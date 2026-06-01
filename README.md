@@ -239,7 +239,7 @@ Pass the number of data classes to randomly distribute:
 ```bash
 python main.py --partition <num_classes>
 ```
-
+    
 Prompts:
 - Which container to exclude (e.g. the server)
 
