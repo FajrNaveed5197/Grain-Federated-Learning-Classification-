@@ -1,11 +1,21 @@
-*.csv
 __pycache__/
-sandbox.py
-test*.py
-test*.sh
-*venv/
-process.txt
-*data/
-logs/
-temp_default_profile.yaml
+*.pyc
+venv/
+.env
+*.log
+.DS_Store
+
+# Large dataset - do not push to GitHub
 compressed_images_wheat/
+lxd-ovs-scripts/
+*.zip
+*.tar
+*.tar.gz
+
+# Temporary/generated files
+temp_default_profile.yaml
+.vscode/
+
+# Logs and backups
+logs/
+*_backup.yaml

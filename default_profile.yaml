@@ -1,7 +1,6 @@
 name: new-profile
-description: ""
+description: ''
 config:
-  nvidia.runtime: "true"
   user.network-config: |
     version: 2
     ethernets:
@@ -27,10 +26,6 @@ config:
         nameservers:
           addresses: [130.231.240.1, 130.231.240.7]
 devices:
-  data:
-    path: /root/data/
-    source: /home/walid/lxd-ovs-scripts/compressed_images_wheat/
-    type: disk
   eth0:
     nictype: bridged
     parent: ovs_br
@@ -40,11 +35,9 @@ devices:
     nictype: bridged
     parent: lxdbr0
     type: nic
-  gpu:
-    type: gpu
   root:
     path: /
-    pool: default-LXDPool
+    pool: default
     size: 30GiB
     type: disk
 used_by:

@@ -1,0 +1,7 @@
+[
+   {
+      "br_name": "br_1-0",
+      "hostname": "Fajr",
+      "controller": "tcp:10.0.1.5:6653"
+   }
+]
