@@ -1,0 +1,24 @@
+# NDA data and local manifests
+dataset/
+manifests/*.csv
+
+# Local experiment outputs
+results/
+checkpoints/
+logs/
+figures/
+experiments/*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model files
+*.pt
+*.pth
+*.ckpt
+*.keras
+
+# Local environments
+.venv/
+venv/

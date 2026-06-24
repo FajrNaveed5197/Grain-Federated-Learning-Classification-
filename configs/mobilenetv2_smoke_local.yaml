@@ -1,0 +1,33 @@
+run_id: cnn_pt_001_smoke_local
+track_experiment: false
+
+model: mobilenet_v2
+num_classes: 8
+image_size: 256
+
+seed: 42
+pretrained: false
+freeze_backbone: true
+
+epochs: 1
+batch_size: 8
+learning_rate: 0.0003
+weight_decay: 0.0001
+num_workers: 2
+
+train_per_class: 64
+val_per_class: 16
+test1_per_class: 32
+test2_per_class: 32
+
+use_class_weights: true
+
+train_manifest: manifests/train.csv
+val_manifest: manifests/validation.csv
+test1_manifest: manifests/test.csv
+test2_manifest: manifests/test_07.csv
+class_mapping: configs/classes.json
+
+output_dir: results
+checkpoint_dir: checkpoints
+experiment_log: experiments/experiment_log.csv

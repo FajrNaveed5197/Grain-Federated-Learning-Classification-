@@ -1,0 +1,10 @@
+{
+  "Black Germ": 0,
+  "Broken": 1,
+  "Fusarium": 2,
+  "Insect": 3,
+  "Moldy": 4,
+  "Sound": 5,
+  "Spotted": 6,
+  "Sprouted": 7
+}
