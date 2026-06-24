@@ -1,0 +1,45 @@
+name: new-profile
+description: ''
+config:
+  user.network-config: |
+    version: 2
+    ethernets:
+      eth0:
+        dhcp4: false
+        dhcp6: false
+        mtu: 1400
+      eth1:
+        addresses: [lxdbr0_ip.eth1_host/lxdbr0_netmask]
+        dhcp4: false
+        dhcp6: false
+        nameservers:
+          addresses: [130.231.240.1, 130.231.240.7]
+        routes:
+          - to: default
+            via: lxdbr0_ip.1
+    vlans:
+      vlan_iface:
+        id: vlan_id
+        link: eth0
+        mtu: 1400
+        addresses: [10.0.vlan_id.vlan_host/24]
+        nameservers:
+          addresses: [130.231.240.1, 130.231.240.7]
+devices:
+  eth0:
+    nictype: bridged
+    parent: ovs_br
+    type: nic
+    mtu: 1400
+  eth1:
+    nictype: bridged
+    parent: lxdbr0
+    type: nic
+  root:
+    path: /
+    pool: default
+    size: 30GiB
+    type: disk
+used_by:
+
+project: default
