@@ -22,3 +22,16 @@ __pycache__/
 # Local environments
 .venv/
 venv/
+
+# Federated pipeline private inputs and outputs
+data/
+partitions/*.csv
+client_data/
+federated_results/
+distributed_results/
+*.sif
+
+# Local Docker configuration and runtime files
+docker/.env
+docker/runs/
+runs/

@@ -1,0 +1,80 @@
+services:
+  fl-server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.fl
+    command: python -m containerized_fl.server.server
+    environment:
+      FL_SERVER_ADDRESS: 0.0.0.0:8080
+      FL_ROUNDS: ${FL_ROUNDS:-3}
+      FL_RUNS_DIR: /app/runs
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${RUNS_DIR:-./runs}:/app/runs
+    networks:
+      - fl-network
+
+  client-0:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.fl
+    command: python -m containerized_fl.client.client
+    depends_on:
+      - fl-server
+    environment:
+      FL_SERVER_ADDRESS: fl-server:8080
+      FL_CLIENT_ID: client-0
+      FL_CLIENT_MANIFEST: /private/manifest.csv
+      FL_LOCAL_EPOCHS: ${FL_LOCAL_EPOCHS:-1}
+      FL_BATCH_SIZE: ${FL_BATCH_SIZE:-32}
+      FL_LEARNING_RATE: ${FL_LEARNING_RATE:-0.000002}
+    volumes:
+      - ${CLIENT_0_MANIFEST}:/private/manifest.csv:ro
+      - ${CLIENT_0_DATA_ROOT}:/data:ro
+    networks:
+      - fl-network
+
+  client-1:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.fl
+    command: python -m containerized_fl.client.client
+    depends_on:
+      - fl-server
+    environment:
+      FL_SERVER_ADDRESS: fl-server:8080
+      FL_CLIENT_ID: client-1
+      FL_CLIENT_MANIFEST: /private/manifest.csv
+      FL_LOCAL_EPOCHS: ${FL_LOCAL_EPOCHS:-1}
+      FL_BATCH_SIZE: ${FL_BATCH_SIZE:-32}
+      FL_LEARNING_RATE: ${FL_LEARNING_RATE:-0.000002}
+    volumes:
+      - ${CLIENT_1_MANIFEST}:/private/manifest.csv:ro
+      - ${CLIENT_1_DATA_ROOT}:/data:ro
+    networks:
+      - fl-network
+
+  client-2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.fl
+    command: python -m containerized_fl.client.client
+    depends_on:
+      - fl-server
+    environment:
+      FL_SERVER_ADDRESS: fl-server:8080
+      FL_CLIENT_ID: client-2
+      FL_CLIENT_MANIFEST: /private/manifest.csv
+      FL_LOCAL_EPOCHS: ${FL_LOCAL_EPOCHS:-1}
+      FL_BATCH_SIZE: ${FL_BATCH_SIZE:-32}
+      FL_LEARNING_RATE: ${FL_LEARNING_RATE:-0.000002}
+    volumes:
+      - ${CLIENT_2_MANIFEST}:/private/manifest.csv:ro
+      - ${CLIENT_2_DATA_ROOT}:/data:ro
+    networks:
+      - fl-network
+
+networks:
+  fl-network:
+    driver: bridge

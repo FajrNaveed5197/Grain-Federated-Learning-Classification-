@@ -1,0 +1,8 @@
+flwr
+torch
+torchvision
+numpy
+pandas
+PyYAML
+Pillow
+scikit-learn

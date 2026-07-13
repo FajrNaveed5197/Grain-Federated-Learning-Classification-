@@ -1,0 +1,49 @@
+project:
+  name: federated-distributed-image-learning
+  seed: 42
+  num_classes: 8
+
+data:
+  image_size: 224
+  class_names:
+    - Black Germ
+    - Broken
+    - Fusarium
+    - Insect
+    - Moldy
+    - Sound
+    - Spotted
+    - Sprouted
+
+  # These paths are supplied by each user at runtime.
+  # Do not commit real confidential paths here.
+  train_manifest: /path/to/private/train.csv
+  validation_manifest: /path/to/private/validation.csv
+  test_manifest: /path/to/private/test.csv
+
+model:
+  name: resnet18
+  pretrained: true
+
+training:
+  batch_size: 64
+  num_workers: 4
+  local_epochs: 1
+  learning_rate: 0.00003
+  weight_decay: 0.0001
+
+federated:
+  strategy: fedavg
+  num_clients: 3
+  rounds: 5
+  fraction_fit: 1.0
+  fraction_evaluate: 1.0
+  client_partition: non_iid
+
+distributed:
+  backend: nccl
+  world_size: 2
+
+privacy:
+  raw_data_shared_with_server: false
+  mount_client_data_read_only: true
