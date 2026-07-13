@@ -1,0 +1,30 @@
+Rice Classification – ResNet18 Validation Summary
+
+Dataset split:
+- Training: 21,606 images
+- Validation: 4,711 images
+- Test: 4,645 images
+- Split method: capture-group-aware 70/15/15
+- Capture-group overlap: 0
+
+Best single run:
+- Test accuracy: 99.01%
+- Balanced accuracy: 98.12%
+- Macro-F1: 97.94%
+- Weighted-F1: 99.01%
+- Best epoch: 9
+
+Three-seed results:
+- Seed 42: Accuracy 99.01%, Macro-F1 97.94%
+- Seed 123: Accuracy 98.75%, Macro-F1 97.41%
+- Seed 2026: Accuracy 98.84%, Macro-F1 97.42%
+
+Aggregate:
+- Accuracy: 98.87% ± 0.11%
+- Balanced accuracy: 97.83% ± 0.20%
+- Macro-F1: 97.59% ± 0.25%
+
+Data-integrity checks:
+- Exact duplicate files across splits: 0
+- Perceptual near-duplicate candidates across splits: 0
+- Capture-group leakage: 0

@@ -1,0 +1,57 @@
+{
+  "experiment": "rice_resnet18_grouped_multiseed",
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "runs": {
+    "42": {
+      "loss": 0.032235,
+      "accuracy": 99.01,
+      "balanced_accuracy": 98.12,
+      "macro_f1": 97.94,
+      "weighted_f1": 99.01
+    },
+    "123": {
+      "loss": 0.041589,
+      "accuracy": 98.75,
+      "balanced_accuracy": 97.7,
+      "macro_f1": 97.41,
+      "weighted_f1": 98.76
+    },
+    "2026": {
+      "loss": 0.039666,
+      "accuracy": 98.84,
+      "balanced_accuracy": 97.68,
+      "macro_f1": 97.42,
+      "weighted_f1": 98.84
+    }
+  },
+  "aggregate": {
+    "accuracy": {
+      "mean": 98.87,
+      "std": 0.11,
+      "minimum": 98.75,
+      "maximum": 99.01
+    },
+    "balanced_accuracy": {
+      "mean": 97.83,
+      "std": 0.2,
+      "minimum": 97.68,
+      "maximum": 98.12
+    },
+    "macro_f1": {
+      "mean": 97.59,
+      "std": 0.25,
+      "minimum": 97.41,
+      "maximum": 97.94
+    },
+    "weighted_f1": {
+      "mean": 98.87,
+      "std": 0.1,
+      "minimum": 98.76,
+      "maximum": 99.01
+    }
+  }
+}
