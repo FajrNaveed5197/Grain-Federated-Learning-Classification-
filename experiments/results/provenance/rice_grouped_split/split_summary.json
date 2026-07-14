@@ -1,0 +1,52 @@
+{
+  "seed": 42,
+  "total_images": 30962,
+  "total_groups": 7695,
+  "splits": {
+    "train": {
+      "images": 21606,
+      "percentage": 69.78,
+      "groups": 5386,
+      "class_counts": {
+        "0_NOR": 13975,
+        "1_F&S": 1035,
+        "2_SD": 1037,
+        "3_MY": 1045,
+        "4_AP": 1043,
+        "5_BN": 1026,
+        "6_UN": 1045,
+        "7_IM": 1400
+      }
+    },
+    "validation": {
+      "images": 4711,
+      "percentage": 15.22,
+      "groups": 1154,
+      "class_counts": {
+        "0_NOR": 3013,
+        "1_F&S": 222,
+        "2_SD": 233,
+        "3_MY": 229,
+        "4_AP": 224,
+        "5_BN": 240,
+        "6_UN": 228,
+        "7_IM": 322
+      }
+    },
+    "test": {
+      "images": 4645,
+      "percentage": 15.0,
+      "groups": 1155,
+      "class_counts": {
+        "0_NOR": 3012,
+        "1_F&S": 229,
+        "2_SD": 230,
+        "3_MY": 226,
+        "4_AP": 233,
+        "5_BN": 225,
+        "6_UN": 212,
+        "7_IM": 278
+      }
+    }
+  }
+}

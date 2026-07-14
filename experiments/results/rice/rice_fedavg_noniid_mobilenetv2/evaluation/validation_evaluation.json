@@ -1,0 +1,73 @@
+{
+  "experiment": "FedAvg non-IID MobileNetV2",
+  "split": "validation",
+  "metrics": {
+    "accuracy": 98.8962,
+    "balanced_accuracy": 98.1797,
+    "macro_f1": 97.7757,
+    "weighted_f1": 98.902
+  },
+  "classification_report": {
+    "0_NOR": {
+      "precision": 0.9986653319986654,
+      "recall": 0.9933620975771656,
+      "f1-score": 0.9960066555740432,
+      "support": 3013.0
+    },
+    "1_F&S": {
+      "precision": 0.9478260869565217,
+      "recall": 0.9819819819819819,
+      "f1-score": 0.9646017699115044,
+      "support": 222.0
+    },
+    "2_SD": {
+      "precision": 0.9620253164556962,
+      "recall": 0.9785407725321889,
+      "f1-score": 0.9702127659574468,
+      "support": 233.0
+    },
+    "3_MY": {
+      "precision": 0.9736842105263158,
+      "recall": 0.9694323144104804,
+      "f1-score": 0.9715536105032823,
+      "support": 229.0
+    },
+    "4_AP": {
+      "precision": 0.9409282700421941,
+      "recall": 0.9955357142857143,
+      "f1-score": 0.9674620390455532,
+      "support": 224.0
+    },
+    "5_BN": {
+      "precision": 0.9915254237288136,
+      "recall": 0.975,
+      "f1-score": 0.9831932773109243,
+      "support": 240.0
+    },
+    "6_UN": {
+      "precision": 0.9776785714285714,
+      "recall": 0.9605263157894737,
+      "f1-score": 0.9690265486725663,
+      "support": 228.0
+    },
+    "7_IM": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 322.0
+    },
+    "accuracy": 0.9889620038208449,
+    "macro avg": {
+      "precision": 0.9740416513920973,
+      "recall": 0.9817973995721256,
+      "f1-score": 0.977757083371915,
+      "support": 4711.0
+    },
+    "weighted avg": {
+      "precision": 0.9892095877799005,
+      "recall": 0.9889620038208449,
+      "f1-score": 0.9890195147179907,
+      "support": 4711.0
+    }
+  }
+}

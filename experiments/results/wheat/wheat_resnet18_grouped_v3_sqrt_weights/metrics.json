@@ -1,0 +1,250 @@
+{
+  "experiment": "wheat_resnet18_grouped_v3_sqrt_weights",
+  "manifest_dir": "/scratch/project_2019765/fnaveed/datasets/wheat_grouped_v1/grouped_split_v2",
+  "seed": 42,
+  "classes": [
+    "Black Germ",
+    "Broken",
+    "Fusarium",
+    "Insect",
+    "Moldy",
+    "Sound",
+    "Spotted",
+    "Sprouted"
+  ],
+  "split_sizes": {
+    "train": 257069,
+    "validation": 28389,
+    "test": 37143,
+    "test_07": 27144
+  },
+  "capture_groups": {
+    "train": 1448,
+    "validation": 253,
+    "test": 95,
+    "test_07": 718
+  },
+  "training": {
+    "warmup_epochs": 2,
+    "finetune_epochs": 8,
+    "best_epoch": 6,
+    "best_validation_macro_f1": 75.226,
+    "total_seconds": 1180.51,
+    "batch_size": 128,
+    "warmup_lr": 0.001,
+    "finetune_lr": 0.0001,
+    "weight_decay": 0.0001
+  },
+  "results": {
+    "validation": {
+      "loss": 0.37338,
+      "accuracy": 93.5433,
+      "balanced_accuracy": 79.2635,
+      "macro_f1": 75.226,
+      "weighted_f1": 93.7968,
+      "classification_report": {
+        "Black Germ": {
+          "precision": 0.7729468599033816,
+          "recall": 0.7960199004975125,
+          "f1-score": 0.7843137254901961,
+          "support": 201.0
+        },
+        "Broken": {
+          "precision": 0.9850642584230636,
+          "recall": 0.9566537358745151,
+          "f1-score": 0.9706511508513733,
+          "support": 5929.0
+        },
+        "Fusarium": {
+          "precision": 0.6706349206349206,
+          "recall": 0.9135135135135135,
+          "f1-score": 0.7734553775743707,
+          "support": 185.0
+        },
+        "Insect": {
+          "precision": 0.7380422691879867,
+          "recall": 0.8522800256904303,
+          "f1-score": 0.7910581222056632,
+          "support": 1557.0
+        },
+        "Moldy": {
+          "precision": 0.56,
+          "recall": 0.6046511627906976,
+          "f1-score": 0.5814696485623003,
+          "support": 301.0
+        },
+        "Sound": {
+          "precision": 0.9781612868861191,
+          "recall": 0.9586052095839641,
+          "f1-score": 0.9682845166222879,
+          "support": 19157.0
+        },
+        "Spotted": {
+          "precision": 0.5172413793103449,
+          "recall": 0.5429864253393665,
+          "f1-score": 0.5298013245033113,
+          "support": 442.0
+        },
+        "Sprouted": {
+          "precision": 0.5450061652281134,
+          "recall": 0.7163695299837926,
+          "f1-score": 0.6190476190476191,
+          "support": 617.0
+        },
+        "accuracy": 0.9354327380323365,
+        "macro avg": {
+          "precision": 0.7208871424467412,
+          "recall": 0.792634937909224,
+          "f1-score": 0.7522601856071403,
+          "support": 28389.0
+        },
+        "weighted avg": {
+          "precision": 0.9419526171035396,
+          "recall": 0.9354327380323365,
+          "f1-score": 0.9379681527662146,
+          "support": 28389.0
+        }
+      }
+    },
+    "test": {
+      "loss": 0.203429,
+      "accuracy": 93.4658,
+      "balanced_accuracy": 85.802,
+      "macro_f1": 86.759,
+      "weighted_f1": 93.3379,
+      "classification_report": {
+        "Black Germ": {
+          "precision": 0.8674157303370786,
+          "recall": 0.7942386831275721,
+          "f1-score": 0.8292158968850698,
+          "support": 486.0
+        },
+        "Broken": {
+          "precision": 0.9955619527407941,
+          "recall": 0.9905125604152992,
+          "f1-score": 0.993030837794993,
+          "support": 16759.0
+        },
+        "Fusarium": {
+          "precision": 0.8414760914760915,
+          "recall": 0.9385507246376812,
+          "f1-score": 0.8873664017539051,
+          "support": 1725.0
+        },
+        "Insect": {
+          "precision": 0.8990825688073395,
+          "recall": 0.8252631578947368,
+          "f1-score": 0.8605927552140505,
+          "support": 2850.0
+        },
+        "Moldy": {
+          "precision": 0.8302679978980557,
+          "recall": 0.7194899817850637,
+          "f1-score": 0.7709197365211027,
+          "support": 2196.0
+        },
+        "Sound": {
+          "precision": 0.9164835164835164,
+          "recall": 0.9785450888367415,
+          "f1-score": 0.9464980544747081,
+          "support": 8949.0
+        },
+        "Spotted": {
+          "precision": 0.845859872611465,
+          "recall": 0.7268746579091406,
+          "f1-score": 0.7818663526641154,
+          "support": 1827.0
+        },
+        "Sprouted": {
+          "precision": 0.8526058631921825,
+          "recall": 0.8906848149723522,
+          "f1-score": 0.871229457041814,
+          "support": 2351.0
+        },
+        "accuracy": 0.9346579436232938,
+        "macro avg": {
+          "precision": 0.8810941991933154,
+          "recall": 0.8580199586973234,
+          "f1-score": 0.8675899365437199,
+          "support": 37143.0
+        },
+        "weighted avg": {
+          "precision": 0.934088799338908,
+          "recall": 0.9346579436232938,
+          "f1-score": 0.9333785704599818,
+          "support": 37143.0
+        }
+      }
+    },
+    "test_07": {
+      "loss": 0.450159,
+      "accuracy": 86.4022,
+      "balanced_accuracy": 75.4806,
+      "macro_f1": 74.303,
+      "weighted_f1": 86.6314,
+      "classification_report": {
+        "Black Germ": {
+          "precision": 0.7629310344827587,
+          "recall": 0.7375,
+          "f1-score": 0.75,
+          "support": 240.0
+        },
+        "Broken": {
+          "precision": 0.9922491956712489,
+          "recall": 0.9285616532092514,
+          "f1-score": 0.959349593495935,
+          "support": 7307.0
+        },
+        "Fusarium": {
+          "precision": 0.8865461847389559,
+          "recall": 0.8589494163424124,
+          "f1-score": 0.8725296442687747,
+          "support": 1028.0
+        },
+        "Insect": {
+          "precision": 0.38203125,
+          "recall": 0.6392156862745098,
+          "f1-score": 0.478239608801956,
+          "support": 765.0
+        },
+        "Moldy": {
+          "precision": 0.4954314720812183,
+          "recall": 0.6873239436619718,
+          "f1-score": 0.575811209439528,
+          "support": 710.0
+        },
+        "Sound": {
+          "precision": 0.8830737607716025,
+          "recall": 0.9460489540103328,
+          "f1-score": 0.9134772652927707,
+          "support": 11807.0
+        },
+        "Spotted": {
+          "precision": 0.7254901960784313,
+          "recall": 0.5464135021097046,
+          "f1-score": 0.6233453670276775,
+          "support": 1422.0
+        },
+        "Sprouted": {
+          "precision": 0.867765923052053,
+          "recall": 0.6944372574385511,
+          "f1-score": 0.7714860592124173,
+          "support": 3865.0
+        },
+        "accuracy": 0.8640215148835838,
+        "macro avg": {
+          "precision": 0.7494398771095336,
+          "recall": 0.7548063016308417,
+          "f1-score": 0.7430298434423824,
+          "support": 27144.0
+        },
+        "weighted avg": {
+          "precision": 0.8768369545842548,
+          "recall": 0.8640215148835838,
+          "f1-score": 0.8663138820917977,
+          "support": 27144.0
+        }
+      }
+    }
+  }
+}

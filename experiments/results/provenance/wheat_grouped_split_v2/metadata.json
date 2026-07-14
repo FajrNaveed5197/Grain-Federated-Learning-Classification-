@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "seed": 42,
+  "target_validation_image_fraction": 0.1,
+  "target_validation_group_fraction": 0.15,
+  "search_trials_per_class": 5000,
+  "classes": [
+    "Black Germ",
+    "Broken",
+    "Fusarium",
+    "Insect",
+    "Moldy",
+    "Sound",
+    "Spotted",
+    "Sprouted"
+  ],
+  "split_sizes": {
+    "train": 257069,
+    "validation": 28389,
+    "test": 37143,
+    "test_07": 27144
+  },
+  "capture_groups": {
+    "train": 1448,
+    "validation": 253,
+    "test": 95,
+    "test_07": 718
+  },
+  "actual_validation_image_fraction": 0.099451,
+  "actual_validation_group_fraction": 0.148736,
+  "train_validation_group_overlap": 0
+}

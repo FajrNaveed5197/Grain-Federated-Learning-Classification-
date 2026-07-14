@@ -1,0 +1,9 @@
+label,total_images,total_groups,validation_images,validation_groups,validation_image_fraction,validation_group_fraction
+Black Germ,2005,213,201,32,0.100249,0.150235
+Broken,59261,187,5929,28,0.100049,0.149733
+Fusarium,1932,96,185,14,0.095756,0.145833
+Insect,15569,276,1557,41,0.100006,0.148551
+Moldy,3006,240,301,36,0.100133,0.15
+Sound,193090,230,19157,34,0.099213,0.147826
+Spotted,4423,223,442,33,0.099932,0.147982
+Sprouted,6172,236,617,35,0.099968,0.148305

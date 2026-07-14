@@ -1,0 +1,182 @@
+{
+  "experiment": "rice_ddp_resnet18",
+  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_ddp_resnet18/best_ddp_resnet18_rice.pt",
+  "class_names": [
+    "0_NOR",
+    "1_F&S",
+    "2_SD",
+    "3_MY",
+    "4_AP",
+    "5_BN",
+    "6_UN",
+    "7_IM"
+  ],
+  "checkpoint_metadata": {
+    "epoch": 1,
+    "class_names": [
+      "0_NOR",
+      "1_F&S",
+      "2_SD",
+      "3_MY",
+      "4_AP",
+      "5_BN",
+      "6_UN",
+      "7_IM"
+    ],
+    "validation_metrics": {
+      "accuracy": 99.0448,
+      "balanced_accuracy": 98.0709,
+      "macro_f1": 97.9592,
+      "weighted_f1": 99.0482
+    },
+    "world_size": 2,
+    "arguments": {
+      "dataset_root": "/scratch/project_2019765/fnaveed/datasets/rice_grouped",
+      "train_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/train.csv",
+      "validation_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/validation.csv",
+      "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+      "output_dir": "/scratch/project_2019765/fnaveed/results/rice_ddp_resnet18",
+      "epochs": 8,
+      "batch_size_per_gpu": 64,
+      "num_workers": 4,
+      "learning_rate": 2e-06,
+      "weight_decay": 0.0001,
+      "label_smoothing": 0.03,
+      "seed": 42
+    }
+  },
+  "results": {
+    "validation": {
+      "num_images": 4711,
+      "accuracy": 99.0448,
+      "balanced_accuracy": 98.0709,
+      "macro_f1": 97.9592,
+      "weighted_f1": 99.0482,
+      "evaluation_seconds": 4.42,
+      "per_class": [
+        {
+          "class_name": "0_NOR",
+          "precision": 0.9980059820538385,
+          "recall": 0.9966810487885828,
+          "f1_score": 0.9973430753902358,
+          "support": 3013
+        },
+        {
+          "class_name": "1_F&S",
+          "precision": 0.9276595744680851,
+          "recall": 0.9819819819819819,
+          "f1_score": 0.9540481400437637,
+          "support": 222
+        },
+        {
+          "class_name": "2_SD",
+          "precision": 0.9866666666666667,
+          "recall": 0.9527896995708155,
+          "f1_score": 0.9694323144104804,
+          "support": 233
+        },
+        {
+          "class_name": "3_MY",
+          "precision": 0.9650655021834061,
+          "recall": 0.9650655021834061,
+          "f1_score": 0.9650655021834061,
+          "support": 229
+        },
+        {
+          "class_name": "4_AP",
+          "precision": 0.9866666666666667,
+          "recall": 0.9910714285714286,
+          "f1_score": 0.9888641425389755,
+          "support": 224
+        },
+        {
+          "class_name": "5_BN",
+          "precision": 0.9793388429752066,
+          "recall": 0.9875,
+          "f1_score": 0.983402489626556,
+          "support": 240
+        },
+        {
+          "class_name": "6_UN",
+          "precision": 0.9866666666666667,
+          "recall": 0.9736842105263158,
+          "f1_score": 0.9801324503311258,
+          "support": 228
+        },
+        {
+          "class_name": "7_IM",
+          "precision": 1.0,
+          "recall": 0.9968944099378882,
+          "f1_score": 0.9984447900466563,
+          "support": 322
+        }
+      ]
+    },
+    "test": {
+      "num_images": 4645,
+      "accuracy": 98.9236,
+      "balanced_accuracy": 97.9743,
+      "macro_f1": 97.7568,
+      "weighted_f1": 98.9265,
+      "evaluation_seconds": 4.48,
+      "per_class": [
+        {
+          "class_name": "0_NOR",
+          "precision": 0.9980026631158455,
+          "recall": 0.9953519256308101,
+          "f1_score": 0.9966755319148937,
+          "support": 3012
+        },
+        {
+          "class_name": "1_F&S",
+          "precision": 0.9652173913043478,
+          "recall": 0.9694323144104804,
+          "f1_score": 0.9673202614379085,
+          "support": 229
+        },
+        {
+          "class_name": "2_SD",
+          "precision": 0.9574468085106383,
+          "recall": 0.9782608695652174,
+          "f1_score": 0.967741935483871,
+          "support": 230
+        },
+        {
+          "class_name": "3_MY",
+          "precision": 0.9773755656108597,
+          "recall": 0.9557522123893806,
+          "f1_score": 0.9664429530201343,
+          "support": 226
+        },
+        {
+          "class_name": "4_AP",
+          "precision": 0.9827586206896551,
+          "recall": 0.9785407725321889,
+          "f1_score": 0.9806451612903225,
+          "support": 233
+        },
+        {
+          "class_name": "5_BN",
+          "precision": 0.9736842105263158,
+          "recall": 0.9866666666666667,
+          "f1_score": 0.9801324503311258,
+          "support": 225
+        },
+        {
+          "class_name": "6_UN",
+          "precision": 0.9497716894977168,
+          "recall": 0.9811320754716981,
+          "f1_score": 0.9651972157772621,
+          "support": 212
+        },
+        {
+          "class_name": "7_IM",
+          "precision": 1.0,
+          "recall": 0.9928057553956835,
+          "f1_score": 0.9963898916967509,
+          "support": 278
+        }
+      ]
+    }
+  }
+}

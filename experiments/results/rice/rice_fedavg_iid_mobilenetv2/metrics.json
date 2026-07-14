@@ -1,0 +1,168 @@
+{
+  "experiment": "rice_fedavg_iid_mobilenetv2",
+  "completed_round": 5,
+  "best_round": 2,
+  "best_validation_macro_f1": 97.6631,
+  "class_names": [
+    "0_NOR",
+    "1_F&S",
+    "2_SD",
+    "3_MY",
+    "4_AP",
+    "5_BN",
+    "6_UN",
+    "7_IM"
+  ],
+  "history": [
+    {
+      "round": 1,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 7199,
+          "local_loss": 0.569022
+        },
+        {
+          "client": "client_1",
+          "num_samples": 7229,
+          "local_loss": 0.574174
+        },
+        {
+          "client": "client_2",
+          "num_samples": 7178,
+          "local_loss": 0.574251
+        }
+      ],
+      "validation": {
+        "accuracy": 98.7052,
+        "balanced_accuracy": 98.092,
+        "macro_f1": 97.496,
+        "weighted_f1": 98.7134
+      },
+      "elapsed_seconds_from_start": 51.03
+    },
+    {
+      "round": 2,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 7199,
+          "local_loss": 0.558997
+        },
+        {
+          "client": "client_1",
+          "num_samples": 7229,
+          "local_loss": 0.547864
+        },
+        {
+          "client": "client_2",
+          "num_samples": 7178,
+          "local_loss": 0.547308
+        }
+      ],
+      "validation": {
+        "accuracy": 98.8113,
+        "balanced_accuracy": 98.1605,
+        "macro_f1": 97.6631,
+        "weighted_f1": 98.8186
+      },
+      "elapsed_seconds_from_start": 73.39
+    },
+    {
+      "round": 3,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 7199,
+          "local_loss": 0.529501
+        },
+        {
+          "client": "client_1",
+          "num_samples": 7229,
+          "local_loss": 0.523588
+        },
+        {
+          "client": "client_2",
+          "num_samples": 7178,
+          "local_loss": 0.526111
+        }
+      ],
+      "validation": {
+        "accuracy": 98.7901,
+        "balanced_accuracy": 98.1059,
+        "macro_f1": 97.6091,
+        "weighted_f1": 98.7971
+      },
+      "elapsed_seconds_from_start": 95.7
+    },
+    {
+      "round": 4,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 7199,
+          "local_loss": 0.504291
+        },
+        {
+          "client": "client_1",
+          "num_samples": 7229,
+          "local_loss": 0.502516
+        },
+        {
+          "client": "client_2",
+          "num_samples": 7178,
+          "local_loss": 0.505753
+        }
+      ],
+      "validation": {
+        "accuracy": 98.6203,
+        "balanced_accuracy": 98.1729,
+        "macro_f1": 97.4143,
+        "weighted_f1": 98.6312
+      },
+      "elapsed_seconds_from_start": 118.02
+    },
+    {
+      "round": 5,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 7199,
+          "local_loss": 0.481691
+        },
+        {
+          "client": "client_1",
+          "num_samples": 7229,
+          "local_loss": 0.483221
+        },
+        {
+          "client": "client_2",
+          "num_samples": 7178,
+          "local_loss": 0.485493
+        }
+      ],
+      "validation": {
+        "accuracy": 98.7264,
+        "balanced_accuracy": 97.9923,
+        "macro_f1": 97.5221,
+        "weighted_f1": 98.7329
+      },
+      "elapsed_seconds_from_start": 140.34
+    }
+  ],
+  "arguments": {
+    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+    "validation_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/validation.csv",
+    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1/best_mobilenetv2_rice_grouped.pt",
+    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2",
+    "dataset_root": "/scratch/project_2019765/fnaveed/datasets/rice_grouped",
+    "experiment_name": "rice_fedavg_iid_mobilenetv2",
+    "rounds": 5,
+    "local_epochs": 1,
+    "batch_size": 64,
+    "learning_rate": 2e-06,
+    "num_workers": 4,
+    "seed": 42,
+    "resume": false
+  }
+}

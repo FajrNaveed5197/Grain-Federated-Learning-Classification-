@@ -1,0 +1,3 @@
+experiment,split,num_images,accuracy,balanced_accuracy,macro_f1,weighted_f1,evaluation_seconds
+rice_fedavg_iid_resnet18,validation,4711,99.1297,98.1369,98.0954,99.132,4.68
+rice_fedavg_iid_resnet18,test,4645,99.1173,98.25,98.1136,99.1191,4.56

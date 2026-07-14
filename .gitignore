@@ -35,3 +35,32 @@ distributed_results/
 docker/.env
 docker/runs/
 runs/
+
+# Additional dataset safeguards
+datasets/
+**/dataset/
+**/datasets/
+**/compressed_images*/
+**/rice_grouped/
+**/wheat_grouped*/
+*.jpg
+*.jpeg
+*.png.tmp
+*.tif
+*.tiff
+*.bmp
+
+# Runtime and scheduler output
+slurm-*.out
+*.out
+*.err
+*.log
+
+# Generated Python caches
+**/__pycache__/
+.pytest_cache/
+
+# Keep reproducible experiment evidence in Git
+!experiments/
+!experiments/results/
+!experiments/results/**

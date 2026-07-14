@@ -27,10 +27,26 @@ CLASS_TO_ID = {name: index for index, name in enumerate(CLASS_NAMES)}
 ROOT = Path("/scratch/project_2019765/grain_research")
 
 CHECKPOINTS = {
-    "centralized_resnet18_v3": ROOT / "results/version3_dynamic_balanced_resnet18/best_resnet18_v3_gpu.pt",
-    "fedavg_iid_round3": ROOT / "federated_results/fl_full_iid_v3/global_model_round_3.pt",
-    "fedavg_noniid_round3": ROOT / "federated_results/fl_full_noniid_v3/global_model_round_3.pt",
-    "ddp_resnet18_v3": ROOT / "distributed_results/ddp_resnet18_v3/best_ddp_resnet18_v3.pt",
+    "centralized_resnet18_v3": (
+        ROOT
+        / "experiments/centralized/resnet18/v3_dynamic_balanced"
+        / "best_resnet18_v3_gpu.pt"
+    ),
+    "fedavg_iid_round3": (
+        ROOT
+        / "experiments/federated/fl_full_iid_v3"
+        / "global_model_round_3.pt"
+    ),
+    "fedavg_noniid_round3": (
+        ROOT
+        / "experiments/federated/fl_full_noniid_v3"
+        / "global_model_round_3.pt"
+    ),
+    "ddp_resnet18_v3": (
+        ROOT
+        / "experiments/distributed/ddp_resnet18_v3"
+        / "best_ddp_resnet18_v3.pt"
+    ),
 }
 
 MANIFESTS = {
