@@ -1,0 +1,2164 @@
+
+====================================================================================================
+experiments/results/provenance/rice_grouped_split/split_summary.json
+====================================================================================================
+seed: 42
+
+====================================================================================================
+experiments/results/provenance/wheat_grouped_split_v2/metadata.json
+====================================================================================================
+seed: 42
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json
+====================================================================================================
+checkpoint_metadata.validation_metrics.accuracy: 99.0448
+checkpoint_metadata.validation_metrics.balanced_accuracy: 98.0709
+checkpoint_metadata.validation_metrics.macro_f1: 97.9592
+checkpoint_metadata.validation_metrics.weighted_f1: 99.0482
+checkpoint_metadata.world_size: 2
+checkpoint_metadata.arguments.learning_rate: 2e-06
+checkpoint_metadata.arguments.weight_decay: 0.0001
+checkpoint_metadata.arguments.seed: 42
+results.validation.accuracy: 99.0448
+results.validation.balanced_accuracy: 98.0709
+results.validation.macro_f1: 97.9592
+results.validation.weighted_f1: 99.0482
+results.validation.per_class[0].precision: 0.9980059820538385
+results.validation.per_class[0].recall: 0.9966810487885828
+results.validation.per_class[0].support: 3013
+results.validation.per_class[1].precision: 0.9276595744680851
+results.validation.per_class[1].recall: 0.9819819819819819
+results.validation.per_class[1].support: 222
+results.validation.per_class[2].precision: 0.9866666666666667
+results.validation.per_class[2].recall: 0.9527896995708155
+results.validation.per_class[2].support: 233
+results.validation.per_class[3].precision: 0.9650655021834061
+results.validation.per_class[3].recall: 0.9650655021834061
+results.validation.per_class[3].support: 229
+results.validation.per_class[4].precision: 0.9866666666666667
+results.validation.per_class[4].recall: 0.9910714285714286
+results.validation.per_class[4].support: 224
+results.validation.per_class[5].precision: 0.9793388429752066
+results.validation.per_class[5].recall: 0.9875
+results.validation.per_class[5].support: 240
+results.validation.per_class[6].precision: 0.9866666666666667
+results.validation.per_class[6].recall: 0.9736842105263158
+results.validation.per_class[6].support: 228
+results.validation.per_class[7].precision: 1.0
+results.validation.per_class[7].recall: 0.9968944099378882
+results.validation.per_class[7].support: 322
+results.test.accuracy: 98.9236
+results.test.balanced_accuracy: 97.9743
+results.test.macro_f1: 97.7568
+results.test.weighted_f1: 98.9265
+results.test.per_class[0].precision: 0.9980026631158455
+results.test.per_class[0].recall: 0.9953519256308101
+results.test.per_class[0].support: 3012
+results.test.per_class[1].precision: 0.9652173913043478
+results.test.per_class[1].recall: 0.9694323144104804
+results.test.per_class[1].support: 229
+results.test.per_class[2].precision: 0.9574468085106383
+results.test.per_class[2].recall: 0.9782608695652174
+results.test.per_class[2].support: 230
+results.test.per_class[3].precision: 0.9773755656108597
+results.test.per_class[3].recall: 0.9557522123893806
+results.test.per_class[3].support: 226
+results.test.per_class[4].precision: 0.9827586206896551
+results.test.per_class[4].recall: 0.9785407725321889
+results.test.per_class[4].support: 233
+results.test.per_class[5].precision: 0.9736842105263158
+results.test.per_class[5].recall: 0.9866666666666667
+results.test.per_class[5].support: 225
+results.test.per_class[6].precision: 0.9497716894977168
+results.test.per_class[6].recall: 0.9811320754716981
+results.test.per_class[6].support: 212
+results.test.per_class[7].precision: 1.0
+results.test.per_class[7].recall: 0.9928057553956835
+results.test.per_class[7].support: 278
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/metrics.json
+====================================================================================================
+world_size: 2
+best_epoch: 1
+best_validation_macro_f1: 97.9592
+history[0].learning_rate: 1.942909649383465e-06
+history[0].validation.accuracy: 99.0448
+history[0].validation.balanced_accuracy: 98.0709
+history[0].validation.macro_f1: 97.9592
+history[0].validation.weighted_f1: 99.0482
+history[0].epoch_seconds: 18.87
+history[1].learning_rate: 1.780330085889911e-06
+history[1].validation.accuracy: 98.8113
+history[1].validation.balanced_accuracy: 97.7993
+history[1].validation.macro_f1: 97.6014
+history[1].validation.weighted_f1: 98.8134
+history[1].epoch_seconds: 13.92
+history[2].learning_rate: 1.5370125742738177e-06
+history[2].validation.accuracy: 98.7052
+history[2].validation.balanced_accuracy: 97.3988
+history[2].validation.macro_f1: 97.3555
+history[2].validation.weighted_f1: 98.7067
+history[2].epoch_seconds: 13.7
+history[3].learning_rate: 1.2500000000000003e-06
+history[3].validation.accuracy: 98.7264
+history[3].validation.balanced_accuracy: 97.4826
+history[3].validation.macro_f1: 97.4522
+history[3].validation.weighted_f1: 98.7275
+history[3].epoch_seconds: 13.44
+history[4].learning_rate: 9.629874257261829e-07
+history[4].validation.accuracy: 98.875
+history[4].validation.balanced_accuracy: 97.6514
+history[4].validation.macro_f1: 97.7203
+history[4].validation.weighted_f1: 98.8748
+history[4].epoch_seconds: 13.77
+history[5].learning_rate: 7.196699141100895e-07
+history[5].validation.accuracy: 98.9387
+history[5].validation.balanced_accuracy: 97.7743
+history[5].validation.macro_f1: 97.8445
+history[5].validation.weighted_f1: 98.9385
+history[5].epoch_seconds: 13.68
+history[6].learning_rate: 5.570903506165349e-07
+history[6].validation.accuracy: 98.8962
+history[6].validation.balanced_accuracy: 97.7043
+history[6].validation.macro_f1: 97.8
+history[6].validation.weighted_f1: 98.8953
+history[6].epoch_seconds: 13.79
+history[7].learning_rate: 5e-07
+history[7].validation.accuracy: 98.9811
+history[7].validation.balanced_accuracy: 97.7744
+history[7].validation.macro_f1: 97.8695
+history[7].validation.weighted_f1: 98.9809
+history[7].epoch_seconds: 13.59
+arguments.learning_rate: 2e-06
+arguments.weight_decay: 0.0001
+arguments.seed: 42
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/training_summary.json
+====================================================================================================
+world_size: 2
+best_epoch: 1
+best_validation_macro_f1: 97.9592
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/history.json
+====================================================================================================
+[0].validation_accuracy: 88.75
+[0].validation_balanced_accuracy: 83.97
+[0].validation_macro_f1: 80.81
+[0].epoch_seconds: 20.66
+[1].validation_accuracy: 90.36
+[1].validation_balanced_accuracy: 86.98
+[1].validation_macro_f1: 83.47
+[1].epoch_seconds: 14.96
+[2].validation_accuracy: 97.54
+[2].validation_balanced_accuracy: 96.18
+[2].validation_macro_f1: 95.09
+[2].epoch_seconds: 15.13
+[3].validation_accuracy: 98.41
+[3].validation_balanced_accuracy: 96.9
+[3].validation_macro_f1: 96.53
+[3].epoch_seconds: 15.05
+[4].validation_accuracy: 98.79
+[4].validation_balanced_accuracy: 97.75
+[4].validation_macro_f1: 97.41
+[4].epoch_seconds: 15.02
+[5].validation_accuracy: 98.87
+[5].validation_balanced_accuracy: 97.82
+[5].validation_macro_f1: 97.58
+[5].epoch_seconds: 15.02
+[6].validation_accuracy: 98.56
+[6].validation_balanced_accuracy: 97.33
+[6].validation_macro_f1: 96.91
+[6].epoch_seconds: 15.07
+[7].validation_accuracy: 98.81
+[7].validation_balanced_accuracy: 97.75
+[7].validation_macro_f1: 97.42
+[7].epoch_seconds: 15.0
+[8].validation_accuracy: 98.85
+[8].validation_balanced_accuracy: 97.9
+[8].validation_macro_f1: 97.56
+[8].epoch_seconds: 15.02
+[9].validation_accuracy: 98.87
+[9].validation_balanced_accuracy: 98.16
+[9].validation_macro_f1: 97.71
+[9].epoch_seconds: 15.03
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/metrics.json
+====================================================================================================
+seed: 42
+training.best_epoch: 10
+training.best_validation_macro_f1: 97.71
+training.total_seconds: 159.5
+test.accuracy: 98.92
+test.balanced_accuracy: 98.29
+test.macro_f1: 97.81
+test.weighted_f1: 98.93
+classification_report.0_NOR.precision: 0.9996657754010695
+classification_report.0_NOR.recall: 0.9930278884462151
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9733333333333334
+classification_report.1_F&S.recall: 0.9563318777292577
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9116465863453815
+classification_report.2_SD.recall: 0.9869565217391304
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9779735682819384
+classification_report.3_MY.recall: 0.9823008849557522
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9914529914529915
+classification_report.4_AP.recall: 0.9957081545064378
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9823788546255506
+classification_report.5_BN.recall: 0.9911111111111112
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9530516431924883
+classification_report.6_UN.recall: 0.9575471698113207
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9892357373519914
+classification_report.macro avg.precision: 0.9736878440790941
+classification_report.macro avg.recall: 0.982872951037403
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9895970135174627
+classification_report.weighted avg.recall: 0.9892357373519914
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_evaluation.json
+====================================================================================================
+metrics.accuracy: 98.9236
+metrics.balanced_accuracy: 98.2873
+metrics.macro_f1: 97.8079
+metrics.weighted_f1: 98.933
+classification_report.0_NOR.precision: 0.9996657754010695
+classification_report.0_NOR.recall: 0.9930278884462151
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9733333333333334
+classification_report.1_F&S.recall: 0.9563318777292577
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9116465863453815
+classification_report.2_SD.recall: 0.9869565217391304
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9779735682819384
+classification_report.3_MY.recall: 0.9823008849557522
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9914529914529915
+classification_report.4_AP.recall: 0.9957081545064378
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9823788546255506
+classification_report.5_BN.recall: 0.9911111111111112
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9530516431924883
+classification_report.6_UN.recall: 0.9575471698113207
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9892357373519914
+classification_report.macro avg.precision: 0.9736878440790941
+classification_report.macro avg.recall: 0.982872951037403
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9895970135174627
+classification_report.weighted avg.recall: 0.9892357373519914
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_evaluation.json
+====================================================================================================
+metrics.accuracy: 98.875
+metrics.balanced_accuracy: 98.1597
+metrics.macro_f1: 97.7092
+metrics.weighted_f1: 98.8836
+classification_report.0_NOR.precision: 0.9993319973279893
+classification_report.0_NOR.recall: 0.9930302024560239
+classification_report.0_NOR.support: 3013.0
+classification_report.1_F&S.precision: 0.9596412556053812
+classification_report.1_F&S.recall: 0.963963963963964
+classification_report.1_F&S.support: 222.0
+classification_report.2_SD.precision: 0.9166666666666666
+classification_report.2_SD.recall: 0.9914163090128756
+classification_report.2_SD.support: 233.0
+classification_report.3_MY.precision: 0.9779735682819384
+classification_report.3_MY.recall: 0.9694323144104804
+classification_report.3_MY.support: 229.0
+classification_report.4_AP.precision: 0.9779735682819384
+classification_report.4_AP.recall: 0.9910714285714286
+classification_report.4_AP.support: 224.0
+classification_report.5_BN.precision: 0.9874476987447699
+classification_report.5_BN.recall: 0.9833333333333333
+classification_report.5_BN.support: 240.0
+classification_report.6_UN.precision: 0.9647577092511013
+classification_report.6_UN.recall: 0.9605263157894737
+classification_report.6_UN.support: 228.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 322.0
+classification_report.accuracy: 0.9887497346635534
+classification_report.macro avg.precision: 0.972974058019973
+classification_report.macro avg.recall: 0.9815967334421974
+classification_report.macro avg.support: 4711.0
+classification_report.weighted avg.precision: 0.9890862304960037
+classification_report.weighted avg.recall: 0.9887497346635534
+classification_report.weighted avg.support: 4711.0
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_metrics.json
+====================================================================================================
+results.validation.accuracy: 98.8113
+results.validation.balanced_accuracy: 98.1605
+results.validation.macro_f1: 97.6631
+results.validation.weighted_f1: 98.8186
+results.test.accuracy: 98.9882
+results.test.balanced_accuracy: 98.4579
+results.test.macro_f1: 97.9948
+results.test.weighted_f1: 98.9926
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_evaluation.json
+====================================================================================================
+metrics.accuracy: 98.9882
+metrics.balanced_accuracy: 98.4579
+metrics.macro_f1: 97.9948
+metrics.weighted_f1: 98.9926
+classification_report.0_NOR.precision: 0.9993317741396592
+classification_report.0_NOR.recall: 0.9930278884462151
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9576271186440678
+classification_report.1_F&S.recall: 0.9868995633187773
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9617021276595744
+classification_report.2_SD.recall: 0.9826086956521739
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9730941704035875
+classification_report.3_MY.recall: 0.9601769911504425
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9588477366255144
+classification_report.4_AP.recall: 1.0
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9910313901345291
+classification_report.5_BN.recall: 0.9822222222222222
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9626168224299065
+classification_report.6_UN.recall: 0.9716981132075472
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9898815931108719
+classification_report.macro avg.precision: 0.975531392504605
+classification_report.macro avg.recall: 0.9845791842496723
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9900673923617248
+classification_report.weighted avg.recall: 0.9898815931108719
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_evaluation.json
+====================================================================================================
+metrics.accuracy: 98.8113
+metrics.balanced_accuracy: 98.1605
+metrics.macro_f1: 97.6631
+metrics.weighted_f1: 98.8186
+classification_report.0_NOR.precision: 0.9986635482793184
+classification_report.0_NOR.recall: 0.9920345170925987
+classification_report.0_NOR.support: 3013.0
+classification_report.1_F&S.precision: 0.9517543859649122
+classification_report.1_F&S.recall: 0.9774774774774775
+classification_report.1_F&S.support: 222.0
+classification_report.2_SD.precision: 0.950207468879668
+classification_report.2_SD.recall: 0.9828326180257511
+classification_report.2_SD.support: 233.0
+classification_report.3_MY.precision: 0.9694323144104804
+classification_report.3_MY.recall: 0.9694323144104804
+classification_report.3_MY.support: 229.0
+classification_report.4_AP.precision: 0.9369747899159664
+classification_report.4_AP.recall: 0.9955357142857143
+classification_report.4_AP.support: 224.0
+classification_report.5_BN.precision: 0.9915254237288136
+classification_report.5_BN.recall: 0.975
+classification_report.5_BN.support: 240.0
+classification_report.6_UN.precision: 0.9776785714285714
+classification_report.6_UN.recall: 0.9605263157894737
+classification_report.6_UN.support: 228.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 322.0
+classification_report.accuracy: 0.9881129271916791
+classification_report.macro avg.precision: 0.9720295628259663
+classification_report.macro avg.recall: 0.9816048696351869
+classification_report.macro avg.support: 4711.0
+classification_report.weighted avg.precision: 0.9884144032733104
+classification_report.weighted avg.recall: 0.9881129271916791
+classification_report.weighted avg.support: 4711.0
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json
+====================================================================================================
+best_validation_macro_f1: 97.6631
+history[0].validation.accuracy: 98.7052
+history[0].validation.balanced_accuracy: 98.092
+history[0].validation.macro_f1: 97.496
+history[0].validation.weighted_f1: 98.7134
+history[1].validation.accuracy: 98.8113
+history[1].validation.balanced_accuracy: 98.1605
+history[1].validation.macro_f1: 97.6631
+history[1].validation.weighted_f1: 98.8186
+history[2].validation.accuracy: 98.7901
+history[2].validation.balanced_accuracy: 98.1059
+history[2].validation.macro_f1: 97.6091
+history[2].validation.weighted_f1: 98.7971
+history[3].validation.accuracy: 98.6203
+history[3].validation.balanced_accuracy: 98.1729
+history[3].validation.macro_f1: 97.4143
+history[3].validation.weighted_f1: 98.6312
+history[4].validation.accuracy: 98.7264
+history[4].validation.balanced_accuracy: 97.9923
+history[4].validation.macro_f1: 97.5221
+history[4].validation.weighted_f1: 98.7329
+arguments.local_epochs: 1
+arguments.batch_size: 64
+arguments.learning_rate: 2e-06
+arguments.seed: 42
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json
+====================================================================================================
+checkpoint_metadata.validation_metrics.accuracy: 99.1297
+checkpoint_metadata.validation_metrics.balanced_accuracy: 98.1369
+checkpoint_metadata.validation_metrics.macro_f1: 98.0954
+checkpoint_metadata.validation_metrics.weighted_f1: 99.132
+checkpoint_metadata.arguments.local_epochs: 1
+checkpoint_metadata.arguments.batch_size: 64
+checkpoint_metadata.arguments.learning_rate: 2e-06
+checkpoint_metadata.arguments.seed: 42
+results.validation.accuracy: 99.1297
+results.validation.balanced_accuracy: 98.1369
+results.validation.macro_f1: 98.0954
+results.validation.weighted_f1: 99.132
+results.validation.per_class[0].precision: 0.99800796812749
+results.validation.per_class[0].recall: 0.997676734152008
+results.validation.per_class[0].support: 3013
+results.validation.per_class[1].precision: 0.9356223175965666
+results.validation.per_class[1].recall: 0.9819819819819819
+results.validation.per_class[1].support: 222
+results.validation.per_class[2].precision: 0.9867256637168141
+results.validation.per_class[2].recall: 0.9570815450643777
+results.validation.per_class[2].support: 233
+results.validation.per_class[3].precision: 0.9650655021834061
+results.validation.per_class[3].recall: 0.9650655021834061
+results.validation.per_class[3].support: 229
+results.validation.per_class[4].precision: 0.9823008849557522
+results.validation.per_class[4].recall: 0.9910714285714286
+results.validation.per_class[4].support: 224
+results.validation.per_class[5].precision: 0.9916317991631799
+results.validation.per_class[5].recall: 0.9875
+results.validation.per_class[5].support: 240
+results.validation.per_class[6].precision: 0.9866666666666667
+results.validation.per_class[6].recall: 0.9736842105263158
+results.validation.per_class[6].support: 228
+results.validation.per_class[7].precision: 1.0
+results.validation.per_class[7].recall: 0.9968944099378882
+results.validation.per_class[7].support: 322
+results.test.accuracy: 99.1173
+results.test.balanced_accuracy: 98.25
+results.test.macro_f1: 98.1136
+results.test.weighted_f1: 99.1191
+results.test.per_class[0].precision: 0.9983372131692717
+results.test.per_class[0].recall: 0.9966799468791501
+results.test.per_class[0].support: 3012
+results.test.per_class[1].precision: 0.973568281938326
+results.test.per_class[1].recall: 0.9650655021834061
+results.test.per_class[1].support: 229
+results.test.per_class[2].precision: 0.9617021276595744
+results.test.per_class[2].recall: 0.9826086956521739
+results.test.per_class[2].support: 230
+results.test.per_class[3].precision: 0.9863636363636363
+results.test.per_class[3].recall: 0.9601769911504425
+results.test.per_class[3].support: 226
+results.test.per_class[4].precision: 0.9830508474576272
+results.test.per_class[4].recall: 0.9957081545064378
+results.test.per_class[4].support: 233
+results.test.per_class[5].precision: 0.9866071428571429
+results.test.per_class[5].recall: 0.9822222222222222
+results.test.per_class[5].support: 225
+results.test.per_class[6].precision: 0.9497716894977168
+results.test.per_class[6].recall: 0.9811320754716981
+results.test.per_class[6].support: 212
+results.test.per_class[7].precision: 1.0
+results.test.per_class[7].recall: 0.9964028776978417
+results.test.per_class[7].support: 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json
+====================================================================================================
+best_validation_macro_f1: 98.0954
+history[0].validation.accuracy: 99.1297
+history[0].validation.balanced_accuracy: 98.1369
+history[0].validation.macro_f1: 98.0954
+history[0].validation.weighted_f1: 99.132
+history[1].validation.accuracy: 99.1085
+history[1].validation.balanced_accuracy: 98.1823
+history[1].validation.macro_f1: 98.0942
+history[1].validation.weighted_f1: 99.111
+history[2].validation.accuracy: 98.8325
+history[2].validation.balanced_accuracy: 97.7078
+history[2].validation.macro_f1: 97.5568
+history[2].validation.weighted_f1: 98.8363
+history[3].validation.accuracy: 98.8113
+history[3].validation.balanced_accuracy: 97.7539
+history[3].validation.macro_f1: 97.5494
+history[3].validation.weighted_f1: 98.8147
+history[4].validation.accuracy: 98.7476
+history[4].validation.balanced_accuracy: 97.54
+history[4].validation.macro_f1: 97.4567
+history[4].validation.weighted_f1: 98.7491
+arguments.local_epochs: 1
+arguments.batch_size: 64
+arguments.learning_rate: 2e-06
+arguments.seed: 42
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_metrics.json
+====================================================================================================
+results.validation.accuracy: 98.8962
+results.validation.balanced_accuracy: 98.1797
+results.validation.macro_f1: 97.7757
+results.validation.weighted_f1: 98.902
+results.test.accuracy: 99.0097
+results.test.balanced_accuracy: 98.5142
+results.test.macro_f1: 98.0484
+results.test.weighted_f1: 99.0143
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_evaluation.json
+====================================================================================================
+metrics.accuracy: 99.0097
+metrics.balanced_accuracy: 98.5142
+metrics.macro_f1: 98.0484
+metrics.weighted_f1: 99.0143
+classification_report.0_NOR.precision: 0.9993317741396592
+classification_report.0_NOR.recall: 0.9930278884462151
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9617021276595744
+classification_report.1_F&S.recall: 0.9868995633187773
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9656652360515021
+classification_report.2_SD.recall: 0.9782608695652174
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9733333333333334
+classification_report.3_MY.recall: 0.9690265486725663
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9588477366255144
+classification_report.4_AP.recall: 1.0
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9910313901345291
+classification_report.5_BN.recall: 0.9822222222222222
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.958139534883721
+classification_report.6_UN.recall: 0.9716981132075472
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9900968783638321
+classification_report.macro avg.precision: 0.9760063916034791
+classification_report.macro avg.recall: 0.9851419006790683
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.990271818165175
+classification_report.weighted avg.recall: 0.9900968783638321
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_evaluation.json
+====================================================================================================
+metrics.accuracy: 98.8962
+metrics.balanced_accuracy: 98.1797
+metrics.macro_f1: 97.7757
+metrics.weighted_f1: 98.902
+classification_report.0_NOR.precision: 0.9986653319986654
+classification_report.0_NOR.recall: 0.9933620975771656
+classification_report.0_NOR.support: 3013.0
+classification_report.1_F&S.precision: 0.9478260869565217
+classification_report.1_F&S.recall: 0.9819819819819819
+classification_report.1_F&S.support: 222.0
+classification_report.2_SD.precision: 0.9620253164556962
+classification_report.2_SD.recall: 0.9785407725321889
+classification_report.2_SD.support: 233.0
+classification_report.3_MY.precision: 0.9736842105263158
+classification_report.3_MY.recall: 0.9694323144104804
+classification_report.3_MY.support: 229.0
+classification_report.4_AP.precision: 0.9409282700421941
+classification_report.4_AP.recall: 0.9955357142857143
+classification_report.4_AP.support: 224.0
+classification_report.5_BN.precision: 0.9915254237288136
+classification_report.5_BN.recall: 0.975
+classification_report.5_BN.support: 240.0
+classification_report.6_UN.precision: 0.9776785714285714
+classification_report.6_UN.recall: 0.9605263157894737
+classification_report.6_UN.support: 228.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 322.0
+classification_report.accuracy: 0.9889620038208449
+classification_report.macro avg.precision: 0.9740416513920973
+classification_report.macro avg.recall: 0.9817973995721256
+classification_report.macro avg.support: 4711.0
+classification_report.weighted avg.precision: 0.9892095877799005
+classification_report.weighted avg.recall: 0.9889620038208449
+classification_report.weighted avg.support: 4711.0
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json
+====================================================================================================
+best_validation_macro_f1: 97.7757
+history[0].validation.accuracy: 98.8962
+history[0].validation.balanced_accuracy: 98.1797
+history[0].validation.macro_f1: 97.7757
+history[0].validation.weighted_f1: 98.902
+history[1].validation.accuracy: 98.7264
+history[1].validation.balanced_accuracy: 98.1441
+history[1].validation.macro_f1: 97.5509
+history[1].validation.weighted_f1: 98.7351
+history[2].validation.accuracy: 98.6839
+history[2].validation.balanced_accuracy: 98.0347
+history[2].validation.macro_f1: 97.4407
+history[2].validation.weighted_f1: 98.6925
+history[3].validation.accuracy: 98.7052
+history[3].validation.balanced_accuracy: 98.0881
+history[3].validation.macro_f1: 97.472
+history[3].validation.weighted_f1: 98.7136
+history[4].validation.accuracy: 98.6203
+history[4].validation.balanced_accuracy: 98.0715
+history[4].validation.macro_f1: 97.3854
+history[4].validation.weighted_f1: 98.6306
+arguments.local_epochs: 1
+arguments.batch_size: 64
+arguments.learning_rate: 2e-06
+arguments.seed: 42
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json
+====================================================================================================
+checkpoint_metadata.validation_metrics.accuracy: 99.1085
+checkpoint_metadata.validation_metrics.balanced_accuracy: 98.086
+checkpoint_metadata.validation_metrics.macro_f1: 98.0418
+checkpoint_metadata.validation_metrics.weighted_f1: 99.1112
+checkpoint_metadata.arguments.local_epochs: 1
+checkpoint_metadata.arguments.batch_size: 64
+checkpoint_metadata.arguments.learning_rate: 2e-06
+checkpoint_metadata.arguments.seed: 42
+results.validation.accuracy: 99.1085
+results.validation.balanced_accuracy: 98.086
+results.validation.macro_f1: 98.0418
+results.validation.weighted_f1: 99.1112
+results.validation.per_class[0].precision: 0.99800796812749
+results.validation.per_class[0].recall: 0.997676734152008
+results.validation.per_class[0].support: 3013
+results.validation.per_class[1].precision: 0.9279661016949152
+results.validation.per_class[1].recall: 0.9864864864864865
+results.validation.per_class[1].support: 222
+results.validation.per_class[2].precision: 0.9910313901345291
+results.validation.per_class[2].recall: 0.9484978540772532
+results.validation.per_class[2].support: 233
+results.validation.per_class[3].precision: 0.9650655021834061
+results.validation.per_class[3].recall: 0.9650655021834061
+results.validation.per_class[3].support: 229
+results.validation.per_class[4].precision: 0.9823008849557522
+results.validation.per_class[4].recall: 0.9910714285714286
+results.validation.per_class[4].support: 224
+results.validation.per_class[5].precision: 0.9916317991631799
+results.validation.per_class[5].recall: 0.9875
+results.validation.per_class[5].support: 240
+results.validation.per_class[6].precision: 0.9866666666666667
+results.validation.per_class[6].recall: 0.9736842105263158
+results.validation.per_class[6].support: 228
+results.validation.per_class[7].precision: 1.0
+results.validation.per_class[7].recall: 0.9968944099378882
+results.validation.per_class[7].support: 322
+results.test.accuracy: 99.0958
+results.test.balanced_accuracy: 98.1965
+results.test.macro_f1: 98.0866
+results.test.weighted_f1: 99.0974
+results.test.per_class[0].precision: 0.9980053191489362
+results.test.per_class[0].recall: 0.9966799468791501
+results.test.per_class[0].support: 3012
+results.test.per_class[1].precision: 0.9694323144104804
+results.test.per_class[1].recall: 0.9694323144104804
+results.test.per_class[1].support: 229
+results.test.per_class[2].precision: 0.9615384615384616
+results.test.per_class[2].recall: 0.9782608695652174
+results.test.per_class[2].support: 230
+results.test.per_class[3].precision: 0.9863636363636363
+results.test.per_class[3].recall: 0.9601769911504425
+results.test.per_class[3].support: 226
+results.test.per_class[4].precision: 0.9829787234042553
+results.test.per_class[4].recall: 0.9914163090128756
+results.test.per_class[4].support: 233
+results.test.per_class[5].precision: 0.9866071428571429
+results.test.per_class[5].recall: 0.9822222222222222
+results.test.per_class[5].support: 225
+results.test.per_class[6].precision: 0.9541284403669725
+results.test.per_class[6].recall: 0.9811320754716981
+results.test.per_class[6].support: 212
+results.test.per_class[7].precision: 1.0
+results.test.per_class[7].recall: 0.9964028776978417
+results.test.per_class[7].support: 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json
+====================================================================================================
+best_validation_macro_f1: 98.0418
+history[0].validation.accuracy: 99.1085
+history[0].validation.balanced_accuracy: 98.086
+history[0].validation.macro_f1: 98.0418
+history[0].validation.weighted_f1: 99.1112
+history[1].validation.accuracy: 99.0023
+history[1].validation.balanced_accuracy: 97.9105
+history[1].validation.macro_f1: 97.8462
+history[1].validation.weighted_f1: 99.0055
+history[2].validation.accuracy: 98.875
+history[2].validation.balanced_accuracy: 97.8665
+history[2].validation.macro_f1: 97.6892
+history[2].validation.weighted_f1: 98.8785
+history[3].validation.accuracy: 98.7901
+history[3].validation.balanced_accuracy: 97.4835
+history[3].validation.macro_f1: 97.5048
+history[3].validation.weighted_f1: 98.7906
+history[4].validation.accuracy: 98.8113
+history[4].validation.balanced_accuracy: 97.6024
+history[4].validation.macro_f1: 97.6177
+history[4].validation.weighted_f1: 98.8115
+arguments.local_epochs: 1
+arguments.batch_size: 64
+arguments.learning_rate: 2e-06
+arguments.seed: 42
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/history.json
+====================================================================================================
+[0].validation_accuracy: 89.39
+[0].validation_balanced_accuracy: 84.83
+[0].validation_macro_f1: 81.46
+[0].epoch_seconds: 19.68
+[1].validation_accuracy: 90.45
+[1].validation_balanced_accuracy: 86.93
+[1].validation_macro_f1: 83.73
+[1].epoch_seconds: 14.8
+[2].validation_accuracy: 95.27
+[2].validation_balanced_accuracy: 93.95
+[2].validation_macro_f1: 91.74
+[2].epoch_seconds: 14.83
+[3].validation_accuracy: 96.03
+[3].validation_balanced_accuracy: 95.82
+[3].validation_macro_f1: 93.3
+[3].epoch_seconds: 14.83
+[4].validation_accuracy: 97.67
+[4].validation_balanced_accuracy: 96.89
+[4].validation_macro_f1: 95.78
+[4].epoch_seconds: 14.81
+[5].validation_accuracy: 97.96
+[5].validation_balanced_accuracy: 97.39
+[5].validation_macro_f1: 96.37
+[5].epoch_seconds: 14.84
+[6].validation_accuracy: 98.07
+[6].validation_balanced_accuracy: 97.46
+[6].validation_macro_f1: 96.47
+[6].epoch_seconds: 14.8
+[7].validation_accuracy: 98.0
+[7].validation_balanced_accuracy: 97.38
+[7].validation_macro_f1: 96.3
+[7].epoch_seconds: 14.82
+[8].validation_accuracy: 98.9
+[8].validation_balanced_accuracy: 97.98
+[8].validation_macro_f1: 97.72
+[8].epoch_seconds: 14.82
+[9].validation_accuracy: 98.24
+[9].validation_balanced_accuracy: 97.64
+[9].validation_macro_f1: 96.71
+[9].epoch_seconds: 14.81
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/metrics.json
+====================================================================================================
+seed: 42
+training.best_epoch: 9
+training.best_validation_macro_f1: 97.72
+training.total_seconds: 156.51
+test.accuracy: 99.03
+test.balanced_accuracy: 98.42
+test.macro_f1: 98.04
+test.weighted_f1: 99.04
+classification_report.0_NOR.precision: 0.998998998998999
+classification_report.0_NOR.recall: 0.9940239043824701
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9656652360515021
+classification_report.1_F&S.recall: 0.982532751091703
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9694323144104804
+classification_report.2_SD.recall: 0.9652173913043478
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9690265486725663
+classification_report.3_MY.recall: 0.9690265486725663
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9748953974895398
+classification_report.4_AP.recall: 1.0
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9955156950672646
+classification_report.5_BN.recall: 0.9866666666666667
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9409090909090909
+classification_report.6_UN.recall: 0.9764150943396226
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9903121636167922
+classification_report.macro avg.precision: 0.9768054101999304
+classification_report.macro avg.recall: 0.9842352945571721
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9904641857121881
+classification_report.weighted avg.recall: 0.9903121636167922
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_evaluation.json
+====================================================================================================
+metrics.accuracy: 99.0312
+metrics.balanced_accuracy: 98.4235
+metrics.macro_f1: 98.0446
+metrics.weighted_f1: 99.0356
+classification_report.0_NOR.precision: 0.998998998998999
+classification_report.0_NOR.recall: 0.9940239043824701
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9656652360515021
+classification_report.1_F&S.recall: 0.982532751091703
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9694323144104804
+classification_report.2_SD.recall: 0.9652173913043478
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9690265486725663
+classification_report.3_MY.recall: 0.9690265486725663
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9748953974895398
+classification_report.4_AP.recall: 1.0
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9955156950672646
+classification_report.5_BN.recall: 0.9866666666666667
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9409090909090909
+classification_report.6_UN.recall: 0.9764150943396226
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9903121636167922
+classification_report.macro avg.precision: 0.9768054101999304
+classification_report.macro avg.recall: 0.9842352945571721
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9904641857121881
+classification_report.weighted avg.recall: 0.9903121636167922
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_evaluation.json
+====================================================================================================
+metrics.accuracy: 98.8962
+metrics.balanced_accuracy: 97.9826
+metrics.macro_f1: 97.7217
+metrics.weighted_f1: 98.9
+classification_report.0_NOR.precision: 0.998001998001998
+classification_report.0_NOR.recall: 0.9946896780617325
+classification_report.0_NOR.support: 3013.0
+classification_report.1_F&S.precision: 0.9437229437229437
+classification_report.1_F&S.recall: 0.9819819819819819
+classification_report.1_F&S.support: 222.0
+classification_report.2_SD.precision: 0.974025974025974
+classification_report.2_SD.recall: 0.9656652360515021
+classification_report.2_SD.support: 233.0
+classification_report.3_MY.precision: 0.9692982456140351
+classification_report.3_MY.recall: 0.9650655021834061
+classification_report.3_MY.support: 229.0
+classification_report.4_AP.precision: 0.9568965517241379
+classification_report.4_AP.recall: 0.9910714285714286
+classification_report.4_AP.support: 224.0
+classification_report.5_BN.precision: 0.9914893617021276
+classification_report.5_BN.recall: 0.9708333333333333
+classification_report.5_BN.support: 240.0
+classification_report.6_UN.precision: 0.9650655021834061
+classification_report.6_UN.recall: 0.9692982456140351
+classification_report.6_UN.support: 228.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 322.0
+classification_report.accuracy: 0.9889620038208449
+classification_report.macro avg.precision: 0.9748125721218278
+classification_report.macro avg.recall: 0.9798256757246775
+classification_report.macro avg.support: 4711.0
+classification_report.weighted avg.precision: 0.9891193106713465
+classification_report.weighted avg.recall: 0.9889620038208449
+classification_report.weighted avg.support: 4711.0
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/history.json
+====================================================================================================
+[0].validation_accuracy: 90.64
+[0].validation_balanced_accuracy: 86.11
+[0].validation_macro_f1: 82.98
+[0].epoch_seconds: 19.55
+[1].validation_accuracy: 88.66
+[1].validation_balanced_accuracy: 84.63
+[1].validation_macro_f1: 80.53
+[1].epoch_seconds: 14.57
+[2].validation_accuracy: 97.94
+[2].validation_balanced_accuracy: 95.14
+[2].validation_macro_f1: 95.17
+[2].epoch_seconds: 14.59
+[3].validation_accuracy: 98.3
+[3].validation_balanced_accuracy: 96.39
+[3].validation_macro_f1: 96.22
+[3].epoch_seconds: 14.6
+[4].validation_accuracy: 98.79
+[4].validation_balanced_accuracy: 97.36
+[4].validation_macro_f1: 97.3
+[4].epoch_seconds: 14.64
+[5].validation_accuracy: 98.47
+[5].validation_balanced_accuracy: 97.39
+[5].validation_macro_f1: 96.85
+[5].epoch_seconds: 14.64
+[6].validation_accuracy: 98.94
+[6].validation_balanced_accuracy: 97.83
+[6].validation_macro_f1: 97.73
+[6].epoch_seconds: 14.58
+[7].validation_accuracy: 98.58
+[7].validation_balanced_accuracy: 97.87
+[7].validation_macro_f1: 97.17
+[7].epoch_seconds: 14.6
+[8].validation_accuracy: 99.19
+[8].validation_balanced_accuracy: 98.25
+[8].validation_macro_f1: 98.18
+[8].epoch_seconds: 14.61
+[9].validation_accuracy: 99.04
+[9].validation_balanced_accuracy: 97.76
+[9].validation_macro_f1: 97.8
+[9].epoch_seconds: 14.62
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/history_final.json
+====================================================================================================
+[0].validation_accuracy: 90.64
+[0].validation_balanced_accuracy: 86.11
+[0].validation_macro_f1: 82.98
+[0].epoch_seconds: 19.55
+[1].validation_accuracy: 88.66
+[1].validation_balanced_accuracy: 84.63
+[1].validation_macro_f1: 80.53
+[1].epoch_seconds: 14.57
+[2].validation_accuracy: 97.94
+[2].validation_balanced_accuracy: 95.14
+[2].validation_macro_f1: 95.17
+[2].epoch_seconds: 14.59
+[3].validation_accuracy: 98.3
+[3].validation_balanced_accuracy: 96.39
+[3].validation_macro_f1: 96.22
+[3].epoch_seconds: 14.6
+[4].validation_accuracy: 98.79
+[4].validation_balanced_accuracy: 97.36
+[4].validation_macro_f1: 97.3
+[4].epoch_seconds: 14.64
+[5].validation_accuracy: 98.47
+[5].validation_balanced_accuracy: 97.39
+[5].validation_macro_f1: 96.85
+[5].epoch_seconds: 14.64
+[6].validation_accuracy: 98.94
+[6].validation_balanced_accuracy: 97.83
+[6].validation_macro_f1: 97.73
+[6].epoch_seconds: 14.58
+[7].validation_accuracy: 98.58
+[7].validation_balanced_accuracy: 97.87
+[7].validation_macro_f1: 97.17
+[7].epoch_seconds: 14.6
+[8].validation_accuracy: 99.19
+[8].validation_balanced_accuracy: 98.25
+[8].validation_macro_f1: 98.18
+[8].epoch_seconds: 14.61
+[9].validation_accuracy: 99.04
+[9].validation_balanced_accuracy: 97.76
+[9].validation_macro_f1: 97.8
+[9].epoch_seconds: 14.62
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/metrics.json
+====================================================================================================
+seed: 42
+training.best_epoch: 9
+training.best_validation_macro_f1: 98.18
+training.total_seconds: 154.35
+test.accuracy: 99.01
+test.balanced_accuracy: 98.12
+test.macro_f1: 97.94
+test.weighted_f1: 99.01
+classification_report.0_NOR.precision: 0.9980033277870216
+classification_report.0_NOR.recall: 0.9956839309428951
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9694323144104804
+classification_report.1_F&S.recall: 0.9694323144104804
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9493670886075949
+classification_report.2_SD.recall: 0.9782608695652174
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9862385321100917
+classification_report.3_MY.recall: 0.9513274336283186
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9746835443037974
+classification_report.4_AP.recall: 0.9914163090128756
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9954954954954955
+classification_report.5_BN.recall: 0.9822222222222222
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9497716894977168
+classification_report.6_UN.recall: 0.9811320754716981
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9900968783638321
+classification_report.macro avg.precision: 0.9778739990265248
+classification_report.macro avg.recall: 0.9811843944067133
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9902410575702743
+classification_report.weighted avg.recall: 0.9900968783638321
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/metrics_final.json
+====================================================================================================
+seed: 42
+training.best_epoch: 9
+training.best_validation_macro_f1: 98.18
+training.total_seconds: 154.35
+test.accuracy: 99.01
+test.balanced_accuracy: 98.12
+test.macro_f1: 97.94
+test.weighted_f1: 99.01
+classification_report.0_NOR.precision: 0.9980033277870216
+classification_report.0_NOR.recall: 0.9956839309428951
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9694323144104804
+classification_report.1_F&S.recall: 0.9694323144104804
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9493670886075949
+classification_report.2_SD.recall: 0.9782608695652174
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9862385321100917
+classification_report.3_MY.recall: 0.9513274336283186
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9746835443037974
+classification_report.4_AP.recall: 0.9914163090128756
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9954954954954955
+classification_report.5_BN.recall: 0.9822222222222222
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9497716894977168
+classification_report.6_UN.recall: 0.9811320754716981
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9900968783638321
+classification_report.macro avg.precision: 0.9778739990265248
+classification_report.macro avg.recall: 0.9811843944067133
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9902410575702743
+classification_report.weighted avg.recall: 0.9900968783638321
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/split_summary.json
+====================================================================================================
+seed: 42
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/test_evaluation.json
+====================================================================================================
+metrics.accuracy: 99.0097
+metrics.balanced_accuracy: 98.1184
+metrics.macro_f1: 97.9416
+metrics.weighted_f1: 99.0125
+classification_report.0_NOR.precision: 0.9980033277870216
+classification_report.0_NOR.recall: 0.9956839309428951
+classification_report.0_NOR.support: 3012.0
+classification_report.1_F&S.precision: 0.9694323144104804
+classification_report.1_F&S.recall: 0.9694323144104804
+classification_report.1_F&S.support: 229.0
+classification_report.2_SD.precision: 0.9493670886075949
+classification_report.2_SD.recall: 0.9782608695652174
+classification_report.2_SD.support: 230.0
+classification_report.3_MY.precision: 0.9862385321100917
+classification_report.3_MY.recall: 0.9513274336283186
+classification_report.3_MY.support: 226.0
+classification_report.4_AP.precision: 0.9746835443037974
+classification_report.4_AP.recall: 0.9914163090128756
+classification_report.4_AP.support: 233.0
+classification_report.5_BN.precision: 0.9954954954954955
+classification_report.5_BN.recall: 0.9822222222222222
+classification_report.5_BN.support: 225.0
+classification_report.6_UN.precision: 0.9497716894977168
+classification_report.6_UN.recall: 0.9811320754716981
+classification_report.6_UN.support: 212.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 1.0
+classification_report.7_IM.support: 278.0
+classification_report.accuracy: 0.9900968783638321
+classification_report.macro avg.precision: 0.9778739990265248
+classification_report.macro avg.recall: 0.9811843944067133
+classification_report.macro avg.support: 4645.0
+classification_report.weighted avg.precision: 0.9902410575702743
+classification_report.weighted avg.recall: 0.9900968783638321
+classification_report.weighted avg.support: 4645.0
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/validation_evaluation.json
+====================================================================================================
+metrics.accuracy: 99.1934
+metrics.balanced_accuracy: 98.2548
+metrics.macro_f1: 98.1839
+metrics.weighted_f1: 99.1952
+classification_report.0_NOR.precision: 0.9986715376951179
+classification_report.0_NOR.recall: 0.9980086292731497
+classification_report.0_NOR.support: 3013.0
+classification_report.1_F&S.precision: 0.9439655172413793
+classification_report.1_F&S.recall: 0.9864864864864865
+classification_report.1_F&S.support: 222.0
+classification_report.2_SD.precision: 0.9911504424778761
+classification_report.2_SD.recall: 0.9613733905579399
+classification_report.2_SD.support: 233.0
+classification_report.3_MY.precision: 0.9692982456140351
+classification_report.3_MY.recall: 0.9650655021834061
+classification_report.3_MY.support: 229.0
+classification_report.4_AP.precision: 0.9695652173913043
+classification_report.4_AP.recall: 0.9955357142857143
+classification_report.4_AP.support: 224.0
+classification_report.5_BN.precision: 0.9915966386554622
+classification_report.5_BN.recall: 0.9833333333333333
+classification_report.5_BN.support: 240.0
+classification_report.6_UN.precision: 0.9866666666666667
+classification_report.6_UN.recall: 0.9736842105263158
+classification_report.6_UN.support: 228.0
+classification_report.7_IM.precision: 1.0
+classification_report.7_IM.recall: 0.9968944099378882
+classification_report.7_IM.support: 322.0
+classification_report.accuracy: 0.9919337720229251
+classification_report.macro avg.precision: 0.9813642832177303
+classification_report.macro avg.recall: 0.9825477095730293
+classification_report.macro avg.support: 4711.0
+classification_report.weighted avg.precision: 0.9920591893905537
+classification_report.weighted avg.recall: 0.9919337720229251
+classification_report.weighted avg.support: 4711.0
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/history.json
+====================================================================================================
+[0].validation_accuracy: 68.9422
+[0].validation_balanced_accuracy: 49.0046
+[0].validation_macro_f1: 37.3863
+[0].validation_weighted_f1: 74.4658
+[0].epoch_seconds: 148.9
+[1].validation_accuracy: 55.201
+[1].validation_balanced_accuracy: 51.4574
+[1].validation_macro_f1: 35.6965
+[1].validation_weighted_f1: 63.7756
+[1].epoch_seconds: 113.51
+[2].validation_accuracy: 84.3038
+[2].validation_balanced_accuracy: 76.2254
+[2].validation_macro_f1: 57.7556
+[2].validation_weighted_f1: 86.7674
+[2].epoch_seconds: 113.73
+[3].validation_accuracy: 84.7652
+[3].validation_balanced_accuracy: 77.2395
+[3].validation_macro_f1: 64.738
+[3].validation_weighted_f1: 87.2381
+[3].epoch_seconds: 113.93
+[4].validation_accuracy: 88.2349
+[4].validation_balanced_accuracy: 79.1006
+[4].validation_macro_f1: 65.3443
+[4].validation_weighted_f1: 90.0666
+[4].epoch_seconds: 113.85
+[5].validation_accuracy: 89.6368
+[5].validation_balanced_accuracy: 78.933
+[5].validation_macro_f1: 68.9652
+[5].validation_weighted_f1: 90.7061
+[5].epoch_seconds: 114.03
+[6].validation_accuracy: 87.9284
+[6].validation_balanced_accuracy: 81.8401
+[6].validation_macro_f1: 67.8492
+[6].validation_weighted_f1: 89.7028
+[6].epoch_seconds: 113.6
+[7].validation_accuracy: 86.7202
+[7].validation_balanced_accuracy: 80.807
+[7].validation_macro_f1: 62.5754
+[7].validation_weighted_f1: 88.9158
+[7].epoch_seconds: 114.18
+[8].validation_accuracy: 87.5163
+[8].validation_balanced_accuracy: 80.9514
+[8].validation_macro_f1: 65.7154
+[8].validation_weighted_f1: 89.2839
+[8].epoch_seconds: 114.76
+[9].validation_accuracy: 90.1793
+[9].validation_balanced_accuracy: 78.8009
+[9].validation_macro_f1: 67.5341
+[9].validation_weighted_f1: 91.4049
+[9].epoch_seconds: 117.98
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/metrics.json
+====================================================================================================
+seed: 42
+training.best_epoch: 6
+training.best_validation_macro_f1: 68.9652
+training.total_seconds: 1209.57
+training.batch_size: 128
+training.weight_decay: 0.0001
+results.validation.accuracy: 89.6368
+results.validation.balanced_accuracy: 78.933
+results.validation.macro_f1: 68.9652
+results.validation.weighted_f1: 90.7061
+results.validation.classification_report.Black Germ.precision: 0.6680161943319838
+results.validation.classification_report.Black Germ.recall: 0.8208955223880597
+results.validation.classification_report.Black Germ.support: 201.0
+results.validation.classification_report.Broken.precision: 0.988698569662723
+results.validation.classification_report.Broken.recall: 0.9443413729128015
+results.validation.classification_report.Broken.support: 5929.0
+results.validation.classification_report.Fusarium.precision: 0.5737704918032787
+results.validation.classification_report.Fusarium.recall: 0.9459459459459459
+results.validation.classification_report.Fusarium.support: 185.0
+results.validation.classification_report.Insect.precision: 0.518546845124283
+results.validation.classification_report.Insect.recall: 0.8709055876685935
+results.validation.classification_report.Insect.support: 1557.0
+results.validation.classification_report.Moldy.precision: 0.4097222222222222
+results.validation.classification_report.Moldy.recall: 0.5880398671096345
+results.validation.classification_report.Moldy.support: 301.0
+results.validation.classification_report.Sound.precision: 0.9832945053696233
+results.validation.classification_report.Sound.recall: 0.9033251552957143
+results.validation.classification_report.Sound.support: 19157.0
+results.validation.classification_report.Spotted.precision: 0.44567219152854515
+results.validation.classification_report.Spotted.recall: 0.5475113122171946
+results.validation.classification_report.Spotted.support: 442.0
+results.validation.classification_report.Sprouted.precision: 0.43451776649746193
+results.validation.classification_report.Sprouted.recall: 0.6936790923824959
+results.validation.classification_report.Sprouted.support: 617.0
+results.validation.classification_report.accuracy: 0.8963683116700131
+results.validation.classification_report.macro avg.precision: 0.6277798483175151
+results.validation.classification_report.macro avg.recall: 0.7893304819900551
+results.validation.classification_report.macro avg.support: 28389.0
+results.validation.classification_report.weighted avg.precision: 0.9276541566195513
+results.validation.classification_report.weighted avg.recall: 0.8963683116700131
+results.validation.classification_report.weighted avg.support: 28389.0
+results.test.accuracy: 92.2408
+results.test.balanced_accuracy: 85.5208
+results.test.macro_f1: 85.2522
+results.test.weighted_f1: 92.2376
+results.test.classification_report.Black Germ.precision: 0.8792710706150342
+results.test.classification_report.Black Germ.recall: 0.7942386831275721
+results.test.classification_report.Black Germ.support: 486.0
+results.test.classification_report.Broken.precision: 0.997037484885127
+results.test.classification_report.Broken.recall: 0.9840085923981144
+results.test.classification_report.Broken.support: 16759.0
+results.test.classification_report.Fusarium.precision: 0.7946859903381642
+results.test.classification_report.Fusarium.recall: 0.9536231884057971
+results.test.classification_report.Fusarium.support: 1725.0
+results.test.classification_report.Insect.precision: 0.7759822560202788
+results.test.classification_report.Insect.recall: 0.8592982456140351
+results.test.classification_report.Insect.support: 2850.0
+results.test.classification_report.Moldy.precision: 0.7903639159405433
+results.test.classification_report.Moldy.recall: 0.7021857923497268
+results.test.classification_report.Moldy.support: 2196.0
+results.test.classification_report.Sound.precision: 0.9382465629930133
+results.test.classification_report.Sound.recall: 0.9303832830483852
+results.test.classification_report.Sound.support: 8949.0
+results.test.classification_report.Spotted.precision: 0.8110907982937233
+results.test.classification_report.Spotted.recall: 0.7285166940339354
+results.test.classification_report.Spotted.support: 1827.0
+results.test.classification_report.Sprouted.precision: 0.845873786407767
+results.test.classification_report.Sprouted.recall: 0.8894087622288388
+results.test.classification_report.Sprouted.support: 2351.0
+results.test.classification_report.accuracy: 0.9224079907384971
+results.test.classification_report.macro avg.precision: 0.8540689831867063
+results.test.classification_report.macro avg.recall: 0.8552079051508006
+results.test.classification_report.macro avg.support: 37143.0
+results.test.classification_report.weighted avg.precision: 0.9240389716624149
+results.test.classification_report.weighted avg.recall: 0.9224079907384971
+results.test.classification_report.weighted avg.support: 37143.0
+results.test_07.accuracy: 83.0791
+results.test_07.balanced_accuracy: 74.5803
+results.test_07.macro_f1: 70.8532
+results.test_07.weighted_f1: 84.5756
+results.test_07.classification_report.Black Germ.precision: 0.7377777777777778
+results.test_07.classification_report.Black Germ.recall: 0.6916666666666667
+results.test_07.classification_report.Black Germ.support: 240.0
+results.test_07.classification_report.Broken.precision: 0.9946164199192463
+results.test_07.classification_report.Broken.recall: 0.910223073764883
+results.test_07.classification_report.Broken.support: 7307.0
+results.test_07.classification_report.Fusarium.precision: 0.8204444444444444
+results.test_07.classification_report.Fusarium.recall: 0.8978599221789884
+results.test_07.classification_report.Fusarium.support: 1028.0
+results.test_07.classification_report.Insect.precision: 0.22626079054975012
+results.test_07.classification_report.Insect.recall: 0.6509803921568628
+results.test_07.classification_report.Insect.support: 765.0
+results.test_07.classification_report.Moldy.precision: 0.45023696682464454
+results.test_07.classification_report.Moldy.recall: 0.6690140845070423
+results.test_07.classification_report.Moldy.support: 710.0
+results.test_07.classification_report.Sound.precision: 0.9019642077695329
+results.test_07.classification_report.Sound.recall: 0.8750741085796562
+results.test_07.classification_report.Sound.support: 11807.0
+results.test_07.classification_report.Spotted.precision: 0.6732348111658456
+results.test_07.classification_report.Spotted.recall: 0.5766526019690577
+results.test_07.classification_report.Spotted.support: 1422.0
+results.test_07.classification_report.Sprouted.precision: 0.8451856513530522
+results.test_07.classification_report.Sprouted.recall: 0.6949547218628719
+results.test_07.classification_report.Sprouted.support: 3865.0
+results.test_07.classification_report.accuracy: 0.8307913351016799
+results.test_07.classification_report.macro avg.precision: 0.7062151337255367
+results.test_07.classification_report.macro avg.recall: 0.7458031964607537
+results.test_07.classification_report.macro avg.support: 27144.0
+results.test_07.classification_report.weighted avg.precision: 0.8714403673818818
+results.test_07.classification_report.weighted avg.recall: 0.8307913351016799
+results.test_07.classification_report.weighted avg.support: 27144.0
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/history.json
+====================================================================================================
+[0].validation_accuracy: 83.7965
+[0].validation_balanced_accuracy: 38.279
+[0].validation_macro_f1: 39.69
+[0].validation_weighted_f1: 81.5073
+[0].epoch_seconds: 140.78
+[1].validation_accuracy: 81.1124
+[1].validation_balanced_accuracy: 44.9833
+[1].validation_macro_f1: 43.4505
+[1].validation_weighted_f1: 81.1592
+[1].epoch_seconds: 111.51
+[2].validation_accuracy: 91.7362
+[2].validation_balanced_accuracy: 74.9177
+[2].validation_macro_f1: 67.6006
+[2].validation_weighted_f1: 92.2078
+[2].epoch_seconds: 111.49
+[3].validation_accuracy: 93.0748
+[3].validation_balanced_accuracy: 76.4746
+[3].validation_macro_f1: 73.9677
+[3].validation_weighted_f1: 93.3309
+[3].epoch_seconds: 111.29
+[4].validation_accuracy: 93.9519
+[4].validation_balanced_accuracy: 76.8699
+[4].validation_macro_f1: 73.0083
+[4].validation_weighted_f1: 94.2254
+[4].epoch_seconds: 111.86
+[5].validation_accuracy: 93.5433
+[5].validation_balanced_accuracy: 79.2635
+[5].validation_macro_f1: 75.226
+[5].validation_weighted_f1: 93.7968
+[5].epoch_seconds: 113.39
+[6].validation_accuracy: 93.8709
+[6].validation_balanced_accuracy: 80.2336
+[6].validation_macro_f1: 74.6327
+[6].validation_weighted_f1: 94.2002
+[6].epoch_seconds: 115.04
+[7].validation_accuracy: 93.0818
+[7].validation_balanced_accuracy: 80.6644
+[7].validation_macro_f1: 71.645
+[7].validation_weighted_f1: 93.6752
+[7].epoch_seconds: 111.15
+[8].validation_accuracy: 93.8075
+[8].validation_balanced_accuracy: 79.1401
+[8].validation_macro_f1: 74.3315
+[8].validation_weighted_f1: 94.0483
+[8].epoch_seconds: 111.34
+[9].validation_accuracy: 93.5574
+[9].validation_balanced_accuracy: 78.0734
+[9].validation_macro_f1: 73.1891
+[9].validation_weighted_f1: 93.872
+[9].epoch_seconds: 111.5
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/metrics.json
+====================================================================================================
+seed: 42
+training.best_epoch: 6
+training.best_validation_macro_f1: 75.226
+training.total_seconds: 1180.51
+training.batch_size: 128
+training.weight_decay: 0.0001
+results.validation.accuracy: 93.5433
+results.validation.balanced_accuracy: 79.2635
+results.validation.macro_f1: 75.226
+results.validation.weighted_f1: 93.7968
+results.validation.classification_report.Black Germ.precision: 0.7729468599033816
+results.validation.classification_report.Black Germ.recall: 0.7960199004975125
+results.validation.classification_report.Black Germ.support: 201.0
+results.validation.classification_report.Broken.precision: 0.9850642584230636
+results.validation.classification_report.Broken.recall: 0.9566537358745151
+results.validation.classification_report.Broken.support: 5929.0
+results.validation.classification_report.Fusarium.precision: 0.6706349206349206
+results.validation.classification_report.Fusarium.recall: 0.9135135135135135
+results.validation.classification_report.Fusarium.support: 185.0
+results.validation.classification_report.Insect.precision: 0.7380422691879867
+results.validation.classification_report.Insect.recall: 0.8522800256904303
+results.validation.classification_report.Insect.support: 1557.0
+results.validation.classification_report.Moldy.precision: 0.56
+results.validation.classification_report.Moldy.recall: 0.6046511627906976
+results.validation.classification_report.Moldy.support: 301.0
+results.validation.classification_report.Sound.precision: 0.9781612868861191
+results.validation.classification_report.Sound.recall: 0.9586052095839641
+results.validation.classification_report.Sound.support: 19157.0
+results.validation.classification_report.Spotted.precision: 0.5172413793103449
+results.validation.classification_report.Spotted.recall: 0.5429864253393665
+results.validation.classification_report.Spotted.support: 442.0
+results.validation.classification_report.Sprouted.precision: 0.5450061652281134
+results.validation.classification_report.Sprouted.recall: 0.7163695299837926
+results.validation.classification_report.Sprouted.support: 617.0
+results.validation.classification_report.accuracy: 0.9354327380323365
+results.validation.classification_report.macro avg.precision: 0.7208871424467412
+results.validation.classification_report.macro avg.recall: 0.792634937909224
+results.validation.classification_report.macro avg.support: 28389.0
+results.validation.classification_report.weighted avg.precision: 0.9419526171035396
+results.validation.classification_report.weighted avg.recall: 0.9354327380323365
+results.validation.classification_report.weighted avg.support: 28389.0
+results.test.accuracy: 93.4658
+results.test.balanced_accuracy: 85.802
+results.test.macro_f1: 86.759
+results.test.weighted_f1: 93.3379
+results.test.classification_report.Black Germ.precision: 0.8674157303370786
+results.test.classification_report.Black Germ.recall: 0.7942386831275721
+results.test.classification_report.Black Germ.support: 486.0
+results.test.classification_report.Broken.precision: 0.9955619527407941
+results.test.classification_report.Broken.recall: 0.9905125604152992
+results.test.classification_report.Broken.support: 16759.0
+results.test.classification_report.Fusarium.precision: 0.8414760914760915
+results.test.classification_report.Fusarium.recall: 0.9385507246376812
+results.test.classification_report.Fusarium.support: 1725.0
+results.test.classification_report.Insect.precision: 0.8990825688073395
+results.test.classification_report.Insect.recall: 0.8252631578947368
+results.test.classification_report.Insect.support: 2850.0
+results.test.classification_report.Moldy.precision: 0.8302679978980557
+results.test.classification_report.Moldy.recall: 0.7194899817850637
+results.test.classification_report.Moldy.support: 2196.0
+results.test.classification_report.Sound.precision: 0.9164835164835164
+results.test.classification_report.Sound.recall: 0.9785450888367415
+results.test.classification_report.Sound.support: 8949.0
+results.test.classification_report.Spotted.precision: 0.845859872611465
+results.test.classification_report.Spotted.recall: 0.7268746579091406
+results.test.classification_report.Spotted.support: 1827.0
+results.test.classification_report.Sprouted.precision: 0.8526058631921825
+results.test.classification_report.Sprouted.recall: 0.8906848149723522
+results.test.classification_report.Sprouted.support: 2351.0
+results.test.classification_report.accuracy: 0.9346579436232938
+results.test.classification_report.macro avg.precision: 0.8810941991933154
+results.test.classification_report.macro avg.recall: 0.8580199586973234
+results.test.classification_report.macro avg.support: 37143.0
+results.test.classification_report.weighted avg.precision: 0.934088799338908
+results.test.classification_report.weighted avg.recall: 0.9346579436232938
+results.test.classification_report.weighted avg.support: 37143.0
+results.test_07.accuracy: 86.4022
+results.test_07.balanced_accuracy: 75.4806
+results.test_07.macro_f1: 74.303
+results.test_07.weighted_f1: 86.6314
+results.test_07.classification_report.Black Germ.precision: 0.7629310344827587
+results.test_07.classification_report.Black Germ.recall: 0.7375
+results.test_07.classification_report.Black Germ.support: 240.0
+results.test_07.classification_report.Broken.precision: 0.9922491956712489
+results.test_07.classification_report.Broken.recall: 0.9285616532092514
+results.test_07.classification_report.Broken.support: 7307.0
+results.test_07.classification_report.Fusarium.precision: 0.8865461847389559
+results.test_07.classification_report.Fusarium.recall: 0.8589494163424124
+results.test_07.classification_report.Fusarium.support: 1028.0
+results.test_07.classification_report.Insect.precision: 0.38203125
+results.test_07.classification_report.Insect.recall: 0.6392156862745098
+results.test_07.classification_report.Insect.support: 765.0
+results.test_07.classification_report.Moldy.precision: 0.4954314720812183
+results.test_07.classification_report.Moldy.recall: 0.6873239436619718
+results.test_07.classification_report.Moldy.support: 710.0
+results.test_07.classification_report.Sound.precision: 0.8830737607716025
+results.test_07.classification_report.Sound.recall: 0.9460489540103328
+results.test_07.classification_report.Sound.support: 11807.0
+results.test_07.classification_report.Spotted.precision: 0.7254901960784313
+results.test_07.classification_report.Spotted.recall: 0.5464135021097046
+results.test_07.classification_report.Spotted.support: 1422.0
+results.test_07.classification_report.Sprouted.precision: 0.867765923052053
+results.test_07.classification_report.Sprouted.recall: 0.6944372574385511
+results.test_07.classification_report.Sprouted.support: 3865.0
+results.test_07.classification_report.accuracy: 0.8640215148835838
+results.test_07.classification_report.macro avg.precision: 0.7494398771095336
+results.test_07.classification_report.macro avg.recall: 0.7548063016308417
+results.test_07.classification_report.macro avg.support: 27144.0
+results.test_07.classification_report.weighted avg.precision: 0.8768369545842548
+results.test_07.classification_report.weighted avg.recall: 0.8640215148835838
+results.test_07.classification_report.weighted avg.support: 27144.0
+
+====================================================================================================
+experiments/results/provenance/wheat_grouped_split_v2/class_allocation.csv
+====================================================================================================
+label | total_images | total_groups | validation_images | validation_groups | validation_image_fraction | validation_group_fraction
+Black Germ | 2005 | 213 | 201 | 32 | 0.100249 | 0.150235
+Broken | 59261 | 187 | 5929 | 28 | 0.100049 | 0.149733
+Fusarium | 1932 | 96 | 185 | 14 | 0.095756 | 0.145833
+Insect | 15569 | 276 | 1557 | 41 | 0.100006 | 0.148551
+Moldy | 3006 | 240 | 301 | 36 | 0.100133 | 0.15
+Sound | 193090 | 230 | 19157 | 34 | 0.099213 | 0.147826
+Spotted | 4423 | 223 | 442 | 33 | 0.099932 | 0.147982
+Sprouted | 6172 | 236 | 617 | 35 | 0.099968 | 0.148305
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_summary.csv
+====================================================================================================
+experiment | split | num_images | accuracy | balanced_accuracy | macro_f1 | weighted_f1 | evaluation_seconds
+rice_ddp_resnet18 | validation | 4711 | 99.0448 | 98.0709 | 97.9592 | 99.0482 | 4.42
+rice_ddp_resnet18 | test | 4645 | 98.9236 | 97.9743 | 97.7568 | 98.9265 | 4.48
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/evaluation/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2998 | 1 | 3 | 2 | 3 | 2 | 3 | 0
+1_F&S | 0 | 222 | 4 | 1 | 0 | 0 | 2 | 0
+2_SD | 1 | 2 | 225 | 1 | 0 | 0 | 1 | 0
+3_MY | 1 | 3 | 1 | 216 | 0 | 2 | 3 | 0
+4_AP | 3 | 0 | 1 | 1 | 228 | 0 | 0 | 0
+5_BN | 0 | 0 | 0 | 0 | 1 | 222 | 2 | 0
+6_UN | 1 | 2 | 1 | 0 | 0 | 0 | 208 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 276
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/evaluation/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9980026631158455 | 0.9953519256308101 | 0.9966755319148937 | 3012
+1_F&S | 0.9652173913043478 | 0.9694323144104804 | 0.9673202614379085 | 229
+2_SD | 0.9574468085106383 | 0.9782608695652174 | 0.967741935483871 | 230
+3_MY | 0.9773755656108597 | 0.9557522123893806 | 0.9664429530201343 | 226
+4_AP | 0.9827586206896551 | 0.9785407725321889 | 0.9806451612903225 | 233
+5_BN | 0.9736842105263158 | 0.9866666666666667 | 0.9801324503311258 | 225
+6_UN | 0.9497716894977168 | 0.9811320754716981 | 0.9651972157772621 | 212
+7_IM | 1.0 | 0.9928057553956835 | 0.9963898916967509 | 278
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/evaluation/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 3003 | 2 | 0 | 1 | 2 | 4 | 1 | 0
+1_F&S | 0 | 218 | 2 | 1 | 0 | 0 | 1 | 0
+2_SD | 3 | 5 | 222 | 3 | 0 | 0 | 0 | 0
+3_MY | 0 | 6 | 0 | 221 | 0 | 1 | 1 | 0
+4_AP | 1 | 0 | 1 | 0 | 222 | 0 | 0 | 0
+5_BN | 1 | 0 | 0 | 1 | 1 | 237 | 0 | 0
+6_UN | 1 | 4 | 0 | 1 | 0 | 0 | 222 | 0
+7_IM | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 321
+
+====================================================================================================
+experiments/results/rice/rice_ddp_resnet18/evaluation/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9980059820538385 | 0.9966810487885828 | 0.9973430753902358 | 3013
+1_F&S | 0.9276595744680851 | 0.9819819819819819 | 0.9540481400437637 | 222
+2_SD | 0.9866666666666667 | 0.9527896995708155 | 0.9694323144104804 | 233
+3_MY | 0.9650655021834061 | 0.9650655021834061 | 0.9650655021834061 | 229
+4_AP | 0.9866666666666667 | 0.9910714285714286 | 0.9888641425389755 | 224
+5_BN | 0.9793388429752066 | 0.9875 | 0.983402489626556 | 240
+6_UN | 0.9866666666666667 | 0.9736842105263158 | 0.9801324503311258 | 228
+7_IM | 1.0 | 0.9968944099378882 | 0.9984447900466563 | 322
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2991 | 0 | 10 | 3 | 1 | 1 | 6 | 0
+1_F&S | 0 | 219 | 6 | 1 | 0 | 0 | 3 | 0
+2_SD | 1 | 0 | 227 | 1 | 1 | 0 | 0 | 0
+3_MY | 0 | 2 | 2 | 222 | 0 | 0 | 0 | 0
+4_AP | 0 | 0 | 0 | 0 | 232 | 1 | 0 | 0
+5_BN | 0 | 0 | 1 | 0 | 0 | 223 | 1 | 0
+6_UN | 0 | 4 | 3 | 0 | 0 | 2 | 203 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9996657754010695 | 0.9930278884462151 | 0.9963357761492339 | 3012
+1_F&S | 0.9733333333333334 | 0.9563318777292577 | 0.9647577092511013 | 229
+2_SD | 0.9116465863453815 | 0.9869565217391304 | 0.9478079331941545 | 230
+3_MY | 0.9779735682819384 | 0.9823008849557522 | 0.9801324503311258 | 226
+4_AP | 0.9914529914529915 | 0.9957081545064378 | 0.9935760171306209 | 233
+5_BN | 0.9823788546255506 | 0.9911111111111112 | 0.9867256637168141 | 225
+6_UN | 0.9530516431924883 | 0.9575471698113207 | 0.9552941176470588 | 212
+7_IM | 1.0 | 1.0 | 1.0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2992 | 0 | 13 | 0 | 3 | 0 | 5 | 0
+1_F&S | 0 | 214 | 4 | 2 | 0 | 0 | 2 | 0
+2_SD | 1 | 0 | 231 | 0 | 1 | 0 | 0 | 0
+3_MY | 0 | 4 | 1 | 222 | 0 | 2 | 0 | 0
+4_AP | 0 | 0 | 1 | 0 | 222 | 1 | 0 | 0
+5_BN | 1 | 0 | 0 | 2 | 0 | 236 | 1 | 0
+6_UN | 0 | 5 | 2 | 1 | 1 | 0 | 219 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9993319973279893 | 0.9930302024560239 | 0.9961711336773764 | 3013
+1_F&S | 0.9596412556053812 | 0.963963963963964 | 0.9617977528089887 | 222
+2_SD | 0.9166666666666666 | 0.9914163090128756 | 0.9525773195876288 | 233
+3_MY | 0.9779735682819384 | 0.9694323144104804 | 0.9736842105263158 | 229
+4_AP | 0.9779735682819384 | 0.9910714285714286 | 0.9844789356984479 | 224
+5_BN | 0.9874476987447699 | 0.9833333333333333 | 0.9853862212943633 | 240
+6_UN | 0.9647577092511013 | 0.9605263157894737 | 0.9626373626373627 | 228
+7_IM | 1.0 | 1.0 | 1.0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_summary.csv
+====================================================================================================
+experiment | split | accuracy | balanced_accuracy | macro_f1 | weighted_f1
+FedAvg IID MobileNetV2 | validation | 98.8113 | 98.1605 | 97.6631 | 98.8186
+FedAvg IID MobileNetV2 | test | 98.9882 | 98.4579 | 97.9948 | 98.9926
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2991 | 0 | 4 | 3 | 8 | 1 | 5 | 0
+1_F&S | 0 | 226 | 1 | 1 | 0 | 0 | 1 | 0
+2_SD | 0 | 2 | 226 | 1 | 1 | 0 | 0 | 0
+3_MY | 0 | 5 | 2 | 217 | 0 | 0 | 2 | 0
+4_AP | 0 | 0 | 0 | 0 | 233 | 0 | 0 | 0
+5_BN | 1 | 0 | 1 | 1 | 1 | 221 | 0 | 0
+6_UN | 1 | 3 | 1 | 0 | 0 | 1 | 206 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9993317741396592 | 0.9930278884462151 | 0.9961698584512906 | 3012
+1_F&S | 0.9576271186440678 | 0.9868995633187773 | 0.9720430107526882 | 229
+2_SD | 0.9617021276595744 | 0.9826086956521739 | 0.9720430107526882 | 230
+3_MY | 0.9730941704035875 | 0.9601769911504425 | 0.9665924276169265 | 226
+4_AP | 0.9588477366255144 | 1.0 | 0.9789915966386554 | 233
+5_BN | 0.9910313901345291 | 0.9822222222222222 | 0.9866071428571429 | 225
+6_UN | 0.9626168224299065 | 0.9716981132075472 | 0.9671361502347418 | 212
+7_IM | 1.0 | 1.0 | 1.0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2989 | 0 | 8 | 1 | 11 | 1 | 3 | 0
+1_F&S | 0 | 217 | 3 | 1 | 0 | 0 | 1 | 0
+2_SD | 1 | 2 | 229 | 1 | 0 | 0 | 0 | 0
+3_MY | 1 | 5 | 0 | 222 | 0 | 0 | 1 | 0
+4_AP | 0 | 0 | 1 | 0 | 223 | 0 | 0 | 0
+5_BN | 1 | 1 | 0 | 2 | 2 | 234 | 0 | 0
+6_UN | 1 | 3 | 0 | 2 | 2 | 1 | 219 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9986635482793184 | 0.9920345170925987 | 0.9953379953379954 | 3013
+1_F&S | 0.9517543859649122 | 0.9774774774774775 | 0.9644444444444444 | 222
+2_SD | 0.950207468879668 | 0.9828326180257511 | 0.9662447257383966 | 233
+3_MY | 0.9694323144104804 | 0.9694323144104804 | 0.9694323144104804 | 229
+4_AP | 0.9369747899159664 | 0.9955357142857143 | 0.9653679653679653 | 224
+5_BN | 0.9915254237288136 | 0.975 | 0.9831932773109243 | 240
+6_UN | 0.9776785714285714 | 0.9605263157894737 | 0.9690265486725663 | 228
+7_IM | 1.0 | 1.0 | 1.0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_summary.csv
+====================================================================================================
+experiment | split | num_images | accuracy | balanced_accuracy | macro_f1 | weighted_f1 | evaluation_seconds
+rice_fedavg_iid_resnet18 | validation | 4711 | 99.1297 | 98.1369 | 98.0954 | 99.132 | 4.68
+rice_fedavg_iid_resnet18 | test | 4645 | 99.1173 | 98.25 | 98.1136 | 99.1191 | 4.56
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 3002 | 0 | 3 | 1 | 3 | 0 | 3 | 0
+1_F&S | 0 | 221 | 4 | 1 | 0 | 0 | 3 | 0
+2_SD | 1 | 1 | 226 | 1 | 0 | 0 | 1 | 0
+3_MY | 2 | 3 | 1 | 217 | 0 | 2 | 1 | 0
+4_AP | 1 | 0 | 0 | 0 | 232 | 0 | 0 | 0
+5_BN | 0 | 0 | 0 | 0 | 1 | 221 | 3 | 0
+6_UN | 1 | 2 | 1 | 0 | 0 | 0 | 208 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 277
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9983372131692717 | 0.9966799468791501 | 0.9975078916763582 | 3012
+1_F&S | 0.973568281938326 | 0.9650655021834061 | 0.9692982456140351 | 229
+2_SD | 0.9617021276595744 | 0.9826086956521739 | 0.9720430107526882 | 230
+3_MY | 0.9863636363636363 | 0.9601769911504425 | 0.9730941704035875 | 226
+4_AP | 0.9830508474576272 | 0.9957081545064378 | 0.9893390191897654 | 233
+5_BN | 0.9866071428571429 | 0.9822222222222222 | 0.9844097995545658 | 225
+6_UN | 0.9497716894977168 | 0.9811320754716981 | 0.9651972157772621 | 212
+7_IM | 1.0 | 0.9964028776978417 | 0.9981981981981982 | 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 3006 | 2 | 0 | 1 | 2 | 1 | 1 | 0
+1_F&S | 0 | 218 | 2 | 1 | 0 | 0 | 1 | 0
+2_SD | 3 | 3 | 223 | 3 | 1 | 0 | 0 | 0
+3_MY | 0 | 6 | 0 | 221 | 0 | 1 | 1 | 0
+4_AP | 1 | 0 | 1 | 0 | 222 | 0 | 0 | 0
+5_BN | 1 | 0 | 0 | 1 | 1 | 237 | 0 | 0
+6_UN | 1 | 4 | 0 | 1 | 0 | 0 | 222 | 0
+7_IM | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 321
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.99800796812749 | 0.997676734152008 | 0.9978423236514523 | 3013
+1_F&S | 0.9356223175965666 | 0.9819819819819819 | 0.9582417582417583 | 222
+2_SD | 0.9867256637168141 | 0.9570815450643777 | 0.971677559912854 | 233
+3_MY | 0.9650655021834061 | 0.9650655021834061 | 0.9650655021834061 | 229
+4_AP | 0.9823008849557522 | 0.9910714285714286 | 0.9866666666666667 | 224
+5_BN | 0.9916317991631799 | 0.9875 | 0.9895615866388309 | 240
+6_UN | 0.9866666666666667 | 0.9736842105263158 | 0.9801324503311258 | 228
+7_IM | 1.0 | 0.9968944099378882 | 0.9984447900466563 | 322
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_summary.csv
+====================================================================================================
+experiment | split | accuracy | balanced_accuracy | macro_f1 | weighted_f1
+FedAvg non-IID MobileNetV2 | validation | 98.8962 | 98.1797 | 97.7757 | 98.902
+FedAvg non-IID MobileNetV2 | test | 99.0097 | 98.5142 | 98.0484 | 99.0143
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2991 | 0 | 4 | 3 | 8 | 1 | 5 | 0
+1_F&S | 0 | 226 | 1 | 1 | 0 | 0 | 1 | 0
+2_SD | 0 | 2 | 225 | 1 | 1 | 0 | 1 | 0
+3_MY | 0 | 4 | 1 | 219 | 0 | 0 | 2 | 0
+4_AP | 0 | 0 | 0 | 0 | 233 | 0 | 0 | 0
+5_BN | 1 | 0 | 1 | 1 | 1 | 221 | 0 | 0
+6_UN | 1 | 3 | 1 | 0 | 0 | 1 | 206 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9993317741396592 | 0.9930278884462151 | 0.9961698584512906 | 3012
+1_F&S | 0.9617021276595744 | 0.9868995633187773 | 0.9741379310344828 | 229
+2_SD | 0.9656652360515021 | 0.9782608695652174 | 0.9719222462203023 | 230
+3_MY | 0.9733333333333334 | 0.9690265486725663 | 0.9711751662971175 | 226
+4_AP | 0.9588477366255144 | 1.0 | 0.9789915966386554 | 233
+5_BN | 0.9910313901345291 | 0.9822222222222222 | 0.9866071428571429 | 225
+6_UN | 0.958139534883721 | 0.9716981132075472 | 0.9648711943793911 | 212
+7_IM | 1.0 | 1.0 | 1.0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2993 | 0 | 6 | 0 | 10 | 1 | 3 | 0
+1_F&S | 0 | 218 | 2 | 1 | 0 | 0 | 1 | 0
+2_SD | 1 | 3 | 228 | 1 | 0 | 0 | 0 | 0
+3_MY | 1 | 5 | 0 | 222 | 0 | 0 | 1 | 0
+4_AP | 0 | 0 | 1 | 0 | 223 | 0 | 0 | 0
+5_BN | 1 | 1 | 0 | 2 | 2 | 234 | 0 | 0
+6_UN | 1 | 3 | 0 | 2 | 2 | 1 | 219 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9986653319986654 | 0.9933620975771656 | 0.9960066555740432 | 3013
+1_F&S | 0.9478260869565217 | 0.9819819819819819 | 0.9646017699115044 | 222
+2_SD | 0.9620253164556962 | 0.9785407725321889 | 0.9702127659574468 | 233
+3_MY | 0.9736842105263158 | 0.9694323144104804 | 0.9715536105032823 | 229
+4_AP | 0.9409282700421941 | 0.9955357142857143 | 0.9674620390455532 | 224
+5_BN | 0.9915254237288136 | 0.975 | 0.9831932773109243 | 240
+6_UN | 0.9776785714285714 | 0.9605263157894737 | 0.9690265486725663 | 228
+7_IM | 1.0 | 1.0 | 1.0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_summary.csv
+====================================================================================================
+experiment | split | num_images | accuracy | balanced_accuracy | macro_f1 | weighted_f1 | evaluation_seconds
+rice_fedavg_noniid_resnet18 | validation | 4711 | 99.1085 | 98.086 | 98.0418 | 99.1112 | 3.41
+rice_fedavg_noniid_resnet18 | test | 4645 | 99.0958 | 98.1965 | 98.0866 | 99.0974 | 3.2
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 3002 | 0 | 3 | 1 | 3 | 0 | 3 | 0
+1_F&S | 0 | 222 | 4 | 1 | 0 | 0 | 2 | 0
+2_SD | 1 | 2 | 225 | 1 | 0 | 0 | 1 | 0
+3_MY | 2 | 3 | 1 | 217 | 0 | 2 | 1 | 0
+4_AP | 2 | 0 | 0 | 0 | 231 | 0 | 0 | 0
+5_BN | 0 | 0 | 0 | 0 | 1 | 221 | 3 | 0
+6_UN | 1 | 2 | 1 | 0 | 0 | 0 | 208 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 277
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9980053191489362 | 0.9966799468791501 | 0.9973421926910299 | 3012
+1_F&S | 0.9694323144104804 | 0.9694323144104804 | 0.9694323144104804 | 229
+2_SD | 0.9615384615384616 | 0.9782608695652174 | 0.9698275862068966 | 230
+3_MY | 0.9863636363636363 | 0.9601769911504425 | 0.9730941704035875 | 226
+4_AP | 0.9829787234042553 | 0.9914163090128756 | 0.9871794871794872 | 233
+5_BN | 0.9866071428571429 | 0.9822222222222222 | 0.9844097995545658 | 225
+6_UN | 0.9541284403669725 | 0.9811320754716981 | 0.9674418604651163 | 212
+7_IM | 1.0 | 0.9964028776978417 | 0.9981981981981982 | 278
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 3006 | 2 | 0 | 1 | 2 | 1 | 1 | 0
+1_F&S | 0 | 219 | 1 | 1 | 0 | 0 | 1 | 0
+2_SD | 3 | 5 | 221 | 3 | 1 | 0 | 0 | 0
+3_MY | 0 | 6 | 0 | 221 | 0 | 1 | 1 | 0
+4_AP | 1 | 0 | 1 | 0 | 222 | 0 | 0 | 0
+5_BN | 1 | 0 | 0 | 1 | 1 | 237 | 0 | 0
+6_UN | 1 | 4 | 0 | 1 | 0 | 0 | 222 | 0
+7_IM | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 321
+
+====================================================================================================
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.99800796812749 | 0.997676734152008 | 0.9978423236514523 | 3013
+1_F&S | 0.9279661016949152 | 0.9864864864864865 | 0.9563318777292577 | 222
+2_SD | 0.9910313901345291 | 0.9484978540772532 | 0.9692982456140351 | 233
+3_MY | 0.9650655021834061 | 0.9650655021834061 | 0.9650655021834061 | 229
+4_AP | 0.9823008849557522 | 0.9910714285714286 | 0.9866666666666667 | 224
+5_BN | 0.9916317991631799 | 0.9875 | 0.9895615866388309 | 240
+6_UN | 0.9866666666666667 | 0.9736842105263158 | 0.9801324503311258 | 228
+7_IM | 1.0 | 0.9968944099378882 | 0.9984447900466563 | 322
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2994 | 0 | 3 | 1 | 5 | 1 | 8 | 0
+1_F&S | 0 | 225 | 1 | 2 | 0 | 0 | 1 | 0
+2_SD | 0 | 2 | 222 | 3 | 1 | 0 | 2 | 0
+3_MY | 1 | 3 | 1 | 219 | 0 | 0 | 2 | 0
+4_AP | 0 | 0 | 0 | 0 | 233 | 0 | 0 | 0
+5_BN | 1 | 0 | 1 | 1 | 0 | 222 | 0 | 0
+6_UN | 1 | 3 | 1 | 0 | 0 | 0 | 207 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.998998998998999 | 0.9940239043824701 | 0.9965052421367948 | 3012
+1_F&S | 0.9656652360515021 | 0.982532751091703 | 0.974025974025974 | 229
+2_SD | 0.9694323144104804 | 0.9652173913043478 | 0.9673202614379085 | 230
+3_MY | 0.9690265486725663 | 0.9690265486725663 | 0.9690265486725663 | 226
+4_AP | 0.9748953974895398 | 1.0 | 0.9872881355932204 | 233
+5_BN | 0.9955156950672646 | 0.9866666666666667 | 0.9910714285714286 | 225
+6_UN | 0.9409090909090909 | 0.9764150943396226 | 0.9583333333333334 | 212
+7_IM | 1.0 | 1.0 | 1.0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2997 | 0 | 3 | 0 | 8 | 1 | 4 | 0
+1_F&S | 0 | 218 | 2 | 1 | 0 | 0 | 1 | 0
+2_SD | 1 | 4 | 225 | 2 | 0 | 0 | 1 | 0
+3_MY | 2 | 5 | 0 | 221 | 0 | 0 | 1 | 0
+4_AP | 0 | 0 | 1 | 0 | 222 | 0 | 1 | 0
+5_BN | 2 | 1 | 0 | 2 | 2 | 233 | 0 | 0
+6_UN | 1 | 3 | 0 | 2 | 0 | 1 | 221 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.998001998001998 | 0.9946896780617325 | 0.996343085106383 | 3013
+1_F&S | 0.9437229437229437 | 0.9819819819819819 | 0.9624724061810155 | 222
+2_SD | 0.974025974025974 | 0.9656652360515021 | 0.9698275862068966 | 233
+3_MY | 0.9692982456140351 | 0.9650655021834061 | 0.9671772428884027 | 229
+4_AP | 0.9568965517241379 | 0.9910714285714286 | 0.9736842105263158 | 224
+5_BN | 0.9914893617021276 | 0.9708333333333333 | 0.9810526315789474 | 240
+6_UN | 0.9650655021834061 | 0.9692982456140351 | 0.9671772428884027 | 228
+7_IM | 1.0 | 1.0 | 1.0 | 322
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/test_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 2999 | 0 | 4 | 1 | 5 | 0 | 3 | 0
+1_F&S | 0 | 222 | 4 | 1 | 0 | 0 | 2 | 0
+2_SD | 1 | 2 | 225 | 1 | 0 | 0 | 1 | 0
+3_MY | 4 | 3 | 1 | 215 | 0 | 1 | 2 | 0
+4_AP | 1 | 0 | 1 | 0 | 231 | 0 | 0 | 0
+5_BN | 0 | 0 | 0 | 0 | 1 | 221 | 3 | 0
+6_UN | 0 | 2 | 2 | 0 | 0 | 0 | 208 | 0
+7_IM | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9980033277870216 | 0.9956839309428951 | 0.9968422802060828 | 3012
+1_F&S | 0.9694323144104804 | 0.9694323144104804 | 0.9694323144104804 | 229
+2_SD | 0.9493670886075949 | 0.9782608695652174 | 0.9635974304068522 | 230
+3_MY | 0.9862385321100917 | 0.9513274336283186 | 0.9684684684684685 | 226
+4_AP | 0.9746835443037974 | 0.9914163090128756 | 0.9829787234042553 | 233
+5_BN | 0.9954954954954955 | 0.9822222222222222 | 0.9888143176733781 | 225
+6_UN | 0.9497716894977168 | 0.9811320754716981 | 0.9651972157772621 | 212
+7_IM | 1.0 | 1.0 | 1.0 | 278
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/validation_confusion_matrix.csv
+====================================================================================================
+ | 0_NOR | 1_F&S | 2_SD | 3_MY | 4_AP | 5_BN | 6_UN | 7_IM
+0_NOR | 3007 | 0 | 0 | 0 | 4 | 1 | 1 | 0
+1_F&S | 0 | 219 | 1 | 1 | 0 | 0 | 1 | 0
+2_SD | 3 | 2 | 224 | 3 | 1 | 0 | 0 | 0
+3_MY | 0 | 6 | 0 | 221 | 0 | 1 | 1 | 0
+4_AP | 0 | 0 | 1 | 0 | 223 | 0 | 0 | 0
+5_BN | 1 | 0 | 0 | 1 | 2 | 236 | 0 | 0
+6_UN | 0 | 5 | 0 | 1 | 0 | 0 | 222 | 0
+7_IM | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 321
+
+====================================================================================================
+experiments/results/rice/rice_resnet18_grouped_v1/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+0_NOR | 0.9986715376951179 | 0.9980086292731497 | 0.998339973439575 | 3013
+1_F&S | 0.9439655172413793 | 0.9864864864864865 | 0.9647577092511013 | 222
+2_SD | 0.9911504424778761 | 0.9613733905579399 | 0.9760348583877996 | 233
+3_MY | 0.9692982456140351 | 0.9650655021834061 | 0.9671772428884027 | 229
+4_AP | 0.9695652173913043 | 0.9955357142857143 | 0.9823788546255506 | 224
+5_BN | 0.9915966386554622 | 0.9833333333333333 | 0.9874476987447699 | 240
+6_UN | 0.9866666666666667 | 0.9736842105263158 | 0.9801324503311258 | 228
+7_IM | 1.0 | 0.9968944099378882 | 0.9984447900466563 | 322
+
+====================================================================================================
+experiments/results/tables/rice_architecture_evaluation.csv
+====================================================================================================
+model | split | num_images | accuracy | balanced_accuracy | macro_f1 | weighted_f1
+ResNet18 | validation | 4711 | 99.1934 | 98.2548 | 98.1839 | 99.1952
+ResNet18 | test | 4645 | 99.0097 | 98.1184 | 97.9416 | 99.0125
+MobileNetV2 | validation | 4711 | 98.8962 | 97.9826 | 97.7217 | 98.9
+MobileNetV2 | test | 4645 | 99.0312 | 98.4235 | 98.0446 | 99.0356
+EfficientNetB0 | validation | 4711 | 98.875 | 98.1597 | 97.7092 | 98.8836
+EfficientNetB0 | test | 4645 | 98.9236 | 98.2873 | 97.8079 | 98.933
+
+====================================================================================================
+experiments/results/tables/rice_fedavg_mobilenetv2_comparison.csv
+====================================================================================================
+experiment | split | num_images | accuracy | balanced_accuracy | macro_f1 | weighted_f1
+FedAvg IID MobileNetV2 | validation | 4711 | 98.8113 | 98.1605 | 97.6631 | 98.8186
+FedAvg IID MobileNetV2 | test | 4645 | 98.9882 | 98.4579 | 97.9948 | 98.9926
+FedAvg non-IID MobileNetV2 | validation | 4711 | 98.8962 | 98.1797 | 97.7757 | 98.902
+FedAvg non-IID MobileNetV2 | test | 4645 | 99.0097 | 98.5142 | 98.0484 | 99.0143
+
+====================================================================================================
+experiments/results/tables/rice_model_efficiency.csv
+====================================================================================================
+model | parameters | fp32_size_mib | centralized_test_macro_f1 | fedavg_iid_test_macro_f1 | fedavg_noniid_test_macro_f1
+ResNet18 | 11180616 | 42.65 | 97.9416 | 98.1136 | 98.0866
+MobileNetV2 | 2234120 | 8.52 | 98.0446 | 97.9948 | 98.0484
+EfficientNetB0 |  |  | 97.8079 |  | 
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/evaluation_summary.csv
+====================================================================================================
+experiment | split | num_images | accuracy | balanced_accuracy | macro_f1 | weighted_f1
+wheat_resnet18_grouped_v2 | validation | 28389 | 89.6368 | 78.933 | 68.9652 | 90.7061
+wheat_resnet18_grouped_v2 | test | 37143 | 92.2408 | 85.5208 | 85.2522 | 92.2376
+wheat_resnet18_grouped_v2 | test_07 | 27144 | 83.0791 | 74.5803 | 70.8532 | 84.5756
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_07_confusion_matrix.csv
+====================================================================================================
+ | Black Germ | Broken | Fusarium | Insect | Moldy | Sound | Spotted | Sprouted
+Black Germ | 166 | 0 | 4 | 1 | 22 | 2 | 32 | 13
+Broken | 1 | 6651 | 15 | 299 | 39 | 156 | 95 | 51
+Fusarium | 0 | 4 | 923 | 34 | 37 | 7 | 12 | 11
+Insect | 0 | 7 | 3 | 498 | 63 | 122 | 36 | 36
+Moldy | 10 | 6 | 70 | 7 | 475 | 23 | 66 | 53
+Sound | 1 | 11 | 35 | 1074 | 82 | 10332 | 88 | 184
+Spotted | 30 | 2 | 34 | 46 | 213 | 133 | 820 | 144
+Sprouted | 17 | 6 | 41 | 242 | 124 | 680 | 69 | 2686
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_07_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+Black Germ | 0.7377777777777778 | 0.6916666666666667 | 0.7139784946236559 | 240
+Broken | 0.9946164199192463 | 0.910223073764883 | 0.9505502358153495 | 7307
+Fusarium | 0.8204444444444444 | 0.8978599221789884 | 0.8574082675336739 | 1028
+Insect | 0.22626079054975012 | 0.6509803921568628 | 0.33580579905596764 | 765
+Moldy | 0.45023696682464454 | 0.6690140845070423 | 0.5382436260623229 | 710
+Sound | 0.9019642077695329 | 0.8750741085796562 | 0.8883157080216663 | 11807
+Spotted | 0.6732348111658456 | 0.5766526019690577 | 0.6212121212121212 | 1422
+Sprouted | 0.8451856513530522 | 0.6949547218628719 | 0.762743149226182 | 3865
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_confusion_matrix.csv
+====================================================================================================
+ | Black Germ | Broken | Fusarium | Insect | Moldy | Sound | Spotted | Sprouted
+Black Germ | 386 | 0 | 2 | 0 | 46 | 3 | 43 | 6
+Broken | 4 | 16491 | 20 | 151 | 19 | 31 | 25 | 18
+Fusarium | 0 | 3 | 1645 | 17 | 35 | 14 | 4 | 7
+Insect | 3 | 29 | 8 | 2449 | 23 | 277 | 13 | 48
+Moldy | 12 | 2 | 333 | 19 | 1542 | 21 | 139 | 128
+Sound | 1 | 3 | 14 | 448 | 54 | 8326 | 38 | 65
+Spotted | 28 | 4 | 30 | 27 | 180 | 118 | 1331 | 109
+Sprouted | 5 | 8 | 18 | 45 | 52 | 84 | 48 | 2091
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+Black Germ | 0.8792710706150342 | 0.7942386831275721 | 0.8345945945945946 | 486
+Broken | 0.997037484885127 | 0.9840085923981144 | 0.9904801946004385 | 16759
+Fusarium | 0.7946859903381642 | 0.9536231884057971 | 0.8669301712779973 | 1725
+Insect | 0.7759822560202788 | 0.8592982456140351 | 0.8155178155178155 | 2850
+Moldy | 0.7903639159405433 | 0.7021857923497268 | 0.7436701229804679 | 2196
+Sound | 0.9382465629930133 | 0.9303832830483852 | 0.9342983784996914 | 8949
+Spotted | 0.8110907982937233 | 0.7285166940339354 | 0.7675893886966552 | 1827
+Sprouted | 0.845873786407767 | 0.8894087622288388 | 0.8670951689819615 | 2351
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/validation_confusion_matrix.csv
+====================================================================================================
+ | Black Germ | Broken | Fusarium | Insect | Moldy | Sound | Spotted | Sprouted
+Black Germ | 165 | 0 | 4 | 0 | 6 | 4 | 11 | 11
+Broken | 4 | 5599 | 10 | 145 | 22 | 56 | 54 | 39
+Fusarium | 0 | 2 | 175 | 1 | 4 | 0 | 2 | 1
+Insect | 6 | 22 | 7 | 1356 | 14 | 102 | 13 | 37
+Moldy | 2 | 9 | 12 | 15 | 177 | 15 | 34 | 37
+Sound | 38 | 20 | 81 | 1016 | 133 | 17305 | 159 | 405
+Spotted | 25 | 6 | 11 | 26 | 52 | 53 | 242 | 27
+Sprouted | 7 | 5 | 5 | 56 | 24 | 64 | 28 | 428
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v2/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+Black Germ | 0.6680161943319838 | 0.8208955223880597 | 0.7366071428571429 | 201
+Broken | 0.988698569662723 | 0.9443413729128015 | 0.9660110420979986 | 5929
+Fusarium | 0.5737704918032787 | 0.9459459459459459 | 0.7142857142857143 | 185
+Insect | 0.518546845124283 | 0.8709055876685935 | 0.6500479386385427 | 1557
+Moldy | 0.4097222222222222 | 0.5880398671096345 | 0.4829467939972715 | 301
+Sound | 0.9832945053696233 | 0.9033251552957143 | 0.9416149744259441 | 19157
+Spotted | 0.44567219152854515 | 0.5475113122171946 | 0.49137055837563454 | 442
+Sprouted | 0.43451776649746193 | 0.6936790923824959 | 0.5343320848938826 | 617
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/evaluation_summary.csv
+====================================================================================================
+experiment | split | num_images | accuracy | balanced_accuracy | macro_f1 | weighted_f1
+wheat_resnet18_grouped_v3_sqrt_weights | validation | 28389 | 93.5433 | 79.2635 | 75.226 | 93.7968
+wheat_resnet18_grouped_v3_sqrt_weights | test | 37143 | 93.4658 | 85.802 | 86.759 | 93.3379
+wheat_resnet18_grouped_v3_sqrt_weights | test_07 | 27144 | 86.4022 | 75.4806 | 74.303 | 86.6314
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_07_confusion_matrix.csv
+====================================================================================================
+ | Black Germ | Broken | Fusarium | Insect | Moldy | Sound | Spotted | Sprouted
+Black Germ | 177 | 0 | 1 | 0 | 17 | 5 | 28 | 12
+Broken | 1 | 6785 | 8 | 197 | 37 | 177 | 62 | 40
+Fusarium | 0 | 6 | 883 | 25 | 63 | 23 | 16 | 12
+Insect | 0 | 12 | 0 | 489 | 49 | 149 | 32 | 34
+Moldy | 16 | 4 | 39 | 5 | 488 | 40 | 61 | 57
+Sound | 0 | 15 | 29 | 397 | 42 | 11170 | 56 | 98
+Spotted | 30 | 4 | 20 | 33 | 199 | 203 | 777 | 156
+Sprouted | 8 | 12 | 16 | 134 | 90 | 882 | 39 | 2684
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_07_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+Black Germ | 0.7629310344827587 | 0.7375 | 0.75 | 240
+Broken | 0.9922491956712489 | 0.9285616532092514 | 0.959349593495935 | 7307
+Fusarium | 0.8865461847389559 | 0.8589494163424124 | 0.8725296442687747 | 1028
+Insect | 0.38203125 | 0.6392156862745098 | 0.478239608801956 | 765
+Moldy | 0.4954314720812183 | 0.6873239436619718 | 0.575811209439528 | 710
+Sound | 0.8830737607716025 | 0.9460489540103328 | 0.9134772652927707 | 11807
+Spotted | 0.7254901960784313 | 0.5464135021097046 | 0.6233453670276775 | 1422
+Sprouted | 0.867765923052053 | 0.6944372574385511 | 0.7714860592124173 | 3865
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_confusion_matrix.csv
+====================================================================================================
+ | Black Germ | Broken | Fusarium | Insect | Moldy | Sound | Spotted | Sprouted
+Black Germ | 386 | 0 | 0 | 2 | 39 | 13 | 37 | 9
+Broken | 1 | 16600 | 9 | 77 | 13 | 26 | 18 | 15
+Fusarium | 0 | 6 | 1619 | 13 | 46 | 22 | 10 | 9
+Insect | 3 | 37 | 2 | 2352 | 19 | 377 | 17 | 43
+Moldy | 20 | 7 | 261 | 12 | 1580 | 63 | 118 | 135
+Sound | 0 | 5 | 8 | 121 | 14 | 8757 | 18 | 26
+Spotted | 28 | 5 | 19 | 11 | 152 | 159 | 1328 | 125
+Sprouted | 7 | 14 | 6 | 28 | 40 | 138 | 24 | 2094
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+Black Germ | 0.8674157303370786 | 0.7942386831275721 | 0.8292158968850698 | 486
+Broken | 0.9955619527407941 | 0.9905125604152992 | 0.993030837794993 | 16759
+Fusarium | 0.8414760914760915 | 0.9385507246376812 | 0.8873664017539051 | 1725
+Insect | 0.8990825688073395 | 0.8252631578947368 | 0.8605927552140505 | 2850
+Moldy | 0.8302679978980557 | 0.7194899817850637 | 0.7709197365211027 | 2196
+Sound | 0.9164835164835164 | 0.9785450888367415 | 0.9464980544747081 | 8949
+Spotted | 0.845859872611465 | 0.7268746579091406 | 0.7818663526641154 | 1827
+Sprouted | 0.8526058631921825 | 0.8906848149723522 | 0.871229457041814 | 2351
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/validation_confusion_matrix.csv
+====================================================================================================
+ | Black Germ | Broken | Fusarium | Insect | Moldy | Sound | Spotted | Sprouted
+Black Germ | 160 | 0 | 2 | 1 | 3 | 6 | 17 | 12
+Broken | 1 | 5672 | 8 | 80 | 16 | 72 | 49 | 31
+Fusarium | 0 | 5 | 169 | 1 | 7 | 1 | 1 | 1
+Insect | 2 | 28 | 6 | 1327 | 14 | 128 | 13 | 39
+Moldy | 3 | 11 | 6 | 11 | 182 | 26 | 31 | 31
+Sound | 17 | 24 | 53 | 331 | 51 | 18364 | 94 | 223
+Spotted | 19 | 9 | 3 | 12 | 40 | 87 | 240 | 32
+Sprouted | 5 | 9 | 5 | 35 | 12 | 90 | 19 | 442
+
+====================================================================================================
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/validation_per_class_metrics.csv
+====================================================================================================
+class_name | precision | recall | f1_score | support
+Black Germ | 0.7729468599033816 | 0.7960199004975125 | 0.7843137254901961 | 201
+Broken | 0.9850642584230636 | 0.9566537358745151 | 0.9706511508513733 | 5929
+Fusarium | 0.6706349206349206 | 0.9135135135135135 | 0.7734553775743707 | 185
+Insect | 0.7380422691879867 | 0.8522800256904303 | 0.7910581222056632 | 1557
+Moldy | 0.56 | 0.6046511627906976 | 0.5814696485623003 | 301
+Sound | 0.9781612868861191 | 0.9586052095839641 | 0.9682845166222879 | 19157
+Spotted | 0.5172413793103449 | 0.5429864253393665 | 0.5298013245033113 | 442
+Sprouted | 0.5450061652281134 | 0.7163695299837926 | 0.6190476190476191 | 617

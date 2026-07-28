@@ -1,0 +1,287 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% IEEE conference template, adapted for the grain-classification study.
+% Replace the author affiliation and email before submission.
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{balance}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{Federated and Distributed Learning for IoT-Oriented Grain Quality Classification}
+
+\author{
+\IEEEauthorblockN{Fajr Naveed}
+\IEEEauthorblockA{
+\textit{Author affiliation to be confirmed before submission}\\
+Oulu, Finland\\
+\texttt{Author email or ORCID to be inserted}
+}
+}
+
+\maketitle
+
+\begin{abstract}
+Internet of Things systems can generate image data at several inspection points, while network, privacy, and ownership constraints may make centralized collection undesirable. This paper presents an IoT-oriented grain quality classification study that compares centralized transfer learning, federated averaging, and multi-GPU distributed data-parallel training. The experiments use rice and wheat image collections, leakage-aware data preparation, and imbalance-sensitive evaluation. For rice, three convolutional backbones were evaluated centrally, followed by three-client federated experiments with independent and nonindependent client partitions. Federated ResNet18 achieved the highest rice test macro F1 score, while MobileNetV2 retained similar performance with about one-fifth of the parameters and communication volume. A two-GPU distributed run reduced the observed training time relative to the implemented centralized run. For wheat, a capture-group audit revealed severe overlap in the original validation protocol. A corrected group-aware split removed this leakage, and square-root inverse-frequency weighting improved macro F1 compared with full inverse weighting. The results show that training topology, model size, and data-split validity must be considered together when designing learning pipelines for resource-constrained IoT scenarios.
+\end{abstract}
+
+\begin{IEEEkeywords}
+federated learning, distributed learning, Internet of Things, grain classification, FedAvg, distributed data parallel, transfer learning
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+Automated visual inspection can support grain sorting and quality control by identifying sound grains and several defect categories from images. In a practical Internet of Things (IoT) setting, cameras or inspection stations may be deployed at farms, storage facilities, laboratories, or processing sites. Their data can differ because of local grain varieties, capture conditions, and defect frequencies. Sending every image to one central location may also be expensive or undesirable. Federated learning addresses this setting by keeping raw data at logical clients and exchanging model updates with an aggregation server \cite{mcmahan2017,nguyen2021}.
+
+Federated learning and conventional distributed training solve different engineering problems. Federated learning is designed for decentralized data ownership and communication-constrained clients. Distributed data parallel (DDP) training instead accelerates optimization on tightly connected compute resources by replicating the model and synchronizing gradients \cite{li2020ddp}. This study evaluates both approaches within one grain-classification workflow. The federated experiments emulate independent inspection clients using logical data partitions, whereas DDP is used as a high-performance training baseline on CSC Roihu. The work does not claim deployment on physical IoT devices; rather, it evaluates learning methods and model choices that are relevant to a future edge-inspection system.
+
+A second concern is the reliability of the evaluation itself. Grain images originating from the same capture session can be visually similar. If images from one session appear in both training and validation sets, the resulting score may overstate generalization. This problem was discovered in the wheat workflow and led to a redesigned group-aware split. The corrected experiments also showed why accuracy alone is insufficient under severe class imbalance.
+
+The main contributions are:
+\begin{itemize}
+    \item a common rice evaluation protocol covering centralized, federated, and two-GPU DDP training;
+    \item an IID and non-IID FedAvg comparison using ResNet18 and MobileNetV2, including a model-size-based communication estimate;
+    \item a capture-group audit and leakage-free wheat split; and
+    \item an analysis of full inverse-frequency and square-root inverse-frequency weighting under the corrected wheat protocol.
+\end{itemize}
+
+\section{Related Work}
+
+FedAvg combines local client optimization with weighted server-side model averaging \cite{mcmahan2017}. It is relevant to IoT because clients can retain raw observations locally, although federated learning alone does not guarantee privacy and does not remove the need to protect transmitted updates \cite{nguyen2021}. Nonindependent and nonidentically distributed data are particularly important because local sensors or sites may observe different class proportions.
+
+The image models used in this work represent different accuracy--efficiency trade-offs. ResNet introduced residual connections that make deeper networks easier to optimize \cite{he2016}. MobileNetV2 uses inverted residual blocks and linear bottlenecks to reduce model size and computation for mobile or embedded environments \cite{sandler2018}. EfficientNet scales network depth, width, and image resolution in a coordinated manner \cite{tan2019}. These architectures were initialized from ImageNet weights and adapted to the grain classes.
+
+For tightly coupled distributed training, PyTorch DDP assigns one model replica to each process and synchronizes gradients during backpropagation \cite{li2020ddp,paszke2019}. DDP therefore provides computational acceleration, but unlike federated learning it assumes access to shared training infrastructure and does not address decentralized data ownership.
+
+\section{Methodology}
+
+\subsection{Datasets and Leakage-Aware Splitting}
+
+The rice dataset contains eight classes: \texttt{NOR}, \texttt{F\&S}, \texttt{SD}, \texttt{MY}, \texttt{AP}, \texttt{BN}, \texttt{UN}, and \texttt{IM}. A group-aware split produced 21,606 training images, 4,711 validation images, and 4,645 test images. The same validation and test manifests were used for centralized, federated, and DDP evaluation.
+
+The original wheat workflow contained eight highly imbalanced classes. The training counts ranged from 173,782 images for Sound to fewer than 1,800 images for Fusarium and Black Germ. A filename-based capture audit identified 1,682 training groups and 943 validation groups, of which 924 overlapped. Thus, approximately 98 percent of the validation groups were also represented during training.
+
+The first leakage-free correction was not retained because its validation set contained only 21 capture groups and was dominated by a small number of large groups. The final grouped split used 1,448 training groups, 253 validation groups, 95 test groups, and 718 \texttt{test\_07} groups. All pairwise group overlaps were zero. Table~\ref{tab:data} summarizes the final evaluation data.
+
+\begin{table}[t]
+\caption{Leakage-Aware Dataset Splits}
+\label{tab:data}
+\centering
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{llrr}
+\toprule
+\textbf{Dataset} & \textbf{Partition} & \textbf{Images} & \textbf{Groups} \\
+\midrule
+Rice & Train & 21,606 & -- \\
+Rice & Validation & 4,711 & -- \\
+Rice & Test & 4,645 & -- \\
+\midrule
+Wheat & Train & 257,069 & 1,448 \\
+Wheat & Validation & 28,389 & 253 \\
+Wheat & Test & 37,143 & 95 \\
+Wheat & Test\_07 & 27,144 & 718 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection{Centralized and Federated Training}
+
+Centralized rice experiments evaluated ResNet18, MobileNetV2, and EfficientNetB0. The best checkpoint was selected using validation macro F1. The federated study used three logical clients, five FedAvg rounds, one local epoch per round, and seed 42. IID partitions distributed the training data approximately uniformly, while the non-IID partitions were generated with a Dirichlet concentration of 0.5. Both settings used the same held-out validation and test sets.
+
+At round $t$, client $k$ receives the global parameters and returns locally updated parameters $\mathbf{w}_{k}^{t+1}$. The server computes the sample-weighted average
+\begin{equation}
+\mathbf{w}^{t+1} =
+\sum_{k=1}^{K}
+\frac{n_k}{\sum_{j=1}^{K} n_j}
+\mathbf{w}_{k}^{t+1},
+\label{eq:fedavg}
+\end{equation}
+where $n_k$ is the number of training samples on client $k$.
+
+The federated rice runs were initialized from the corresponding centralized checkpoints. Consequently, these experiments measure whether centrally initialized models retain or improve their performance during federated adaptation; they are not end-to-end federated training from random or ImageNet-only initialization. This distinction is important when interpreting the high federated scores.
+
+\subsection{Distributed Data Parallel Training}
+
+The DDP experiment trained ResNet18 using two NVIDIA GH200 GPUs. Each process handled a different portion of the training data, while gradients were synchronized across model replicas. The run used eight epochs and a global batch size equivalent to the implemented centralized configuration. The centralized and DDP runs used the same group-aware rice evaluation manifests.
+
+\subsection{Class-Imbalance Handling}
+
+The corrected wheat baseline used ResNet18 with ImageNet initialization, two classifier warm-up epochs, eight full fine-tuning epochs, image size $224\times224$, batch size 128, AdamW, and checkpoint selection by validation macro F1.
+
+Full inverse-frequency weighting assigned very large weights to rare classes. To reduce this effect, the second experiment used
+\begin{equation}
+\alpha_c =
+\sqrt{\frac{N}{C n_c}},
+\qquad
+\hat{\alpha}_c =
+\frac{\alpha_c}
+{\frac{1}{C}\sum_{j=1}^{C}\alpha_j},
+\label{eq:sqrtweights}
+\end{equation}
+where $N$ is the training-set size, $C$ is the number of classes, and $n_c$ is the count for class $c$.
+
+\subsection{Evaluation and Reproducibility}
+
+Accuracy is reported for completeness, but macro F1 and balanced accuracy are emphasized because they give each class equal importance. Per-class precision, recall, predictions, and confusion matrices were also saved.
+
+Experiments were executed on CSC Roihu with Python 3.12.12, PyTorch 2.10.0 with CUDA 13.0, and NVIDIA GH200 GPUs. The authoritative implementation is the \texttt{federated-pipeline} branch at commit \texttt{eff2f25}. Saved artifacts include metric files, prediction tables, confusion matrices, split metadata, training histories, and checkpoint provenance with SHA-256 hashes.
+
+\begin{figure*}[t]
+\centering
+\IfFileExists{figures/architecture_diagram.pdf}{
+    \includegraphics[width=0.96\textwidth]{figures/architecture_diagram.pdf}
+}{
+    \fbox{\parbox[c][3.0cm][c]{0.94\textwidth}{
+    \centering
+    Generate \texttt{figures/architecture\_diagram.pdf} using the supplied Python script.}}
+}
+\caption{Experimental architecture. Leakage-aware dataset preparation feeds centralized transfer learning, three-client FedAvg training, and two-GPU DDP. All final models are evaluated using fixed held-out manifests and imbalance-sensitive metrics.}
+\label{fig:architecture}
+\end{figure*}
+
+\section{Results}
+
+\subsection{Rice Classification}
+
+Table~\ref{tab:rice} reports test results from the common rice evaluation set. The highest federated macro F1 was 98.1136 percent from IID FedAvg with ResNet18. The non-IID ResNet18 result was only 0.027 percentage points lower. For MobileNetV2, the non-IID run exceeded the IID run by 0.0536 percentage points. These differences are too small to support strong claims of superiority without repeated federated runs.
+
+MobileNetV2 produced the highest centralized test macro F1, whereas ResNet18 produced the highest centralized validation macro F1. The comparison therefore does not identify one universal winner. Instead, ResNet18 provided the highest observed federated score, while MobileNetV2 offered a stronger size--performance trade-off.
+
+\begin{table*}[t]
+\caption{Rice Test Results Using the Common Group-Aware Evaluation Set}
+\label{tab:rice}
+\centering
+\small
+\begin{tabular}{lllrrrr}
+\toprule
+\textbf{Training} & \textbf{Partition} & \textbf{Backbone}
+& \textbf{Accuracy} & \textbf{Balanced Acc.} & \textbf{Macro F1} & \textbf{Time (s)} \\
+\midrule
+Centralized & Grouped & ResNet18       & 99.0097 & 98.1184 & 97.9416 & 154.35 \\
+Centralized & Grouped & MobileNetV2    & 99.0312 & 98.4235 & 98.0446 & 156.51 \\
+Centralized & Grouped & EfficientNetB0 & 98.9236 & 98.2873 & 97.8079 & 159.50 \\
+\midrule
+FedAvg & IID     & ResNet18    & \textbf{99.1173} & 98.2500 & \textbf{98.1136} & -- \\
+FedAvg & Non-IID & ResNet18    & 99.0958 & 98.1965 & 98.0866 & -- \\
+FedAvg & IID     & MobileNetV2 & 98.9882 & 98.4579 & 97.9948 & -- \\
+FedAvg & Non-IID & MobileNetV2 & 99.0097 & \textbf{98.5142} & 98.0484 & -- \\
+\midrule
+DDP & Grouped & ResNet18 & 98.9236 & 97.9743 & 97.7568 & \textbf{115.06} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure}[t]
+\centering
+\IfFileExists{figures/rice_macro_f1_comparison.pdf}{
+    \includegraphics[width=\columnwidth]{figures/rice_macro_f1_comparison.pdf}
+}{
+    \fbox{\parbox[c][3.7cm][c]{0.94\columnwidth}{
+    \centering
+    Generate \texttt{figures/rice\_macro\_f1\_comparison.pdf} using the supplied Python script.}}
+}
+\caption{Rice test macro F1 across centralized, federated, and DDP experiments. The narrow score range should be considered when interpreting model rankings.}
+\label{fig:rice}
+\end{figure}
+
+ResNet18 contained 11,180,616 parameters, corresponding to approximately 42.65 MiB in FP32. MobileNetV2 contained 2,234,120 parameters, or approximately 8.52 MiB. With three clients and five rounds, the implemented full-model exchange corresponds to 30 model transfers: three downloads and three uploads per round. The resulting raw parameter volume is approximately 1,279.5 MiB for ResNet18 and 255.6 MiB for MobileNetV2. This estimate excludes serialization, protocol, optimizer-state, and security overhead.
+
+The DDP run completed in 115.06 seconds, compared with 154.35 seconds for the reported centralized ResNet18 run. This is an observed wall-clock ratio of approximately 1.34 and a 25.5 percent reduction. Because the implemented schedules were not identical in total epoch count, this value should be treated as an end-to-end runtime comparison rather than a formal two-GPU scaling-efficiency measurement.
+
+\subsection{Corrected Wheat Evaluation}
+
+Table~\ref{tab:wheat} separates the two weighting strategies under the valid grouped split. Full inverse-frequency weighting achieved high minority-class recall but produced many false positives. For example, validation recall for Fusarium reached 94.59 percent while precision was 57.38 percent. On \texttt{test\_07}, Insect precision was 22.63 percent and recall was 65.10 percent.
+
+Square-root weighting reduced this overcorrection. Relative to full inverse weighting, it increased validation macro F1 by 6.2608 percentage points, test macro F1 by 1.5068 points, and \texttt{test\_07} macro F1 by 3.4498 points. Legacy wheat results are not mixed with these values because their validation split contained capture-group leakage.
+
+\begin{table}[t]
+\caption{Wheat Macro F1 Under the Corrected Grouped Split}
+\label{tab:wheat}
+\centering
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Weighting} & \textbf{Validation} & \textbf{Test} & \textbf{Test\_07} \\
+\midrule
+Full inverse & 68.9652 & 85.2522 & 70.8532 \\
+Square-root inverse & \textbf{75.2260} & \textbf{86.7590} & \textbf{74.3030} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{Discussion}
+
+The rice results show that federated adaptation can preserve high classification performance under both IID and moderately non-IID client partitions. However, the models were initialized from centralized checkpoints, the federated comparison used one recorded seed, and only three logical clients were simulated. The results therefore demonstrate implementation feasibility and stability, not statistical proof that federated training improves over centralized learning.
+
+The model-size comparison is more decisive. MobileNetV2 used about 80 percent fewer parameters and approximately one-fifth of the raw full-model communication volume of ResNet18, while its macro F1 remained close to the larger model. This makes MobileNetV2 a practical candidate for resource-constrained clients, even though ResNet18 produced the best observed absolute federated score.
+
+The wheat study shows that data protocol errors can be more important than small architectural differences. Capture leakage made the old validation results optimistic and weakened checkpoint selection. Removing overlap changed the evaluation basis, while softer class weighting improved the balance between minority recall and precision. Reporting this correction is necessary for a credible comparison.
+
+Several limitations remain. The clients were logical partitions executed on HPC infrastructure rather than heterogeneous physical IoT devices. Network latency, packet loss, energy use, intermittent participation, secure aggregation, differential privacy, and adversarial clients were not evaluated. Non-IID severity was tested at one Dirichlet concentration, and the number of clients and communication rounds was fixed. Finally, uniformly repeated seeds are not yet available for all final federated and DDP configurations. These constraints limit claims about real-world deployment and statistical significance.
+
+\section{Conclusion}
+
+This study compared centralized transfer learning, FedAvg, and DDP for IoT-oriented grain quality classification. ResNet18 achieved the highest observed federated rice macro F1, while MobileNetV2 offered nearly the same performance with substantially lower model size and estimated communication volume. DDP reduced the observed end-to-end training time in the implemented configuration. On wheat, a capture-group audit exposed severe validation leakage, and a corrected split showed that square-root inverse-frequency weighting was more reliable than full inverse weighting. The main conclusion is that IoT learning pipelines should be evaluated not only by predictive scores, but also by communication cost, training topology, class imbalance, and the validity of the data split.
+
+\section*{Acknowledgment}
+
+The author acknowledges CSC -- IT Center for Science, Finland, for providing the Roihu computing resources used in this study. Additional project and supervisory acknowledgments should be inserted before submission.
+
+\balance
+\begin{thebibliography}{00}
+
+\bibitem{nguyen2021}
+D. C. Nguyen, M. Ding, P. N. Pathirana, A. Seneviratne, J. Li, and H. V. Poor,
+``Federated learning for Internet of Things: A comprehensive survey,''
+\emph{IEEE Communications Surveys \& Tutorials}, vol. 23, no. 3,
+pp. 1622--1658, 2021.
+
+\bibitem{mcmahan2017}
+H. B. McMahan, E. Moore, D. Ramage, S. Hampson, and B. Ag{\"u}era y Arcas,
+``Communication-efficient learning of deep networks from decentralized data,''
+in \emph{Proc. 20th Int. Conf. Artificial Intelligence and Statistics},
+2017, pp. 1273--1282.
+
+\bibitem{he2016}
+K. He, X. Zhang, S. Ren, and J. Sun,
+``Deep residual learning for image recognition,''
+in \emph{Proc. IEEE Conf. Computer Vision and Pattern Recognition},
+2016, pp. 770--778.
+
+\bibitem{sandler2018}
+M. Sandler, A. Howard, M. Zhu, A. Zhmoginov, and L.-C. Chen,
+``MobileNetV2: Inverted residuals and linear bottlenecks,''
+in \emph{Proc. IEEE Conf. Computer Vision and Pattern Recognition},
+2018, pp. 4510--4520.
+
+\bibitem{tan2019}
+M. Tan and Q. V. Le,
+``EfficientNet: Rethinking model scaling for convolutional neural networks,''
+in \emph{Proc. 36th Int. Conf. Machine Learning},
+2019, pp. 6105--6114.
+
+\bibitem{paszke2019}
+A. Paszke \emph{et al.},
+``PyTorch: An imperative style, high-performance deep learning library,''
+in \emph{Advances in Neural Information Processing Systems}, vol. 32, 2019.
+
+\bibitem{li2020ddp}
+S. Li, Y. Zhao, R. Varma, O. Salpekar, P. Noordhuis, T. Li, A. Paszke,
+J. Smith, B. Vaughan, P. Damania, and S. Chintala,
+``PyTorch distributed: Experiences on accelerating data parallel training,''
+\emph{Proc. VLDB Endowment}, vol. 13, no. 12, pp. 3005--3018, 2020.
+
+\end{thebibliography}
+
+\end{document}

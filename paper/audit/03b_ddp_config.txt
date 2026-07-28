@@ -1,0 +1,1065 @@
+scripts/create_rice_federated_partitions.py:35:    parser.add_argument("--seed", type=int, default=42)
+scripts/create_rice_federated_partitions.py:118:    seed: int,
+scripts/create_rice_federated_partitions.py:124:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions.py:161:    # Seed each client with one large group where possible.
+scripts/create_rice_federated_partitions.py:210:    seed: int,
+scripts/create_rice_federated_partitions.py:212:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions.py:241:    seed: int,
+scripts/create_rice_federated_partitions.py:250:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions.py:258:        seed=seed,
+scripts/create_rice_federated_partitions.py:385:    seed: int,
+scripts/create_rice_federated_partitions.py:479:        "seed": seed,
+scripts/create_rice_federated_partitions.py:535:    random.seed(args.seed)
+scripts/create_rice_federated_partitions.py:536:    np.random.seed(args.seed)
+scripts/create_rice_federated_partitions.py:564:        seed=args.seed,
+scripts/create_rice_federated_partitions.py:569:        f"iid_{args.num_clients}clients_seed{args.seed}"
+scripts/create_rice_federated_partitions.py:579:        seed=args.seed,
+scripts/create_rice_federated_partitions.py:589:            seed=args.seed,
+scripts/create_rice_federated_partitions.py:599:            f"alpha{alpha_text}_seed{args.seed}"
+scripts/create_rice_federated_partitions.py:610:        seed=args.seed,
+scripts/create_rice_federated_partitions_v2.py:29:    parser.add_argument("--seed", type=int, default=42)
+scripts/create_rice_federated_partitions_v2.py:75:def assign_iid(group_table, num_clients, seed):
+scripts/create_rice_federated_partitions_v2.py:83:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions_v2.py:141:    seed,
+scripts/create_rice_federated_partitions_v2.py:143:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions_v2.py:167:    seed,
+scripts/create_rice_federated_partitions_v2.py:176:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions_v2.py:188:        seed,
+scripts/create_rice_federated_partitions_v2.py:292:    seed,
+scripts/create_rice_federated_partitions_v2.py:387:        "seed": seed,
+scripts/create_rice_federated_partitions_v2.py:442:        args.seed,
+scripts/create_rice_federated_partitions_v2.py:447:        f"iid_{args.num_clients}clients_seed{args.seed}_v2"
+scripts/create_rice_federated_partitions_v2.py:457:        args.seed,
+scripts/create_rice_federated_partitions_v2.py:464:        args.seed,
+scripts/create_rice_federated_partitions_v2.py:474:            f"alpha{alpha_text}_seed{args.seed}_v2"
+scripts/create_rice_federated_partitions_v2.py:485:        args.seed,
+scripts/create_wheat_grouped_split.py:11:SEED = 42
+scripts/create_wheat_grouped_split.py:70:    seed: int,
+scripts/create_wheat_grouped_split.py:80:    random.Random(seed).shuffle(records)
+scripts/create_wheat_grouped_split.py:237:                seed=SEED + class_index * 1000,
+scripts/create_wheat_grouped_split.py:304:        random_state=SEED,
+scripts/create_wheat_grouped_split.py:309:        random_state=SEED,
+scripts/create_wheat_grouped_split.py:395:        "seed": SEED,
+scripts/create_wheat_grouped_split_v2.py:12:SEED = 42
+scripts/create_wheat_grouped_split_v2.py:106:        SEED + class_index * 10000
+scripts/create_wheat_grouped_split_v2.py:297:        random_state=SEED,
+scripts/create_wheat_grouped_split_v2.py:302:        random_state=SEED,
+scripts/create_wheat_grouped_split_v2.py:401:        "seed": SEED,
+scripts/csc_continue_finetune_v2.py:42:        "v1_checkpoint": "best_mobilenetv2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:44:        "v2_checkpoint": "best_mobilenetv2_v2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:49:        "v1_checkpoint": "best_resnet18_gpu.pt",
+scripts/csc_continue_finetune_v2.py:51:        "v2_checkpoint": "best_resnet18_v2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:56:        "v1_checkpoint": "best_efficientnetb0_gpu.pt",
+scripts/csc_continue_finetune_v2.py:58:        "v2_checkpoint": "best_efficientnetb0_v2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:78:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_continue_finetune_v2.py:91:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_continue_finetune_v2.py:95:        .sample(frac=1, random_state=seed)
+scripts/csc_continue_finetune_v2.py:198:    parser.add_argument("--epochs", type=int, default=5)
+scripts/csc_continue_finetune_v2.py:203:    v1_checkpoint = RESULTS_ROOT / cfg["v1_dir"] / cfg["v1_checkpoint"]
+scripts/csc_continue_finetune_v2.py:206:    v2_checkpoint = output_dir / cfg["v2_checkpoint"]
+scripts/csc_continue_finetune_v2.py:208:    if not v1_checkpoint.exists():
+scripts/csc_continue_finetune_v2.py:210:            f"Version 1 checkpoint not found: {v1_checkpoint}"
+scripts/csc_continue_finetune_v2.py:213:    seed = 42
+scripts/csc_continue_finetune_v2.py:214:    random.seed(seed)
+scripts/csc_continue_finetune_v2.py:215:    np.random.seed(seed)
+scripts/csc_continue_finetune_v2.py:216:    torch.manual_seed(seed)
+scripts/csc_continue_finetune_v2.py:217:    torch.cuda.manual_seed_all(seed)
+scripts/csc_continue_finetune_v2.py:222:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_continue_finetune_v2.py:223:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_continue_finetune_v2.py:224:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_continue_finetune_v2.py:225:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_continue_finetune_v2.py:254:        batch_size=64,
+scripts/csc_continue_finetune_v2.py:263:        batch_size=64,
+scripts/csc_continue_finetune_v2.py:272:        batch_size=64,
+scripts/csc_continue_finetune_v2.py:281:        batch_size=64,
+scripts/csc_continue_finetune_v2.py:289:    model.load_state_dict(torch.load(v1_checkpoint, map_location=device))
+scripts/csc_continue_finetune_v2.py:299:    selected_checkpoint = "Version 1 checkpoint retained"
+scripts/csc_continue_finetune_v2.py:309:        T_max=args.epochs,
+scripts/csc_continue_finetune_v2.py:318:    print("Version 1 checkpoint:", v1_checkpoint)
+scripts/csc_continue_finetune_v2.py:322:        f"{args.epochs} epochs, learning rate={args.learning_rate}"
+scripts/csc_continue_finetune_v2.py:325:    for epoch in range(1, args.epochs + 1):
+scripts/csc_continue_finetune_v2.py:338:            f"Version 2 epoch {epoch}/{args.epochs} | "
+scripts/csc_continue_finetune_v2.py:352:            selected_checkpoint = f"Version 2 epoch {epoch}"
+scripts/csc_continue_finetune_v2.py:353:            torch.save(model.state_dict(), v2_checkpoint)
+scripts/csc_continue_finetune_v2.py:356:        model.load_state_dict(torch.load(v2_checkpoint, map_location=device))
+scripts/csc_continue_finetune_v2.py:358:        model.load_state_dict(torch.load(v1_checkpoint, map_location=device))
+scripts/csc_continue_finetune_v2.py:364:        "base_checkpoint": str(v1_checkpoint),
+scripts/csc_continue_finetune_v2.py:366:            f"Continuation from Version 1 best checkpoint; "
+scripts/csc_continue_finetune_v2.py:367:            f"{args.epochs} full-model epochs; "
+scripts/csc_continue_finetune_v2.py:373:        "selected_checkpoint": selected_checkpoint,
+scripts/csc_finetune_efficientnetb0.py:52:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_finetune_efficientnetb0.py:65:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_finetune_efficientnetb0.py:69:        .sample(frac=1, random_state=seed)
+scripts/csc_finetune_efficientnetb0.py:138:    seed = 42
+scripts/csc_finetune_efficientnetb0.py:139:    random.seed(seed)
+scripts/csc_finetune_efficientnetb0.py:140:    np.random.seed(seed)
+scripts/csc_finetune_efficientnetb0.py:141:    torch.manual_seed(seed)
+scripts/csc_finetune_efficientnetb0.py:142:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_efficientnetb0.py:147:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:148:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:149:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:150:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:179:        batch_size=64,
+scripts/csc_finetune_efficientnetb0.py:188:        batch_size=64,
+scripts/csc_finetune_efficientnetb0.py:197:        batch_size=64,
+scripts/csc_finetune_efficientnetb0.py:206:        batch_size=64,
+scripts/csc_finetune_efficientnetb0.py:223:    best_checkpoint = OUTPUT_DIR / "best_efficientnetb0_gpu.pt"
+scripts/csc_finetune_efficientnetb0.py:233:    print("\nSTAGE 1: classifier-head warm-up, 2 epochs")
+scripts/csc_finetune_efficientnetb0.py:264:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_efficientnetb0.py:266:    print("\nSTAGE 2: full end-to-end fine-tuning, 8 epochs")
+scripts/csc_finetune_efficientnetb0.py:303:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_efficientnetb0.py:305:    model.load_state_dict(torch.load(best_checkpoint, map_location=device))
+scripts/csc_finetune_efficientnetb0.py:312:        "training": "2 frozen-head warm-up epochs + 8 full fine-tuning epochs",
+scripts/csc_finetune_mobilenet.py:52:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_finetune_mobilenet.py:65:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_finetune_mobilenet.py:69:        .sample(frac=1, random_state=seed)
+scripts/csc_finetune_mobilenet.py:143:    seed = 42
+scripts/csc_finetune_mobilenet.py:144:    random.seed(seed)
+scripts/csc_finetune_mobilenet.py:145:    np.random.seed(seed)
+scripts/csc_finetune_mobilenet.py:146:    torch.manual_seed(seed)
+scripts/csc_finetune_mobilenet.py:147:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_mobilenet.py:152:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_finetune_mobilenet.py:153:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_finetune_mobilenet.py:154:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_mobilenet.py:155:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_mobilenet.py:184:        batch_size=64,
+scripts/csc_finetune_mobilenet.py:193:        batch_size=64,
+scripts/csc_finetune_mobilenet.py:202:        batch_size=64,
+scripts/csc_finetune_mobilenet.py:211:        batch_size=64,
+scripts/csc_finetune_mobilenet.py:228:    best_checkpoint = OUTPUT_DIR / "best_mobilenetv2_gpu.pt"
+scripts/csc_finetune_mobilenet.py:238:    print("\nSTAGE 1: classifier-head warm-up, 2 epochs")
+scripts/csc_finetune_mobilenet.py:273:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_mobilenet.py:275:    print("\nSTAGE 2: full end-to-end fine-tuning, 8 epochs")
+scripts/csc_finetune_mobilenet.py:317:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_mobilenet.py:320:        torch.load(best_checkpoint, map_location=device)
+scripts/csc_finetune_mobilenet.py:328:        "training": "2 frozen-head warm-up epochs + 8 full fine-tuning epochs",
+scripts/csc_finetune_resnet18.py:52:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_finetune_resnet18.py:65:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_finetune_resnet18.py:69:        .sample(frac=1, random_state=seed)
+scripts/csc_finetune_resnet18.py:138:    seed = 42
+scripts/csc_finetune_resnet18.py:139:    random.seed(seed)
+scripts/csc_finetune_resnet18.py:140:    np.random.seed(seed)
+scripts/csc_finetune_resnet18.py:141:    torch.manual_seed(seed)
+scripts/csc_finetune_resnet18.py:142:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_resnet18.py:147:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_finetune_resnet18.py:148:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_finetune_resnet18.py:149:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_resnet18.py:150:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_resnet18.py:179:        batch_size=64,
+scripts/csc_finetune_resnet18.py:188:        batch_size=64,
+scripts/csc_finetune_resnet18.py:197:        batch_size=64,
+scripts/csc_finetune_resnet18.py:206:        batch_size=64,
+scripts/csc_finetune_resnet18.py:220:    best_checkpoint = OUTPUT_DIR / "best_resnet18_gpu.pt"
+scripts/csc_finetune_resnet18.py:230:    print("\nSTAGE 1: classifier-head warm-up, 2 epochs")
+scripts/csc_finetune_resnet18.py:263:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_resnet18.py:265:    print("\nSTAGE 2: full end-to-end fine-tuning, 8 epochs")
+scripts/csc_finetune_resnet18.py:302:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_resnet18.py:304:    model.load_state_dict(torch.load(best_checkpoint, map_location=device))
+scripts/csc_finetune_resnet18.py:311:        "training": "2 frozen-head warm-up epochs + 8 full fine-tuning epochs",
+scripts/csc_finetune_v3_resnet18.py:34:V2_CHECKPOINT = (
+scripts/csc_finetune_v3_resnet18.py:43:BEST_CHECKPOINT = OUTPUT_DIR / "best_resnet18_v3_gpu.pt"
+scripts/csc_finetune_v3_resnet18.py:62:def create_balanced_epoch(dataframe, per_class, epoch_seed):
+scripts/csc_finetune_v3_resnet18.py:77:                random_state=epoch_seed + CLASS_TO_ID[label],
+scripts/csc_finetune_v3_resnet18.py:83:        .sample(frac=1, random_state=epoch_seed)
+scripts/csc_finetune_v3_resnet18.py:88:def create_balanced_fixed(dataframe, per_class, seed):
+scripts/csc_finetune_v3_resnet18.py:89:    return create_balanced_epoch(dataframe, per_class, seed)
+scripts/csc_finetune_v3_resnet18.py:173:    seed = 42
+scripts/csc_finetune_v3_resnet18.py:174:    epochs = 8
+scripts/csc_finetune_v3_resnet18.py:177:    random.seed(seed)
+scripts/csc_finetune_v3_resnet18.py:178:    np.random.seed(seed)
+scripts/csc_finetune_v3_resnet18.py:179:    torch.manual_seed(seed)
+scripts/csc_finetune_v3_resnet18.py:180:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_v3_resnet18.py:185:    if not V2_CHECKPOINT.exists():
+scripts/csc_finetune_v3_resnet18.py:186:        raise FileNotFoundError(f"Missing V2 checkpoint: {V2_CHECKPOINT}")
+scripts/csc_finetune_v3_resnet18.py:196:        seed=seed,
+scripts/csc_finetune_v3_resnet18.py:201:        seed=seed,
+scripts/csc_finetune_v3_resnet18.py:206:        seed=seed,
+scripts/csc_finetune_v3_resnet18.py:236:        batch_size=128,
+scripts/csc_finetune_v3_resnet18.py:245:        batch_size=128,
+scripts/csc_finetune_v3_resnet18.py:254:        batch_size=128,
+scripts/csc_finetune_v3_resnet18.py:263:        batch_size=128,
+scripts/csc_finetune_v3_resnet18.py:274:    model.load_state_dict(torch.load(V2_CHECKPOINT, map_location=device))
+scripts/csc_finetune_v3_resnet18.py:286:        T_max=epochs,
+scripts/csc_finetune_v3_resnet18.py:293:    selected_checkpoint = "Version 2 checkpoint retained"
+scripts/csc_finetune_v3_resnet18.py:296:    print("Base checkpoint:", V2_CHECKPOINT)
+scripts/csc_finetune_v3_resnet18.py:304:    for epoch in range(1, epochs + 1):
+scripts/csc_finetune_v3_resnet18.py:308:            epoch_seed=seed + epoch * 100,
+scripts/csc_finetune_v3_resnet18.py:313:            batch_size=128,
+scripts/csc_finetune_v3_resnet18.py:333:            f"Version 3 epoch {epoch}/{epochs} | "
+scripts/csc_finetune_v3_resnet18.py:347:            selected_checkpoint = f"Version 3 epoch {epoch}"
+scripts/csc_finetune_v3_resnet18.py:348:            torch.save(model.state_dict(), BEST_CHECKPOINT)
+scripts/csc_finetune_v3_resnet18.py:351:        model.load_state_dict(torch.load(BEST_CHECKPOINT, map_location=device))
+scripts/csc_finetune_v3_resnet18.py:353:        model.load_state_dict(torch.load(V2_CHECKPOINT, map_location=device))
+scripts/csc_finetune_v3_resnet18.py:359:        "base_checkpoint": str(V2_CHECKPOINT),
+scripts/csc_finetune_v3_resnet18.py:361:            "8 continuation epochs from best V2 checkpoint; "
+scripts/csc_finetune_v3_resnet18.py:369:        "selected_checkpoint": selected_checkpoint,
+scripts/evaluate_all_final_models.py:29:CHECKPOINTS = {
+scripts/evaluate_all_final_models.py:76:def fixed_subset(csv_path: Path, per_class: int, seed: int = 42) -> pd.DataFrame:
+scripts/evaluate_all_final_models.py:82:        parts.append(class_df.sample(n=per_class, random_state=seed))
+scripts/evaluate_all_final_models.py:86:        .sample(frac=1, random_state=seed)
+scripts/evaluate_all_final_models.py:145:def load_model(checkpoint: Path, device: torch.device) -> nn.Module:
+scripts/evaluate_all_final_models.py:149:    state = torch.load(checkpoint, map_location="cpu")
+scripts/evaluate_all_final_models.py:176:            batch_size=256,
+scripts/evaluate_all_final_models.py:183:        "protocol": "Same fixed balanced evaluation samples for all final checkpoints.",
+scripts/evaluate_all_final_models.py:195:    for model_name, checkpoint in CHECKPOINTS.items():
+scripts/evaluate_all_final_models.py:196:        if not checkpoint.exists():
+scripts/evaluate_all_final_models.py:197:            raise FileNotFoundError(f"Missing checkpoint: {checkpoint}")
+scripts/evaluate_all_final_models.py:200:        print(f"Checkpoint: {checkpoint}", flush=True)
+scripts/evaluate_all_final_models.py:202:        model = load_model(checkpoint, device)
+scripts/evaluate_all_final_models.py:205:            "checkpoint": str(checkpoint),
+scripts/evaluate_resnet18_v2_full.py:18:CHECKPOINT = ROOT / "results/additional_finetuning_v2_resnet18/best_resnet18_v2_gpu.pt"
+scripts/evaluate_resnet18_v2_full.py:46:model.load_state_dict(torch.load(CHECKPOINT, map_location=device))
+scripts/evaluate_resnet18_v2_full.py:54:    batch_size=128,
+scripts/evaluate_resnet18_v2_v3_fixed.py:22:CHECKPOINTS = {
+scripts/evaluate_resnet18_v2_v3_fixed.py:50:def v2_fixed_balanced_subset(csv_path, per_class, seed=42):
+scripts/evaluate_resnet18_v2_v3_fixed.py:58:                random_state=seed,
+scripts/evaluate_resnet18_v2_v3_fixed.py:64:        .sample(frac=1, random_state=seed)
+scripts/evaluate_resnet18_v2_v3_fixed.py:109:def load_resnet18(checkpoint, device):
+scripts/evaluate_resnet18_v2_v3_fixed.py:112:    model.load_state_dict(torch.load(checkpoint, map_location=device))
+scripts/evaluate_resnet18_v2_v3_fixed.py:144:            batch_size=128,
+scripts/evaluate_resnet18_v2_v3_fixed.py:155:            "Both checkpoints evaluated on the exact fixed balanced "
+scripts/evaluate_resnet18_v2_v3_fixed.py:159:        "checkpoints": {},
+scripts/evaluate_resnet18_v2_v3_fixed.py:162:    for version, checkpoint in CHECKPOINTS.items():
+scripts/evaluate_resnet18_v2_v3_fixed.py:163:        if not checkpoint.exists():
+scripts/evaluate_resnet18_v2_v3_fixed.py:164:            raise FileNotFoundError(checkpoint)
+scripts/evaluate_resnet18_v2_v3_fixed.py:166:        model = load_resnet18(checkpoint, device)
+scripts/evaluate_resnet18_v2_v3_fixed.py:167:        print(f"\nEvaluating {version}: {checkpoint}")
+scripts/evaluate_resnet18_v2_v3_fixed.py:169:        results["checkpoints"][version] = {
+scripts/evaluate_resnet18_v2_v3_fixed.py:170:            "checkpoint": str(checkpoint),
+scripts/evaluate_resnet18_v2_v3_fixed.py:177:        print(json.dumps(results["checkpoints"][version], indent=2))
+scripts/evaluate_rice_architectures.py:45:BATCH_SIZE = 128
+scripts/evaluate_rice_architectures.py:55:        "checkpoint": "best_resnet18_rice_grouped.pt",
+scripts/evaluate_rice_architectures.py:63:        "checkpoint": "best_mobilenetv2_rice_grouped.pt",
+scripts/evaluate_rice_architectures.py:71:        "checkpoint": "best_efficientnetb0_rice_grouped.pt",
+scripts/evaluate_rice_architectures.py:380:            batch_size=BATCH_SIZE,
+scripts/evaluate_rice_architectures.py:398:        checkpoint_path = (
+scripts/evaluate_rice_architectures.py:399:            output_dir / config["checkpoint"]
+scripts/evaluate_rice_architectures.py:406:        checkpoint = torch.load(
+scripts/evaluate_rice_architectures.py:407:            checkpoint_path,
+scripts/evaluate_rice_architectures.py:413:            isinstance(checkpoint, dict)
+scripts/evaluate_rice_architectures.py:414:            and "model_state_dict" in checkpoint
+scripts/evaluate_rice_architectures.py:416:            state_dict = checkpoint[
+scripts/evaluate_rice_architectures.py:420:            state_dict = checkpoint
+scripts/evaluate_rice_fedavg_mobilenetv2.py:45:BATCH_SIZE = 128
+scripts/evaluate_rice_fedavg_mobilenetv2.py:402:            batch_size=BATCH_SIZE,
+scripts/evaluate_rice_fedavg_mobilenetv2.py:418:        checkpoint_path = (
+scripts/evaluate_rice_fedavg_mobilenetv2.py:430:            f"Checkpoint: "
+scripts/evaluate_rice_fedavg_mobilenetv2.py:431:            f"{checkpoint_path}",
+scripts/evaluate_rice_fedavg_mobilenetv2.py:437:        checkpoint = torch.load(
+scripts/evaluate_rice_fedavg_mobilenetv2.py:438:            checkpoint_path,
+scripts/evaluate_rice_fedavg_mobilenetv2.py:444:            checkpoint["model_state_dict"]
+scripts/evaluate_rice_fedavg_mobilenetv2.py:446:                isinstance(checkpoint, dict)
+scripts/evaluate_rice_fedavg_mobilenetv2.py:448:                in checkpoint
+scripts/evaluate_rice_fedavg_mobilenetv2.py:450:            else checkpoint
+scripts/evaluate_rice_fedavg_mobilenetv2.py:524:                    "checkpoint": str(
+scripts/evaluate_rice_fedavg_mobilenetv2.py:525:                        checkpoint_path
+scripts/evaluate_rice_model.py:45:        description="Evaluate a rice ResNet18 checkpoint."
+scripts/evaluate_rice_model.py:48:    parser.add_argument("--checkpoint", type=Path, required=True)
+scripts/evaluate_rice_model.py:54:    parser.add_argument("--batch-size", type=int, default=256)
+scripts/evaluate_rice_model.py:60:def load_checkpoint(
+scripts/evaluate_rice_model.py:61:    checkpoint_path: Path,
+scripts/evaluate_rice_model.py:63:    checkpoint = torch.load(
+scripts/evaluate_rice_model.py:64:        checkpoint_path,
+scripts/evaluate_rice_model.py:72:        isinstance(checkpoint, dict)
+scripts/evaluate_rice_model.py:73:        and "model_state_dict" in checkpoint
+scripts/evaluate_rice_model.py:75:        state_dict = checkpoint["model_state_dict"]
+scripts/evaluate_rice_model.py:79:            for key, value in checkpoint.items()
+scripts/evaluate_rice_model.py:83:        state_dict = checkpoint
+scripts/evaluate_rice_model.py:320:    state_dict, checkpoint_metadata = load_checkpoint(
+scripts/evaluate_rice_model.py:321:        args.checkpoint
+scripts/evaluate_rice_model.py:334:        "checkpoint": str(args.checkpoint),
+scripts/evaluate_rice_model.py:336:        "checkpoint_metadata": checkpoint_metadata,
+scripts/evaluate_rice_model.py:350:            batch_size=args.batch_size,
+scripts/evaluate_v3_on_v2_protocol.py:20:CHECKPOINT = ROOT / "results/version3_dynamic_balanced_resnet18/best_resnet18_v3_gpu.pt"
+scripts/evaluate_v3_on_v2_protocol.py:51:def fixed_v2_subset(csv_path, per_class, seed=42):
+scripts/evaluate_v3_on_v2_protocol.py:59:                random_state=seed,
+scripts/evaluate_v3_on_v2_protocol.py:65:        .sample(frac=1, random_state=seed)
+scripts/evaluate_v3_on_v2_protocol.py:119:    if not CHECKPOINT.exists():
+scripts/evaluate_v3_on_v2_protocol.py:120:        raise FileNotFoundError(CHECKPOINT)
+scripts/evaluate_v3_on_v2_protocol.py:135:    model.load_state_dict(torch.load(CHECKPOINT, map_location=device))
+scripts/evaluate_v3_on_v2_protocol.py:140:        "checkpoint": str(CHECKPOINT),
+scripts/evaluate_v3_on_v2_protocol.py:150:            batch_size=256,
+scripts/paper/generate_paper_figures.py:483:    epochs = [
+scripts/paper/generate_paper_figures.py:501:        epochs,
+scripts/paper/generate_paper_figures.py:513:    ax.set_xticks(epochs)
+scripts/paper/generate_paper_figures.py:521:    full_finetuning_epochs = [
+scripts/paper/generate_paper_figures.py:523:        for epoch, stage in zip(epochs, stages)
+scripts/paper/generate_paper_figures.py:527:    if full_finetuning_epochs:
+scripts/paper/generate_paper_figures.py:528:        first_full_epoch = min(full_finetuning_epochs)
+scripts/paper/generate_paper_figures.py:549:            f"Best epoch: {epochs[best_index]}\n"
+scripts/paper/generate_paper_figures.py:553:            epochs[best_index],
+scripts/train_rice_efficientnetb0_grouped.py:25:SEED = 42
+scripts/train_rice_efficientnetb0_grouped.py:59:BATCH_SIZE = 128
+scripts/train_rice_efficientnetb0_grouped.py:62:WARMUP_EPOCHS = 2
+scripts/train_rice_efficientnetb0_grouped.py:63:FINETUNE_EPOCHS = 8
+scripts/train_rice_efficientnetb0_grouped.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_efficientnetb0_grouped.py:132:    random.seed(seed)
+scripts/train_rice_efficientnetb0_grouped.py:133:    np.random.seed(seed)
+scripts/train_rice_efficientnetb0_grouped.py:134:    torch.manual_seed(seed)
+scripts/train_rice_efficientnetb0_grouped.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_efficientnetb0_grouped.py:228:        batch_size = labels.size(0)
+scripts/train_rice_efficientnetb0_grouped.py:230:        running_loss += loss.item() * batch_size
+scripts/train_rice_efficientnetb0_grouped.py:231:        sample_count += batch_size
+scripts/train_rice_efficientnetb0_grouped.py:266:            batch_size = labels.size(0)
+scripts/train_rice_efficientnetb0_grouped.py:268:            total_loss += loss.item() * batch_size
+scripts/train_rice_efficientnetb0_grouped.py:269:            sample_count += batch_size
+scripts/train_rice_efficientnetb0_grouped.py:363:    set_seed(SEED)
+scripts/train_rice_efficientnetb0_grouped.py:433:        "batch_size": BATCH_SIZE,
+scripts/train_rice_efficientnetb0_grouped.py:475:    checkpoint_path = (
+scripts/train_rice_efficientnetb0_grouped.py:492:    total_epochs = WARMUP_EPOCHS + FINETUNE_EPOCHS
+scripts/train_rice_efficientnetb0_grouped.py:494:    for epoch_index in range(total_epochs):
+scripts/train_rice_efficientnetb0_grouped.py:497:        if epoch_index == WARMUP_EPOCHS:
+scripts/train_rice_efficientnetb0_grouped.py:510:            if epoch_index < WARMUP_EPOCHS
+scripts/train_rice_efficientnetb0_grouped.py:560:            f"Epoch {epoch_number:02d}/{total_epochs} "
+scripts/train_rice_efficientnetb0_grouped.py:582:                checkpoint_path,
+scripts/train_rice_efficientnetb0_grouped.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_efficientnetb0_grouped.py:594:    checkpoint = torch.load(
+scripts/train_rice_efficientnetb0_grouped.py:595:        checkpoint_path,
+scripts/train_rice_efficientnetb0_grouped.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_efficientnetb0_grouped.py:647:        "seed": SEED,
+scripts/train_rice_efficientnetb0_grouped.py:655:            "warmup_epochs": WARMUP_EPOCHS,
+scripts/train_rice_efficientnetb0_grouped.py:656:            "finetune_epochs": FINETUNE_EPOCHS,
+scripts/train_rice_mobilenetv2_grouped.py:25:SEED = 42
+scripts/train_rice_mobilenetv2_grouped.py:59:BATCH_SIZE = 128
+scripts/train_rice_mobilenetv2_grouped.py:62:WARMUP_EPOCHS = 2
+scripts/train_rice_mobilenetv2_grouped.py:63:FINETUNE_EPOCHS = 8
+scripts/train_rice_mobilenetv2_grouped.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_mobilenetv2_grouped.py:132:    random.seed(seed)
+scripts/train_rice_mobilenetv2_grouped.py:133:    np.random.seed(seed)
+scripts/train_rice_mobilenetv2_grouped.py:134:    torch.manual_seed(seed)
+scripts/train_rice_mobilenetv2_grouped.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_mobilenetv2_grouped.py:228:        batch_size = labels.size(0)
+scripts/train_rice_mobilenetv2_grouped.py:230:        running_loss += loss.item() * batch_size
+scripts/train_rice_mobilenetv2_grouped.py:231:        sample_count += batch_size
+scripts/train_rice_mobilenetv2_grouped.py:266:            batch_size = labels.size(0)
+scripts/train_rice_mobilenetv2_grouped.py:268:            total_loss += loss.item() * batch_size
+scripts/train_rice_mobilenetv2_grouped.py:269:            sample_count += batch_size
+scripts/train_rice_mobilenetv2_grouped.py:363:    set_seed(SEED)
+scripts/train_rice_mobilenetv2_grouped.py:433:        "batch_size": BATCH_SIZE,
+scripts/train_rice_mobilenetv2_grouped.py:475:    checkpoint_path = (
+scripts/train_rice_mobilenetv2_grouped.py:492:    total_epochs = WARMUP_EPOCHS + FINETUNE_EPOCHS
+scripts/train_rice_mobilenetv2_grouped.py:494:    for epoch_index in range(total_epochs):
+scripts/train_rice_mobilenetv2_grouped.py:497:        if epoch_index == WARMUP_EPOCHS:
+scripts/train_rice_mobilenetv2_grouped.py:510:            if epoch_index < WARMUP_EPOCHS
+scripts/train_rice_mobilenetv2_grouped.py:560:            f"Epoch {epoch_number:02d}/{total_epochs} "
+scripts/train_rice_mobilenetv2_grouped.py:582:                checkpoint_path,
+scripts/train_rice_mobilenetv2_grouped.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_mobilenetv2_grouped.py:594:    checkpoint = torch.load(
+scripts/train_rice_mobilenetv2_grouped.py:595:        checkpoint_path,
+scripts/train_rice_mobilenetv2_grouped.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_mobilenetv2_grouped.py:647:        "seed": SEED,
+scripts/train_rice_mobilenetv2_grouped.py:655:            "warmup_epochs": WARMUP_EPOCHS,
+scripts/train_rice_mobilenetv2_grouped.py:656:            "finetune_epochs": FINETUNE_EPOCHS,
+scripts/train_rice_resnet18_grouped.py:25:SEED = 42
+scripts/train_rice_resnet18_grouped.py:59:BATCH_SIZE = 128
+scripts/train_rice_resnet18_grouped.py:62:WARMUP_EPOCHS = 2
+scripts/train_rice_resnet18_grouped.py:63:FINETUNE_EPOCHS = 8
+scripts/train_rice_resnet18_grouped.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_resnet18_grouped.py:132:    random.seed(seed)
+scripts/train_rice_resnet18_grouped.py:133:    np.random.seed(seed)
+scripts/train_rice_resnet18_grouped.py:134:    torch.manual_seed(seed)
+scripts/train_rice_resnet18_grouped.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_resnet18_grouped.py:228:        batch_size = labels.size(0)
+scripts/train_rice_resnet18_grouped.py:230:        running_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_grouped.py:231:        sample_count += batch_size
+scripts/train_rice_resnet18_grouped.py:266:            batch_size = labels.size(0)
+scripts/train_rice_resnet18_grouped.py:268:            total_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_grouped.py:269:            sample_count += batch_size
+scripts/train_rice_resnet18_grouped.py:363:    set_seed(SEED)
+scripts/train_rice_resnet18_grouped.py:433:        "batch_size": BATCH_SIZE,
+scripts/train_rice_resnet18_grouped.py:475:    checkpoint_path = (
+scripts/train_rice_resnet18_grouped.py:492:    total_epochs = WARMUP_EPOCHS + FINETUNE_EPOCHS
+scripts/train_rice_resnet18_grouped.py:494:    for epoch_index in range(total_epochs):
+scripts/train_rice_resnet18_grouped.py:497:        if epoch_index == WARMUP_EPOCHS:
+scripts/train_rice_resnet18_grouped.py:510:            if epoch_index < WARMUP_EPOCHS
+scripts/train_rice_resnet18_grouped.py:560:            f"Epoch {epoch_number:02d}/{total_epochs} "
+scripts/train_rice_resnet18_grouped.py:582:                checkpoint_path,
+scripts/train_rice_resnet18_grouped.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_resnet18_grouped.py:594:    checkpoint = torch.load(
+scripts/train_rice_resnet18_grouped.py:595:        checkpoint_path,
+scripts/train_rice_resnet18_grouped.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_resnet18_grouped.py:647:        "seed": SEED,
+scripts/train_rice_resnet18_grouped.py:655:            "warmup_epochs": WARMUP_EPOCHS,
+scripts/train_rice_resnet18_grouped.py:656:            "finetune_epochs": FINETUNE_EPOCHS,
+scripts/train_rice_resnet18_seed123.py:25:SEED = 123
+scripts/train_rice_resnet18_seed123.py:39:    "rice_resnet18_grouped_seed123"
+scripts/train_rice_resnet18_seed123.py:58:IMAGE_SIZE = 224
+scripts/train_rice_resnet18_seed123.py:59:BATCH_SIZE = 128
+scripts/train_rice_resnet18_seed123.py:62:WARMUP_EPOCHS = 2
+scripts/train_rice_resnet18_seed123.py:63:FINETUNE_EPOCHS = 8
+scripts/train_rice_resnet18_seed123.py:65:WARMUP_LR = 1e-3
+scripts/train_rice_resnet18_seed123.py:66:FINETUNE_LR = 1e-4
+scripts/train_rice_resnet18_seed123.py:67:WEIGHT_DECAY = 1e-4
+scripts/train_rice_resnet18_seed123.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_resnet18_seed123.py:132:    random.seed(seed)
+scripts/train_rice_resnet18_seed123.py:133:    np.random.seed(seed)
+scripts/train_rice_resnet18_seed123.py:134:    torch.manual_seed(seed)
+scripts/train_rice_resnet18_seed123.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_resnet18_seed123.py:166:def calculate_class_weights(
+scripts/train_rice_resnet18_seed123.py:202:    optimizer: torch.optim.Optimizer,
+scripts/train_rice_resnet18_seed123.py:208:    sample_count = 0
+scripts/train_rice_resnet18_seed123.py:220:        optimizer.zero_grad(set_to_none=True)
+scripts/train_rice_resnet18_seed123.py:226:        optimizer.step()
+scripts/train_rice_resnet18_seed123.py:228:        batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed123.py:230:        running_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed123.py:231:        sample_count += batch_size
+scripts/train_rice_resnet18_seed123.py:233:    return running_loss / max(sample_count, 1)
+scripts/train_rice_resnet18_seed123.py:245:    sample_count = 0
+scripts/train_rice_resnet18_seed123.py:266:            batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed123.py:268:            total_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed123.py:269:            sample_count += batch_size
+scripts/train_rice_resnet18_seed123.py:282:        "loss": total_loss / max(sample_count, 1),
+scripts/train_rice_resnet18_seed123.py:363:    set_seed(SEED)
+scripts/train_rice_resnet18_seed123.py:388:            IMAGE_SIZE,
+scripts/train_rice_resnet18_seed123.py:407:        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+scripts/train_rice_resnet18_seed123.py:428:    print(f"Training samples:   {len(train_dataset)}")
+scripts/train_rice_resnet18_seed123.py:429:    print(f"Validation samples: {len(validation_dataset)}")
+scripts/train_rice_resnet18_seed123.py:430:    print(f"Test samples:       {len(test_dataset)}")
+scripts/train_rice_resnet18_seed123.py:433:        "batch_size": BATCH_SIZE,
+scripts/train_rice_resnet18_seed123.py:461:    class_weights = calculate_class_weights(
+scripts/train_rice_resnet18_seed123.py:468:        weight=class_weights
+scripts/train_rice_resnet18_seed123.py:475:    checkpoint_path = (
+scripts/train_rice_resnet18_seed123.py:483:    optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed123.py:488:        lr=WARMUP_LR,
+scripts/train_rice_resnet18_seed123.py:489:        weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed123.py:492:    total_epochs = WARMUP_EPOCHS + FINETUNE_EPOCHS
+scripts/train_rice_resnet18_seed123.py:494:    for epoch_index in range(total_epochs):
+scripts/train_rice_resnet18_seed123.py:497:        if epoch_index == WARMUP_EPOCHS:
+scripts/train_rice_resnet18_seed123.py:502:            optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed123.py:504:                lr=FINETUNE_LR,
+scripts/train_rice_resnet18_seed123.py:505:                weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed123.py:509:            "warmup"
+scripts/train_rice_resnet18_seed123.py:510:            if epoch_index < WARMUP_EPOCHS
+scripts/train_rice_resnet18_seed123.py:511:            else "full_finetuning"
+scripts/train_rice_resnet18_seed123.py:520:            optimizer,
+scripts/train_rice_resnet18_seed123.py:560:            f"Epoch {epoch_number:02d}/{total_epochs} "
+scripts/train_rice_resnet18_seed123.py:582:                checkpoint_path,
+scripts/train_rice_resnet18_seed123.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_resnet18_seed123.py:594:    checkpoint = torch.load(
+scripts/train_rice_resnet18_seed123.py:595:        checkpoint_path,
+scripts/train_rice_resnet18_seed123.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_resnet18_seed123.py:645:        "experiment": "rice_resnet18_grouped_seed123",
+scripts/train_rice_resnet18_seed123.py:647:        "seed": SEED,
+scripts/train_rice_resnet18_seed123.py:655:            "warmup_epochs": WARMUP_EPOCHS,
+scripts/train_rice_resnet18_seed123.py:656:            "finetune_epochs": FINETUNE_EPOCHS,
+scripts/train_rice_resnet18_seed2026.py:25:SEED = 2026
+scripts/train_rice_resnet18_seed2026.py:39:    "rice_resnet18_grouped_seed2026"
+scripts/train_rice_resnet18_seed2026.py:58:IMAGE_SIZE = 224
+scripts/train_rice_resnet18_seed2026.py:59:BATCH_SIZE = 128
+scripts/train_rice_resnet18_seed2026.py:62:WARMUP_EPOCHS = 2
+scripts/train_rice_resnet18_seed2026.py:63:FINETUNE_EPOCHS = 8
+scripts/train_rice_resnet18_seed2026.py:65:WARMUP_LR = 1e-3
+scripts/train_rice_resnet18_seed2026.py:66:FINETUNE_LR = 1e-4
+scripts/train_rice_resnet18_seed2026.py:67:WEIGHT_DECAY = 1e-4
+scripts/train_rice_resnet18_seed2026.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_resnet18_seed2026.py:132:    random.seed(seed)
+scripts/train_rice_resnet18_seed2026.py:133:    np.random.seed(seed)
+scripts/train_rice_resnet18_seed2026.py:134:    torch.manual_seed(seed)
+scripts/train_rice_resnet18_seed2026.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_resnet18_seed2026.py:166:def calculate_class_weights(
+scripts/train_rice_resnet18_seed2026.py:202:    optimizer: torch.optim.Optimizer,
+scripts/train_rice_resnet18_seed2026.py:208:    sample_count = 0
+scripts/train_rice_resnet18_seed2026.py:220:        optimizer.zero_grad(set_to_none=True)
+scripts/train_rice_resnet18_seed2026.py:226:        optimizer.step()
+scripts/train_rice_resnet18_seed2026.py:228:        batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed2026.py:230:        running_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed2026.py:231:        sample_count += batch_size
+scripts/train_rice_resnet18_seed2026.py:233:    return running_loss / max(sample_count, 1)
+scripts/train_rice_resnet18_seed2026.py:245:    sample_count = 0
+scripts/train_rice_resnet18_seed2026.py:266:            batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed2026.py:268:            total_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed2026.py:269:            sample_count += batch_size
+scripts/train_rice_resnet18_seed2026.py:282:        "loss": total_loss / max(sample_count, 1),
+scripts/train_rice_resnet18_seed2026.py:363:    set_seed(SEED)
+scripts/train_rice_resnet18_seed2026.py:388:            IMAGE_SIZE,
+scripts/train_rice_resnet18_seed2026.py:407:        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+scripts/train_rice_resnet18_seed2026.py:428:    print(f"Training samples:   {len(train_dataset)}")
+scripts/train_rice_resnet18_seed2026.py:429:    print(f"Validation samples: {len(validation_dataset)}")
+scripts/train_rice_resnet18_seed2026.py:430:    print(f"Test samples:       {len(test_dataset)}")
+scripts/train_rice_resnet18_seed2026.py:433:        "batch_size": BATCH_SIZE,
+scripts/train_rice_resnet18_seed2026.py:461:    class_weights = calculate_class_weights(
+scripts/train_rice_resnet18_seed2026.py:468:        weight=class_weights
+scripts/train_rice_resnet18_seed2026.py:475:    checkpoint_path = (
+scripts/train_rice_resnet18_seed2026.py:483:    optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed2026.py:488:        lr=WARMUP_LR,
+scripts/train_rice_resnet18_seed2026.py:489:        weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed2026.py:492:    total_epochs = WARMUP_EPOCHS + FINETUNE_EPOCHS
+scripts/train_rice_resnet18_seed2026.py:494:    for epoch_index in range(total_epochs):
+scripts/train_rice_resnet18_seed2026.py:497:        if epoch_index == WARMUP_EPOCHS:
+scripts/train_rice_resnet18_seed2026.py:502:            optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed2026.py:504:                lr=FINETUNE_LR,
+scripts/train_rice_resnet18_seed2026.py:505:                weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed2026.py:509:            "warmup"
+scripts/train_rice_resnet18_seed2026.py:510:            if epoch_index < WARMUP_EPOCHS
+scripts/train_rice_resnet18_seed2026.py:511:            else "full_finetuning"
+scripts/train_rice_resnet18_seed2026.py:520:            optimizer,
+scripts/train_rice_resnet18_seed2026.py:560:            f"Epoch {epoch_number:02d}/{total_epochs} "
+scripts/train_rice_resnet18_seed2026.py:582:                checkpoint_path,
+scripts/train_rice_resnet18_seed2026.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_resnet18_seed2026.py:594:    checkpoint = torch.load(
+scripts/train_rice_resnet18_seed2026.py:595:        checkpoint_path,
+scripts/train_rice_resnet18_seed2026.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_resnet18_seed2026.py:645:        "experiment": "rice_resnet18_grouped_seed2026",
+scripts/train_rice_resnet18_seed2026.py:647:        "seed": SEED,
+scripts/train_rice_resnet18_seed2026.py:655:            "warmup_epochs": WARMUP_EPOCHS,
+scripts/train_rice_resnet18_seed2026.py:656:            "finetune_epochs": FINETUNE_EPOCHS,
+scripts/train_wheat_resnet18_grouped_v2.py:24:SEED = 42
+scripts/train_wheat_resnet18_grouped_v2.py:58:BATCH_SIZE = 128
+scripts/train_wheat_resnet18_grouped_v2.py:61:WARMUP_EPOCHS = 2
+scripts/train_wheat_resnet18_grouped_v2.py:62:FINETUNE_EPOCHS = 8
+scripts/train_wheat_resnet18_grouped_v2.py:136:def set_seed(seed: int) -> None:
+scripts/train_wheat_resnet18_grouped_v2.py:137:    random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:138:    np.random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:139:    torch.manual_seed(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:142:        torch.cuda.manual_seed_all(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:250:        current_batch_size = labels.size(0)
+scripts/train_wheat_resnet18_grouped_v2.py:254:            * current_batch_size
+scripts/train_wheat_resnet18_grouped_v2.py:257:        sample_count += current_batch_size
+scripts/train_wheat_resnet18_grouped_v2.py:302:            current_batch_size = (
+scripts/train_wheat_resnet18_grouped_v2.py:308:                * current_batch_size
+scripts/train_wheat_resnet18_grouped_v2.py:312:                current_batch_size
+scripts/train_wheat_resnet18_grouped_v2.py:590:    set_seed(SEED)
+scripts/train_wheat_resnet18_grouped_v2.py:733:        "batch_size": BATCH_SIZE,
+scripts/train_wheat_resnet18_grouped_v2.py:785:    checkpoint_path = (
+scripts/train_wheat_resnet18_grouped_v2.py:805:    total_epochs = (
+scripts/train_wheat_resnet18_grouped_v2.py:806:        WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2.py:807:        + FINETUNE_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2.py:811:        total_epochs
+scripts/train_wheat_resnet18_grouped_v2.py:819:            == WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2.py:843:                < WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2.py:918:            f"{total_epochs} "
+scripts/train_wheat_resnet18_grouped_v2.py:966:                    "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v2.py:968:                checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2.py:973:                f"checkpoint: "
+scripts/train_wheat_resnet18_grouped_v2.py:974:                f"{checkpoint_path}",
+scripts/train_wheat_resnet18_grouped_v2.py:991:    checkpoint = torch.load(
+scripts/train_wheat_resnet18_grouped_v2.py:992:        checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2.py:998:        checkpoint[
+scripts/train_wheat_resnet18_grouped_v2.py:1083:        "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v2.py:1122:            "warmup_epochs": (
+scripts/train_wheat_resnet18_grouped_v2.py:1123:                WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2.py:1125:            "finetune_epochs": (
+scripts/train_wheat_resnet18_grouped_v2.py:1126:                FINETUNE_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2.py:1139:            "batch_size": (
+scripts/train_wheat_resnet18_grouped_v2.py:1140:                BATCH_SIZE
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:24:SEED = 42
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:58:BATCH_SIZE = 128
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:61:WARMUP_EPOCHS = 1
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:62:FINETUNE_EPOCHS = 0
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:136:def set_seed(seed: int) -> None:
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:137:    random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:138:    np.random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:139:    torch.manual_seed(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:142:        torch.cuda.manual_seed_all(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:250:        current_batch_size = labels.size(0)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:254:            * current_batch_size
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:257:        sample_count += current_batch_size
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:302:            current_batch_size = (
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:308:                * current_batch_size
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:312:                current_batch_size
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:590:    set_seed(SEED)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:733:        "batch_size": BATCH_SIZE,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:785:    checkpoint_path = (
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:805:    total_epochs = (
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:806:        WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:807:        + FINETUNE_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:811:        total_epochs
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:819:            == WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:843:                < WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:918:            f"{total_epochs} "
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:966:                    "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:968:                checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:973:                f"checkpoint: "
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:974:                f"{checkpoint_path}",
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:991:    checkpoint = torch.load(
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:992:        checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:998:        checkpoint[
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1083:        "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1122:            "warmup_epochs": (
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1123:                WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1125:            "finetune_epochs": (
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1126:                FINETUNE_EPOCHS
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1139:            "batch_size": (
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1140:                BATCH_SIZE
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:24:SEED = 42
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:58:BATCH_SIZE = 128
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:61:WARMUP_EPOCHS = 2
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:62:FINETUNE_EPOCHS = 8
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:136:def set_seed(seed: int) -> None:
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:137:    random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:138:    np.random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:139:    torch.manual_seed(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:142:        torch.cuda.manual_seed_all(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:254:        current_batch_size = labels.size(0)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:258:            * current_batch_size
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:261:        sample_count += current_batch_size
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:306:            current_batch_size = (
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:312:                * current_batch_size
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:316:                current_batch_size
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:594:    set_seed(SEED)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:737:        "batch_size": BATCH_SIZE,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:789:    checkpoint_path = (
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:809:    total_epochs = (
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:810:        WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:811:        + FINETUNE_EPOCHS
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:815:        total_epochs
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:823:            == WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:847:                < WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:922:            f"{total_epochs} "
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:970:                    "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:972:                checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:977:                f"checkpoint: "
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:978:                f"{checkpoint_path}",
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:995:    checkpoint = torch.load(
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:996:        checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1002:        checkpoint[
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1087:        "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1126:            "warmup_epochs": (
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1127:                WARMUP_EPOCHS
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1129:            "finetune_epochs": (
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1130:                FINETUNE_EPOCHS
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1143:            "batch_size": (
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1144:                BATCH_SIZE
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:18:from torch.utils.data.distributed import DistributedSampler
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:43:    parser.add_argument("--epochs", type=int, default=8)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:45:    parser.add_argument("--batch-size-per-gpu", type=int, default=64)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:47:    parser.add_argument("--learning-rate", type=float, default=2e-6)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:48:    parser.add_argument("--weight-decay", type=float, default=1e-4)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:49:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:58:        "--initial-checkpoint",
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:61:            "additional_finetuning_v2_resnet18/"
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:93:    world_size = dist.get_world_size()
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:99:    return rank, world_size, local_rank, device
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:107:def set_seed(seed: int) -> None:
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:108:    random.seed(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:109:    np.random.seed(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:110:    torch.manual_seed(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:111:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:117:    epoch_seed: int,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:131:            class_df.sample(
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:133:                random_state=epoch_seed + CLASS_TO_ID[label],
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:139:        .sample(frac=1, random_state=epoch_seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:209:    rank, world_size, local_rank, device = setup_distributed()
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:212:        set_seed(args.seed + rank)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:217:        initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:224:        if not initial_checkpoint.exists():
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:226:                f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:232:                f"DDP world size: {world_size} | "
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:233:                f"effective global batch size: "
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:234:                f"{args.batch_size_per_gpu * world_size}",
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:252:            epoch_seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:257:            epoch_seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:262:            epoch_seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:293:            torch.load(initial_checkpoint, map_location="cpu")
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:305:        optimizer = torch.optim.AdamW(
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:307:            lr=args.learning_rate,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:308:            weight_decay=args.weight_decay,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:311:        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:312:            optimizer,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:313:            T_max=args.epochs,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:322:        for epoch in range(1, args.epochs + 1):
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:326:                epoch_seed=args.seed + epoch * 100,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:331:            sampler = DistributedSampler(
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:333:                num_replicas=world_size,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:336:                seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:338:            sampler.set_epoch(epoch)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:342:                batch_size=args.batch_size_per_gpu,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:343:                sampler=sampler,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:351:            total_samples = 0
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:357:                optimizer.zero_grad(set_to_none=True)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:361:                optimizer.step()
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:364:                total_samples += labels.size(0)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:367:                [total_loss, total_samples],
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:377:            scheduler.step()
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:383:                    batch_size=256,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:393:                    f"DDP epoch {epoch}/{args.epochs} | "
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:418:            best_checkpoint = output_dir / "best_ddp_resnet18_v3.pt"
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:420:            if best_checkpoint.exists():
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:422:                    torch.load(best_checkpoint, map_location=device)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:426:                    torch.load(initial_checkpoint, map_location=device)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:432:                "world_size": world_size,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:433:                "epochs": args.epochs,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:438:                "batch_size_per_gpu": args.batch_size_per_gpu,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:439:                "effective_global_batch_size": (
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:440:                    args.batch_size_per_gpu * world_size
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:442:                "initial_checkpoint": str(initial_checkpoint),
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:454:                    "batch_size": 256,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:22:from torch.utils.data.distributed import DistributedSampler
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:54:    parser.add_argument("--initial-checkpoint", type=Path, required=True)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:57:    parser.add_argument("--epochs", type=int, default=8)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:58:    parser.add_argument("--batch-size-per-gpu", type=int, default=64)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:60:    parser.add_argument("--learning-rate", type=float, default=2e-6)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:61:    parser.add_argument("--weight-decay", type=float, default=1e-4)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:63:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:72:    world_size = dist.get_world_size()
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:78:    return rank, world_size, local_rank, device
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:86:def set_seed(seed: int) -> None:
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:87:    random.seed(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:88:    np.random.seed(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:89:    torch.manual_seed(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:90:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:93:def calculate_class_weights(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:105:    weights = np.sqrt(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:170:    rank, world_size, local_rank, device = setup_distributed()
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:173:        set_seed(args.seed + rank)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:183:                f"DDP world size: {world_size}",
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:188:                f"Effective global batch size: "
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:189:                f"{args.batch_size_per_gpu * world_size}",
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:242:        train_sampler = DistributedSampler(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:244:            num_replicas=world_size,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:247:            seed=args.seed,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:253:            batch_size=args.batch_size_per_gpu,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:254:            sampler=train_sampler,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:265:                batch_size=256,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:282:        checkpoint = torch.load(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:283:            args.initial_checkpoint,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:289:            isinstance(checkpoint, dict)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:290:            and "model_state_dict" in checkpoint
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:292:            state_dict = checkpoint["model_state_dict"]
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:294:            state_dict = checkpoint
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:298:            pretrained=False,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:310:        class_weights = calculate_class_weights(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:315:            weight=class_weights,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:319:        optimizer = torch.optim.AdamW(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:321:            lr=args.learning_rate,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:322:            weight_decay=args.weight_decay,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:325:        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:326:            optimizer,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:327:            T_max=args.epochs,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:336:        for epoch in range(1, args.epochs + 1):
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:337:            train_sampler.set_epoch(epoch)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:341:            local_sample_count = 0
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:356:                optimizer.zero_grad(set_to_none=True)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:362:                optimizer.step()
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:368:                local_sample_count += labels.size(0)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:373:                    local_sample_count,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:389:            scheduler.step()
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:409:                    "learning_rate": optimizer.param_groups[0]["lr"],
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:420:                    f"Epoch {epoch}/{args.epochs} | "
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:438:                        "world_size": world_size,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:461:                            "world_size": world_size,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:469:                        f"New best checkpoint: epoch {epoch}",
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:476:                    "world_size": world_size,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:477:                    "effective_global_batch_size": (
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:478:                        args.batch_size_per_gpu
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:479:                        * world_size
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:517:                "world_size": world_size,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:518:                "epochs": args.epochs,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:527:                "effective_global_batch_size": (
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:528:                    args.batch_size_per_gpu
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:529:                    * world_size
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:25:        description="Evaluate a federated ResNet18 checkpoint on the fixed V2/V3 protocol."
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:27:    parser.add_argument("--checkpoint", required=True)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:30:    parser.add_argument("--batch-size", type=int, default=256)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:50:def fixed_subset(csv_path: Path, per_class: int, seed: int = 42) -> pd.DataFrame:
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:56:            dataframe[dataframe["label"] == label].sample(
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:58:                random_state=seed,
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:64:        .sample(frac=1, random_state=seed)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:124:    checkpoint = Path(args.checkpoint)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:127:    if not checkpoint.exists():
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:128:        raise FileNotFoundError(f"Checkpoint not found: {checkpoint}")
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:138:    print(f"Checkpoint: {checkpoint}", flush=True)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:151:    model.load_state_dict(torch.load(checkpoint, map_location="cpu"))
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:155:        "experiment": "federated_iid_resnet18_v3",
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:156:        "checkpoint": str(checkpoint),
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:157:        "protocol": "Exact fixed balanced samples previously used for V2 and V3 comparison.",
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:166:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_full_v3.py:40:    parser.add_argument("--initial-checkpoint", required=True)
+src/federated_pipeline/federated/fedavg_full_v3.py:44:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_full_v3.py:45:    parser.add_argument("--batch-size", type=int, default=64)
+src/federated_pipeline/federated/fedavg_full_v3.py:48:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_full_v3.py:57:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_full_v3.py:58:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:59:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:60:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:61:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:109:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_full_v3.py:130:    for epoch in range(1, local_epochs + 1):
+src/federated_pipeline/federated/fedavg_full_v3.py:146:                    f"    local epoch {epoch}/{local_epochs} | "
+src/federated_pipeline/federated/fedavg_full_v3.py:271:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:280:    initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/federated/fedavg_full_v3.py:289:    if not initial_checkpoint.exists():
+src/federated_pipeline/federated/fedavg_full_v3.py:291:            f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/federated/fedavg_full_v3.py:306:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_full_v3.py:323:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_full_v3.py:348:            torch.load(initial_checkpoint, map_location="cpu")
+src/federated_pipeline/federated/fedavg_full_v3.py:350:        print(f"Initialized from: {initial_checkpoint}", flush=True)
+src/federated_pipeline/federated/fedavg_full_v3.py:370:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_full_v3.py:423:            f"Saved checkpoint: {output_dir}/global_model_round_{round_number}.pt",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:61:    parser.add_argument("--initial-checkpoint", required=True)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:74:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:75:    parser.add_argument("--batch-size", type=int, default=64)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:78:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:87:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:88:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:89:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:90:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:91:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:143:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:164:    for epoch in range(1, local_epochs + 1):
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:180:                    f"    local epoch {epoch}/{local_epochs} | "
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:338:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:347:    initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:369:    if not initial_checkpoint.exists():
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:371:            f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:387:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:405:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:429:        checkpoint = torch.load(
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:430:            initial_checkpoint,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:436:            isinstance(checkpoint, dict)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:437:            and "model_state_dict" in checkpoint
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:439:            model_state_dict = checkpoint["model_state_dict"]
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:441:            model_state_dict = checkpoint
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:446:            f"Initialized from: {initial_checkpoint}",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:450:        if isinstance(checkpoint, dict):
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:452:                f"Initial checkpoint epoch: "
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:453:                f"{checkpoint.get('epoch', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:457:                f"Initial checkpoint classes: "
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:458:                f"{checkpoint.get('class_names', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:493:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:580:            f"Saved checkpoint: {output_dir}/global_model_round_{round_number}.pt",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:40:    parser.add_argument("--initial-checkpoint", required=True)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:53:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:54:    parser.add_argument("--batch-size", type=int, default=64)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:57:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:66:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:67:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:68:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:69:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:70:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:122:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:143:    for epoch in range(1, local_epochs + 1):
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:159:                    f"    local epoch {epoch}/{local_epochs} | "
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:317:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:326:    initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:348:    if not initial_checkpoint.exists():
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:350:            f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:366:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:384:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:408:        checkpoint = torch.load(
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:409:            initial_checkpoint,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:415:            isinstance(checkpoint, dict)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:416:            and "model_state_dict" in checkpoint
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:418:            model_state_dict = checkpoint["model_state_dict"]
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:420:            model_state_dict = checkpoint
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:425:            f"Initialized from: {initial_checkpoint}",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:429:        if isinstance(checkpoint, dict):
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:431:                f"Initial checkpoint epoch: "
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:432:                f"{checkpoint.get('epoch', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:436:                f"Initial checkpoint classes: "
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:437:                f"{checkpoint.get('class_names', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:472:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:559:            f"Saved checkpoint: {output_dir}/global_model_round_{round_number}.pt",
+src/federated_pipeline/federated/fedavg_simulation.py:42:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_simulation.py:43:    parser.add_argument("--batch-size", type=int, default=32)
+src/federated_pipeline/federated/fedavg_simulation.py:46:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_simulation.py:51:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_simulation.py:52:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:53:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:54:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:55:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:86:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_simulation.py:102:    for _ in range(local_epochs):
+src/federated_pipeline/federated/fedavg_simulation.py:204:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_simulation.py:233:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_simulation.py:251:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_simulation.py:277:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_simulation.py:323:                    "local_epochs": args.local_epochs,
+src/train.py:24:def set_seed(seed: int) -> None:
+src/train.py:25:    random.seed(seed)
+src/train.py:26:    np.random.seed(seed)
+src/train.py:27:    torch.manual_seed(seed)
+src/train.py:30:        torch.cuda.manual_seed_all(seed)
+src/train.py:33:def balanced_subset(dataset: GrainDataset, per_class: int | None, seed: int) -> Subset:
+src/train.py:37:    rng = np.random.default_rng(seed)
+src/train.py:107:    set_seed(int(config["seed"]))
+src/train.py:110:    checkpoint_dir = Path(config["checkpoint_dir"]) / run_id
+src/train.py:113:    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+src/train.py:171:        int(config["seed"]),
+src/train.py:177:        int(config["seed"]) + 1,
+src/train.py:183:        int(config["seed"]) + 2,
+src/train.py:189:        int(config["seed"]) + 3,
+src/train.py:192:    batch_size = int(config["batch_size"])
+src/train.py:197:        batch_size=batch_size,
+src/train.py:204:        batch_size=batch_size,
+src/train.py:211:        batch_size=batch_size,
+src/train.py:218:        batch_size=batch_size,
+src/train.py:266:    best_checkpoint = checkpoint_dir / "best_model.pt"
+src/train.py:270:    for epoch in range(1, int(config["epochs"]) + 1):
+src/train.py:295:            f"Epoch {epoch}/{config['epochs']} | "
+src/train.py:311:                best_checkpoint,
+src/train.py:316:    checkpoint = torch.load(best_checkpoint, map_location=device)
+src/train.py:317:    model.load_state_dict(checkpoint["model_state_dict"])
+src/train.py:335:        "checkpoint": str(best_checkpoint),
+src/train.py:352:        "seed": config["seed"],
+src/train.py:357:        "epochs": config["epochs"],
+src/train.py:358:        "batch_size": config["batch_size"],
+src/train.py:369:        "checkpoint_path": str(best_checkpoint),
+src/train.py:386:    print(f"\nSaved checkpoint: {best_checkpoint}")
+slurm/csc_v2_efficientnetb0.sh:14:python scripts/csc_continue_finetune_v2.py --model efficientnetb0 --epochs 5 --learning-rate 5e-6
+slurm/csc_v2_mobilenetv2.sh:14:python scripts/csc_continue_finetune_v2.py --model mobilenetv2 --epochs 5 --learning-rate 5e-6
+slurm/csc_v2_resnet18.sh:14:python scripts/csc_continue_finetune_v2.py --model resnet18 --epochs 5 --learning-rate 5e-6
+slurm/ddp_resnet18_v3.sh:21:  --nproc_per_node=2 \
+slurm/ddp_resnet18_v3.sh:23:  --epochs 8 \
+slurm/ddp_resnet18_v3.sh:25:  --batch-size-per-gpu 64 \
+slurm/ddp_resnet18_v3_smoke.sh:21:  --nproc_per_node=2 \
+slurm/ddp_resnet18_v3_smoke.sh:23:  --epochs 1 \
+slurm/ddp_resnet18_v3_smoke.sh:25:  --batch-size-per-gpu 32 \
+slurm/evaluate_fl_full_iid_v3.sh:16:PYTHONPATH=src python -m federated_pipeline.federated.evaluate_federated_checkpoint \
+slurm/evaluate_fl_full_iid_v3.sh:17:  --checkpoint /scratch/project_2019765/grain_research/federated_results/fl_full_iid_v3/global_model_round_3.pt \
+slurm/evaluate_fl_full_iid_v3.sh:20:  --batch-size 256 \
+slurm/evaluate_fl_full_noniid_v3.sh:16:PYTHONPATH=src python -m federated_pipeline.federated.evaluate_federated_checkpoint \
+slurm/evaluate_fl_full_noniid_v3.sh:17:  --checkpoint /scratch/project_2019765/grain_research/federated_results/fl_full_noniid_v3/global_model_round_3.pt \
+slurm/evaluate_fl_full_noniid_v3.sh:20:  --batch-size 256 \
+slurm/evaluate_rice_ddp.sh:23:  --checkpoint \
+slurm/evaluate_rice_ddp.sh:34:  --batch-size 256 \
+slurm/evaluate_rice_federated_models.sh:26:  --checkpoint \
+slurm/evaluate_rice_federated_models.sh:36:  --batch-size 256 \
+slurm/evaluate_rice_federated_models.sh:40:  --checkpoint \
+slurm/evaluate_rice_federated_models.sh:50:  --batch-size 256 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:29:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:32:  --initial-checkpoint \
+slurm/fedavg_rice_mobilenetv2_iid.sh:41:  --local-epochs 1 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:42:  --batch-size 64 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:45:  --seed 42
+slurm/fedavg_rice_mobilenetv2_noniid.sh:29:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:32:  --initial-checkpoint \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:41:  --local-epochs 1 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:42:  --batch-size 64 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:45:  --seed 42
+slurm/fl_fedavg_smoke.sh:21:  --local-epochs 1 \
+slurm/fl_fedavg_smoke.sh:22:  --batch-size 32 \
+slurm/fl_fedavg_smoke.sh:25:  --seed 42
+slurm/fl_full_iid_v3.sh:19:  --initial-checkpoint /scratch/project_2019649/grain_research/results/version3_dynamic_balanced_resnet18/best_resnet18_v3_gpu.pt \
+slurm/fl_full_iid_v3.sh:22:  --local-epochs 1 \
+slurm/fl_full_iid_v3.sh:23:  --batch-size 64 \
+slurm/fl_full_iid_v3.sh:26:  --seed 42
+slurm/fl_full_noniid_v3.sh:19:  --initial-checkpoint /scratch/project_2019765/grain_research/results/version3_dynamic_balanced_resnet18/best_resnet18_v3_gpu.pt \
+slurm/fl_full_noniid_v3.sh:22:  --local-epochs 1 \
+slurm/fl_full_noniid_v3.sh:23:  --batch-size 64 \
+slurm/fl_full_noniid_v3.sh:26:  --seed 42
+slurm/rice_ddp_resnet18_full.sh:29:  --nproc_per_node=2 \
+slurm/rice_ddp_resnet18_full.sh:37:  --initial-checkpoint \
+slurm/rice_ddp_resnet18_full.sh:41:  --epochs 8 \
+slurm/rice_ddp_resnet18_full.sh:42:  --batch-size-per-gpu 64 \
+slurm/rice_ddp_resnet18_full.sh:44:  --learning-rate 0.000002 \
+slurm/rice_ddp_resnet18_full.sh:45:  --weight-decay 0.0001 \
+slurm/rice_ddp_resnet18_full.sh:46:  --seed 42
+slurm/rice_ddp_resnet18_smoke.sh:29:  --nproc_per_node=2 \
+slurm/rice_ddp_resnet18_smoke.sh:37:  --initial-checkpoint \
+slurm/rice_ddp_resnet18_smoke.sh:41:  --epochs 1 \
+slurm/rice_ddp_resnet18_smoke.sh:42:  --batch-size-per-gpu 64 \
+slurm/rice_ddp_resnet18_smoke.sh:44:  --learning-rate 0.000002 \
+slurm/rice_ddp_resnet18_smoke.sh:45:  --weight-decay 0.0001 \
+slurm/rice_ddp_resnet18_smoke.sh:46:  --seed 42
+slurm/rice_fedavg_iid_full.sh:28:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2 \
+slurm/rice_fedavg_iid_full.sh:33:  --initial-checkpoint \
+slurm/rice_fedavg_iid_full.sh:39:  --local-epochs 1 \
+slurm/rice_fedavg_iid_full.sh:40:  --batch-size 64 \
+slurm/rice_fedavg_iid_full.sh:43:  --seed 42
+slurm/rice_fedavg_iid_smoke.sh:28:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2 \
+slurm/rice_fedavg_iid_smoke.sh:33:  --initial-checkpoint \
+slurm/rice_fedavg_iid_smoke.sh:39:  --local-epochs 1 \
+slurm/rice_fedavg_iid_smoke.sh:40:  --batch-size 64 \
+slurm/rice_fedavg_iid_smoke.sh:43:  --seed 42
+slurm/rice_fedavg_noniid_full.sh:28:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2 \
+slurm/rice_fedavg_noniid_full.sh:33:  --initial-checkpoint \
+slurm/rice_fedavg_noniid_full.sh:39:  --local-epochs 1 \
+slurm/rice_fedavg_noniid_full.sh:40:  --batch-size 64 \
+slurm/rice_fedavg_noniid_full.sh:43:  --seed 42
+slurm/roihu_fl_network_smoke.sh:33:  FL_LOCAL_EPOCHS=1 \
+slurm/roihu_fl_network_smoke.sh:34:  FL_BATCH_SIZE=32 \
+slurm/train_rice_resnet18_seed123.sh:32:python scripts/train_rice_resnet18_seed123.py
+slurm/train_rice_resnet18_seed2026.sh:32:python scripts/train_rice_resnet18_seed2026.py
+experiments/results/provenance/rice_grouped_split/split_summary.json:2:  "seed": 42,
+experiments/results/provenance/wheat_grouped_split_v2/metadata.json:3:  "seed": 42,
+experiments/results/README.md:25:- Checkpoint provenance and SHA-256 inventory
+experiments/results/README.md:29:The image datasets, generated train/validation/test manifests, virtual environments, runtime logs, and binary checkpoints are excluded from Git.
+experiments/results/README.md:31:The binary checkpoints remain stored on CSC. Their paths, sizes, timestamps, and SHA-256 hashes are recorded in:
+experiments/results/README.md:33:`provenance/checkpoint_inventory.csv`
+experiments/results/README.md:43:The result files in this directory were generated directly from the saved model checkpoints and experiment outputs.
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_ddp_resnet18/best_ddp_resnet18_rice.pt",
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:14:  "checkpoint_metadata": {
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:32:    "world_size": 2,
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:37:      "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:39:      "epochs": 8,
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:40:      "batch_size_per_gpu": 64,
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:42:      "learning_rate": 2e-06,
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:43:      "weight_decay": 0.0001,
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:45:      "seed": 42
+experiments/results/rice/rice_ddp_resnet18/metrics.json:13:  "world_size": 2,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:14:  "effective_global_batch_size": 128,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:22:      "learning_rate": 1.942909649383465e-06,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:34:      "learning_rate": 1.780330085889911e-06,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:46:      "learning_rate": 1.5370125742738177e-06,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:58:      "learning_rate": 1.2500000000000003e-06,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:70:      "learning_rate": 9.629874257261829e-07,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:82:      "learning_rate": 7.196699141100895e-07,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:94:      "learning_rate": 5.570903506165349e-07,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:106:      "learning_rate": 5e-07,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:120:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_ddp_resnet18/metrics.json:122:    "epochs": 8,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:123:    "batch_size_per_gpu": 64,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:125:    "learning_rate": 2e-06,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:126:    "weight_decay": 0.0001,
+experiments/results/rice/rice_ddp_resnet18/metrics.json:128:    "seed": 42
+experiments/results/rice/rice_ddp_resnet18/training_summary.json:3:  "world_size": 2,
+experiments/results/rice/rice_ddp_resnet18/training_summary.json:4:  "epochs": 8,
+experiments/results/rice/rice_ddp_resnet18/training_summary.json:8:  "effective_global_batch_size": 128,
+experiments/results/rice/rice_efficientnetb0_grouped_v1/metrics.json:4:  "seed": 42,
+experiments/results/rice/rice_efficientnetb0_grouped_v1/metrics.json:21:    "warmup_epochs": 2,
+experiments/results/rice/rice_efficientnetb0_grouped_v1/metrics.json:22:    "finetune_epochs": 8,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/best_global_model.pt",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1/best_mobilenetv2_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/best_global_model.pt",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:14:  "checkpoint_metadata": {
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:34:      "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:36:      "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:41:      "local_epochs": 1,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:42:      "batch_size": 64,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:45:      "seed": 42,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/best_global_model.pt",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1/best_mobilenetv2_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/best_global_model.pt",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:14:  "checkpoint_metadata": {
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:34:      "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:36:      "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:41:      "local_epochs": 1,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:42:      "batch_size": 64,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:45:      "seed": 42,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_mobilenetv2_grouped_v1/metrics.json:4:  "seed": 42,
+experiments/results/rice/rice_mobilenetv2_grouped_v1/metrics.json:21:    "warmup_epochs": 2,
+experiments/results/rice/rice_mobilenetv2_grouped_v1/metrics.json:22:    "finetune_epochs": 8,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics.json:4:  "seed": 42,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics.json:21:    "warmup_epochs": 2,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics.json:22:    "finetune_epochs": 8,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics_final.json:4:  "seed": 42,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics_final.json:21:    "warmup_epochs": 2,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics_final.json:22:    "finetune_epochs": 8,
+experiments/results/rice/rice_resnet18_grouped_v1/split_summary.json:2:  "seed": 42,
+experiments/results/wheat/wheat_resnet18_grouped_v2/metrics.json:4:  "seed": 42,
+experiments/results/wheat/wheat_resnet18_grouped_v2/metrics.json:28:    "warmup_epochs": 2,
+experiments/results/wheat/wheat_resnet18_grouped_v2/metrics.json:29:    "finetune_epochs": 8,
+experiments/results/wheat/wheat_resnet18_grouped_v2/metrics.json:33:    "batch_size": 128,
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/metrics.json:4:  "seed": 42,
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/metrics.json:28:    "warmup_epochs": 2,
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/metrics.json:29:    "finetune_epochs": 8,
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/metrics.json:33:    "batch_size": 128,

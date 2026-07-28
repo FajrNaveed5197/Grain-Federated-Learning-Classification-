@@ -1,0 +1,4 @@
+2026-06-30 | e35cd27 | Add CSC centralized training and evaluation pipeline
+2026-07-13 | 27f0e66 | Add federated learning, DDP, container, and Roihu pipeline code
+2026-07-13 | 138ec43 | Add validated rice results
+2026-07-14 | eff2f25 | Add rice and wheat experimental pipelines

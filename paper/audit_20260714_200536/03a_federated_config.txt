@@ -1,0 +1,1369 @@
+scripts/create_final_comparison_artifacts.py:17:    "fedavg_iid_round3": "FedAvg IID",
+scripts/create_final_comparison_artifacts.py:18:    "fedavg_noniid_round3": "FedAvg non-IID",
+scripts/create_rice_federated_partitions.py:27:            "Create capture-group-safe IID and non-IID federated "
+scripts/create_rice_federated_partitions.py:33:    parser.add_argument("--num-clients", type=int, default=3)
+scripts/create_rice_federated_partitions.py:34:    parser.add_argument("--alpha", type=float, default=0.3)
+scripts/create_rice_federated_partitions.py:35:    parser.add_argument("--seed", type=int, default=42)
+scripts/create_rice_federated_partitions.py:114:def assign_groups_iid(
+scripts/create_rice_federated_partitions.py:117:    num_clients: int,
+scripts/create_rice_federated_partitions.py:118:    seed: int,
+scripts/create_rice_federated_partitions.py:124:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions.py:130:        global_class_counts / num_clients,
+scripts/create_rice_federated_partitions.py:131:        (num_clients, 1),
+scripts/create_rice_federated_partitions.py:134:        num_clients,
+scripts/create_rice_federated_partitions.py:135:        global_total / num_clients,
+scripts/create_rice_federated_partitions.py:140:        (num_clients, len(CLASS_NAMES)),
+scripts/create_rice_federated_partitions.py:143:    client_totals = np.zeros(num_clients, dtype=np.float64)
+scripts/create_rice_federated_partitions.py:161:    # Seed each client with one large group where possible.
+scripts/create_rice_federated_partitions.py:162:    for client_id, group_index in enumerate(order[:num_clients]):
+scripts/create_rice_federated_partitions.py:168:    for group_index in order[num_clients:]:
+scripts/create_rice_federated_partitions.py:174:        for client_id in range(num_clients):
+scripts/create_rice_federated_partitions.py:206:def generate_dirichlet_targets(
+scripts/create_rice_federated_partitions.py:208:    num_clients: int,
+scripts/create_rice_federated_partitions.py:209:    alpha: float,
+scripts/create_rice_federated_partitions.py:210:    seed: int,
+scripts/create_rice_federated_partitions.py:212:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions.py:215:        (num_clients, len(CLASS_NAMES)),
+scripts/create_rice_federated_partitions.py:222:        class_proportions = rng.dirichlet(
+scripts/create_rice_federated_partitions.py:223:            np.full(num_clients, alpha, dtype=np.float64)
+scripts/create_rice_federated_partitions.py:236:def assign_groups_noniid(
+scripts/create_rice_federated_partitions.py:239:    num_clients: int,
+scripts/create_rice_federated_partitions.py:240:    alpha: float,
+scripts/create_rice_federated_partitions.py:241:    seed: int,
+scripts/create_rice_federated_partitions.py:244:    Generate class-wise Dirichlet targets, then greedily assign whole
+scripts/create_rice_federated_partitions.py:247:    if alpha <= 0:
+scripts/create_rice_federated_partitions.py:248:        raise ValueError("Dirichlet alpha must be greater than zero.")
+scripts/create_rice_federated_partitions.py:250:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions.py:254:    target_class_counts, proportions = generate_dirichlet_targets(
+scripts/create_rice_federated_partitions.py:256:        num_clients=num_clients,
+scripts/create_rice_federated_partitions.py:257:        alpha=alpha,
+scripts/create_rice_federated_partitions.py:258:        seed=seed,
+scripts/create_rice_federated_partitions.py:264:    client_totals = np.zeros(num_clients, dtype=np.float64)
+scripts/create_rice_federated_partitions.py:286:    initial_indices = order[:num_clients]
+scripts/create_rice_federated_partitions.py:294:    for group_index in order[num_clients:]:
+scripts/create_rice_federated_partitions.py:300:        for client_id in range(num_clients):
+scripts/create_rice_federated_partitions.py:335:    num_clients: int,
+scripts/create_rice_federated_partitions.py:364:            "across multiple clients."
+scripts/create_rice_federated_partitions.py:367:    present_clients = sorted(assigned["client_id"].unique().tolist())
+scripts/create_rice_federated_partitions.py:369:    expected_clients = list(range(num_clients))
+scripts/create_rice_federated_partitions.py:371:    if present_clients != expected_clients:
+scripts/create_rice_federated_partitions.py:373:            f"Expected clients {expected_clients}, "
+scripts/create_rice_federated_partitions.py:374:            f"found {present_clients}."
+scripts/create_rice_federated_partitions.py:384:    num_clients: int,
+scripts/create_rice_federated_partitions.py:385:    seed: int,
+scripts/create_rice_federated_partitions.py:386:    alpha: float | None,
+scripts/create_rice_federated_partitions.py:387:    dirichlet_proportions: np.ndarray | None = None,
+scripts/create_rice_federated_partitions.py:401:        num_clients=num_clients,
+scripts/create_rice_federated_partitions.py:410:        index=range(num_clients),
+scripts/create_rice_federated_partitions.py:422:        range(num_clients),
+scripts/create_rice_federated_partitions.py:426:    for client_id in range(num_clients):
+scripts/create_rice_federated_partitions.py:445:        output_dir / "all_clients.csv",
+scripts/create_rice_federated_partitions.py:474:        "num_clients": num_clients,
+scripts/create_rice_federated_partitions.py:479:        "seed": seed,
+scripts/create_rice_federated_partitions.py:480:        "dirichlet_alpha": alpha,
+scripts/create_rice_federated_partitions.py:482:        "capture_groups_split_between_clients": 0,
+scripts/create_rice_federated_partitions.py:487:            for client_id in range(num_clients)
+scripts/create_rice_federated_partitions.py:491:            for client_id in range(num_clients)
+scripts/create_rice_federated_partitions.py:500:    if dirichlet_proportions is not None:
+scripts/create_rice_federated_partitions.py:502:            dirichlet_proportions,
+scripts/create_rice_federated_partitions.py:505:                for client_id in range(num_clients)
+scripts/create_rice_federated_partitions.py:511:            output_dir / "dirichlet_target_proportions.csv"
+scripts/create_rice_federated_partitions.py:528:    print("  Capture groups split across clients: 0")
+scripts/create_rice_federated_partitions.py:529:    print("  Empty clients: 0")
+scripts/create_rice_federated_partitions.py:535:    random.seed(args.seed)
+scripts/create_rice_federated_partitions.py:536:    np.random.seed(args.seed)
+scripts/create_rice_federated_partitions.py:560:    iid_assignments = assign_groups_iid(
+scripts/create_rice_federated_partitions.py:563:        num_clients=args.num_clients,
+scripts/create_rice_federated_partitions.py:564:        seed=args.seed,
+scripts/create_rice_federated_partitions.py:567:    iid_dir = (
+scripts/create_rice_federated_partitions.py:569:        f"iid_{args.num_clients}clients_seed{args.seed}"
+scripts/create_rice_federated_partitions.py:574:        assignments=iid_assignments,
+scripts/create_rice_federated_partitions.py:575:        output_dir=iid_dir,
+scripts/create_rice_federated_partitions.py:576:        partition_name="iid",
+scripts/create_rice_federated_partitions.py:578:        num_clients=args.num_clients,
+scripts/create_rice_federated_partitions.py:579:        seed=args.seed,
+scripts/create_rice_federated_partitions.py:580:        alpha=None,
+scripts/create_rice_federated_partitions.py:583:    noniid_assignments, dirichlet_proportions = (
+scripts/create_rice_federated_partitions.py:584:        assign_groups_noniid(
+scripts/create_rice_federated_partitions.py:587:            num_clients=args.num_clients,
+scripts/create_rice_federated_partitions.py:588:            alpha=args.alpha,
+scripts/create_rice_federated_partitions.py:589:            seed=args.seed,
+scripts/create_rice_federated_partitions.py:593:    alpha_text = str(args.alpha).replace(".", "p")
+scripts/create_rice_federated_partitions.py:595:    noniid_dir = (
+scripts/create_rice_federated_partitions.py:598:            f"noniid_{args.num_clients}clients_"
+scripts/create_rice_federated_partitions.py:599:            f"alpha{alpha_text}_seed{args.seed}"
+scripts/create_rice_federated_partitions.py:605:        assignments=noniid_assignments,
+scripts/create_rice_federated_partitions.py:606:        output_dir=noniid_dir,
+scripts/create_rice_federated_partitions.py:607:        partition_name="non_iid",
+scripts/create_rice_federated_partitions.py:609:        num_clients=args.num_clients,
+scripts/create_rice_federated_partitions.py:610:        seed=args.seed,
+scripts/create_rice_federated_partitions.py:611:        alpha=args.alpha,
+scripts/create_rice_federated_partitions.py:612:        dirichlet_proportions=dirichlet_proportions,
+scripts/create_rice_federated_partitions_v2.py:27:    parser.add_argument("--num-clients", type=int, default=3)
+scripts/create_rice_federated_partitions_v2.py:28:    parser.add_argument("--alpha", type=float, default=0.5)
+scripts/create_rice_federated_partitions_v2.py:29:    parser.add_argument("--seed", type=int, default=42)
+scripts/create_rice_federated_partitions_v2.py:75:def assign_iid(group_table, num_clients, seed):
+scripts/create_rice_federated_partitions_v2.py:77:    Balanced group-aware IID assignment.
+scripts/create_rice_federated_partitions_v2.py:83:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions_v2.py:86:    total_loads = np.zeros(num_clients, dtype=np.int64)
+scripts/create_rice_federated_partitions_v2.py:88:        (num_clients, len(CLASS_NAMES)),
+scripts/create_rice_federated_partitions_v2.py:115:                range(num_clients),
+scripts/create_rice_federated_partitions_v2.py:137:def generate_noniid_targets(
+scripts/create_rice_federated_partitions_v2.py:139:    num_clients,
+scripts/create_rice_federated_partitions_v2.py:140:    alpha,
+scripts/create_rice_federated_partitions_v2.py:141:    seed,
+scripts/create_rice_federated_partitions_v2.py:143:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions_v2.py:146:        (num_clients, len(CLASS_NAMES)),
+scripts/create_rice_federated_partitions_v2.py:153:        p = rng.dirichlet(
+scripts/create_rice_federated_partitions_v2.py:154:            np.full(num_clients, alpha, dtype=np.float64)
+scripts/create_rice_federated_partitions_v2.py:163:def assign_noniid(
+scripts/create_rice_federated_partitions_v2.py:165:    num_clients,
+scripts/create_rice_federated_partitions_v2.py:166:    alpha,
+scripts/create_rice_federated_partitions_v2.py:167:    seed,
+scripts/create_rice_federated_partitions_v2.py:171:    Group-aware non-IID partition.
+scripts/create_rice_federated_partitions_v2.py:173:    First gives each client enough groups to avoid tiny clients, then assigns
+scripts/create_rice_federated_partitions_v2.py:174:    remaining groups based on Dirichlet class targets.
+scripts/create_rice_federated_partitions_v2.py:176:    rng = np.random.default_rng(seed)
+scripts/create_rice_federated_partitions_v2.py:184:    targets, proportions = generate_noniid_targets(
+scripts/create_rice_federated_partitions_v2.py:186:        num_clients,
+scripts/create_rice_federated_partitions_v2.py:187:        alpha,
+scripts/create_rice_federated_partitions_v2.py:188:        seed,
+scripts/create_rice_federated_partitions_v2.py:192:    client_totals = np.zeros(num_clients, dtype=np.int64)
+scripts/create_rice_federated_partitions_v2.py:247:    # Stage 2: approximate Dirichlet class targets.
+scripts/create_rice_federated_partitions_v2.py:254:        for client_id in range(num_clients):
+scripts/create_rice_federated_partitions_v2.py:291:    num_clients,
+scripts/create_rice_federated_partitions_v2.py:292:    seed,
+scripts/create_rice_federated_partitions_v2.py:293:    alpha=None,
+scripts/create_rice_federated_partitions_v2.py:294:    dirichlet_proportions=None,
+scripts/create_rice_federated_partitions_v2.py:326:        index=range(num_clients),
+scripts/create_rice_federated_partitions_v2.py:340:        .reindex(range(num_clients), fill_value=0)
+scripts/create_rice_federated_partitions_v2.py:343:    for client_id in range(num_clients):
+scripts/create_rice_federated_partitions_v2.py:358:        output_dir / "all_clients.csv",
+scripts/create_rice_federated_partitions_v2.py:382:        "num_clients": num_clients,
+scripts/create_rice_federated_partitions_v2.py:387:        "seed": seed,
+scripts/create_rice_federated_partitions_v2.py:388:        "dirichlet_alpha": alpha,
+scripts/create_rice_federated_partitions_v2.py:393:            for client_id in range(num_clients)
+scripts/create_rice_federated_partitions_v2.py:402:    if dirichlet_proportions is not None:
+scripts/create_rice_federated_partitions_v2.py:404:            dirichlet_proportions,
+scripts/create_rice_federated_partitions_v2.py:407:                for client_id in range(num_clients)
+scripts/create_rice_federated_partitions_v2.py:411:            output_dir / "dirichlet_target_proportions.csv"
+scripts/create_rice_federated_partitions_v2.py:425:    print("Capture groups split across clients: 0")
+scripts/create_rice_federated_partitions_v2.py:439:    iid_assignments = assign_iid(
+scripts/create_rice_federated_partitions_v2.py:441:        args.num_clients,
+scripts/create_rice_federated_partitions_v2.py:442:        args.seed,
+scripts/create_rice_federated_partitions_v2.py:445:    iid_dir = (
+scripts/create_rice_federated_partitions_v2.py:447:        f"iid_{args.num_clients}clients_seed{args.seed}_v2"
+scripts/create_rice_federated_partitions_v2.py:452:        iid_assignments,
+scripts/create_rice_federated_partitions_v2.py:453:        iid_dir,
+scripts/create_rice_federated_partitions_v2.py:454:        "iid",
+scripts/create_rice_federated_partitions_v2.py:456:        args.num_clients,
+scripts/create_rice_federated_partitions_v2.py:457:        args.seed,
+scripts/create_rice_federated_partitions_v2.py:460:    noniid_assignments, targets = assign_noniid(
+scripts/create_rice_federated_partitions_v2.py:462:        args.num_clients,
+scripts/create_rice_federated_partitions_v2.py:463:        args.alpha,
+scripts/create_rice_federated_partitions_v2.py:464:        args.seed,
+scripts/create_rice_federated_partitions_v2.py:468:    alpha_text = str(args.alpha).replace(".", "p")
+scripts/create_rice_federated_partitions_v2.py:470:    noniid_dir = (
+scripts/create_rice_federated_partitions_v2.py:473:            f"noniid_{args.num_clients}clients_"
+scripts/create_rice_federated_partitions_v2.py:474:            f"alpha{alpha_text}_seed{args.seed}_v2"
+scripts/create_rice_federated_partitions_v2.py:480:        noniid_assignments,
+scripts/create_rice_federated_partitions_v2.py:481:        noniid_dir,
+scripts/create_rice_federated_partitions_v2.py:482:        "non_iid",
+scripts/create_rice_federated_partitions_v2.py:484:        args.num_clients,
+scripts/create_rice_federated_partitions_v2.py:485:        args.seed,
+scripts/create_rice_federated_partitions_v2.py:486:        args.alpha,
+scripts/create_wheat_grouped_split.py:11:SEED = 42
+scripts/create_wheat_grouped_split.py:70:    seed: int,
+scripts/create_wheat_grouped_split.py:80:    random.Random(seed).shuffle(records)
+scripts/create_wheat_grouped_split.py:237:                seed=SEED + class_index * 1000,
+scripts/create_wheat_grouped_split.py:304:        random_state=SEED,
+scripts/create_wheat_grouped_split.py:309:        random_state=SEED,
+scripts/create_wheat_grouped_split.py:395:        "seed": SEED,
+scripts/create_wheat_grouped_split_v2.py:12:SEED = 42
+scripts/create_wheat_grouped_split_v2.py:106:        SEED + class_index * 10000
+scripts/create_wheat_grouped_split_v2.py:297:        random_state=SEED,
+scripts/create_wheat_grouped_split_v2.py:302:        random_state=SEED,
+scripts/create_wheat_grouped_split_v2.py:401:        "seed": SEED,
+scripts/csc_continue_finetune_v2.py:42:        "v1_checkpoint": "best_mobilenetv2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:44:        "v2_checkpoint": "best_mobilenetv2_v2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:49:        "v1_checkpoint": "best_resnet18_gpu.pt",
+scripts/csc_continue_finetune_v2.py:51:        "v2_checkpoint": "best_resnet18_v2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:56:        "v1_checkpoint": "best_efficientnetb0_gpu.pt",
+scripts/csc_continue_finetune_v2.py:58:        "v2_checkpoint": "best_efficientnetb0_v2_gpu.pt",
+scripts/csc_continue_finetune_v2.py:78:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_continue_finetune_v2.py:91:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_continue_finetune_v2.py:95:        .sample(frac=1, random_state=seed)
+scripts/csc_continue_finetune_v2.py:203:    v1_checkpoint = RESULTS_ROOT / cfg["v1_dir"] / cfg["v1_checkpoint"]
+scripts/csc_continue_finetune_v2.py:206:    v2_checkpoint = output_dir / cfg["v2_checkpoint"]
+scripts/csc_continue_finetune_v2.py:208:    if not v1_checkpoint.exists():
+scripts/csc_continue_finetune_v2.py:210:            f"Version 1 checkpoint not found: {v1_checkpoint}"
+scripts/csc_continue_finetune_v2.py:213:    seed = 42
+scripts/csc_continue_finetune_v2.py:214:    random.seed(seed)
+scripts/csc_continue_finetune_v2.py:215:    np.random.seed(seed)
+scripts/csc_continue_finetune_v2.py:216:    torch.manual_seed(seed)
+scripts/csc_continue_finetune_v2.py:217:    torch.cuda.manual_seed_all(seed)
+scripts/csc_continue_finetune_v2.py:222:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_continue_finetune_v2.py:223:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_continue_finetune_v2.py:224:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_continue_finetune_v2.py:225:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_continue_finetune_v2.py:289:    model.load_state_dict(torch.load(v1_checkpoint, map_location=device))
+scripts/csc_continue_finetune_v2.py:299:    selected_checkpoint = "Version 1 checkpoint retained"
+scripts/csc_continue_finetune_v2.py:318:    print("Version 1 checkpoint:", v1_checkpoint)
+scripts/csc_continue_finetune_v2.py:352:            selected_checkpoint = f"Version 2 epoch {epoch}"
+scripts/csc_continue_finetune_v2.py:353:            torch.save(model.state_dict(), v2_checkpoint)
+scripts/csc_continue_finetune_v2.py:356:        model.load_state_dict(torch.load(v2_checkpoint, map_location=device))
+scripts/csc_continue_finetune_v2.py:358:        model.load_state_dict(torch.load(v1_checkpoint, map_location=device))
+scripts/csc_continue_finetune_v2.py:364:        "base_checkpoint": str(v1_checkpoint),
+scripts/csc_continue_finetune_v2.py:366:            f"Continuation from Version 1 best checkpoint; "
+scripts/csc_continue_finetune_v2.py:373:        "selected_checkpoint": selected_checkpoint,
+scripts/csc_finetune_efficientnetb0.py:52:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_finetune_efficientnetb0.py:65:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_finetune_efficientnetb0.py:69:        .sample(frac=1, random_state=seed)
+scripts/csc_finetune_efficientnetb0.py:138:    seed = 42
+scripts/csc_finetune_efficientnetb0.py:139:    random.seed(seed)
+scripts/csc_finetune_efficientnetb0.py:140:    np.random.seed(seed)
+scripts/csc_finetune_efficientnetb0.py:141:    torch.manual_seed(seed)
+scripts/csc_finetune_efficientnetb0.py:142:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_efficientnetb0.py:147:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:148:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:149:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:150:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_efficientnetb0.py:223:    best_checkpoint = OUTPUT_DIR / "best_efficientnetb0_gpu.pt"
+scripts/csc_finetune_efficientnetb0.py:264:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_efficientnetb0.py:303:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_efficientnetb0.py:305:    model.load_state_dict(torch.load(best_checkpoint, map_location=device))
+scripts/csc_finetune_mobilenet.py:52:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_finetune_mobilenet.py:65:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_finetune_mobilenet.py:69:        .sample(frac=1, random_state=seed)
+scripts/csc_finetune_mobilenet.py:143:    seed = 42
+scripts/csc_finetune_mobilenet.py:144:    random.seed(seed)
+scripts/csc_finetune_mobilenet.py:145:    np.random.seed(seed)
+scripts/csc_finetune_mobilenet.py:146:    torch.manual_seed(seed)
+scripts/csc_finetune_mobilenet.py:147:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_mobilenet.py:152:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_finetune_mobilenet.py:153:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_finetune_mobilenet.py:154:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_mobilenet.py:155:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_mobilenet.py:228:    best_checkpoint = OUTPUT_DIR / "best_mobilenetv2_gpu.pt"
+scripts/csc_finetune_mobilenet.py:273:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_mobilenet.py:317:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_mobilenet.py:320:        torch.load(best_checkpoint, map_location=device)
+scripts/csc_finetune_resnet18.py:52:def balanced_subset(manifest_path, per_class, seed):
+scripts/csc_finetune_resnet18.py:65:        groups.append(group.sample(n=per_class, random_state=seed))
+scripts/csc_finetune_resnet18.py:69:        .sample(frac=1, random_state=seed)
+scripts/csc_finetune_resnet18.py:138:    seed = 42
+scripts/csc_finetune_resnet18.py:139:    random.seed(seed)
+scripts/csc_finetune_resnet18.py:140:    np.random.seed(seed)
+scripts/csc_finetune_resnet18.py:141:    torch.manual_seed(seed)
+scripts/csc_finetune_resnet18.py:142:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_resnet18.py:147:    train_df = balanced_subset(TRAIN_MANIFEST, per_class=1738, seed=seed)
+scripts/csc_finetune_resnet18.py:148:    val_df = balanced_subset(VAL_MANIFEST, per_class=194, seed=seed)
+scripts/csc_finetune_resnet18.py:149:    test1_df = balanced_subset(TEST1_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_resnet18.py:150:    test2_df = balanced_subset(TEST2_MANIFEST, per_class=200, seed=seed)
+scripts/csc_finetune_resnet18.py:220:    best_checkpoint = OUTPUT_DIR / "best_resnet18_gpu.pt"
+scripts/csc_finetune_resnet18.py:263:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_resnet18.py:302:            torch.save(model.state_dict(), best_checkpoint)
+scripts/csc_finetune_resnet18.py:304:    model.load_state_dict(torch.load(best_checkpoint, map_location=device))
+scripts/csc_finetune_v3_resnet18.py:34:V2_CHECKPOINT = (
+scripts/csc_finetune_v3_resnet18.py:43:BEST_CHECKPOINT = OUTPUT_DIR / "best_resnet18_v3_gpu.pt"
+scripts/csc_finetune_v3_resnet18.py:62:def create_balanced_epoch(dataframe, per_class, epoch_seed):
+scripts/csc_finetune_v3_resnet18.py:77:                random_state=epoch_seed + CLASS_TO_ID[label],
+scripts/csc_finetune_v3_resnet18.py:83:        .sample(frac=1, random_state=epoch_seed)
+scripts/csc_finetune_v3_resnet18.py:88:def create_balanced_fixed(dataframe, per_class, seed):
+scripts/csc_finetune_v3_resnet18.py:89:    return create_balanced_epoch(dataframe, per_class, seed)
+scripts/csc_finetune_v3_resnet18.py:173:    seed = 42
+scripts/csc_finetune_v3_resnet18.py:177:    random.seed(seed)
+scripts/csc_finetune_v3_resnet18.py:178:    np.random.seed(seed)
+scripts/csc_finetune_v3_resnet18.py:179:    torch.manual_seed(seed)
+scripts/csc_finetune_v3_resnet18.py:180:    torch.cuda.manual_seed_all(seed)
+scripts/csc_finetune_v3_resnet18.py:185:    if not V2_CHECKPOINT.exists():
+scripts/csc_finetune_v3_resnet18.py:186:        raise FileNotFoundError(f"Missing V2 checkpoint: {V2_CHECKPOINT}")
+scripts/csc_finetune_v3_resnet18.py:196:        seed=seed,
+scripts/csc_finetune_v3_resnet18.py:201:        seed=seed,
+scripts/csc_finetune_v3_resnet18.py:206:        seed=seed,
+scripts/csc_finetune_v3_resnet18.py:274:    model.load_state_dict(torch.load(V2_CHECKPOINT, map_location=device))
+scripts/csc_finetune_v3_resnet18.py:293:    selected_checkpoint = "Version 2 checkpoint retained"
+scripts/csc_finetune_v3_resnet18.py:296:    print("Base checkpoint:", V2_CHECKPOINT)
+scripts/csc_finetune_v3_resnet18.py:308:            epoch_seed=seed + epoch * 100,
+scripts/csc_finetune_v3_resnet18.py:347:            selected_checkpoint = f"Version 3 epoch {epoch}"
+scripts/csc_finetune_v3_resnet18.py:348:            torch.save(model.state_dict(), BEST_CHECKPOINT)
+scripts/csc_finetune_v3_resnet18.py:351:        model.load_state_dict(torch.load(BEST_CHECKPOINT, map_location=device))
+scripts/csc_finetune_v3_resnet18.py:353:        model.load_state_dict(torch.load(V2_CHECKPOINT, map_location=device))
+scripts/csc_finetune_v3_resnet18.py:359:        "base_checkpoint": str(V2_CHECKPOINT),
+scripts/csc_finetune_v3_resnet18.py:361:            "8 continuation epochs from best V2 checkpoint; "
+scripts/csc_finetune_v3_resnet18.py:369:        "selected_checkpoint": selected_checkpoint,
+scripts/evaluate_all_final_models.py:29:CHECKPOINTS = {
+scripts/evaluate_all_final_models.py:35:    "fedavg_iid_round3": (
+scripts/evaluate_all_final_models.py:40:    "fedavg_noniid_round3": (
+scripts/evaluate_all_final_models.py:42:        / "experiments/federated/fl_full_noniid_v3"
+scripts/evaluate_all_final_models.py:76:def fixed_subset(csv_path: Path, per_class: int, seed: int = 42) -> pd.DataFrame:
+scripts/evaluate_all_final_models.py:82:        parts.append(class_df.sample(n=per_class, random_state=seed))
+scripts/evaluate_all_final_models.py:86:        .sample(frac=1, random_state=seed)
+scripts/evaluate_all_final_models.py:145:def load_model(checkpoint: Path, device: torch.device) -> nn.Module:
+scripts/evaluate_all_final_models.py:149:    state = torch.load(checkpoint, map_location="cpu")
+scripts/evaluate_all_final_models.py:183:        "protocol": "Same fixed balanced evaluation samples for all final checkpoints.",
+scripts/evaluate_all_final_models.py:195:    for model_name, checkpoint in CHECKPOINTS.items():
+scripts/evaluate_all_final_models.py:196:        if not checkpoint.exists():
+scripts/evaluate_all_final_models.py:197:            raise FileNotFoundError(f"Missing checkpoint: {checkpoint}")
+scripts/evaluate_all_final_models.py:200:        print(f"Checkpoint: {checkpoint}", flush=True)
+scripts/evaluate_all_final_models.py:202:        model = load_model(checkpoint, device)
+scripts/evaluate_all_final_models.py:205:            "checkpoint": str(checkpoint),
+scripts/evaluate_resnet18_v2_full.py:18:CHECKPOINT = ROOT / "results/additional_finetuning_v2_resnet18/best_resnet18_v2_gpu.pt"
+scripts/evaluate_resnet18_v2_full.py:46:model.load_state_dict(torch.load(CHECKPOINT, map_location=device))
+scripts/evaluate_resnet18_v2_v3_fixed.py:22:CHECKPOINTS = {
+scripts/evaluate_resnet18_v2_v3_fixed.py:50:def v2_fixed_balanced_subset(csv_path, per_class, seed=42):
+scripts/evaluate_resnet18_v2_v3_fixed.py:58:                random_state=seed,
+scripts/evaluate_resnet18_v2_v3_fixed.py:64:        .sample(frac=1, random_state=seed)
+scripts/evaluate_resnet18_v2_v3_fixed.py:109:def load_resnet18(checkpoint, device):
+scripts/evaluate_resnet18_v2_v3_fixed.py:112:    model.load_state_dict(torch.load(checkpoint, map_location=device))
+scripts/evaluate_resnet18_v2_v3_fixed.py:155:            "Both checkpoints evaluated on the exact fixed balanced "
+scripts/evaluate_resnet18_v2_v3_fixed.py:159:        "checkpoints": {},
+scripts/evaluate_resnet18_v2_v3_fixed.py:162:    for version, checkpoint in CHECKPOINTS.items():
+scripts/evaluate_resnet18_v2_v3_fixed.py:163:        if not checkpoint.exists():
+scripts/evaluate_resnet18_v2_v3_fixed.py:164:            raise FileNotFoundError(checkpoint)
+scripts/evaluate_resnet18_v2_v3_fixed.py:166:        model = load_resnet18(checkpoint, device)
+scripts/evaluate_resnet18_v2_v3_fixed.py:167:        print(f"\nEvaluating {version}: {checkpoint}")
+scripts/evaluate_resnet18_v2_v3_fixed.py:169:        results["checkpoints"][version] = {
+scripts/evaluate_resnet18_v2_v3_fixed.py:170:            "checkpoint": str(checkpoint),
+scripts/evaluate_resnet18_v2_v3_fixed.py:177:        print(json.dumps(results["checkpoints"][version], indent=2))
+scripts/evaluate_rice_architectures.py:55:        "checkpoint": "best_resnet18_rice_grouped.pt",
+scripts/evaluate_rice_architectures.py:63:        "checkpoint": "best_mobilenetv2_rice_grouped.pt",
+scripts/evaluate_rice_architectures.py:71:        "checkpoint": "best_efficientnetb0_rice_grouped.pt",
+scripts/evaluate_rice_architectures.py:398:        checkpoint_path = (
+scripts/evaluate_rice_architectures.py:399:            output_dir / config["checkpoint"]
+scripts/evaluate_rice_architectures.py:406:        checkpoint = torch.load(
+scripts/evaluate_rice_architectures.py:407:            checkpoint_path,
+scripts/evaluate_rice_architectures.py:413:            isinstance(checkpoint, dict)
+scripts/evaluate_rice_architectures.py:414:            and "model_state_dict" in checkpoint
+scripts/evaluate_rice_architectures.py:416:            state_dict = checkpoint[
+scripts/evaluate_rice_architectures.py:420:            state_dict = checkpoint
+scripts/evaluate_rice_fedavg_mobilenetv2.py:44:IMAGE_SIZE = 224
+scripts/evaluate_rice_fedavg_mobilenetv2.py:45:BATCH_SIZE = 128
+scripts/evaluate_rice_fedavg_mobilenetv2.py:49:    "FedAvg IID MobileNetV2": Path(
+scripts/evaluate_rice_fedavg_mobilenetv2.py:51:        "rice_fedavg_iid_mobilenetv2"
+scripts/evaluate_rice_fedavg_mobilenetv2.py:53:    "FedAvg non-IID MobileNetV2": Path(
+scripts/evaluate_rice_fedavg_mobilenetv2.py:55:        "rice_fedavg_noniid_mobilenetv2"
+scripts/evaluate_rice_fedavg_mobilenetv2.py:368:                    IMAGE_SIZE,
+scripts/evaluate_rice_fedavg_mobilenetv2.py:369:                    IMAGE_SIZE,
+scripts/evaluate_rice_fedavg_mobilenetv2.py:402:            batch_size=BATCH_SIZE,
+scripts/evaluate_rice_fedavg_mobilenetv2.py:418:        checkpoint_path = (
+scripts/evaluate_rice_fedavg_mobilenetv2.py:430:            f"Checkpoint: "
+scripts/evaluate_rice_fedavg_mobilenetv2.py:431:            f"{checkpoint_path}",
+scripts/evaluate_rice_fedavg_mobilenetv2.py:437:        checkpoint = torch.load(
+scripts/evaluate_rice_fedavg_mobilenetv2.py:438:            checkpoint_path,
+scripts/evaluate_rice_fedavg_mobilenetv2.py:444:            checkpoint["model_state_dict"]
+scripts/evaluate_rice_fedavg_mobilenetv2.py:446:                isinstance(checkpoint, dict)
+scripts/evaluate_rice_fedavg_mobilenetv2.py:448:                in checkpoint
+scripts/evaluate_rice_fedavg_mobilenetv2.py:450:            else checkpoint
+scripts/evaluate_rice_fedavg_mobilenetv2.py:524:                    "checkpoint": str(
+scripts/evaluate_rice_fedavg_mobilenetv2.py:525:                        checkpoint_path
+scripts/evaluate_rice_model.py:45:        description="Evaluate a rice ResNet18 checkpoint."
+scripts/evaluate_rice_model.py:48:    parser.add_argument("--checkpoint", type=Path, required=True)
+scripts/evaluate_rice_model.py:60:def load_checkpoint(
+scripts/evaluate_rice_model.py:61:    checkpoint_path: Path,
+scripts/evaluate_rice_model.py:63:    checkpoint = torch.load(
+scripts/evaluate_rice_model.py:64:        checkpoint_path,
+scripts/evaluate_rice_model.py:72:        isinstance(checkpoint, dict)
+scripts/evaluate_rice_model.py:73:        and "model_state_dict" in checkpoint
+scripts/evaluate_rice_model.py:75:        state_dict = checkpoint["model_state_dict"]
+scripts/evaluate_rice_model.py:79:            for key, value in checkpoint.items()
+scripts/evaluate_rice_model.py:83:        state_dict = checkpoint
+scripts/evaluate_rice_model.py:320:    state_dict, checkpoint_metadata = load_checkpoint(
+scripts/evaluate_rice_model.py:321:        args.checkpoint
+scripts/evaluate_rice_model.py:334:        "checkpoint": str(args.checkpoint),
+scripts/evaluate_rice_model.py:336:        "checkpoint_metadata": checkpoint_metadata,
+scripts/evaluate_v3_on_v2_protocol.py:20:CHECKPOINT = ROOT / "results/version3_dynamic_balanced_resnet18/best_resnet18_v3_gpu.pt"
+scripts/evaluate_v3_on_v2_protocol.py:51:def fixed_v2_subset(csv_path, per_class, seed=42):
+scripts/evaluate_v3_on_v2_protocol.py:59:                random_state=seed,
+scripts/evaluate_v3_on_v2_protocol.py:65:        .sample(frac=1, random_state=seed)
+scripts/evaluate_v3_on_v2_protocol.py:119:    if not CHECKPOINT.exists():
+scripts/evaluate_v3_on_v2_protocol.py:120:        raise FileNotFoundError(CHECKPOINT)
+scripts/evaluate_v3_on_v2_protocol.py:135:    model.load_state_dict(torch.load(CHECKPOINT, map_location=device))
+scripts/evaluate_v3_on_v2_protocol.py:140:        "checkpoint": str(CHECKPOINT),
+scripts/paper/generate_paper_figures.py:142:            "FedAvg IID ResNet18",
+scripts/paper/generate_paper_figures.py:144:            / "rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json",
+scripts/paper/generate_paper_figures.py:147:            "FedAvg non-IID ResNet18",
+scripts/paper/generate_paper_figures.py:149:            / "rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json",
+scripts/paper/generate_paper_figures.py:152:            "FedAvg IID MobileNetV2",
+scripts/paper/generate_paper_figures.py:154:            / "rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_metrics.json",
+scripts/paper/generate_paper_figures.py:157:            "FedAvg non-IID MobileNetV2",
+scripts/paper/generate_paper_figures.py:159:            / "rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_metrics.json",
+scripts/paper/generate_paper_figures.py:202:        alpha=0.6,
+scripts/paper/generate_paper_figures.py:313:        alpha=0.6,
+scripts/paper/generate_paper_figures.py:518:        alpha=0.6,
+scripts/show_best_experimental_results.py:120:        / "rice_fedavg_iid_resnet18"
+scripts/show_best_experimental_results.py:125:    resnet_noniid_csv = (
+scripts/show_best_experimental_results.py:127:        / "rice_fedavg_noniid_resnet18"
+scripts/show_best_experimental_results.py:143:        resnet_noniid_csv,
+scripts/show_best_experimental_results.py:186:            resnet_noniid_csv,
+scripts/show_best_experimental_results.py:187:            "non-IID",
+scripts/show_best_experimental_results.py:219:                and "non-IID"
+scripts/show_best_experimental_results.py:221:                else "non-IID"
+scripts/train_rice_efficientnetb0_grouped.py:25:SEED = 42
+scripts/train_rice_efficientnetb0_grouped.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_efficientnetb0_grouped.py:132:    random.seed(seed)
+scripts/train_rice_efficientnetb0_grouped.py:133:    np.random.seed(seed)
+scripts/train_rice_efficientnetb0_grouped.py:134:    torch.manual_seed(seed)
+scripts/train_rice_efficientnetb0_grouped.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_efficientnetb0_grouped.py:363:    set_seed(SEED)
+scripts/train_rice_efficientnetb0_grouped.py:475:    checkpoint_path = (
+scripts/train_rice_efficientnetb0_grouped.py:582:                checkpoint_path,
+scripts/train_rice_efficientnetb0_grouped.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_efficientnetb0_grouped.py:594:    checkpoint = torch.load(
+scripts/train_rice_efficientnetb0_grouped.py:595:        checkpoint_path,
+scripts/train_rice_efficientnetb0_grouped.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_efficientnetb0_grouped.py:647:        "seed": SEED,
+scripts/train_rice_mobilenetv2_grouped.py:25:SEED = 42
+scripts/train_rice_mobilenetv2_grouped.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_mobilenetv2_grouped.py:132:    random.seed(seed)
+scripts/train_rice_mobilenetv2_grouped.py:133:    np.random.seed(seed)
+scripts/train_rice_mobilenetv2_grouped.py:134:    torch.manual_seed(seed)
+scripts/train_rice_mobilenetv2_grouped.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_mobilenetv2_grouped.py:363:    set_seed(SEED)
+scripts/train_rice_mobilenetv2_grouped.py:475:    checkpoint_path = (
+scripts/train_rice_mobilenetv2_grouped.py:582:                checkpoint_path,
+scripts/train_rice_mobilenetv2_grouped.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_mobilenetv2_grouped.py:594:    checkpoint = torch.load(
+scripts/train_rice_mobilenetv2_grouped.py:595:        checkpoint_path,
+scripts/train_rice_mobilenetv2_grouped.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_mobilenetv2_grouped.py:647:        "seed": SEED,
+scripts/train_rice_resnet18_grouped.py:25:SEED = 42
+scripts/train_rice_resnet18_grouped.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_resnet18_grouped.py:132:    random.seed(seed)
+scripts/train_rice_resnet18_grouped.py:133:    np.random.seed(seed)
+scripts/train_rice_resnet18_grouped.py:134:    torch.manual_seed(seed)
+scripts/train_rice_resnet18_grouped.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_resnet18_grouped.py:363:    set_seed(SEED)
+scripts/train_rice_resnet18_grouped.py:475:    checkpoint_path = (
+scripts/train_rice_resnet18_grouped.py:582:                checkpoint_path,
+scripts/train_rice_resnet18_grouped.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_resnet18_grouped.py:594:    checkpoint = torch.load(
+scripts/train_rice_resnet18_grouped.py:595:        checkpoint_path,
+scripts/train_rice_resnet18_grouped.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_resnet18_grouped.py:647:        "seed": SEED,
+scripts/train_rice_resnet18_seed123.py:25:SEED = 123
+scripts/train_rice_resnet18_seed123.py:39:    "rice_resnet18_grouped_seed123"
+scripts/train_rice_resnet18_seed123.py:58:IMAGE_SIZE = 224
+scripts/train_rice_resnet18_seed123.py:59:BATCH_SIZE = 128
+scripts/train_rice_resnet18_seed123.py:62:WARMUP_EPOCHS = 2
+scripts/train_rice_resnet18_seed123.py:63:FINETUNE_EPOCHS = 8
+scripts/train_rice_resnet18_seed123.py:65:WARMUP_LR = 1e-3
+scripts/train_rice_resnet18_seed123.py:66:FINETUNE_LR = 1e-4
+scripts/train_rice_resnet18_seed123.py:67:WEIGHT_DECAY = 1e-4
+scripts/train_rice_resnet18_seed123.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_resnet18_seed123.py:132:    random.seed(seed)
+scripts/train_rice_resnet18_seed123.py:133:    np.random.seed(seed)
+scripts/train_rice_resnet18_seed123.py:134:    torch.manual_seed(seed)
+scripts/train_rice_resnet18_seed123.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_resnet18_seed123.py:166:def calculate_class_weights(
+scripts/train_rice_resnet18_seed123.py:202:    optimizer: torch.optim.Optimizer,
+scripts/train_rice_resnet18_seed123.py:207:    running_loss = 0.0
+scripts/train_rice_resnet18_seed123.py:208:    sample_count = 0
+scripts/train_rice_resnet18_seed123.py:220:        optimizer.zero_grad(set_to_none=True)
+scripts/train_rice_resnet18_seed123.py:223:        loss = criterion(outputs, labels)
+scripts/train_rice_resnet18_seed123.py:225:        loss.backward()
+scripts/train_rice_resnet18_seed123.py:226:        optimizer.step()
+scripts/train_rice_resnet18_seed123.py:228:        batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed123.py:230:        running_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed123.py:231:        sample_count += batch_size
+scripts/train_rice_resnet18_seed123.py:233:    return running_loss / max(sample_count, 1)
+scripts/train_rice_resnet18_seed123.py:244:    total_loss = 0.0
+scripts/train_rice_resnet18_seed123.py:245:    sample_count = 0
+scripts/train_rice_resnet18_seed123.py:262:            loss = criterion(outputs, labels)
+scripts/train_rice_resnet18_seed123.py:266:            batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed123.py:268:            total_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed123.py:269:            sample_count += batch_size
+scripts/train_rice_resnet18_seed123.py:282:        "loss": total_loss / max(sample_count, 1),
+scripts/train_rice_resnet18_seed123.py:363:    set_seed(SEED)
+scripts/train_rice_resnet18_seed123.py:388:            IMAGE_SIZE,
+scripts/train_rice_resnet18_seed123.py:407:        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+scripts/train_rice_resnet18_seed123.py:428:    print(f"Training samples:   {len(train_dataset)}")
+scripts/train_rice_resnet18_seed123.py:429:    print(f"Validation samples: {len(validation_dataset)}")
+scripts/train_rice_resnet18_seed123.py:430:    print(f"Test samples:       {len(test_dataset)}")
+scripts/train_rice_resnet18_seed123.py:433:        "batch_size": BATCH_SIZE,
+scripts/train_rice_resnet18_seed123.py:461:    class_weights = calculate_class_weights(
+scripts/train_rice_resnet18_seed123.py:467:    criterion = nn.CrossEntropyLoss(
+scripts/train_rice_resnet18_seed123.py:468:        weight=class_weights
+scripts/train_rice_resnet18_seed123.py:475:    checkpoint_path = (
+scripts/train_rice_resnet18_seed123.py:483:    optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed123.py:488:        lr=WARMUP_LR,
+scripts/train_rice_resnet18_seed123.py:489:        weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed123.py:492:    total_epochs = WARMUP_EPOCHS + FINETUNE_EPOCHS
+scripts/train_rice_resnet18_seed123.py:494:    for epoch_index in range(total_epochs):
+scripts/train_rice_resnet18_seed123.py:497:        if epoch_index == WARMUP_EPOCHS:
+scripts/train_rice_resnet18_seed123.py:502:            optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed123.py:504:                lr=FINETUNE_LR,
+scripts/train_rice_resnet18_seed123.py:505:                weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed123.py:509:            "warmup"
+scripts/train_rice_resnet18_seed123.py:510:            if epoch_index < WARMUP_EPOCHS
+scripts/train_rice_resnet18_seed123.py:511:            else "full_finetuning"
+scripts/train_rice_resnet18_seed123.py:516:        train_loss = train_one_epoch(
+scripts/train_rice_resnet18_seed123.py:520:            optimizer,
+scripts/train_rice_resnet18_seed123.py:534:            "train_loss": round(train_loss, 6),
+scripts/train_rice_resnet18_seed123.py:535:            "validation_loss": round(
+scripts/train_rice_resnet18_seed123.py:536:                validation_metrics["loss"],
+scripts/train_rice_resnet18_seed123.py:560:            f"Epoch {epoch_number:02d}/{total_epochs} "
+scripts/train_rice_resnet18_seed123.py:562:            f"train loss={train_loss:.4f} | "
+scripts/train_rice_resnet18_seed123.py:563:            f"val loss={validation_metrics['loss']:.4f} | "
+scripts/train_rice_resnet18_seed123.py:582:                checkpoint_path,
+scripts/train_rice_resnet18_seed123.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_resnet18_seed123.py:594:    checkpoint = torch.load(
+scripts/train_rice_resnet18_seed123.py:595:        checkpoint_path,
+scripts/train_rice_resnet18_seed123.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_resnet18_seed123.py:645:        "experiment": "rice_resnet18_grouped_seed123",
+scripts/train_rice_resnet18_seed123.py:647:        "seed": SEED,
+scripts/train_rice_resnet18_seed123.py:655:            "warmup_epochs": WARMUP_EPOCHS,
+scripts/train_rice_resnet18_seed123.py:656:            "finetune_epochs": FINETUNE_EPOCHS,
+scripts/train_rice_resnet18_seed123.py:668:            "loss": round(test_metrics["loss"], 6),
+scripts/train_rice_resnet18_seed2026.py:25:SEED = 2026
+scripts/train_rice_resnet18_seed2026.py:39:    "rice_resnet18_grouped_seed2026"
+scripts/train_rice_resnet18_seed2026.py:58:IMAGE_SIZE = 224
+scripts/train_rice_resnet18_seed2026.py:59:BATCH_SIZE = 128
+scripts/train_rice_resnet18_seed2026.py:62:WARMUP_EPOCHS = 2
+scripts/train_rice_resnet18_seed2026.py:63:FINETUNE_EPOCHS = 8
+scripts/train_rice_resnet18_seed2026.py:65:WARMUP_LR = 1e-3
+scripts/train_rice_resnet18_seed2026.py:66:FINETUNE_LR = 1e-4
+scripts/train_rice_resnet18_seed2026.py:67:WEIGHT_DECAY = 1e-4
+scripts/train_rice_resnet18_seed2026.py:131:def set_seed(seed: int) -> None:
+scripts/train_rice_resnet18_seed2026.py:132:    random.seed(seed)
+scripts/train_rice_resnet18_seed2026.py:133:    np.random.seed(seed)
+scripts/train_rice_resnet18_seed2026.py:134:    torch.manual_seed(seed)
+scripts/train_rice_resnet18_seed2026.py:137:        torch.cuda.manual_seed_all(seed)
+scripts/train_rice_resnet18_seed2026.py:166:def calculate_class_weights(
+scripts/train_rice_resnet18_seed2026.py:202:    optimizer: torch.optim.Optimizer,
+scripts/train_rice_resnet18_seed2026.py:207:    running_loss = 0.0
+scripts/train_rice_resnet18_seed2026.py:208:    sample_count = 0
+scripts/train_rice_resnet18_seed2026.py:220:        optimizer.zero_grad(set_to_none=True)
+scripts/train_rice_resnet18_seed2026.py:223:        loss = criterion(outputs, labels)
+scripts/train_rice_resnet18_seed2026.py:225:        loss.backward()
+scripts/train_rice_resnet18_seed2026.py:226:        optimizer.step()
+scripts/train_rice_resnet18_seed2026.py:228:        batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed2026.py:230:        running_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed2026.py:231:        sample_count += batch_size
+scripts/train_rice_resnet18_seed2026.py:233:    return running_loss / max(sample_count, 1)
+scripts/train_rice_resnet18_seed2026.py:244:    total_loss = 0.0
+scripts/train_rice_resnet18_seed2026.py:245:    sample_count = 0
+scripts/train_rice_resnet18_seed2026.py:262:            loss = criterion(outputs, labels)
+scripts/train_rice_resnet18_seed2026.py:266:            batch_size = labels.size(0)
+scripts/train_rice_resnet18_seed2026.py:268:            total_loss += loss.item() * batch_size
+scripts/train_rice_resnet18_seed2026.py:269:            sample_count += batch_size
+scripts/train_rice_resnet18_seed2026.py:282:        "loss": total_loss / max(sample_count, 1),
+scripts/train_rice_resnet18_seed2026.py:363:    set_seed(SEED)
+scripts/train_rice_resnet18_seed2026.py:388:            IMAGE_SIZE,
+scripts/train_rice_resnet18_seed2026.py:407:        transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)),
+scripts/train_rice_resnet18_seed2026.py:428:    print(f"Training samples:   {len(train_dataset)}")
+scripts/train_rice_resnet18_seed2026.py:429:    print(f"Validation samples: {len(validation_dataset)}")
+scripts/train_rice_resnet18_seed2026.py:430:    print(f"Test samples:       {len(test_dataset)}")
+scripts/train_rice_resnet18_seed2026.py:433:        "batch_size": BATCH_SIZE,
+scripts/train_rice_resnet18_seed2026.py:461:    class_weights = calculate_class_weights(
+scripts/train_rice_resnet18_seed2026.py:467:    criterion = nn.CrossEntropyLoss(
+scripts/train_rice_resnet18_seed2026.py:468:        weight=class_weights
+scripts/train_rice_resnet18_seed2026.py:475:    checkpoint_path = (
+scripts/train_rice_resnet18_seed2026.py:483:    optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed2026.py:488:        lr=WARMUP_LR,
+scripts/train_rice_resnet18_seed2026.py:489:        weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed2026.py:492:    total_epochs = WARMUP_EPOCHS + FINETUNE_EPOCHS
+scripts/train_rice_resnet18_seed2026.py:494:    for epoch_index in range(total_epochs):
+scripts/train_rice_resnet18_seed2026.py:497:        if epoch_index == WARMUP_EPOCHS:
+scripts/train_rice_resnet18_seed2026.py:502:            optimizer = torch.optim.AdamW(
+scripts/train_rice_resnet18_seed2026.py:504:                lr=FINETUNE_LR,
+scripts/train_rice_resnet18_seed2026.py:505:                weight_decay=WEIGHT_DECAY,
+scripts/train_rice_resnet18_seed2026.py:509:            "warmup"
+scripts/train_rice_resnet18_seed2026.py:510:            if epoch_index < WARMUP_EPOCHS
+scripts/train_rice_resnet18_seed2026.py:511:            else "full_finetuning"
+scripts/train_rice_resnet18_seed2026.py:516:        train_loss = train_one_epoch(
+scripts/train_rice_resnet18_seed2026.py:520:            optimizer,
+scripts/train_rice_resnet18_seed2026.py:534:            "train_loss": round(train_loss, 6),
+scripts/train_rice_resnet18_seed2026.py:535:            "validation_loss": round(
+scripts/train_rice_resnet18_seed2026.py:536:                validation_metrics["loss"],
+scripts/train_rice_resnet18_seed2026.py:560:            f"Epoch {epoch_number:02d}/{total_epochs} "
+scripts/train_rice_resnet18_seed2026.py:562:            f"train loss={train_loss:.4f} | "
+scripts/train_rice_resnet18_seed2026.py:563:            f"val loss={validation_metrics['loss']:.4f} | "
+scripts/train_rice_resnet18_seed2026.py:582:                checkpoint_path,
+scripts/train_rice_resnet18_seed2026.py:586:                f"Saved new best checkpoint: {checkpoint_path}"
+scripts/train_rice_resnet18_seed2026.py:594:    checkpoint = torch.load(
+scripts/train_rice_resnet18_seed2026.py:595:        checkpoint_path,
+scripts/train_rice_resnet18_seed2026.py:601:        checkpoint["model_state_dict"]
+scripts/train_rice_resnet18_seed2026.py:645:        "experiment": "rice_resnet18_grouped_seed2026",
+scripts/train_rice_resnet18_seed2026.py:647:        "seed": SEED,
+scripts/train_rice_resnet18_seed2026.py:655:            "warmup_epochs": WARMUP_EPOCHS,
+scripts/train_rice_resnet18_seed2026.py:656:            "finetune_epochs": FINETUNE_EPOCHS,
+scripts/train_rice_resnet18_seed2026.py:668:            "loss": round(test_metrics["loss"], 6),
+scripts/train_wheat_resnet18_grouped_v2.py:24:SEED = 42
+scripts/train_wheat_resnet18_grouped_v2.py:136:def set_seed(seed: int) -> None:
+scripts/train_wheat_resnet18_grouped_v2.py:137:    random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:138:    np.random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:139:    torch.manual_seed(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:142:        torch.cuda.manual_seed_all(seed)
+scripts/train_wheat_resnet18_grouped_v2.py:590:    set_seed(SEED)
+scripts/train_wheat_resnet18_grouped_v2.py:785:    checkpoint_path = (
+scripts/train_wheat_resnet18_grouped_v2.py:966:                    "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v2.py:968:                checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2.py:973:                f"checkpoint: "
+scripts/train_wheat_resnet18_grouped_v2.py:974:                f"{checkpoint_path}",
+scripts/train_wheat_resnet18_grouped_v2.py:991:    checkpoint = torch.load(
+scripts/train_wheat_resnet18_grouped_v2.py:992:        checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2.py:998:        checkpoint[
+scripts/train_wheat_resnet18_grouped_v2.py:1083:        "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:24:SEED = 42
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:136:def set_seed(seed: int) -> None:
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:137:    random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:138:    np.random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:139:    torch.manual_seed(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:142:        torch.cuda.manual_seed_all(seed)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:590:    set_seed(SEED)
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:785:    checkpoint_path = (
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:966:                    "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:968:                checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:973:                f"checkpoint: "
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:974:                f"{checkpoint_path}",
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:991:    checkpoint = torch.load(
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:992:        checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:998:        checkpoint[
+scripts/train_wheat_resnet18_grouped_v2_smoke.py:1083:        "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:24:SEED = 42
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:136:def set_seed(seed: int) -> None:
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:137:    random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:138:    np.random.seed(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:139:    torch.manual_seed(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:142:        torch.cuda.manual_seed_all(seed)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:594:    set_seed(SEED)
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:789:    checkpoint_path = (
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:970:                    "seed": SEED,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:972:                checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:977:                f"checkpoint: "
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:978:                f"{checkpoint_path}",
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:995:    checkpoint = torch.load(
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:996:        checkpoint_path,
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1002:        checkpoint[
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py:1087:        "seed": SEED,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:49:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:58:        "--initial-checkpoint",
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:107:def set_seed(seed: int) -> None:
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:108:    random.seed(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:109:    np.random.seed(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:110:    torch.manual_seed(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:111:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:117:    epoch_seed: int,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:133:                random_state=epoch_seed + CLASS_TO_ID[label],
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:139:        .sample(frac=1, random_state=epoch_seed)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:212:        set_seed(args.seed + rank)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:217:        initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:224:        if not initial_checkpoint.exists():
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:226:                f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:252:            epoch_seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:257:            epoch_seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:262:            epoch_seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:293:            torch.load(initial_checkpoint, map_location="cpu")
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:326:                epoch_seed=args.seed + epoch * 100,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:336:                seed=args.seed,
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:418:            best_checkpoint = output_dir / "best_ddp_resnet18_v3.pt"
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:420:            if best_checkpoint.exists():
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:422:                    torch.load(best_checkpoint, map_location=device)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:426:                    torch.load(initial_checkpoint, map_location=device)
+src/federated_pipeline/distributed/ddp_resnet18_v3.py:442:                "initial_checkpoint": str(initial_checkpoint),
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:54:    parser.add_argument("--initial-checkpoint", type=Path, required=True)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:63:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:86:def set_seed(seed: int) -> None:
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:87:    random.seed(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:88:    np.random.seed(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:89:    torch.manual_seed(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:90:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:173:        set_seed(args.seed + rank)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:247:            seed=args.seed,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:282:        checkpoint = torch.load(
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:283:            args.initial_checkpoint,
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:289:            isinstance(checkpoint, dict)
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:290:            and "model_state_dict" in checkpoint
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:292:            state_dict = checkpoint["model_state_dict"]
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:294:            state_dict = checkpoint
+src/federated_pipeline/distributed/ddp_rice_resnet18.py:469:                        f"New best checkpoint: epoch {epoch}",
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:25:        description="Evaluate a federated ResNet18 checkpoint on the fixed V2/V3 protocol."
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:27:    parser.add_argument("--checkpoint", required=True)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:30:    parser.add_argument("--batch-size", type=int, default=256)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:50:def fixed_subset(csv_path: Path, per_class: int, seed: int = 42) -> pd.DataFrame:
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:56:            dataframe[dataframe["label"] == label].sample(
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:58:                random_state=seed,
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:64:        .sample(frac=1, random_state=seed)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:124:    checkpoint = Path(args.checkpoint)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:127:    if not checkpoint.exists():
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:128:        raise FileNotFoundError(f"Checkpoint not found: {checkpoint}")
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:138:    print(f"Checkpoint: {checkpoint}", flush=True)
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:151:    model.load_state_dict(torch.load(checkpoint, map_location="cpu"))
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:155:        "experiment": "federated_iid_resnet18_v3",
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:156:        "checkpoint": str(checkpoint),
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:157:        "protocol": "Exact fixed balanced samples previously used for V2 and V3 comparison.",
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py:166:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_full_v3.py:40:    parser.add_argument("--initial-checkpoint", required=True)
+src/federated_pipeline/federated/fedavg_full_v3.py:43:    parser.add_argument("--rounds", type=int, default=3)
+src/federated_pipeline/federated/fedavg_full_v3.py:44:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_full_v3.py:45:    parser.add_argument("--batch-size", type=int, default=64)
+src/federated_pipeline/federated/fedavg_full_v3.py:46:    parser.add_argument("--learning-rate", type=float, default=2e-6)
+src/federated_pipeline/federated/fedavg_full_v3.py:48:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_full_v3.py:57:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_full_v3.py:58:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:59:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:60:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:61:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:93:def local_class_weights(dataset: ManifestImageDataset) -> torch.Tensor:
+src/federated_pipeline/federated/fedavg_full_v3.py:97:    # Square-root inverse frequency weighting. This reduces majority-class
+src/federated_pipeline/federated/fedavg_full_v3.py:98:    # dominance without making rare-class weights excessively large.
+src/federated_pipeline/federated/fedavg_full_v3.py:99:    weights = np.sqrt(counts.sum() / np.maximum(counts, 1.0))
+src/federated_pipeline/federated/fedavg_full_v3.py:109:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_full_v3.py:110:    learning_rate: float,
+src/federated_pipeline/federated/fedavg_full_v3.py:115:    optimizer = torch.optim.AdamW(
+src/federated_pipeline/federated/fedavg_full_v3.py:117:        lr=learning_rate,
+src/federated_pipeline/federated/fedavg_full_v3.py:118:        weight_decay=1e-4,
+src/federated_pipeline/federated/fedavg_full_v3.py:121:    weights = local_class_weights(train_loader.dataset).to(device)
+src/federated_pipeline/federated/fedavg_full_v3.py:122:    criterion = nn.CrossEntropyLoss(
+src/federated_pipeline/federated/fedavg_full_v3.py:127:    total_loss = 0.0
+src/federated_pipeline/federated/fedavg_full_v3.py:128:    total_samples = 0
+src/federated_pipeline/federated/fedavg_full_v3.py:130:    for epoch in range(1, local_epochs + 1):
+src/federated_pipeline/federated/fedavg_full_v3.py:135:            optimizer.zero_grad(set_to_none=True)
+src/federated_pipeline/federated/fedavg_full_v3.py:137:            loss = criterion(outputs, labels)
+src/federated_pipeline/federated/fedavg_full_v3.py:138:            loss.backward()
+src/federated_pipeline/federated/fedavg_full_v3.py:139:            optimizer.step()
+src/federated_pipeline/federated/fedavg_full_v3.py:141:            total_loss += loss.item() * labels.size(0)
+src/federated_pipeline/federated/fedavg_full_v3.py:142:            total_samples += labels.size(0)
+src/federated_pipeline/federated/fedavg_full_v3.py:146:                    f"    local epoch {epoch}/{local_epochs} | "
+src/federated_pipeline/federated/fedavg_full_v3.py:151:    average_loss = total_loss / max(total_samples, 1)
+src/federated_pipeline/federated/fedavg_full_v3.py:158:    return weights_cpu, len(train_loader.dataset), average_loss
+src/federated_pipeline/federated/fedavg_full_v3.py:164:    total_samples = sum(num_samples for _, num_samples in client_updates)
+src/federated_pipeline/federated/fedavg_full_v3.py:180:        for state_dict, num_samples in client_updates:
+src/federated_pipeline/federated/fedavg_full_v3.py:181:            weighted_sum += state_dict[key].float() * num_samples
+src/federated_pipeline/federated/fedavg_full_v3.py:183:        aggregated[key] = (weighted_sum / total_samples).to(reference.dtype)
+src/federated_pipeline/federated/fedavg_full_v3.py:260:                "experiment": "fedavg_full_iid_resnet18_v3",
+src/federated_pipeline/federated/fedavg_full_v3.py:271:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_full_v3.py:280:    initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/federated/fedavg_full_v3.py:289:    if not initial_checkpoint.exists():
+src/federated_pipeline/federated/fedavg_full_v3.py:291:            f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/federated/fedavg_full_v3.py:306:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_full_v3.py:323:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_full_v3.py:331:        pretrained=False,
+src/federated_pipeline/federated/fedavg_full_v3.py:348:            torch.load(initial_checkpoint, map_location="cpu")
+src/federated_pipeline/federated/fedavg_full_v3.py:350:        print(f"Initialized from: {initial_checkpoint}", flush=True)
+src/federated_pipeline/federated/fedavg_full_v3.py:354:    for round_number in range(start_round, args.rounds + 1):
+src/federated_pipeline/federated/fedavg_full_v3.py:356:            f"\n===== Federated round {round_number}/{args.rounds} =====",
+src/federated_pipeline/federated/fedavg_full_v3.py:366:            weights, num_samples, local_loss = train_local_model(
+src/federated_pipeline/federated/fedavg_full_v3.py:370:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_full_v3.py:371:                learning_rate=args.learning_rate,
+src/federated_pipeline/federated/fedavg_full_v3.py:374:            client_updates.append((weights, num_samples))
+src/federated_pipeline/federated/fedavg_full_v3.py:378:                    "num_samples": num_samples,
+src/federated_pipeline/federated/fedavg_full_v3.py:379:                    "local_loss": round(local_loss, 6),
+src/federated_pipeline/federated/fedavg_full_v3.py:384:                f"Finished {client_name}: samples={num_samples}, "
+src/federated_pipeline/federated/fedavg_full_v3.py:385:                f"local_loss={local_loss:.4f}",
+src/federated_pipeline/federated/fedavg_full_v3.py:409:                "clients": client_metrics,
+src/federated_pipeline/federated/fedavg_full_v3.py:423:            f"Saved checkpoint: {output_dir}/global_model_round_{round_number}.pt",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:35:    pretrained: bool = False,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:39:        if pretrained
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:61:    parser.add_argument("--initial-checkpoint", required=True)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:68:            "rice_fedavg_iid_mobilenetv2",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:69:            "rice_fedavg_noniid_mobilenetv2",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:73:    parser.add_argument("--rounds", type=int, default=3)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:74:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:75:    parser.add_argument("--batch-size", type=int, default=64)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:76:    parser.add_argument("--learning-rate", type=float, default=2e-6)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:78:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:87:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:88:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:89:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:90:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:91:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:123:def local_class_weights(dataset: ManifestImageDataset) -> torch.Tensor:
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:131:    # Square-root inverse frequency weighting. This reduces majority-class
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:132:    # dominance without making rare-class weights excessively large.
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:133:    weights = np.sqrt(counts.sum() / np.maximum(counts, 1.0))
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:143:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:144:    learning_rate: float,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:149:    optimizer = torch.optim.AdamW(
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:151:        lr=learning_rate,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:152:        weight_decay=1e-4,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:155:    weights = local_class_weights(train_loader.dataset).to(device)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:156:    criterion = nn.CrossEntropyLoss(
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:161:    total_loss = 0.0
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:162:    total_samples = 0
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:164:    for epoch in range(1, local_epochs + 1):
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:169:            optimizer.zero_grad(set_to_none=True)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:171:            loss = criterion(outputs, labels)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:172:            loss.backward()
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:173:            optimizer.step()
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:175:            total_loss += loss.item() * labels.size(0)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:176:            total_samples += labels.size(0)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:180:                    f"    local epoch {epoch}/{local_epochs} | "
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:185:    average_loss = total_loss / max(total_samples, 1)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:192:    return weights_cpu, len(train_loader.dataset), average_loss
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:198:    total_samples = sum(num_samples for _, num_samples in client_updates)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:214:        for state_dict, num_samples in client_updates:
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:215:            weighted_sum += state_dict[key].float() * num_samples
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:217:        aggregated[key] = (weighted_sum / total_samples).to(reference.dtype)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:338:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:347:    initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:369:    if not initial_checkpoint.exists():
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:371:            f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:387:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:405:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:413:        pretrained=False,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:429:        checkpoint = torch.load(
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:430:            initial_checkpoint,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:436:            isinstance(checkpoint, dict)
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:437:            and "model_state_dict" in checkpoint
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:439:            model_state_dict = checkpoint["model_state_dict"]
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:441:            model_state_dict = checkpoint
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:446:            f"Initialized from: {initial_checkpoint}",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:450:        if isinstance(checkpoint, dict):
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:452:                f"Initial checkpoint epoch: "
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:453:                f"{checkpoint.get('epoch', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:457:                f"Initial checkpoint classes: "
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:458:                f"{checkpoint.get('class_names', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:477:    for round_number in range(start_round, args.rounds + 1):
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:479:            f"\n===== Federated round {round_number}/{args.rounds} =====",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:489:            weights, num_samples, local_loss = train_local_model(
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:493:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:494:                learning_rate=args.learning_rate,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:497:            client_updates.append((weights, num_samples))
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:501:                    "num_samples": num_samples,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:502:                    "local_loss": round(local_loss, 6),
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:507:                f"Finished {client_name}: samples={num_samples}, "
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:508:                f"local_loss={local_loss:.4f}",
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:535:                "clients": client_metrics,
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py:580:            f"Saved checkpoint: {output_dir}/global_model_round_{round_number}.pt",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:40:    parser.add_argument("--initial-checkpoint", required=True)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:47:            "rice_fedavg_iid_resnet18",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:48:            "rice_fedavg_noniid_resnet18",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:52:    parser.add_argument("--rounds", type=int, default=3)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:53:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:54:    parser.add_argument("--batch-size", type=int, default=64)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:55:    parser.add_argument("--learning-rate", type=float, default=2e-6)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:57:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:66:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:67:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:68:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:69:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:70:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:102:def local_class_weights(dataset: ManifestImageDataset) -> torch.Tensor:
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:110:    # Square-root inverse frequency weighting. This reduces majority-class
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:111:    # dominance without making rare-class weights excessively large.
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:112:    weights = np.sqrt(counts.sum() / np.maximum(counts, 1.0))
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:122:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:123:    learning_rate: float,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:128:    optimizer = torch.optim.AdamW(
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:130:        lr=learning_rate,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:131:        weight_decay=1e-4,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:134:    weights = local_class_weights(train_loader.dataset).to(device)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:135:    criterion = nn.CrossEntropyLoss(
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:140:    total_loss = 0.0
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:141:    total_samples = 0
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:143:    for epoch in range(1, local_epochs + 1):
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:148:            optimizer.zero_grad(set_to_none=True)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:150:            loss = criterion(outputs, labels)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:151:            loss.backward()
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:152:            optimizer.step()
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:154:            total_loss += loss.item() * labels.size(0)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:155:            total_samples += labels.size(0)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:159:                    f"    local epoch {epoch}/{local_epochs} | "
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:164:    average_loss = total_loss / max(total_samples, 1)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:171:    return weights_cpu, len(train_loader.dataset), average_loss
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:177:    total_samples = sum(num_samples for _, num_samples in client_updates)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:193:        for state_dict, num_samples in client_updates:
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:194:            weighted_sum += state_dict[key].float() * num_samples
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:196:        aggregated[key] = (weighted_sum / total_samples).to(reference.dtype)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:317:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:326:    initial_checkpoint = Path(args.initial_checkpoint)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:348:    if not initial_checkpoint.exists():
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:350:            f"Initial checkpoint not found: {initial_checkpoint}"
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:366:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:384:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:392:        pretrained=False,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:408:        checkpoint = torch.load(
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:409:            initial_checkpoint,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:415:            isinstance(checkpoint, dict)
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:416:            and "model_state_dict" in checkpoint
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:418:            model_state_dict = checkpoint["model_state_dict"]
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:420:            model_state_dict = checkpoint
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:425:            f"Initialized from: {initial_checkpoint}",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:429:        if isinstance(checkpoint, dict):
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:431:                f"Initial checkpoint epoch: "
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:432:                f"{checkpoint.get('epoch', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:436:                f"Initial checkpoint classes: "
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:437:                f"{checkpoint.get('class_names', 'unknown')}",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:456:    for round_number in range(start_round, args.rounds + 1):
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:458:            f"\n===== Federated round {round_number}/{args.rounds} =====",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:468:            weights, num_samples, local_loss = train_local_model(
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:472:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:473:                learning_rate=args.learning_rate,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:476:            client_updates.append((weights, num_samples))
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:480:                    "num_samples": num_samples,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:481:                    "local_loss": round(local_loss, 6),
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:486:                f"Finished {client_name}: samples={num_samples}, "
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:487:                f"local_loss={local_loss:.4f}",
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:514:                "clients": client_metrics,
+src/federated_pipeline/federated/fedavg_rice_resnet18.py:559:            f"Saved checkpoint: {output_dir}/global_model_round_{round_number}.pt",
+src/federated_pipeline/federated/fedavg_simulation.py:41:    parser.add_argument("--rounds", type=int, default=3)
+src/federated_pipeline/federated/fedavg_simulation.py:42:    parser.add_argument("--local-epochs", type=int, default=1)
+src/federated_pipeline/federated/fedavg_simulation.py:43:    parser.add_argument("--batch-size", type=int, default=32)
+src/federated_pipeline/federated/fedavg_simulation.py:44:    parser.add_argument("--learning-rate", type=float, default=1e-4)
+src/federated_pipeline/federated/fedavg_simulation.py:46:    parser.add_argument("--seed", type=int, default=42)
+src/federated_pipeline/federated/fedavg_simulation.py:51:def set_seed(seed: int) -> None:
+src/federated_pipeline/federated/fedavg_simulation.py:52:    random.seed(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:53:    np.random.seed(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:54:    torch.manual_seed(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:55:    torch.cuda.manual_seed_all(seed)
+src/federated_pipeline/federated/fedavg_simulation.py:86:    local_epochs: int,
+src/federated_pipeline/federated/fedavg_simulation.py:87:    learning_rate: float,
+src/federated_pipeline/federated/fedavg_simulation.py:92:    optimizer = torch.optim.AdamW(
+src/federated_pipeline/federated/fedavg_simulation.py:94:        lr=learning_rate,
+src/federated_pipeline/federated/fedavg_simulation.py:95:        weight_decay=1e-4,
+src/federated_pipeline/federated/fedavg_simulation.py:97:    criterion = nn.CrossEntropyLoss()
+src/federated_pipeline/federated/fedavg_simulation.py:99:    total_loss = 0.0
+src/federated_pipeline/federated/fedavg_simulation.py:100:    total_samples = 0
+src/federated_pipeline/federated/fedavg_simulation.py:102:    for _ in range(local_epochs):
+src/federated_pipeline/federated/fedavg_simulation.py:107:            optimizer.zero_grad()
+src/federated_pipeline/federated/fedavg_simulation.py:109:            loss = criterion(outputs, labels)
+src/federated_pipeline/federated/fedavg_simulation.py:110:            loss.backward()
+src/federated_pipeline/federated/fedavg_simulation.py:111:            optimizer.step()
+src/federated_pipeline/federated/fedavg_simulation.py:113:            total_loss += loss.item() * labels.size(0)
+src/federated_pipeline/federated/fedavg_simulation.py:114:            total_samples += labels.size(0)
+src/federated_pipeline/federated/fedavg_simulation.py:116:    average_loss = total_loss / max(total_samples, 1)
+src/federated_pipeline/federated/fedavg_simulation.py:123:    return weights, len(train_loader.dataset), average_loss
+src/federated_pipeline/federated/fedavg_simulation.py:129:    total_samples = sum(num_samples for _, num_samples in client_weights)
+src/federated_pipeline/federated/fedavg_simulation.py:136:        for state_dict, num_samples in client_weights:
+src/federated_pipeline/federated/fedavg_simulation.py:137:            value = state_dict[key].float() * num_samples
+src/federated_pipeline/federated/fedavg_simulation.py:144:        aggregated[key] = (weighted_sum / total_samples).to(
+src/federated_pipeline/federated/fedavg_simulation.py:204:    set_seed(args.seed)
+src/federated_pipeline/federated/fedavg_simulation.py:233:            batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_simulation.py:251:        batch_size=args.batch_size,
+src/federated_pipeline/federated/fedavg_simulation.py:260:        pretrained=True,
+src/federated_pipeline/federated/fedavg_simulation.py:266:    for round_number in range(1, args.rounds + 1):
+src/federated_pipeline/federated/fedavg_simulation.py:267:        print(f"\n===== Federated round {round_number}/{args.rounds} =====")
+src/federated_pipeline/federated/fedavg_simulation.py:273:            weights, num_samples, local_loss = train_local_model(
+src/federated_pipeline/federated/fedavg_simulation.py:277:                local_epochs=args.local_epochs,
+src/federated_pipeline/federated/fedavg_simulation.py:278:                learning_rate=args.learning_rate,
+src/federated_pipeline/federated/fedavg_simulation.py:281:            client_updates.append((weights, num_samples))
+src/federated_pipeline/federated/fedavg_simulation.py:285:                "num_samples": num_samples,
+src/federated_pipeline/federated/fedavg_simulation.py:286:                "local_loss": round(local_loss, 6),
+src/federated_pipeline/federated/fedavg_simulation.py:290:                f"{client_name}: samples={num_samples}, "
+src/federated_pipeline/federated/fedavg_simulation.py:291:                f"local_loss={local_loss:.4f}"
+src/federated_pipeline/federated/fedavg_simulation.py:305:            "clients": round_client_metrics,
+src/federated_pipeline/federated/fedavg_simulation.py:322:                    "rounds": args.rounds,
+src/federated_pipeline/federated/fedavg_simulation.py:323:                    "local_epochs": args.local_epochs,
+src/federated_pipeline/federated/fedavg_simulation.py:324:                    "num_clients": len(client_loaders),
+src/train.py:24:def set_seed(seed: int) -> None:
+src/train.py:25:    random.seed(seed)
+src/train.py:26:    np.random.seed(seed)
+src/train.py:27:    torch.manual_seed(seed)
+src/train.py:30:        torch.cuda.manual_seed_all(seed)
+src/train.py:33:def balanced_subset(dataset: GrainDataset, per_class: int | None, seed: int) -> Subset:
+src/train.py:37:    rng = np.random.default_rng(seed)
+src/train.py:107:    set_seed(int(config["seed"]))
+src/train.py:110:    checkpoint_dir = Path(config["checkpoint_dir"]) / run_id
+src/train.py:113:    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+src/train.py:171:        int(config["seed"]),
+src/train.py:177:        int(config["seed"]) + 1,
+src/train.py:183:        int(config["seed"]) + 2,
+src/train.py:189:        int(config["seed"]) + 3,
+src/train.py:266:    best_checkpoint = checkpoint_dir / "best_model.pt"
+src/train.py:311:                best_checkpoint,
+src/train.py:316:    checkpoint = torch.load(best_checkpoint, map_location=device)
+src/train.py:317:    model.load_state_dict(checkpoint["model_state_dict"])
+src/train.py:335:        "checkpoint": str(best_checkpoint),
+src/train.py:352:        "seed": config["seed"],
+src/train.py:369:        "checkpoint_path": str(best_checkpoint),
+src/train.py:386:    print(f"\nSaved checkpoint: {best_checkpoint}")
+slurm/evaluate_fl_full_iid_v3.sh:16:PYTHONPATH=src python -m federated_pipeline.federated.evaluate_federated_checkpoint \
+slurm/evaluate_fl_full_iid_v3.sh:17:  --checkpoint /scratch/project_2019765/grain_research/federated_results/fl_full_iid_v3/global_model_round_3.pt \
+slurm/evaluate_fl_full_noniid_v3.sh:2:#SBATCH --job-name=eval_fl_iid_v3
+slurm/evaluate_fl_full_noniid_v3.sh:9:#SBATCH --output=/scratch/project_2019765/grain_research/logs/eval_fl_iid_v3_%j.out
+slurm/evaluate_fl_full_noniid_v3.sh:10:#SBATCH --error=/scratch/project_2019765/grain_research/logs/eval_fl_iid_v3_%j.err
+slurm/evaluate_fl_full_noniid_v3.sh:16:PYTHONPATH=src python -m federated_pipeline.federated.evaluate_federated_checkpoint \
+slurm/evaluate_fl_full_noniid_v3.sh:17:  --checkpoint /scratch/project_2019765/grain_research/federated_results/fl_full_noniid_v3/global_model_round_3.pt \
+slurm/evaluate_fl_full_noniid_v3.sh:19:  --output /scratch/project_2019765/grain_research/federated_results/fl_full_noniid_v3/fixed_protocol_results.json \
+slurm/evaluate_fl_full_noniid_v3.sh:20:  --batch-size 256 \
+slurm/evaluate_rice_ddp.sh:23:  --checkpoint \
+slurm/evaluate_rice_federated_models.sh:26:  --checkpoint \
+slurm/evaluate_rice_federated_models.sh:27:  ${RESULT_ROOT}/rice_fedavg_iid_resnet18/best_global_model.pt \
+slurm/evaluate_rice_federated_models.sh:34:  ${RESULT_ROOT}/rice_fedavg_iid_resnet18/evaluation \
+slurm/evaluate_rice_federated_models.sh:35:  --experiment-name rice_fedavg_iid_resnet18 \
+slurm/evaluate_rice_federated_models.sh:40:  --checkpoint \
+slurm/evaluate_rice_federated_models.sh:41:  ${RESULT_ROOT}/rice_fedavg_noniid_resnet18/best_global_model.pt \
+slurm/evaluate_rice_federated_models.sh:48:  ${RESULT_ROOT}/rice_fedavg_noniid_resnet18/evaluation \
+slurm/evaluate_rice_federated_models.sh:49:  --experiment-name rice_fedavg_noniid_resnet18 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:2:#SBATCH --job-name=rice_mob_iid
+slurm/fedavg_rice_mobilenetv2_iid.sh:9:#SBATCH --output=/scratch/project_2019765/fnaveed/logs/rice_mob_iid_%j.out
+slurm/fedavg_rice_mobilenetv2_iid.sh:10:#SBATCH --error=/scratch/project_2019765/fnaveed/logs/rice_mob_iid_%j.err
+slurm/fedavg_rice_mobilenetv2_iid.sh:21:  /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2
+slurm/fedavg_rice_mobilenetv2_iid.sh:29:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:32:  --initial-checkpoint \
+slurm/fedavg_rice_mobilenetv2_iid.sh:35:  /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:39:  rice_fedavg_iid_mobilenetv2 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:40:  --rounds 5 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:41:  --local-epochs 1 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:42:  --batch-size 64 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:43:  --learning-rate 2e-6 \
+slurm/fedavg_rice_mobilenetv2_iid.sh:45:  --seed 42
+slurm/fedavg_rice_mobilenetv2_noniid.sh:9:#SBATCH --output=/scratch/project_2019765/fnaveed/logs/rice_mob_noniid_%j.out
+slurm/fedavg_rice_mobilenetv2_noniid.sh:10:#SBATCH --error=/scratch/project_2019765/fnaveed/logs/rice_mob_noniid_%j.err
+slurm/fedavg_rice_mobilenetv2_noniid.sh:21:  /scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2
+slurm/fedavg_rice_mobilenetv2_noniid.sh:29:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:32:  --initial-checkpoint \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:35:  /scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:39:  rice_fedavg_noniid_mobilenetv2 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:40:  --rounds 5 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:41:  --local-epochs 1 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:42:  --batch-size 64 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:43:  --learning-rate 2e-6 \
+slurm/fedavg_rice_mobilenetv2_noniid.sh:45:  --seed 42
+slurm/fl_fedavg_smoke.sh:17:  --client-dir /scratch/project_2019649/grain_research/partitions/fl_smoke_noniid_3clients \
+slurm/fl_fedavg_smoke.sh:19:  --output-dir /scratch/project_2019649/grain_research/federated_results/fl_smoke_noniid_3clients \
+slurm/fl_fedavg_smoke.sh:20:  --rounds 3 \
+slurm/fl_fedavg_smoke.sh:21:  --local-epochs 1 \
+slurm/fl_fedavg_smoke.sh:22:  --batch-size 32 \
+slurm/fl_fedavg_smoke.sh:23:  --learning-rate 0.0001 \
+slurm/fl_fedavg_smoke.sh:25:  --seed 42
+slurm/fl_full_iid_v3.sh:17:  --client-dir /scratch/project_2019649/grain_research/partitions/fl_full_iid_3clients \
+slurm/fl_full_iid_v3.sh:19:  --initial-checkpoint /scratch/project_2019649/grain_research/results/version3_dynamic_balanced_resnet18/best_resnet18_v3_gpu.pt \
+slurm/fl_full_iid_v3.sh:26:  --seed 42
+slurm/fl_full_noniid_v3.sh:2:#SBATCH --job-name=fl_full_noniid_v3
+slurm/fl_full_noniid_v3.sh:9:#SBATCH --output=/scratch/project_2019765/grain_research/logs/fl_full_noniid_v3_%j.out
+slurm/fl_full_noniid_v3.sh:10:#SBATCH --error=/scratch/project_2019765/grain_research/logs/fl_full_noniid_v3_%j.err
+slurm/fl_full_noniid_v3.sh:17:  --client-dir /scratch/project_2019765/grain_research/partitions/fl_full_noniid_3clients \
+slurm/fl_full_noniid_v3.sh:19:  --initial-checkpoint /scratch/project_2019765/grain_research/results/version3_dynamic_balanced_resnet18/best_resnet18_v3_gpu.pt \
+slurm/fl_full_noniid_v3.sh:20:  --output-dir /scratch/project_2019765/grain_research/federated_results/fl_full_noniid_v3 \
+slurm/fl_full_noniid_v3.sh:21:  --rounds 3 \
+slurm/fl_full_noniid_v3.sh:22:  --local-epochs 1 \
+slurm/fl_full_noniid_v3.sh:23:  --batch-size 64 \
+slurm/fl_full_noniid_v3.sh:24:  --learning-rate 0.000002 \
+slurm/fl_full_noniid_v3.sh:26:  --seed 42
+slurm/rice_ddp_resnet18_full.sh:37:  --initial-checkpoint \
+slurm/rice_ddp_resnet18_full.sh:46:  --seed 42
+slurm/rice_ddp_resnet18_smoke.sh:37:  --initial-checkpoint \
+slurm/rice_ddp_resnet18_smoke.sh:46:  --seed 42
+slurm/rice_fedavg_iid_full.sh:2:#SBATCH --job-name=rice_fl_iid_full
+slurm/rice_fedavg_iid_full.sh:9:#SBATCH --output=/scratch/project_2019765/fnaveed/logs/rice_fl_iid_full_%j.out
+slurm/rice_fedavg_iid_full.sh:10:#SBATCH --error=/scratch/project_2019765/fnaveed/logs/rice_fl_iid_full_%j.err
+slurm/rice_fedavg_iid_full.sh:21:  /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18
+slurm/rice_fedavg_iid_full.sh:28:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2 \
+slurm/rice_fedavg_iid_full.sh:33:  --initial-checkpoint \
+slurm/rice_fedavg_iid_full.sh:36:  /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18 \
+slurm/rice_fedavg_iid_full.sh:37:  --experiment-name rice_fedavg_iid_resnet18 \
+slurm/rice_fedavg_iid_full.sh:38:  --rounds 5 \
+slurm/rice_fedavg_iid_full.sh:39:  --local-epochs 1 \
+slurm/rice_fedavg_iid_full.sh:40:  --batch-size 64 \
+slurm/rice_fedavg_iid_full.sh:41:  --learning-rate 0.000002 \
+slurm/rice_fedavg_iid_full.sh:43:  --seed 42
+slurm/rice_fedavg_iid_smoke.sh:2:#SBATCH --job-name=rice_fl_iid_smoke
+slurm/rice_fedavg_iid_smoke.sh:9:#SBATCH --output=/scratch/project_2019765/fnaveed/logs/rice_fl_iid_smoke_%j.out
+slurm/rice_fedavg_iid_smoke.sh:10:#SBATCH --error=/scratch/project_2019765/fnaveed/logs/rice_fl_iid_smoke_%j.err
+slurm/rice_fedavg_iid_smoke.sh:21:  /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke
+slurm/rice_fedavg_iid_smoke.sh:28:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2 \
+slurm/rice_fedavg_iid_smoke.sh:33:  --initial-checkpoint \
+slurm/rice_fedavg_iid_smoke.sh:36:  /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke \
+slurm/rice_fedavg_iid_smoke.sh:37:  --experiment-name rice_fedavg_iid_resnet18 \
+slurm/rice_fedavg_iid_smoke.sh:38:  --rounds 1 \
+slurm/rice_fedavg_iid_smoke.sh:39:  --local-epochs 1 \
+slurm/rice_fedavg_iid_smoke.sh:40:  --batch-size 64 \
+slurm/rice_fedavg_iid_smoke.sh:41:  --learning-rate 0.000002 \
+slurm/rice_fedavg_iid_smoke.sh:43:  --seed 42
+slurm/rice_fedavg_noniid_full.sh:2:#SBATCH --job-name=rice_fl_noniid_full
+slurm/rice_fedavg_noniid_full.sh:9:#SBATCH --output=/scratch/project_2019765/fnaveed/logs/rice_fl_noniid_full_%j.out
+slurm/rice_fedavg_noniid_full.sh:10:#SBATCH --error=/scratch/project_2019765/fnaveed/logs/rice_fl_noniid_full_%j.err
+slurm/rice_fedavg_noniid_full.sh:21:  /scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18
+slurm/rice_fedavg_noniid_full.sh:28:  /scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2 \
+slurm/rice_fedavg_noniid_full.sh:33:  --initial-checkpoint \
+slurm/rice_fedavg_noniid_full.sh:36:  /scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18 \
+slurm/rice_fedavg_noniid_full.sh:37:  --experiment-name rice_fedavg_noniid_resnet18 \
+slurm/rice_fedavg_noniid_full.sh:38:  --rounds 5 \
+slurm/rice_fedavg_noniid_full.sh:39:  --local-epochs 1 \
+slurm/rice_fedavg_noniid_full.sh:40:  --batch-size 64 \
+slurm/rice_fedavg_noniid_full.sh:41:  --learning-rate 0.000002 \
+slurm/rice_fedavg_noniid_full.sh:43:  --seed 42
+slurm/roihu_fl_network_smoke.sh:32:  FL_CLIENT_MANIFEST="/scratch/project_2019765/grain_research/partitions/fl_smoke_noniid_3clients/client_${CLIENT_ID}_train.csv" \
+slurm/roihu_fl_network_smoke.sh:33:  FL_LOCAL_EPOCHS=1 \
+slurm/train_rice_resnet18_seed123.sh:32:python scripts/train_rice_resnet18_seed123.py
+slurm/train_rice_resnet18_seed2026.sh:32:python scripts/train_rice_resnet18_seed2026.py
+experiments/results/provenance/checkpoint_inventory.csv:1:checkpoint,size_bytes,size_mib,modified,sha256
+experiments/results/provenance/checkpoint_inventory.csv:14:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/best_global_model.pt,9185547,8.76,2026-07-14T14:42:53,df27b522a016c1835e881f40dd698bffa5d0434dd9169f54ace809a61fb22962
+experiments/results/provenance/checkpoint_inventory.csv:15:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/global_model_round_1.pt,9185291,8.7598,2026-07-14T14:42:31,6edeaf8b30fe3c2f82abaa62698ec0a43f4290655ffe465539700413c3f77e2d
+experiments/results/provenance/checkpoint_inventory.csv:16:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/global_model_round_2.pt,9185291,8.7598,2026-07-14T14:42:53,b8d98461a4ea8de4abb2bd06763f65176a2dc0017e9098e27b772d25d4801fd2
+experiments/results/provenance/checkpoint_inventory.csv:17:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/global_model_round_3.pt,9185291,8.7598,2026-07-14T14:43:16,6658d9a5e0f97918fd549c0231bd248f7d582f148ff2e985b45bcccce623bdad
+experiments/results/provenance/checkpoint_inventory.csv:18:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/global_model_round_4.pt,9185291,8.7598,2026-07-14T14:43:38,0e78c3642dc33cbceabfb637dbb7df7289bed27ec0ea7281096439c5f9d667c7
+experiments/results/provenance/checkpoint_inventory.csv:19:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/global_model_round_5.pt,9185291,8.7598,2026-07-14T14:44:00,60c1f199ccef8ff7b9ede178ebe71d1beb89a9719a35ed9837a1c59ed68ef5d3
+experiments/results/provenance/checkpoint_inventory.csv:20:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/training_state.pt,9185611,8.7601,2026-07-14T14:44:00,386fa627f9104c9df81083e82dd3b0a6ddd48a63ee9b0c8c21ae5f7d72524e11
+experiments/results/provenance/checkpoint_inventory.csv:21:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/best_global_model.pt,44804107,42.7285,2026-07-14T00:18:38,a24e1ad24486eaced70771bf3dd3282ac564a9a25d586ea783c9e5fe5545900e
+experiments/results/provenance/checkpoint_inventory.csv:22:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_1.pt,44803339,42.7278,2026-07-14T00:18:39,9e71cfcadd6c7286e1395c4e1ee6e0fd4633dcb42bc7cd8914d5c316fbb3fc08
+experiments/results/provenance/checkpoint_inventory.csv:23:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_2.pt,44803339,42.7278,2026-07-14T00:19:02,1d468ab04c89f72839a33c221fa635f88470dcef2e26b363e9f2ff55073f6b66
+experiments/results/provenance/checkpoint_inventory.csv:24:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_3.pt,44803339,42.7278,2026-07-14T00:19:25,0ef1d1ee665019ef4e99dfd00370ea9823aa861139e571938e34301b02a3bac0
+experiments/results/provenance/checkpoint_inventory.csv:25:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_4.pt,44803339,42.7278,2026-07-14T00:19:48,79cff65b92a2f4b640390344d7ca20b30e3ff24b6e942ca43ccb1bc420d56edf
+experiments/results/provenance/checkpoint_inventory.csv:26:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_5.pt,44803339,42.7278,2026-07-14T00:20:11,864d585693314e36160e5cdadfe6576cce87cf08cc8d5e32325923a537c7b933
+experiments/results/provenance/checkpoint_inventory.csv:27:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/training_state.pt,44804811,42.7292,2026-07-14T00:20:11,e714fc76a2f760a2772fee8e57c654f08639af7ffc9aafef976c5112b43d57d8
+experiments/results/provenance/checkpoint_inventory.csv:28:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke/best_global_model.pt,44804107,42.7285,2026-07-14T00:17:16,630c868c11f1b820beb990f176373e665fb0e216fba2dbb4cbdab5113a12c40b
+experiments/results/provenance/checkpoint_inventory.csv:29:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke/global_model_round_1.pt,44803339,42.7278,2026-07-14T00:17:16,bca7629664ba08a29f945ee23e6f6d553959a0576752755a8eb9f665c4be2221
+experiments/results/provenance/checkpoint_inventory.csv:30:/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke/training_state.pt,44803915,42.7283,2026-07-14T00:17:16,c959b1f267c063376b4a507ca544824ad31f5203eb33cf50785a4c58f078e7ea
+experiments/results/provenance/checkpoint_inventory.csv:31:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/best_global_model.pt,9185547,8.76,2026-07-14T14:42:31,56f52a7610879894094c1b7f078434212d1e783a1cde609401e1073ee77a3d14
+experiments/results/provenance/checkpoint_inventory.csv:32:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/global_model_round_1.pt,9185291,8.7598,2026-07-14T14:42:31,2f423178c80178cefb268e3a659892a41039c3244685d19411fc0ee09b7f5804
+experiments/results/provenance/checkpoint_inventory.csv:33:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/global_model_round_2.pt,9185291,8.7598,2026-07-14T14:42:53,5bfa8f6c2c4e6b08ea3693425aab3f4bd654ed10418b695b543c2d3a63cb610b
+experiments/results/provenance/checkpoint_inventory.csv:34:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/global_model_round_3.pt,9185291,8.7598,2026-07-14T14:43:15,e38110908ce737764e6cf48c6ff2373064cc1a994daba8a88343b7f132716d6c
+experiments/results/provenance/checkpoint_inventory.csv:35:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/global_model_round_4.pt,9185291,8.7598,2026-07-14T14:43:38,f8581e81af1665db54b375f6e6e8f3b98528bbeb43781e20eae773dc8dd3f5c6
+experiments/results/provenance/checkpoint_inventory.csv:36:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/global_model_round_5.pt,9185291,8.7598,2026-07-14T14:44:00,da34a0fdca47f0614efd085ce3b143773a1015087993150fa8f2012784cc9e92
+experiments/results/provenance/checkpoint_inventory.csv:37:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/training_state.pt,9185675,8.7601,2026-07-14T14:44:00,ae6129404565e2aa84e52841349fc5e5de18c242fc3718420b9fe5f844708482
+experiments/results/provenance/checkpoint_inventory.csv:38:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/best_global_model.pt,44804171,42.7286,2026-07-14T00:18:42,0addd9229d0f0959d4b95c76d180a6128eedff041e4a766c9b97c962159ce307
+experiments/results/provenance/checkpoint_inventory.csv:39:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/global_model_round_1.pt,44803339,42.7278,2026-07-14T00:18:42,0c87d025ab683beb96da96122c145115c571880e9f42df1156cf55509d707e8d
+experiments/results/provenance/checkpoint_inventory.csv:40:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/global_model_round_2.pt,44803339,42.7278,2026-07-14T00:19:05,36324324be6f62ec8fc5aa8b5bbeba7e8cb20ba7375c6d3f8d04508f3708ca27
+experiments/results/provenance/checkpoint_inventory.csv:41:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/global_model_round_3.pt,44803339,42.7278,2026-07-14T00:19:28,ddf965d8ef62c534d18d4f4bef6ef4f934a4b1932540ee302536ddc286629a3c
+experiments/results/provenance/checkpoint_inventory.csv:42:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/global_model_round_4.pt,44803339,42.7278,2026-07-14T00:19:51,e426dd0975d55a9fed152edf9912da2f8f23530e437556bedf23f5253e50fd9a
+experiments/results/provenance/checkpoint_inventory.csv:43:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/global_model_round_5.pt,44803339,42.7278,2026-07-14T00:20:14,f72c23c96a0fd23a9ff78f0fc0b80013079610eab0b814ab65adbeb80122da58
+experiments/results/provenance/checkpoint_inventory.csv:44:/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/training_state.pt,44804811,42.7292,2026-07-14T00:20:14,47077f3037063aa1bbea70f3f69d724195bd9c14610b182d8476c0cc6aed0034
+experiments/results/provenance/checkpoint_inventory.csv:46:/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_seed123/best_resnet18_rice_grouped.pt,44804555,42.729,2026-07-13T23:27:50,1b2bc5e083d593a6d1c27c2994aaa426cdfead3e763b64079d3526beadd05e94
+experiments/results/provenance/checkpoint_inventory.csv:47:/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_seed2026/best_resnet18_rice_grouped.pt,44804555,42.729,2026-07-13T23:29:02,3bd342378c7ed6fab34acd325a204ca272a12becedb044daa5ac812a1d117897
+experiments/results/provenance/checkpoint_inventory.csv:51:/scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights/best_resnet18_wheat_grouped_v3_sqrt_weights.pt,44806923,42.7312,2026-07-14T14:07:56,7f8de5d0e11c8723b4bd26a21ce0e6659f7cf5629a49a572ef4956a4437780c7
+experiments/results/provenance/rice_grouped_split/split_summary.json:2:  "seed": 42,
+experiments/results/provenance/wheat_grouped_split_v2/metadata.json:3:  "seed": 42,
+experiments/results/README.md:12:  - ResNet18 IID and non-IID
+experiments/results/README.md:13:  - MobileNetV2 IID and non-IID
+experiments/results/README.md:25:- Checkpoint provenance and SHA-256 inventory
+experiments/results/README.md:29:The image datasets, generated train/validation/test manifests, virtual environments, runtime logs, and binary checkpoints are excluded from Git.
+experiments/results/README.md:31:The binary checkpoints remain stored on CSC. Their paths, sizes, timestamps, and SHA-256 hashes are recorded in:
+experiments/results/README.md:33:`provenance/checkpoint_inventory.csv`
+experiments/results/README.md:43:The result files in this directory were generated directly from the saved model checkpoints and experiment outputs.
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_ddp_resnet18/best_ddp_resnet18_rice.pt",
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:14:  "checkpoint_metadata": {
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:37:      "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json:45:      "seed": 42
+experiments/results/rice/rice_ddp_resnet18/metrics.json:120:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_ddp_resnet18/metrics.json:128:    "seed": 42
+experiments/results/rice/rice_efficientnetb0_grouped_v1/metrics.json:4:  "seed": 42,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_metrics.json:2:  "experiment": "FedAvg IID MobileNetV2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/best_global_model.pt",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_summary.csv:2:FedAvg IID MobileNetV2,validation,98.8113,98.1605,97.6631,98.8186
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_summary.csv:3:FedAvg IID MobileNetV2,test,98.9882,98.4579,97.9948,98.9926
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_evaluation.json:2:  "experiment": "FedAvg IID MobileNetV2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_evaluation.json:2:  "experiment": "FedAvg IID MobileNetV2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:2:  "experiment": "rice_fedavg_iid_mobilenetv2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:19:      "clients": [
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:22:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:23:          "local_loss": 0.569022
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:27:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:28:          "local_loss": 0.574174
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:32:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:33:          "local_loss": 0.574251
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:46:      "clients": [
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:49:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:50:          "local_loss": 0.558997
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:54:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:55:          "local_loss": 0.547864
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:59:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:60:          "local_loss": 0.547308
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:73:      "clients": [
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:76:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:77:          "local_loss": 0.529501
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:81:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:82:          "local_loss": 0.523588
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:86:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:87:          "local_loss": 0.526111
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:100:      "clients": [
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:103:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:104:          "local_loss": 0.504291
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:108:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:109:          "local_loss": 0.502516
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:113:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:114:          "local_loss": 0.505753
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:127:      "clients": [
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:130:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:131:          "local_loss": 0.481691
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:135:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:136:          "local_loss": 0.483221
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:140:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:141:          "local_loss": 0.485493
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1/best_mobilenetv2_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:157:    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:159:    "experiment_name": "rice_fedavg_iid_mobilenetv2",
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:160:    "rounds": 5,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:163:    "learning_rate": 2e-06,
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:2:  "experiment": "rice_fedavg_iid_resnet18",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/best_global_model.pt",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:14:  "checkpoint_metadata": {
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:32:    "experiment": "rice_fedavg_iid_resnet18",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:34:      "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:36:      "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:37:      "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:39:      "experiment_name": "rice_fedavg_iid_resnet18",
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:40:      "rounds": 5,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:41:      "local_epochs": 1,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:42:      "batch_size": 64,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:43:      "learning_rate": 2e-06,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json:45:      "seed": 42,
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_summary.csv:2:rice_fedavg_iid_resnet18,validation,4711,99.1297,98.1369,98.0954,99.132,4.68
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_summary.csv:3:rice_fedavg_iid_resnet18,test,4645,99.1173,98.25,98.1136,99.1191,4.56
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:2:  "experiment": "rice_fedavg_iid_resnet18",
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:19:      "clients": [
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:22:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:23:          "local_loss": 0.656674
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:27:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:28:          "local_loss": 0.645098
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:32:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:33:          "local_loss": 0.648934
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:46:      "clients": [
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:49:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:50:          "local_loss": 0.577793
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:54:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:55:          "local_loss": 0.577078
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:59:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:60:          "local_loss": 0.574022
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:73:      "clients": [
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:76:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:77:          "local_loss": 0.522728
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:81:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:82:          "local_loss": 0.521059
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:86:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:87:          "local_loss": 0.519654
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:100:      "clients": [
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:103:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:104:          "local_loss": 0.481345
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:108:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:109:          "local_loss": 0.485378
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:113:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:114:          "local_loss": 0.476673
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:127:      "clients": [
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:130:          "num_samples": 7199,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:131:          "local_loss": 0.458016
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:135:          "num_samples": 7229,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:136:          "local_loss": 0.45923
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:140:          "num_samples": 7178,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:141:          "local_loss": 0.461462
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:157:    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18",
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:159:    "experiment_name": "rice_fedavg_iid_resnet18",
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:160:    "rounds": 5,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:163:    "learning_rate": 2e-06,
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_metrics.json:2:  "experiment": "FedAvg non-IID MobileNetV2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/best_global_model.pt",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_summary.csv:2:FedAvg non-IID MobileNetV2,validation,98.8962,98.1797,97.7757,98.902
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_summary.csv:3:FedAvg non-IID MobileNetV2,test,99.0097,98.5142,98.0484,99.0143
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_evaluation.json:2:  "experiment": "FedAvg non-IID MobileNetV2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_evaluation.json:2:  "experiment": "FedAvg non-IID MobileNetV2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:2:  "experiment": "rice_fedavg_noniid_mobilenetv2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:19:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:22:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:23:          "local_loss": 0.656616
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:27:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:28:          "local_loss": 0.724112
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:32:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:33:          "local_loss": 0.553878
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:46:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:49:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:50:          "local_loss": 0.629373
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:54:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:55:          "local_loss": 0.692675
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:59:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:60:          "local_loss": 0.543783
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:73:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:76:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:77:          "local_loss": 0.60061
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:81:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:82:          "local_loss": 0.657982
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:86:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:87:          "local_loss": 0.509771
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:100:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:103:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:104:          "local_loss": 0.57233
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:108:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:109:          "local_loss": 0.624076
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:113:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:114:          "local_loss": 0.492761
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:127:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:130:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:131:          "local_loss": 0.547809
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:135:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:136:          "local_loss": 0.595092
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:140:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:141:          "local_loss": 0.477136
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1/best_mobilenetv2_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:157:    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:159:    "experiment_name": "rice_fedavg_noniid_mobilenetv2",
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:160:    "rounds": 5,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:163:    "learning_rate": 2e-06,
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:2:  "experiment": "rice_fedavg_noniid_resnet18",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:3:  "checkpoint": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/best_global_model.pt",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:14:  "checkpoint_metadata": {
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:32:    "experiment": "rice_fedavg_noniid_resnet18",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:34:      "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:36:      "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:37:      "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:39:      "experiment_name": "rice_fedavg_noniid_resnet18",
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:40:      "rounds": 5,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:41:      "local_epochs": 1,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:42:      "batch_size": 64,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:43:      "learning_rate": 2e-06,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json:45:      "seed": 42,
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_summary.csv:2:rice_fedavg_noniid_resnet18,validation,4711,99.1085,98.086,98.0418,99.1112,3.41
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_summary.csv:3:rice_fedavg_noniid_resnet18,test,4645,99.0958,98.1965,98.0866,99.0974,3.2
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:2:  "experiment": "rice_fedavg_noniid_resnet18",
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:19:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:22:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:23:          "local_loss": 0.733148
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:27:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:28:          "local_loss": 0.829879
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:32:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:33:          "local_loss": 0.618355
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:46:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:49:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:50:          "local_loss": 0.643706
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:54:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:55:          "local_loss": 0.717336
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:59:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:60:          "local_loss": 0.544684
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:73:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:76:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:77:          "local_loss": 0.577462
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:81:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:82:          "local_loss": 0.646082
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:86:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:87:          "local_loss": 0.500527
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:100:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:103:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:104:          "local_loss": 0.527128
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:108:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:109:          "local_loss": 0.596736
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:113:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:114:          "local_loss": 0.462183
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:127:      "clients": [
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:130:          "num_samples": 8436,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:131:          "local_loss": 0.501705
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:135:          "num_samples": 10167,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:136:          "local_loss": 0.561702
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:140:          "num_samples": 3003,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:141:          "local_loss": 0.422323
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:154:    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:156:    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:157:    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18",
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:159:    "experiment_name": "rice_fedavg_noniid_resnet18",
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:160:    "rounds": 5,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:161:    "local_epochs": 1,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:162:    "batch_size": 64,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:163:    "learning_rate": 2e-06,
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json:165:    "seed": 42,
+experiments/results/rice/rice_mobilenetv2_grouped_v1/metrics.json:4:  "seed": 42,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics.json:4:  "seed": 42,
+experiments/results/rice/rice_resnet18_grouped_v1/metrics_final.json:4:  "seed": 42,
+experiments/results/rice/rice_resnet18_grouped_v1/split_summary.json:2:  "seed": 42,
+experiments/results/tables/rice_fedavg_mobilenetv2_comparison.csv:2:FedAvg IID MobileNetV2,validation,4711,98.8113,98.1605,97.6631,98.8186
+experiments/results/tables/rice_fedavg_mobilenetv2_comparison.csv:3:FedAvg IID MobileNetV2,test,4645,98.9882,98.4579,97.9948,98.9926
+experiments/results/tables/rice_fedavg_mobilenetv2_comparison.csv:4:FedAvg non-IID MobileNetV2,validation,4711,98.8962,98.1797,97.7757,98.902
+experiments/results/tables/rice_fedavg_mobilenetv2_comparison.csv:5:FedAvg non-IID MobileNetV2,test,4645,99.0097,98.5142,98.0484,99.0143
+experiments/results/tables/rice_model_efficiency.csv:1:model,parameters,fp32_size_mib,centralized_test_macro_f1,fedavg_iid_test_macro_f1,fedavg_noniid_test_macro_f1
+experiments/results/wheat/wheat_resnet18_grouped_v2/metrics.json:4:  "seed": 42,
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/metrics.json:4:  "seed": 42,
+docs/DATA_CONTRACT.md:3:This pipeline never stores raw images, private manifests, checkpoints, or results in Git.
+README.md:227:- Which containers to use as clients (default: all)
+README.md:233:Distributes dataset classes across containers to simulate non-IID federated learning conditions.

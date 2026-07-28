@@ -1,0 +1,20 @@
+Repository root: /mnt/c/Users/fajrn/Desktop/GrainClassification/Grain-Federated-Learning-Classification-
+Collection timestamp: 2026-07-14T20:05:36+03:00
+
+Current branch:
+federated-pipeline
+
+HEAD commit:
+eff2f25ddfe24dc420125c1403176c63ecdc402e
+
+HEAD description:
+2026-07-14 17:12:35 +0300 | eff2f25ddfe24dc420125c1403176c63ecdc402e | Add rice and wheat experimental pipelines
+Remote URLs:
+origin	https://github.com/FajrNaveed5197/Grain-Federated-Learning-Classification-.git (fetch)
+origin	https://github.com/FajrNaveed5197/Grain-Federated-Learning-Classification-.git (push)
+
+Working-tree status:
+?? ResearchPaper.tex
+?? collect_paper_experiment_audit.sh
+?? paper/
+?? scripts/paper/
