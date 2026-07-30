@@ -37,6 +37,7 @@ def parse_args():
     parser.add_argument("--initial-checkpoint", required=True)
     parser.add_argument("--output-dir", required=True)
     parser.add_argument("--dataset-root", required=True)
+    parser.add_argument("--experiment-name", required=True)
     parser.add_argument("--rounds", type=int, default=5)
     parser.add_argument("--local-epochs", type=int, default=1)
     parser.add_argument("--batch-size", type=int, default=64)
@@ -229,11 +230,27 @@ def main():
         for name, p in initial_model.named_parameters()
         if is_private(name)
     )
+    shared_parameters = total_params - private_params
+    shared_model_transfers = (
+        2 * len(client_loaders) * args.rounds
+    )
     communication = {
         "total_parameters": total_params,
-        "shared_parameters": total_params - private_params,
+        "shared_parameters": shared_parameters,
         "private_parameters_per_client": private_params,
-        "complete_transfers": 2 * len(client_loaders) * args.rounds,
+        "complete_transfers": shared_model_transfers,
+        "shared_model_transfers": shared_model_transfers,
+        "estimated_shared_fp32_mib_per_transfer": round(
+            shared_parameters * 4 / (1024 ** 2),
+            4,
+        ),
+        "estimated_cumulative_shared_fp32_mib": round(
+            shared_parameters
+            * 4
+            * shared_model_transfers
+            / (1024 ** 2),
+            4,
+        ),
     }
 
     print(f"Device: {device}")
@@ -307,14 +324,36 @@ def main():
                     "communication": communication,
                     "arguments": vars(args),
                     "class_names": CLASS_NAMES,
+                    "experiment": args.experiment_name,
+                    "algorithm": "FedPer",
                 },
                 output_dir / "best_fedper_state.pt",
             )
 
+        torch.save(
+            {
+                "round": round_number,
+                "shared_state_dict": clone_state(shared),
+                "client_private_state_dicts": {
+                    name: clone_state(state)
+                    for name, state in private_by_client.items()
+                },
+                "validation_by_client": validation_by_client,
+                "validation_summary": validation_summary,
+                "communication": communication,
+                "arguments": vars(args),
+                "class_names": CLASS_NAMES,
+                "experiment": args.experiment_name,
+                "algorithm": "FedPer",
+            },
+            output_dir / f"fedper_state_round_{round_number}.pt",
+        )
+
         with open(output_dir / "metrics.json", "w", encoding="utf-8") as handle:
             json.dump(
                 {
-                    "experiment": "rice_fedper_noniid_mobilenetv2",
+                    "experiment": args.experiment_name,
+                    "algorithm": "FedPer",
                     "history": history,
                     "best_mean_validation_macro_f1": best_mean_macro_f1,
                     "communication": communication,
@@ -339,7 +378,9 @@ def main():
         device,
     )
     test_result = {
-        "selected_round": best["round"],
+        "experiment": args.experiment_name,
+        "algorithm": "FedPer",
+        "selected_round": int(best["round"]),
         "protocol": (
             "Each personalized client model is evaluated on the same "
             "capture-group-disjoint rice test manifest."

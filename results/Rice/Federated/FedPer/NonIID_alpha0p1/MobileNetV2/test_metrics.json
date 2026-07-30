@@ -1,0 +1,44 @@
+{
+  "experiment": "rice_fedper_noniid_alpha0p1_mobilenetv2",
+  "algorithm": "FedPer",
+  "selected_round": 2,
+  "protocol": "Each personalized client model is evaluated on the same capture-group-disjoint rice test manifest.",
+  "test_by_client": {
+    "client_0": {
+      "accuracy": 99.0743,
+      "balanced_accuracy": 98.5749,
+      "macro_f1": 98.1594,
+      "weighted_f1": 99.0781
+    },
+    "client_1": {
+      "accuracy": 99.0958,
+      "balanced_accuracy": 98.5289,
+      "macro_f1": 98.1866,
+      "weighted_f1": 99.0989
+    },
+    "client_2": {
+      "accuracy": 99.0743,
+      "balanced_accuracy": 98.4736,
+      "macro_f1": 98.1557,
+      "weighted_f1": 99.0769
+    }
+  },
+  "test_summary": {
+    "mean_accuracy": 99.0815,
+    "mean_balanced_accuracy": 98.5258,
+    "mean_macro_f1": 98.1672,
+    "mean_weighted_f1": 99.0846,
+    "worst_client_macro_f1": 98.1557,
+    "best_client_macro_f1": 98.1866,
+    "std_client_macro_f1": 0.0138
+  },
+  "communication": {
+    "total_parameters": 2234120,
+    "shared_parameters": 2223872,
+    "private_parameters_per_client": 10248,
+    "complete_transfers": 30,
+    "shared_model_transfers": 30,
+    "estimated_shared_fp32_mib_per_transfer": 8.4834,
+    "estimated_cumulative_shared_fp32_mib": 254.502
+  }
+}

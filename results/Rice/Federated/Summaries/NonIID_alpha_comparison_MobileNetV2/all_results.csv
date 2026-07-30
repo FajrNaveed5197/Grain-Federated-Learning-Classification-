@@ -1,0 +1,7 @@
+algorithm,alpha,partition,selected_round,best_validation_macro_f1,test_accuracy,test_balanced_accuracy,test_macro_f1,test_weighted_f1,worst_client_macro_f1,std_client_macro_f1
+FedAvg,0.5,NonIID_alpha0p5,1,97.7757,99.0097,98.5142,98.0484,99.0143,,
+FedAvg,0.1,NonIID_alpha0p1,1,97.7205,99.0527,98.5727,98.1358,99.057,,
+FedPer,0.5,NonIID_alpha0p5,3,97.8203,98.9666,98.417,97.9198,98.9715,97.857,0.0551
+FedPer,0.1,NonIID_alpha0p1,2,97.809,99.0815,98.5258,98.1672,99.0846,98.1557,0.0138
+FedRep,0.5,NonIID_alpha0p5,5,97.9407,99.1173,98.4231,98.2075,99.1196,97.9637,0.174
+FedRep,0.1,NonIID_alpha0p1,3,97.9505,99.0169,98.3521,98.0299,99.0208,97.9043,0.1499

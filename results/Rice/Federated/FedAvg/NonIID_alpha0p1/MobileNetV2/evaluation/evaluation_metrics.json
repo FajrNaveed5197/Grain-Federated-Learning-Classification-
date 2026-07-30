@@ -1,0 +1,40 @@
+{
+  "experiment": "rice_fedavg_noniid_alpha0p1_mobilenetv2",
+  "algorithm": "FedAvg",
+  "checkpoint": "/scratch/project_2019765/fnaveed/results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/best_global_model.pt",
+  "checkpoint_round": 1,
+  "checkpoint_validation_metrics": {
+    "accuracy": 98.875,
+    "balanced_accuracy": 98.1234,
+    "macro_f1": 97.7205,
+    "weighted_f1": 98.8808
+  },
+  "dataset_root": "/scratch/project_2019765/fnaveed/datasets/rice_grouped",
+  "validation_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/validation.csv",
+  "test_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/test.csv",
+  "results": {
+    "validation": {
+      "accuracy": 98.875,
+      "balanced_accuracy": 98.1234,
+      "macro_f1": 97.7205,
+      "weighted_f1": 98.8808
+    },
+    "test": {
+      "accuracy": 99.0527,
+      "balanced_accuracy": 98.5727,
+      "macro_f1": 98.1358,
+      "weighted_f1": 99.057
+    }
+  },
+  "communication": {
+    "total_parameters": 2234120,
+    "shared_parameters": 2234120,
+    "private_parameters_per_client": 0,
+    "full_model_transfers": 30,
+    "estimated_full_fp32_mib_per_transfer": 8.5225,
+    "estimated_cumulative_full_fp32_mib": 255.6747
+  },
+  "training_best_round": 1,
+  "training_best_validation_macro_f1": 97.7205,
+  "evaluation_scope": "Single alpha=0.1 FedAvg experiment; no shared archive files modified."
+}

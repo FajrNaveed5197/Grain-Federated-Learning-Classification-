@@ -1,0 +1,78 @@
+{
+  "dataset": "Rice",
+  "model": "MobileNetV2",
+  "clients": 3,
+  "rounds": 5,
+  "seed": 42,
+  "comparison": "NonIID Dirichlet alpha 0.5 versus alpha 0.1",
+  "alpha0p1_ranking": [
+    {
+      "rank": 1,
+      "algorithm": "FedPer",
+      "test_macro_f1": 98.1672
+    },
+    {
+      "rank": 2,
+      "algorithm": "FedAvg",
+      "test_macro_f1": 98.1358
+    },
+    {
+      "rank": 3,
+      "algorithm": "FedRep",
+      "test_macro_f1": 98.0299
+    }
+  ],
+  "best_alpha0p1": {
+    "algorithm": "FedPer",
+    "alpha": 0.1,
+    "partition": "NonIID_alpha0p1",
+    "selected_round": 2,
+    "best_validation_macro_f1": 97.809,
+    "test_accuracy": 99.0815,
+    "test_balanced_accuracy": 98.5258,
+    "test_macro_f1": 98.1672,
+    "test_weighted_f1": 99.0846,
+    "worst_client_macro_f1": 98.1557,
+    "std_client_macro_f1": 0.0138
+  },
+  "best_overall": {
+    "algorithm": "FedRep",
+    "alpha": 0.5,
+    "partition": "NonIID_alpha0p5",
+    "selected_round": 5,
+    "best_validation_macro_f1": 97.9407,
+    "test_accuracy": 99.1173,
+    "test_balanced_accuracy": 98.4231,
+    "test_macro_f1": 98.2075,
+    "test_weighted_f1": 99.1196,
+    "worst_client_macro_f1": 97.9637,
+    "std_client_macro_f1": 0.174
+  },
+  "deltas": [
+    {
+      "algorithm": "FedAvg",
+      "alpha0p5_test_macro_f1": 98.0484,
+      "alpha0p1_test_macro_f1": 98.1358,
+      "delta_alpha0p1_minus_alpha0p5": 0.0874,
+      "alpha0p5_selected_round": 1,
+      "alpha0p1_selected_round": 1
+    },
+    {
+      "algorithm": "FedPer",
+      "alpha0p5_test_macro_f1": 97.9198,
+      "alpha0p1_test_macro_f1": 98.1672,
+      "delta_alpha0p1_minus_alpha0p5": 0.2474,
+      "alpha0p5_selected_round": 3,
+      "alpha0p1_selected_round": 2
+    },
+    {
+      "algorithm": "FedRep",
+      "alpha0p5_test_macro_f1": 98.2075,
+      "alpha0p1_test_macro_f1": 98.0299,
+      "delta_alpha0p1_minus_alpha0p5": -0.1776,
+      "alpha0p5_selected_round": 5,
+      "alpha0p1_selected_round": 3
+    }
+  ],
+  "interpretation_note": "FedAvg reports one global model. FedPer and FedRep report the mean across three personalized client models evaluated on the same test manifest."
+}
