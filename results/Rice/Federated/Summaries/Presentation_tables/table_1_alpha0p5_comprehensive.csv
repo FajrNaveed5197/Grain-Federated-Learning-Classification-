@@ -1,0 +1,13 @@
+Approach,Data setting,Backbone,Accuracy,Balanced Acc.,Macro-F1,Evaluation basis
+Centralized,Centralized,ResNet18,98.87,97.83,97.59,Mean of 3 seeds
+Centralized,Centralized,MobileNetV2,99.03,98.42,98.04,Seed 42
+Centralized,Centralized,EfficientNetB0,98.92,98.29,97.81,Seed 42
+DDP,Distributed,ResNet18,98.92,97.97,97.76,Global model
+FedAvg,IID,ResNet18,99.12,98.25,98.11,Global model
+FedAvg,Non-IID α=0.5,ResNet18,99.10,98.20,98.09,Global model
+FedAvg,IID,MobileNetV2,98.99,98.46,97.99,Global model
+FedAvg,Non-IID α=0.5,MobileNetV2,99.01,98.51,98.05,Global model
+FedPer,IID,MobileNetV2,99.07,98.58,98.16,Mean of 3 clients
+FedPer,Non-IID α=0.5,MobileNetV2,98.97,98.42,97.92,Mean of 3 clients
+FedRep,IID,MobileNetV2,99.06,98.23,98.04,Mean of 3 clients
+FedRep,Non-IID α=0.5,MobileNetV2,99.12,98.42,98.21,Mean of 3 clients

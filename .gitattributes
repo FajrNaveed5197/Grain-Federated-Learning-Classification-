@@ -2,3 +2,4 @@
 # Preserve raw SLURM logs exactly
 results/Logs/SLURM/*.out binary
 results/Logs/SLURM/*.err binary
+results/Rice/Federated/Summaries/Presentation_tables/*.csv text eol=lf

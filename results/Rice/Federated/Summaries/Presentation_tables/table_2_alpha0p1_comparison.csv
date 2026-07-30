@@ -1,0 +1,4 @@
+Method,IID F1,α=0.5 F1,α=0.1 F1,Δ 0.1−0.5,α=0.1 Bal. Acc.,Worst client,Client std,Best round
+FedAvg (global),97.99,98.05,98.14,+0.09,98.57,—,—,1
+FedPer (client mean),98.16,97.92,98.17,+0.25,98.53,98.16,0.01,2
+FedRep (client mean),98.04,98.21,98.03,-0.18,98.35,97.90,0.15,3
