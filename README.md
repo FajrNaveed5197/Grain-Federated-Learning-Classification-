@@ -67,7 +67,7 @@ venv\Scripts\activate
 ### 4. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements/federated.txt
 ```
 
 ### 5. Prepare system data directories
@@ -206,7 +206,7 @@ The deployment process performs the following steps inside each container:
 2. Runs `apt update` and `apt upgrade`
 3. Installs `git`, `pip`, and `python3-venv`
 4. Creates a Python virtual environment in `fl_app/`
-5. Installs PyTorch (with CUDA) and all requirements from `requirements.txt`
+5. Installs PyTorch (with CUDA) and all requirements from `requirements/federated.txt`
 6. Runs a CUDA availability check
 7. Reboots the container
 
@@ -307,7 +307,7 @@ Network test results are saved as timestamped CSV files in `measurements_data/`.
 ├── measurements.py          # iPerf testing and CSV output
 ├── utils.py                 # General utilities (file I/O, shell commands)
 ├── fl_utils.py              # Federated learning helpers
-├── requirements.txt         # Python dependencies
+├── requirements/             # Python dependency files
 ├── sys_data/                # Auto-generated system state JSON files
 ├── measurements_data/       # iPerf test result CSVs
 └── schemas/                 # JSON schemas for data validation
