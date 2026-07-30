@@ -1,0 +1,4 @@
+Device: cuda
+client_0: 7199 images
+client_1: 7229 images
+client_2: 7178 images

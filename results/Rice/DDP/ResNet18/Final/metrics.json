@@ -1,0 +1,130 @@
+{
+  "experiment": "rice_ddp_resnet18",
+  "class_names": [
+    "0_NOR",
+    "1_F&S",
+    "2_SD",
+    "3_MY",
+    "4_AP",
+    "5_BN",
+    "6_UN",
+    "7_IM"
+  ],
+  "world_size": 2,
+  "effective_global_batch_size": 128,
+  "completed_epoch": 8,
+  "best_epoch": 1,
+  "best_validation_macro_f1": 97.9592,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.62251,
+      "learning_rate": 1.942909649383465e-06,
+      "validation": {
+        "accuracy": 99.0448,
+        "balanced_accuracy": 98.0709,
+        "macro_f1": 97.9592,
+        "weighted_f1": 99.0482
+      },
+      "epoch_seconds": 18.87
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.513954,
+      "learning_rate": 1.780330085889911e-06,
+      "validation": {
+        "accuracy": 98.8113,
+        "balanced_accuracy": 97.7993,
+        "macro_f1": 97.6014,
+        "weighted_f1": 98.8134
+      },
+      "epoch_seconds": 13.92
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.458264,
+      "learning_rate": 1.5370125742738177e-06,
+      "validation": {
+        "accuracy": 98.7052,
+        "balanced_accuracy": 97.3988,
+        "macro_f1": 97.3555,
+        "weighted_f1": 98.7067
+      },
+      "epoch_seconds": 13.7
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.427767,
+      "learning_rate": 1.2500000000000003e-06,
+      "validation": {
+        "accuracy": 98.7264,
+        "balanced_accuracy": 97.4826,
+        "macro_f1": 97.4522,
+        "weighted_f1": 98.7275
+      },
+      "epoch_seconds": 13.44
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.410459,
+      "learning_rate": 9.629874257261829e-07,
+      "validation": {
+        "accuracy": 98.875,
+        "balanced_accuracy": 97.6514,
+        "macro_f1": 97.7203,
+        "weighted_f1": 98.8748
+      },
+      "epoch_seconds": 13.77
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.398058,
+      "learning_rate": 7.196699141100895e-07,
+      "validation": {
+        "accuracy": 98.9387,
+        "balanced_accuracy": 97.7743,
+        "macro_f1": 97.8445,
+        "weighted_f1": 98.9385
+      },
+      "epoch_seconds": 13.68
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.390467,
+      "learning_rate": 5.570903506165349e-07,
+      "validation": {
+        "accuracy": 98.8962,
+        "balanced_accuracy": 97.7043,
+        "macro_f1": 97.8,
+        "weighted_f1": 98.8953
+      },
+      "epoch_seconds": 13.79
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.38451,
+      "learning_rate": 5e-07,
+      "validation": {
+        "accuracy": 98.9811,
+        "balanced_accuracy": 97.7744,
+        "macro_f1": 97.8695,
+        "weighted_f1": 98.9809
+      },
+      "epoch_seconds": 13.59
+    }
+  ],
+  "arguments": {
+    "dataset_root": "/scratch/project_2019765/fnaveed/datasets/rice_grouped",
+    "train_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/train.csv",
+    "validation_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/validation.csv",
+    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_ddp_resnet18",
+    "epochs": 8,
+    "batch_size_per_gpu": 64,
+    "num_workers": 4,
+    "learning_rate": 2e-06,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.03,
+    "seed": 42
+  }
+}

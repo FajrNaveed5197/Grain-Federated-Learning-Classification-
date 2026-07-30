@@ -1,0 +1,23 @@
+Device: cuda
+GPU: NVIDIA GH200 120GB
+Dataset root: /scratch/project_2019765/fnaveed/datasets/rice_grouped
+Output directory: /scratch/project_2019765/fnaveed/results/rice_efficientnetb0_grouped_v1
+Training samples:   21606
+Validation samples: 4711
+Test samples:       4645
+
+Training class counts and weights:
+  0_NOR: count=13975, weight=0.1933
+  1_F&S: count=1035, weight=2.6094
+  2_SD: count=1037, weight=2.6044
+  3_MY: count=1045, weight=2.5844
+  4_AP: count=1043, weight=2.5894
+  5_BN: count=1026, weight=2.6323
+  6_UN: count=1045, weight=2.5844
+  7_IM: count=1400, weight=1.9291
+Epoch 01/10 [warmup] | train loss=0.9375 | val loss=0.5289 | val acc=88.75% | val balanced acc=83.97% | val macro-F1=80.81%
+Saved new best checkpoint: /scratch/project_2019765/fnaveed/results/rice_efficientnetb0_grouped_v1/best_efficientnetb0_rice_grouped.pt
+Epoch 02/10 [warmup] | train loss=0.5626 | val loss=0.4271 | val acc=90.36% | val balanced acc=86.98% | val macro-F1=83.47%
+Saved new best checkpoint: /scratch/project_2019765/fnaveed/results/rice_efficientnetb0_grouped_v1/best_efficientnetb0_rice_grouped.pt
+
+Unfreezing complete EfficientNetB0 model.

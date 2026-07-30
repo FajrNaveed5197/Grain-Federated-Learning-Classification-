@@ -1,0 +1,67 @@
+Device: cuda
+Client manifests: client_0.csv, client_1.csv, client_2.csv
+client_0: 7199 images
+client_1: 7229 images
+client_2: 7178 images
+Initialized from: /scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt
+Initial checkpoint epoch: 9
+Initial checkpoint classes: ['0_NOR', '1_F&S', '2_SD', '3_MY', '4_AP', '5_BN', '6_UN', '7_IM']
+
+===== Federated round 1/5 =====
+Starting client_0
+Finished client_0: samples=7199, local_loss=0.6567
+Starting client_1
+Finished client_1: samples=7229, local_loss=0.6451
+Starting client_2
+Finished client_2: samples=7178, local_loss=0.6489
+Evaluating full validation set...
+Global validation | Accuracy=99.13% | Balanced Accuracy=98.14% | Macro-F1=98.0954% | Weighted-F1=99.1320%
+New best global model | round=1 | Macro-F1=98.0954%
+Saved checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_1.pt
+
+===== Federated round 2/5 =====
+Starting client_0
+Finished client_0: samples=7199, local_loss=0.5778
+Starting client_1
+Finished client_1: samples=7229, local_loss=0.5771
+Starting client_2
+Finished client_2: samples=7178, local_loss=0.5740
+Evaluating full validation set...
+Global validation | Accuracy=99.11% | Balanced Accuracy=98.18% | Macro-F1=98.0942% | Weighted-F1=99.1110%
+Saved checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_2.pt
+
+===== Federated round 3/5 =====
+Starting client_0
+Finished client_0: samples=7199, local_loss=0.5227
+Starting client_1
+Finished client_1: samples=7229, local_loss=0.5211
+Starting client_2
+Finished client_2: samples=7178, local_loss=0.5197
+Evaluating full validation set...
+Global validation | Accuracy=98.83% | Balanced Accuracy=97.71% | Macro-F1=97.5568% | Weighted-F1=98.8363%
+Saved checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_3.pt
+
+===== Federated round 4/5 =====
+Starting client_0
+Finished client_0: samples=7199, local_loss=0.4813
+Starting client_1
+Finished client_1: samples=7229, local_loss=0.4854
+Starting client_2
+Finished client_2: samples=7178, local_loss=0.4767
+Evaluating full validation set...
+Global validation | Accuracy=98.81% | Balanced Accuracy=97.75% | Macro-F1=97.5494% | Weighted-F1=98.8147%
+Saved checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_4.pt
+
+===== Federated round 5/5 =====
+Starting client_0
+Finished client_0: samples=7199, local_loss=0.4580
+Starting client_1
+Finished client_1: samples=7229, local_loss=0.4592
+Starting client_2
+Finished client_2: samples=7178, local_loss=0.4615
+Evaluating full validation set...
+Global validation | Accuracy=98.75% | Balanced Accuracy=97.54% | Macro-F1=97.4567% | Weighted-F1=98.7491%
+Saved checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/global_model_round_5.pt
+
+Completed in 0.03 hours
+Results saved to: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18

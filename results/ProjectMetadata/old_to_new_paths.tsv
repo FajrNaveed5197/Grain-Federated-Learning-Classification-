@@ -1,0 +1,26 @@
+Old path	New path
+/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1	/scratch/project_2019765/fnaveed/results/Rice/Centralized/ResNet18/seed42
+/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_seed123	/scratch/project_2019765/fnaveed/results/Rice/Centralized/ResNet18/seed123
+/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_seed2026	/scratch/project_2019765/fnaveed/results/Rice/Centralized/ResNet18/seed2026
+/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1	/scratch/project_2019765/fnaveed/results/Rice/Centralized/MobileNetV2/seed42
+/scratch/project_2019765/fnaveed/results/rice_efficientnetb0_grouped_v1	/scratch/project_2019765/fnaveed/results/Rice/Centralized/EfficientNetB0/seed42
+/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedAvg/IID/ResNet18
+/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedAvg/IID/MobileNetV2
+/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18
+/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2
+/scratch/project_2019765/fnaveed/results/rice_fedper_iid_mobilenetv2	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedPer/IID/MobileNetV2
+/scratch/project_2019765/fnaveed/results/rice_fedper_noniid_mobilenetv2	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedPer/NonIID_alpha0p5/MobileNetV2
+/scratch/project_2019765/fnaveed/results/rice_fedrep_iid_mobilenetv2	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedRep/IID/MobileNetV2
+/scratch/project_2019765/fnaveed/results/rice_fedrep_noniid_mobilenetv2	/scratch/project_2019765/fnaveed/results/Rice/Federated/FedRep/NonIID_alpha0p5/MobileNetV2
+/scratch/project_2019765/fnaveed/results/rice_ddp_resnet18	/scratch/project_2019765/fnaveed/results/Rice/DDP/ResNet18/Final
+/scratch/project_2019765/fnaveed/results/rice_dataset_validation	/scratch/project_2019765/fnaveed/results/Rice/DataValidation/DuplicateAudit
+/scratch/project_2019765/fnaveed/results/rice_resnet18_proof	/scratch/project_2019765/fnaveed/results/Rice/SupportingEvidence/ResNet18Proof
+/scratch/project_2019765/fnaveed/results/rice_resnet18_multiseed_summary.json	/scratch/project_2019765/fnaveed/results/Rice/Summaries/resnet18_multiseed_summary.json
+/scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v2	/scratch/project_2019765/fnaveed/results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights
+/scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights	/scratch/project_2019765/fnaveed/results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights
+/scratch/project_2019765/fnaveed/results/rice_ddp_resnet18_smoke	/scratch/project_2019765/fnaveed/results/Development/SmokeTests/Rice_DDP_ResNet18
+/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke	/scratch/project_2019765/fnaveed/results/Development/SmokeTests/Rice_FedAvg_IID_ResNet18
+/scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v2_smoke	/scratch/project_2019765/fnaveed/results/Development/SmokeTests/Wheat_ResNet18_GroupedV2
+/scratch/project_2019765/fnaveed/results/final_report_archive	/scratch/project_2019765/fnaveed/results/Reports/FinalReportArchive
+/scratch/project_2019765/fnaveed/logs	/scratch/project_2019765/fnaveed/results/Logs/SLURM
+/scratch/project_2019765/fnaveed/duplicate_audit	/scratch/project_2019765/fnaveed/results/ProjectMetadata/DuplicateAudit

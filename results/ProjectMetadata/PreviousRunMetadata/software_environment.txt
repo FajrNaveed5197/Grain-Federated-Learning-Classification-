@@ -1,0 +1,6 @@
+Python 3.12.12
+Platform: Linux-5.14.0-687.26.3.1.el9_8.aarch64+64k-aarch64-with-glibc2.34
+PyTorch: 2.10.0+cu130
+Torchvision: 0.25.0+cu130
+CUDA version: 13.0
+CUDA available: False

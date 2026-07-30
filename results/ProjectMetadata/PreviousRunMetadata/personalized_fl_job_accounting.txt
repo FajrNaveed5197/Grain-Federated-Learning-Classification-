@@ -1,0 +1,14 @@
+JobID           JobName      State    Elapsed ExitCode  AllocTRES     MaxRSS
+------------ ---------- ---------- ---------- -------- ---------- ----------
+385093       rice_fedp+  COMPLETED   00:02:53      0:0 billing=8+
+385093.batch      batch  COMPLETED   00:02:53      0:0 cpu=8,gre+   8898176K
+385093.exte+     extern  COMPLETED   00:02:53      0:0 billing=8+
+385138       rice_fedp+  COMPLETED   00:02:45      0:0 billing=8+
+385138.batch      batch  COMPLETED   00:02:45      0:0 cpu=8,gre+   3655488K
+385138.exte+     extern  COMPLETED   00:02:45      0:0 billing=8+
+387494       rice_fedr+  COMPLETED   00:11:19      0:0 billing=8+
+387494.batch      batch  COMPLETED   00:11:19      0:0 cpu=8,gre+   6954560K
+387494.exte+     extern  COMPLETED   00:11:20      0:0 billing=8+
+387495       rice_fedr+  COMPLETED   00:11:08      0:0 billing=8+
+387495.batch      batch  COMPLETED   00:11:08      0:0 cpu=8,gre+   6016128K
+387495.exte+     extern  COMPLETED   00:11:08      0:0 billing=8+

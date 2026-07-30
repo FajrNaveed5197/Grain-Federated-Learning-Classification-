@@ -1,0 +1,168 @@
+{
+  "experiment": "rice_fedavg_noniid_mobilenetv2",
+  "completed_round": 5,
+  "best_round": 1,
+  "best_validation_macro_f1": 97.7757,
+  "class_names": [
+    "0_NOR",
+    "1_F&S",
+    "2_SD",
+    "3_MY",
+    "4_AP",
+    "5_BN",
+    "6_UN",
+    "7_IM"
+  ],
+  "history": [
+    {
+      "round": 1,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.656616
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.724112
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.553878
+        }
+      ],
+      "validation": {
+        "accuracy": 98.8962,
+        "balanced_accuracy": 98.1797,
+        "macro_f1": 97.7757,
+        "weighted_f1": 98.902
+      },
+      "elapsed_seconds_from_start": 46.56
+    },
+    {
+      "round": 2,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.629373
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.692675
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.543783
+        }
+      ],
+      "validation": {
+        "accuracy": 98.7264,
+        "balanced_accuracy": 98.1441,
+        "macro_f1": 97.5509,
+        "weighted_f1": 98.7351
+      },
+      "elapsed_seconds_from_start": 68.92
+    },
+    {
+      "round": 3,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.60061
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.657982
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.509771
+        }
+      ],
+      "validation": {
+        "accuracy": 98.6839,
+        "balanced_accuracy": 98.0347,
+        "macro_f1": 97.4407,
+        "weighted_f1": 98.6925
+      },
+      "elapsed_seconds_from_start": 91.39
+    },
+    {
+      "round": 4,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.57233
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.624076
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.492761
+        }
+      ],
+      "validation": {
+        "accuracy": 98.7052,
+        "balanced_accuracy": 98.0881,
+        "macro_f1": 97.472,
+        "weighted_f1": 98.7136
+      },
+      "elapsed_seconds_from_start": 113.84
+    },
+    {
+      "round": 5,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.547809
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.595092
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.477136
+        }
+      ],
+      "validation": {
+        "accuracy": 98.6203,
+        "balanced_accuracy": 98.0715,
+        "macro_f1": 97.3854,
+        "weighted_f1": 98.6306
+      },
+      "elapsed_seconds_from_start": 136.33
+    }
+  ],
+  "arguments": {
+    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+    "validation_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/validation.csv",
+    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1/best_mobilenetv2_rice_grouped.pt",
+    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2",
+    "dataset_root": "/scratch/project_2019765/fnaveed/datasets/rice_grouped",
+    "experiment_name": "rice_fedavg_noniid_mobilenetv2",
+    "rounds": 5,
+    "local_epochs": 1,
+    "batch_size": 64,
+    "learning_rate": 2e-06,
+    "num_workers": 4,
+    "seed": 42,
+    "resume": false
+  }
+}

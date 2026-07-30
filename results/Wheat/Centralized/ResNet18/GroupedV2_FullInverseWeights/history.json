@@ -1,0 +1,112 @@
+[
+  {
+    "epoch": 1,
+    "stage": "warmup",
+    "train_loss": 1.407754,
+    "validation_loss": 1.44488,
+    "validation_accuracy": 68.9422,
+    "validation_balanced_accuracy": 49.0046,
+    "validation_macro_f1": 37.3863,
+    "validation_weighted_f1": 74.4658,
+    "epoch_seconds": 148.9
+  },
+  {
+    "epoch": 2,
+    "stage": "warmup",
+    "train_loss": 1.28716,
+    "validation_loss": 1.33102,
+    "validation_accuracy": 55.201,
+    "validation_balanced_accuracy": 51.4574,
+    "validation_macro_f1": 35.6965,
+    "validation_weighted_f1": 63.7756,
+    "epoch_seconds": 113.51
+  },
+  {
+    "epoch": 3,
+    "stage": "full_finetuning",
+    "train_loss": 0.821634,
+    "validation_loss": 0.694002,
+    "validation_accuracy": 84.3038,
+    "validation_balanced_accuracy": 76.2254,
+    "validation_macro_f1": 57.7556,
+    "validation_weighted_f1": 86.7674,
+    "epoch_seconds": 113.73
+  },
+  {
+    "epoch": 4,
+    "stage": "full_finetuning",
+    "train_loss": 0.640927,
+    "validation_loss": 0.651812,
+    "validation_accuracy": 84.7652,
+    "validation_balanced_accuracy": 77.2395,
+    "validation_macro_f1": 64.738,
+    "validation_weighted_f1": 87.2381,
+    "epoch_seconds": 113.93
+  },
+  {
+    "epoch": 5,
+    "stage": "full_finetuning",
+    "train_loss": 0.575804,
+    "validation_loss": 0.605063,
+    "validation_accuracy": 88.2349,
+    "validation_balanced_accuracy": 79.1006,
+    "validation_macro_f1": 65.3443,
+    "validation_weighted_f1": 90.0666,
+    "epoch_seconds": 113.85
+  },
+  {
+    "epoch": 6,
+    "stage": "full_finetuning",
+    "train_loss": 0.538564,
+    "validation_loss": 0.609999,
+    "validation_accuracy": 89.6368,
+    "validation_balanced_accuracy": 78.933,
+    "validation_macro_f1": 68.9652,
+    "validation_weighted_f1": 90.7061,
+    "epoch_seconds": 114.03
+  },
+  {
+    "epoch": 7,
+    "stage": "full_finetuning",
+    "train_loss": 0.506409,
+    "validation_loss": 0.55225,
+    "validation_accuracy": 87.9284,
+    "validation_balanced_accuracy": 81.8401,
+    "validation_macro_f1": 67.8492,
+    "validation_weighted_f1": 89.7028,
+    "epoch_seconds": 113.6
+  },
+  {
+    "epoch": 8,
+    "stage": "full_finetuning",
+    "train_loss": 0.484558,
+    "validation_loss": 0.571964,
+    "validation_accuracy": 86.7202,
+    "validation_balanced_accuracy": 80.807,
+    "validation_macro_f1": 62.5754,
+    "validation_weighted_f1": 88.9158,
+    "epoch_seconds": 114.18
+  },
+  {
+    "epoch": 9,
+    "stage": "full_finetuning",
+    "train_loss": 0.465013,
+    "validation_loss": 0.556674,
+    "validation_accuracy": 87.5163,
+    "validation_balanced_accuracy": 80.9514,
+    "validation_macro_f1": 65.7154,
+    "validation_weighted_f1": 89.2839,
+    "epoch_seconds": 114.76
+  },
+  {
+    "epoch": 10,
+    "stage": "full_finetuning",
+    "train_loss": 0.447102,
+    "validation_loss": 0.587904,
+    "validation_accuracy": 90.1793,
+    "validation_balanced_accuracy": 78.8009,
+    "validation_macro_f1": 67.5341,
+    "validation_weighted_f1": 91.4049,
+    "epoch_seconds": 117.98
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "selected_round": 1,
+  "protocol": "Each personalized client model is evaluated on the same capture-group-disjoint rice test manifest.",
+  "test_by_client": {
+    "client_0": {
+      "accuracy": 99.0743,
+      "balanced_accuracy": 98.5759,
+      "macro_f1": 98.1579,
+      "weighted_f1": 99.0783
+    },
+    "client_1": {
+      "accuracy": 99.0743,
+      "balanced_accuracy": 98.5759,
+      "macro_f1": 98.1579,
+      "weighted_f1": 99.0783
+    },
+    "client_2": {
+      "accuracy": 99.0743,
+      "balanced_accuracy": 98.5759,
+      "macro_f1": 98.1579,
+      "weighted_f1": 99.0783
+    }
+  },
+  "test_summary": {
+    "mean_accuracy": 99.0743,
+    "mean_balanced_accuracy": 98.5759,
+    "mean_macro_f1": 98.1579,
+    "mean_weighted_f1": 99.0783,
+    "worst_client_macro_f1": 98.1579,
+    "best_client_macro_f1": 98.1579,
+    "std_client_macro_f1": 0.0
+  },
+  "communication": {
+    "total_parameters": 2234120,
+    "shared_parameters": 2223872,
+    "private_parameters_per_client": 10248,
+    "complete_transfers": 30
+  }
+}

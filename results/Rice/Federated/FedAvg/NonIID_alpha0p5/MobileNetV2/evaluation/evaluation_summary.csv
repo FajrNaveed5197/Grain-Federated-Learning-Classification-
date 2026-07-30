@@ -1,0 +1,3 @@
+experiment,split,accuracy,balanced_accuracy,macro_f1,weighted_f1
+FedAvg non-IID MobileNetV2,validation,98.8962,98.1797,97.7757,98.902
+FedAvg non-IID MobileNetV2,test,99.0097,98.5142,98.0484,99.0143

@@ -1,0 +1,13 @@
+[
+  {
+    "epoch": 1,
+    "stage": "warmup",
+    "train_loss": 1.407754,
+    "validation_loss": 1.44488,
+    "validation_accuracy": 68.9422,
+    "validation_balanced_accuracy": 49.0046,
+    "validation_macro_f1": 37.3863,
+    "validation_weighted_f1": 74.4658,
+    "epoch_seconds": 149.81
+  }
+]

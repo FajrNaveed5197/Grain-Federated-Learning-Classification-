@@ -1,0 +1,7 @@
+{
+  "total_images": 30962,
+  "hash_bits": 256,
+  "nearest_neighbors_checked": 5,
+  "hamming_threshold": 6,
+  "cross_split_near_duplicate_candidates": 0
+}

@@ -1,0 +1,208 @@
+Device: cuda
+Experiment: rice_fedrep_iid_mobilenetv2
+client_0: 7199 images
+client_1: 7229 images
+client_2: 7178 images
+Shared parameters: 2,223,872; private parameters/client: 10,248
+FedRep schedule: 5 head epoch(s) at 0.0001, then 1 representation epoch(s) at 2e-06 per round
+
+===== FedRep round 1/5 =====
+Starting client_0
+Finished client_0: samples=7199, head_loss=0.4665, representation_loss=0.3985
+Starting client_1
+Finished client_1: samples=7229, head_loss=0.4680, representation_loss=0.3966
+Starting client_2
+Finished client_2: samples=7178, head_loss=0.4691, representation_loss=0.4000
+{
+  "client_0": {
+    "accuracy": 98.2594,
+    "balanced_accuracy": 98.0005,
+    "macro_f1": 96.9164,
+    "weighted_f1": 98.2827
+  },
+  "client_1": {
+    "accuracy": 98.2169,
+    "balanced_accuracy": 98.0975,
+    "macro_f1": 96.8811,
+    "weighted_f1": 98.2399
+  },
+  "client_2": {
+    "accuracy": 98.3018,
+    "balanced_accuracy": 98.0599,
+    "macro_f1": 96.9819,
+    "weighted_f1": 98.3208
+  }
+}
+Validation summary: {'mean_accuracy': 98.2594, 'mean_balanced_accuracy': 98.0526, 'mean_macro_f1': 96.9265, 'mean_weighted_f1': 98.2811, 'worst_client_macro_f1': 96.8811, 'best_client_macro_f1': 96.9819, 'std_client_macro_f1': 0.0418}
+New best FedRep state: round=1, mean validation Macro-F1=96.9265%
+
+===== FedRep round 2/5 =====
+Starting client_0
+Finished client_0: samples=7199, head_loss=0.3594, representation_loss=0.3596
+Starting client_1
+Finished client_1: samples=7229, head_loss=0.3555, representation_loss=0.3579
+Starting client_2
+Finished client_2: samples=7178, head_loss=0.3603, representation_loss=0.3592
+{
+  "client_0": {
+    "accuracy": 98.875,
+    "balanced_accuracy": 97.8289,
+    "macro_f1": 97.6283,
+    "weighted_f1": 98.8776
+  },
+  "client_1": {
+    "accuracy": 98.9387,
+    "balanced_accuracy": 98.045,
+    "macro_f1": 97.7702,
+    "weighted_f1": 98.9423
+  },
+  "client_2": {
+    "accuracy": 98.8113,
+    "balanced_accuracy": 97.7645,
+    "macro_f1": 97.5162,
+    "weighted_f1": 98.8151
+  }
+}
+Validation summary: {'mean_accuracy': 98.875, 'mean_balanced_accuracy': 97.8795, 'mean_macro_f1': 97.6382, 'mean_weighted_f1': 98.8783, 'worst_client_macro_f1': 97.5162, 'best_client_macro_f1': 97.7702, 'std_client_macro_f1': 0.1039}
+New best FedRep state: round=2, mean validation Macro-F1=97.6382%
+
+===== FedRep round 3/5 =====
+Starting client_0
+Finished client_0: samples=7199, head_loss=0.3410, representation_loss=0.3514
+Starting client_1
+Finished client_1: samples=7229, head_loss=0.3377, representation_loss=0.3475
+Starting client_2
+Finished client_2: samples=7178, head_loss=0.3421, representation_loss=0.3513
+{
+  "client_0": {
+    "accuracy": 98.9174,
+    "balanced_accuracy": 97.7836,
+    "macro_f1": 97.7056,
+    "weighted_f1": 98.9185
+  },
+  "client_1": {
+    "accuracy": 98.9599,
+    "balanced_accuracy": 97.9396,
+    "macro_f1": 97.807,
+    "weighted_f1": 98.9613
+  },
+  "client_2": {
+    "accuracy": 98.9811,
+    "balanced_accuracy": 97.841,
+    "macro_f1": 97.8297,
+    "weighted_f1": 98.9818
+  }
+}
+Validation summary: {'mean_accuracy': 98.9528, 'mean_balanced_accuracy': 97.8547, 'mean_macro_f1': 97.7808, 'mean_weighted_f1': 98.9539, 'worst_client_macro_f1': 97.7056, 'best_client_macro_f1': 97.8297, 'std_client_macro_f1': 0.054}
+New best FedRep state: round=3, mean validation Macro-F1=97.7808%
+
+===== FedRep round 4/5 =====
+Starting client_0
+Finished client_0: samples=7199, head_loss=0.3357, representation_loss=0.3464
+Starting client_1
+Finished client_1: samples=7229, head_loss=0.3319, representation_loss=0.3392
+Starting client_2
+Finished client_2: samples=7178, head_loss=0.3362, representation_loss=0.3461
+{
+  "client_0": {
+    "accuracy": 99.0023,
+    "balanced_accuracy": 97.9541,
+    "macro_f1": 97.8662,
+    "weighted_f1": 99.0036
+  },
+  "client_1": {
+    "accuracy": 98.9387,
+    "balanced_accuracy": 97.8939,
+    "macro_f1": 97.7534,
+    "weighted_f1": 98.9408
+  },
+  "client_2": {
+    "accuracy": 98.9174,
+    "balanced_accuracy": 97.733,
+    "macro_f1": 97.6685,
+    "weighted_f1": 98.9197
+  }
+}
+Validation summary: {'mean_accuracy': 98.9528, 'mean_balanced_accuracy': 97.8603, 'mean_macro_f1': 97.7627, 'mean_weighted_f1': 98.9547, 'worst_client_macro_f1': 97.6685, 'best_client_macro_f1': 97.8662, 'std_client_macro_f1': 0.081}
+
+===== FedRep round 5/5 =====
+Starting client_0
+Finished client_0: samples=7199, head_loss=0.3320, representation_loss=0.3457
+Starting client_1
+Finished client_1: samples=7229, head_loss=0.3291, representation_loss=0.3424
+Starting client_2
+Finished client_2: samples=7178, head_loss=0.3321, representation_loss=0.3435
+{
+  "client_0": {
+    "accuracy": 99.0872,
+    "balanced_accuracy": 97.9699,
+    "macro_f1": 98.0565,
+    "weighted_f1": 99.0868
+  },
+  "client_1": {
+    "accuracy": 98.9811,
+    "balanced_accuracy": 97.9492,
+    "macro_f1": 97.8871,
+    "weighted_f1": 98.9824
+  },
+  "client_2": {
+    "accuracy": 99.066,
+    "balanced_accuracy": 98.0135,
+    "macro_f1": 98.0259,
+    "weighted_f1": 99.0665
+  }
+}
+Validation summary: {'mean_accuracy': 99.0448, 'mean_balanced_accuracy': 97.9775, 'mean_macro_f1': 97.9898, 'mean_weighted_f1': 99.0452, 'worst_client_macro_f1': 97.8871, 'best_client_macro_f1': 98.0565, 'std_client_macro_f1': 0.0737}
+New best FedRep state: round=5, mean validation Macro-F1=97.9898%
+
+===== Test results =====
+{
+  "experiment": "rice_fedrep_iid_mobilenetv2",
+  "algorithm": "FedRep",
+  "selected_round": 5,
+  "protocol": "Each personalized client model is evaluated on the same capture-group-disjoint rice test manifest.",
+  "training_schedule": {
+    "head_epochs_per_round": 5,
+    "representation_epochs_per_round": 1,
+    "head_learning_rate": 0.0001,
+    "representation_learning_rate": 2e-06
+  },
+  "test_by_client": {
+    "client_0": {
+      "accuracy": 99.1173,
+      "balanced_accuracy": 98.2915,
+      "macro_f1": 98.1364,
+      "weighted_f1": 99.1188
+    },
+    "client_1": {
+      "accuracy": 98.9882,
+      "balanced_accuracy": 98.1565,
+      "macro_f1": 97.9082,
+      "weighted_f1": 98.9912
+    },
+    "client_2": {
+      "accuracy": 99.0743,
+      "balanced_accuracy": 98.2283,
+      "macro_f1": 98.0794,
+      "weighted_f1": 99.0757
+    }
+  },
+  "test_summary": {
+    "mean_accuracy": 99.0599,
+    "mean_balanced_accuracy": 98.2254,
+    "mean_macro_f1": 98.0413,
+    "mean_weighted_f1": 99.0619,
+    "worst_client_macro_f1": 97.9082,
+    "best_client_macro_f1": 98.1364,
+    "std_client_macro_f1": 0.097
+  },
+  "communication": {
+    "total_parameters": 2234120,
+    "shared_parameters": 2223872,
+    "private_parameters_per_client": 10248,
+    "shared_model_transfers": 30,
+    "estimated_shared_fp32_mib_per_transfer": 8.4834,
+    "estimated_cumulative_shared_fp32_mib": 254.502
+  }
+}
+Completed in 0.18 hours

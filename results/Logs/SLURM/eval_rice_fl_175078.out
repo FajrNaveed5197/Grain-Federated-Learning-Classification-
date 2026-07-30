@@ -1,0 +1,12 @@
+Device: cuda
+Evaluating validation: 4711 images
+validation | Accuracy=99.1297% | Balanced Accuracy=98.1369% | Macro-F1=98.0954% | Weighted-F1=99.1320%
+Evaluating test: 4645 images
+test | Accuracy=99.1173% | Balanced Accuracy=98.2500% | Macro-F1=98.1136% | Weighted-F1=99.1191%
+Saved results to: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18/evaluation
+Device: cuda
+Evaluating validation: 4711 images
+validation | Accuracy=99.1085% | Balanced Accuracy=98.0860% | Macro-F1=98.0418% | Weighted-F1=99.1112%
+Evaluating test: 4645 images
+test | Accuracy=99.0958% | Balanced Accuracy=98.1965% | Macro-F1=98.0866% | Weighted-F1=99.0974%
+Saved results to: /scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_resnet18/evaluation

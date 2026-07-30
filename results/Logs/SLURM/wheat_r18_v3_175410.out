@@ -1,0 +1,50 @@
+Device: cuda
+GPU: NVIDIA GH200 120GB
+Manifest directory: /scratch/project_2019765/fnaveed/datasets/wheat_grouped_v1/grouped_split_v2
+Output directory: /scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights
+Training samples:   257069
+Validation samples: 28389
+Test samples:       37143
+Test_07 samples:    27144
+
+Training class counts and weights:
+  Black Germ: count=1804, weight=1.6948
+  Broken: count=53332, weight=0.3117
+  Fusarium: count=1747, weight=1.7222
+  Insect: count=14012, weight=0.6081
+  Moldy: count=2705, weight=1.3840
+  Sound: count=173933, weight=0.1726
+  Spotted: count=3981, weight=1.1409
+  Sprouted: count=5555, weight=0.9658
+Epoch 01/10 [warmup] | train loss=1.0770 | val loss=1.0785 | val acc=83.80% | val balanced acc=38.28% | val Macro-F1=39.69%
+Saved new best checkpoint: /scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights/best_resnet18_wheat_grouped_v3_sqrt_weights.pt
+Epoch 02/10 [warmup] | train loss=0.9878 | val loss=1.0273 | val acc=81.11% | val balanced acc=44.98% | val Macro-F1=43.45%
+Saved new best checkpoint: /scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights/best_resnet18_wheat_grouped_v3_sqrt_weights.pt
+
+Unfreezing complete ResNet18 model.
+Epoch 03/10 [full_finetuning] | train loss=0.5527 | val loss=0.4740 | val acc=91.74% | val balanced acc=74.92% | val Macro-F1=67.60%
+Saved new best checkpoint: /scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights/best_resnet18_wheat_grouped_v3_sqrt_weights.pt
+Epoch 04/10 [full_finetuning] | train loss=0.4230 | val loss=0.4154 | val acc=93.07% | val balanced acc=76.47% | val Macro-F1=73.97%
+Saved new best checkpoint: /scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights/best_resnet18_wheat_grouped_v3_sqrt_weights.pt
+Epoch 05/10 [full_finetuning] | train loss=0.3797 | val loss=0.3865 | val acc=93.95% | val balanced acc=76.87% | val Macro-F1=73.01%
+Epoch 06/10 [full_finetuning] | train loss=0.3542 | val loss=0.3734 | val acc=93.54% | val balanced acc=79.26% | val Macro-F1=75.23%
+Saved new best checkpoint: /scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights/best_resnet18_wheat_grouped_v3_sqrt_weights.pt
+Epoch 07/10 [full_finetuning] | train loss=0.3326 | val loss=0.3704 | val acc=93.87% | val balanced acc=80.23% | val Macro-F1=74.63%
+Epoch 08/10 [full_finetuning] | train loss=0.3164 | val loss=0.3616 | val acc=93.08% | val balanced acc=80.66% | val Macro-F1=71.65%
+Epoch 09/10 [full_finetuning] | train loss=0.3008 | val loss=0.3739 | val acc=93.81% | val balanced acc=79.14% | val Macro-F1=74.33%
+Epoch 10/10 [full_finetuning] | train loss=0.2880 | val loss=0.3808 | val acc=93.56% | val balanced acc=78.07% | val Macro-F1=73.19%
+
+Evaluating validation...
+validation | Accuracy=93.5433% | Balanced Accuracy=79.2635% | Macro-F1=75.2260% | Weighted-F1=93.7968%
+
+Evaluating test...
+test | Accuracy=93.4658% | Balanced Accuracy=85.8020% | Macro-F1=86.7590% | Weighted-F1=93.3379%
+
+Evaluating test_07...
+test_07 | Accuracy=86.4022% | Balanced Accuracy=75.4806% | Macro-F1=74.3030% | Weighted-F1=86.6314%
+
+Training completed.
+Best epoch: 6
+Best validation Macro-F1: 75.2260%
+Total time: 1180.51 seconds
+Results saved to: /scratch/project_2019765/fnaveed/results/wheat_resnet18_grouped_v3_sqrt_weights

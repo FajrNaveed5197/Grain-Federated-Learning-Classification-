@@ -1,0 +1,4 @@
+
+# Preserve raw SLURM logs exactly
+results/Logs/SLURM/*.out binary
+results/Logs/SLURM/*.err binary

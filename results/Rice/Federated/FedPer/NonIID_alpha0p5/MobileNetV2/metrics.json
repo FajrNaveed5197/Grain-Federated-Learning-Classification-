@@ -1,0 +1,276 @@
+{
+  "experiment": "rice_fedper_noniid_mobilenetv2",
+  "history": [
+    {
+      "round": 1,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.65299
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.724574
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.563956
+        }
+      ],
+      "validation_by_client": {
+        "client_0": {
+          "accuracy": 98.8325,
+          "balanced_accuracy": 98.0204,
+          "macro_f1": 97.6381,
+          "weighted_f1": 98.838
+        },
+        "client_1": {
+          "accuracy": 98.8962,
+          "balanced_accuracy": 98.1797,
+          "macro_f1": 97.7751,
+          "weighted_f1": 98.9019
+        },
+        "client_2": {
+          "accuracy": 98.8537,
+          "balanced_accuracy": 98.0245,
+          "macro_f1": 97.6666,
+          "weighted_f1": 98.8589
+        }
+      },
+      "validation_summary": {
+        "mean_accuracy": 98.8608,
+        "mean_balanced_accuracy": 98.0749,
+        "mean_macro_f1": 97.6933,
+        "mean_weighted_f1": 98.8663,
+        "worst_client_macro_f1": 97.6381,
+        "best_client_macro_f1": 97.7751,
+        "std_client_macro_f1": 0.059
+      },
+      "elapsed_seconds": 43.08
+    },
+    {
+      "round": 2,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.628826
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.68341
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.542388
+        }
+      ],
+      "validation_by_client": {
+        "client_0": {
+          "accuracy": 98.8113,
+          "balanced_accuracy": 98.1595,
+          "macro_f1": 97.662,
+          "weighted_f1": 98.8177
+        },
+        "client_1": {
+          "accuracy": 98.8113,
+          "balanced_accuracy": 98.1595,
+          "macro_f1": 97.662,
+          "weighted_f1": 98.8177
+        },
+        "client_2": {
+          "accuracy": 98.8962,
+          "balanced_accuracy": 98.2268,
+          "macro_f1": 97.802,
+          "weighted_f1": 98.9014
+        }
+      },
+      "validation_summary": {
+        "mean_accuracy": 98.8396,
+        "mean_balanced_accuracy": 98.1819,
+        "mean_macro_f1": 97.7087,
+        "mean_weighted_f1": 98.8456,
+        "worst_client_macro_f1": 97.662,
+        "best_client_macro_f1": 97.802,
+        "std_client_macro_f1": 0.066
+      },
+      "elapsed_seconds": 71.02
+    },
+    {
+      "round": 3,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.596097
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.646118
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.517547
+        }
+      ],
+      "validation_by_client": {
+        "client_0": {
+          "accuracy": 98.8537,
+          "balanced_accuracy": 98.2173,
+          "macro_f1": 97.7461,
+          "weighted_f1": 98.8591
+        },
+        "client_1": {
+          "accuracy": 98.875,
+          "balanced_accuracy": 98.2215,
+          "macro_f1": 97.7746,
+          "weighted_f1": 98.8796
+        },
+        "client_2": {
+          "accuracy": 98.9811,
+          "balanced_accuracy": 98.2425,
+          "macro_f1": 97.9402,
+          "weighted_f1": 98.9838
+        }
+      },
+      "validation_summary": {
+        "mean_accuracy": 98.9033,
+        "mean_balanced_accuracy": 98.2271,
+        "mean_macro_f1": 97.8203,
+        "mean_weighted_f1": 98.9075,
+        "worst_client_macro_f1": 97.7461,
+        "best_client_macro_f1": 97.9402,
+        "std_client_macro_f1": 0.0856
+      },
+      "elapsed_seconds": 99.06
+    },
+    {
+      "round": 4,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.571764
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.615032
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.496469
+        }
+      ],
+      "validation_by_client": {
+        "client_0": {
+          "accuracy": 98.7901,
+          "balanced_accuracy": 98.2041,
+          "macro_f1": 97.6383,
+          "weighted_f1": 98.7979
+        },
+        "client_1": {
+          "accuracy": 98.7476,
+          "balanced_accuracy": 98.1958,
+          "macro_f1": 97.5828,
+          "weighted_f1": 98.7561
+        },
+        "client_2": {
+          "accuracy": 98.8113,
+          "balanced_accuracy": 98.1576,
+          "macro_f1": 97.6635,
+          "weighted_f1": 98.8177
+        }
+      },
+      "validation_summary": {
+        "mean_accuracy": 98.783,
+        "mean_balanced_accuracy": 98.1858,
+        "mean_macro_f1": 97.6282,
+        "mean_weighted_f1": 98.7906,
+        "worst_client_macro_f1": 97.5828,
+        "best_client_macro_f1": 97.6635,
+        "std_client_macro_f1": 0.0337
+      },
+      "elapsed_seconds": 127.16
+    },
+    {
+      "round": 5,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 8436,
+          "local_loss": 0.543699
+        },
+        {
+          "client": "client_1",
+          "num_samples": 10167,
+          "local_loss": 0.58777
+        },
+        {
+          "client": "client_2",
+          "num_samples": 3003,
+          "local_loss": 0.478201
+        }
+      ],
+      "validation_by_client": {
+        "client_0": {
+          "accuracy": 98.6627,
+          "balanced_accuracy": 98.0791,
+          "macro_f1": 97.4656,
+          "weighted_f1": 98.6714
+        },
+        "client_1": {
+          "accuracy": 98.6627,
+          "balanced_accuracy": 98.0791,
+          "macro_f1": 97.4662,
+          "weighted_f1": 98.6712
+        },
+        "client_2": {
+          "accuracy": 98.7688,
+          "balanced_accuracy": 98.0492,
+          "macro_f1": 97.6012,
+          "weighted_f1": 98.7743
+        }
+      },
+      "validation_summary": {
+        "mean_accuracy": 98.6981,
+        "mean_balanced_accuracy": 98.0691,
+        "mean_macro_f1": 97.511,
+        "mean_weighted_f1": 98.7056,
+        "worst_client_macro_f1": 97.4656,
+        "best_client_macro_f1": 97.6012,
+        "std_client_macro_f1": 0.0638
+      },
+      "elapsed_seconds": 155.22
+    }
+  ],
+  "best_mean_validation_macro_f1": 97.8203,
+  "communication": {
+    "total_parameters": 2234120,
+    "shared_parameters": 2223872,
+    "private_parameters_per_client": 10248,
+    "complete_transfers": 30
+  },
+  "arguments": {
+    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/noniid_3clients_alpha0p5_seed42_v2",
+    "validation_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/validation.csv",
+    "test_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/test.csv",
+    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_mobilenetv2_grouped_v1/best_mobilenetv2_rice_grouped.pt",
+    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedper_noniid_mobilenetv2",
+    "dataset_root": "/scratch/project_2019765/fnaveed/datasets/rice_grouped",
+    "rounds": 5,
+    "local_epochs": 1,
+    "batch_size": 64,
+    "learning_rate": 2e-06,
+    "num_workers": 4,
+    "seed": 42
+  }
+}

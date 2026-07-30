@@ -8,21 +8,17 @@ checkpoints/
 logs/
 figures/
 experiments/*.csv
-
 # Python cache
 __pycache__/
 *.pyc
-
 # Model files
 *.pt
 *.pth
 *.ckpt
 *.keras
-
 # Local environments
 .venv/
 venv/
-
 # Federated pipeline private inputs and outputs
 data/
 partitions/*.csv
@@ -30,12 +26,10 @@ client_data/
 federated_results/
 distributed_results/
 *.sif
-
 # Local Docker configuration and runtime files
 docker/.env
 docker/runs/
 runs/
-
 # Additional dataset safeguards
 datasets/
 **/dataset/
@@ -49,18 +43,34 @@ datasets/
 *.tif
 *.tiff
 *.bmp
-
 # Runtime and scheduler output
 slurm-*.out
 *.out
 *.err
 *.log
-
 # Generated Python caches
 **/__pycache__/
 .pytest_cache/
-
 # Keep reproducible experiment evidence in Git
 !experiments/
 !experiments/results/
 !experiments/results/**
+# Large experiment checkpoints
+results/**/*.pt
+results/**/*.pth
+results/**/*.ckpt
+results/**/*.tar
+results/**/*.tar.gz
+results/**/*.zip
+
+# Track organized experiment results
+!results/
+!results/**
+
+# Keep large model and archive files only on Roihu
+results/**/*.pt
+results/**/*.pth
+results/**/*.ckpt
+results/**/*.tar
+results/**/*.tar.gz
+results/**/*.zip

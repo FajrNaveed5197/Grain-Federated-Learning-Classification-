@@ -1,0 +1,4 @@
+experiment,split,num_images,accuracy,balanced_accuracy,macro_f1,weighted_f1
+wheat_resnet18_grouped_v2,validation,28389,89.6368,78.933,68.9652,90.7061
+wheat_resnet18_grouped_v2,test,37143,92.2408,85.5208,85.2522,92.2376
+wheat_resnet18_grouped_v2,test_07,27144,83.0791,74.5803,70.8532,84.5756

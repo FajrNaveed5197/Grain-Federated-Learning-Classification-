@@ -1,0 +1,60 @@
+{
+  "experiment": "rice_fedavg_iid_resnet18",
+  "completed_round": 1,
+  "best_round": 1,
+  "best_validation_macro_f1": 98.0954,
+  "class_names": [
+    "0_NOR",
+    "1_F&S",
+    "2_SD",
+    "3_MY",
+    "4_AP",
+    "5_BN",
+    "6_UN",
+    "7_IM"
+  ],
+  "history": [
+    {
+      "round": 1,
+      "clients": [
+        {
+          "client": "client_0",
+          "num_samples": 7199,
+          "local_loss": 0.656668
+        },
+        {
+          "client": "client_1",
+          "num_samples": 7229,
+          "local_loss": 0.645103
+        },
+        {
+          "client": "client_2",
+          "num_samples": 7178,
+          "local_loss": 0.648931
+        }
+      ],
+      "validation": {
+        "accuracy": 99.1297,
+        "balanced_accuracy": 98.1369,
+        "macro_f1": 98.0954,
+        "weighted_f1": 99.132
+      },
+      "elapsed_seconds_from_start": 34.88
+    }
+  ],
+  "arguments": {
+    "client_dir": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/federated_partitions/iid_3clients_seed42_v2",
+    "validation_manifest": "/scratch/project_2019765/fnaveed/datasets/rice_grouped/grouped_split/validation.csv",
+    "initial_checkpoint": "/scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt",
+    "output_dir": "/scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke",
+    "dataset_root": "/scratch/project_2019765/fnaveed/datasets/rice_grouped",
+    "experiment_name": "rice_fedavg_iid_resnet18",
+    "rounds": 1,
+    "local_epochs": 1,
+    "batch_size": 64,
+    "learning_rate": 2e-06,
+    "num_workers": 4,
+    "seed": 42,
+    "resume": false
+  }
+}

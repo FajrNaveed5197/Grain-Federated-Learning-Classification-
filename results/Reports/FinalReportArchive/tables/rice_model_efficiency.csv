@@ -1,0 +1,4 @@
+model,parameters,fp32_size_mib,centralized_test_macro_f1,fedavg_iid_test_macro_f1,fedavg_noniid_test_macro_f1
+ResNet18,11180616,42.65,97.9416,98.1136,98.0866
+MobileNetV2,2234120,8.52,98.0446,97.9948,98.0484
+EfficientNetB0,,,97.8079,,

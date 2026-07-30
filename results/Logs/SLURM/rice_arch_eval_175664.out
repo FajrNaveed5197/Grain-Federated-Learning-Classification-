@@ -1,0 +1,12 @@
+
+Evaluating ResNet18
+validation: accuracy=99.1934% | balanced_accuracy=98.2548% | macro_f1=98.1839% | weighted_f1=99.1952%
+test: accuracy=99.0097% | balanced_accuracy=98.1184% | macro_f1=97.9416% | weighted_f1=99.0125%
+
+Evaluating MobileNetV2
+validation: accuracy=98.8962% | balanced_accuracy=97.9826% | macro_f1=97.7217% | weighted_f1=98.9000%
+test: accuracy=99.0312% | balanced_accuracy=98.4235% | macro_f1=98.0446% | weighted_f1=99.0356%
+
+Evaluating EfficientNetB0
+validation: accuracy=98.8750% | balanced_accuracy=98.1597% | macro_f1=97.7092% | weighted_f1=98.8836%
+test: accuracy=98.9236% | balanced_accuracy=98.2873% | macro_f1=97.8079% | weighted_f1=98.9330%

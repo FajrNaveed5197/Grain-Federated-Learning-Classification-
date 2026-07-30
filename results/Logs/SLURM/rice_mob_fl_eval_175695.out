@@ -1,0 +1,10 @@
+
+Evaluating FedAvg IID MobileNetV2
+Checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_mobilenetv2/best_global_model.pt
+validation | accuracy=98.8113% | balanced_accuracy=98.1605% | macro_f1=97.6631% | weighted_f1=98.8186%
+test | accuracy=98.9882% | balanced_accuracy=98.4579% | macro_f1=97.9948% | weighted_f1=98.9926%
+
+Evaluating FedAvg non-IID MobileNetV2
+Checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_noniid_mobilenetv2/best_global_model.pt
+validation | accuracy=98.8962% | balanced_accuracy=98.1797% | macro_f1=97.7757% | weighted_f1=98.9020%
+test | accuracy=99.0097% | balanced_accuracy=98.5142% | macro_f1=98.0484% | weighted_f1=99.0143%

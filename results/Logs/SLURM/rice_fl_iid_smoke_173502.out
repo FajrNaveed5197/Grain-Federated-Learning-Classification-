@@ -1,0 +1,23 @@
+Device: cuda
+Client manifests: client_0.csv, client_1.csv, client_2.csv
+client_0: 7199 images
+client_1: 7229 images
+client_2: 7178 images
+Initialized from: /scratch/project_2019765/fnaveed/results/rice_resnet18_grouped_v1/best_resnet18_rice_grouped.pt
+Initial checkpoint epoch: 9
+Initial checkpoint classes: ['0_NOR', '1_F&S', '2_SD', '3_MY', '4_AP', '5_BN', '6_UN', '7_IM']
+
+===== Federated round 1/1 =====
+Starting client_0
+Finished client_0: samples=7199, local_loss=0.6567
+Starting client_1
+Finished client_1: samples=7229, local_loss=0.6451
+Starting client_2
+Finished client_2: samples=7178, local_loss=0.6489
+Evaluating full validation set...
+Global validation | Accuracy=99.13% | Balanced Accuracy=98.14% | Macro-F1=98.0954% | Weighted-F1=99.1320%
+New best global model | round=1 | Macro-F1=98.0954%
+Saved checkpoint: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke/global_model_round_1.pt
+
+Completed in 0.01 hours
+Results saved to: /scratch/project_2019765/fnaveed/results/rice_fedavg_iid_resnet18_smoke
