@@ -1,4 +1,0 @@
-experiment,split,num_images,accuracy,balanced_accuracy,macro_f1,weighted_f1
-wheat_resnet18_grouped_v2_smoke,validation,28389,68.9422,49.0046,37.3863,74.4658
-wheat_resnet18_grouped_v2_smoke,test,37143,67.7086,54.2192,45.7547,68.9626
-wheat_resnet18_grouped_v2_smoke,test_07,27144,60.8164,43.7672,37.4662,63.1057

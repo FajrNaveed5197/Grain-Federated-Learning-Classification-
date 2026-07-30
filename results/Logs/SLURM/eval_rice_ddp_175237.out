@@ -1,6 +1,0 @@
-Device: cuda
-Evaluating validation: 4711 images
-validation | Accuracy=99.0448% | Balanced Accuracy=98.0709% | Macro-F1=97.9592% | Weighted-F1=99.0482%
-Evaluating test: 4645 images
-test | Accuracy=98.9236% | Balanced Accuracy=97.9743% | Macro-F1=97.7568% | Weighted-F1=98.9265%
-Saved results to: /scratch/project_2019765/fnaveed/results/rice_ddp_resnet18/evaluation

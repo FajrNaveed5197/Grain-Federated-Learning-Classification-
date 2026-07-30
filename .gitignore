@@ -74,3 +74,12 @@ results/**/*.ckpt
 results/**/*.tar
 results/**/*.tar.gz
 results/**/*.zip
+
+# GitHub results cleanup exclusions
+# These files remain on Roihu but are not stored in Git.
+results/Development/
+results/Logs/SLURM/
+results/**/*_predictions.csv
+results/ProjectMetadata/PreviousRunMetadata/uncommitted_changes.patch
+results/Rice/Centralized/ResNet18/seed42/history_final.json
+results/Rice/Centralized/ResNet18/seed42/metrics_final.json
