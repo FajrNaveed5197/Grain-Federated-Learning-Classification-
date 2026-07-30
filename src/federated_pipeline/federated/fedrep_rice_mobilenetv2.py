@@ -623,6 +623,7 @@ def main() -> None:
                     "arguments": vars(args),
                     "class_names": CLASS_NAMES,
                     "experiment": args.experiment_name,
+                    "algorithm": "FedRep",
                 },
                 output_dir / "best_fedrep_state.pt",
             )
@@ -634,6 +635,25 @@ def main() -> None:
                 f"{best_mean_macro_f1:.4f}%",
                 flush=True,
             )
+
+        torch.save(
+            {
+                "round": round_number,
+                "shared_state_dict": clone_state(shared),
+                "client_private_state_dicts": {
+                    name: clone_state(state)
+                    for name, state in private_by_client.items()
+                },
+                "validation_by_client": validation_by_client,
+                "validation_summary": validation_summary,
+                "communication": communication,
+                "arguments": vars(args),
+                "class_names": CLASS_NAMES,
+                "experiment": args.experiment_name,
+                "algorithm": "FedRep",
+            },
+            output_dir / f"fedrep_state_round_{round_number}.pt",
+        )
 
         with open(
             output_dir / "metrics.json",

@@ -1,0 +1,4 @@
+algorithm,alpha0p5_test_macro_f1,alpha0p1_test_macro_f1,delta_alpha0p1_minus_alpha0p5,alpha0p5_selected_round,alpha0p1_selected_round
+FedAvg,98.0484,98.1358,0.0874,1,1
+FedPer,97.9198,98.1672,0.2474,3,2
+FedRep,98.2075,98.0299,-0.1776,5,3

@@ -28,6 +28,17 @@ def parse_args():
     parser.add_argument("--alpha", type=float, default=0.5)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--min-client-images", type=int, default=3000)
+    parser.add_argument(
+        "--partition-kind",
+        choices=["both", "iid", "noniid"],
+        default="both",
+        help="Generate both partitions, only IID, or only non-IID.",
+    )
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Allow replacing a non-empty existing partition directory.",
+    )
     return parser.parse_args()
 
 
@@ -292,7 +303,22 @@ def write_partition(
     seed,
     alpha=None,
     dirichlet_proportions=None,
+    min_client_images=None,
+    overwrite=False,
 ):
+    if output_dir.exists():
+        if not output_dir.is_dir():
+            raise FileExistsError(
+                f"Partition output exists and is not a directory: "
+                f"{output_dir}"
+            )
+
+        if any(output_dir.iterdir()) and not overwrite:
+            raise FileExistsError(
+                f"Refusing to overwrite existing partition: "
+                f"{output_dir}"
+            )
+
     output_dir.mkdir(parents=True, exist_ok=True)
 
     assigned = source.copy()
@@ -329,6 +355,23 @@ def write_partition(
     )
 
     summary["total"] = summary.sum(axis=1)
+
+    if min_client_images is not None:
+        too_small = summary.loc[
+            summary["total"] < min_client_images,
+            "total",
+        ]
+
+        if not too_small.empty:
+            details = ", ".join(
+                f"client_{client_id}={int(count)}"
+                for client_id, count in too_small.items()
+            )
+
+            raise RuntimeError(
+                "Minimum client-size constraint failed: "
+                f"{details}"
+            )
 
     group_summary = (
         assigned[
@@ -388,6 +431,10 @@ def write_partition(
         "dirichlet_alpha": alpha,
         "class_order": CLASS_NAMES,
         "capture_groups_split": 0,
+        "minimum_client_images_required": min_client_images,
+        "minimum_client_images_observed": int(
+            summary["total"].min()
+        ),
         "client_image_counts": {
             str(client_id): int(summary.loc[client_id, "total"])
             for client_id in range(num_clients)
@@ -436,57 +483,61 @@ def main():
     print("Images:", len(source))
     print("Capture groups:", len(group_table))
 
-    iid_assignments = assign_iid(
-        group_table,
-        args.num_clients,
-        args.seed,
-    )
-
-    iid_dir = (
-        args.output_root /
-        f"iid_{args.num_clients}clients_seed{args.seed}_v2"
-    )
-
-    write_partition(
-        source,
-        iid_assignments,
-        iid_dir,
-        "iid",
-        args.train_manifest,
-        args.num_clients,
-        args.seed,
-    )
-
-    noniid_assignments, targets = assign_noniid(
-        group_table,
-        args.num_clients,
-        args.alpha,
-        args.seed,
-        args.min_client_images,
-    )
-
-    alpha_text = str(args.alpha).replace(".", "p")
-
-    noniid_dir = (
-        args.output_root /
-        (
-            f"noniid_{args.num_clients}clients_"
-            f"alpha{alpha_text}_seed{args.seed}_v2"
+    if args.partition_kind in {"both", "iid"}:
+        iid_assignments = assign_iid(
+            group_table,
+            args.num_clients,
+            args.seed,
         )
-    )
 
-    write_partition(
-        source,
-        noniid_assignments,
-        noniid_dir,
-        "non_iid",
-        args.train_manifest,
-        args.num_clients,
-        args.seed,
-        args.alpha,
-        targets,
-    )
+        iid_dir = (
+            args.output_root /
+            f"iid_{args.num_clients}clients_seed{args.seed}_v2"
+        )
 
+        write_partition(
+            source,
+            iid_assignments,
+            iid_dir,
+            "iid",
+            args.train_manifest,
+            args.num_clients,
+            args.seed,
+            overwrite=args.overwrite,
+        )
+
+    if args.partition_kind in {"both", "noniid"}:
+        noniid_assignments, targets = assign_noniid(
+            group_table,
+            args.num_clients,
+            args.alpha,
+            args.seed,
+            args.min_client_images,
+        )
+
+        alpha_text = str(args.alpha).replace(".", "p")
+
+        noniid_dir = (
+            args.output_root /
+            (
+                f"noniid_{args.num_clients}clients_"
+                f"alpha{alpha_text}_seed{args.seed}_v2"
+            )
+        )
+
+        write_partition(
+            source,
+            noniid_assignments,
+            noniid_dir,
+            "non_iid",
+            args.train_manifest,
+            args.num_clients,
+            args.seed,
+            args.alpha,
+            targets,
+            min_client_images=args.min_client_images,
+            overwrite=args.overwrite,
+        )
 
 if __name__ == "__main__":
     main()

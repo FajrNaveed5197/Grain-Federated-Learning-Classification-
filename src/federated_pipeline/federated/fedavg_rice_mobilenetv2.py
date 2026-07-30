@@ -67,6 +67,7 @@ def parse_args() -> argparse.Namespace:
         choices=[
             "rice_fedavg_iid_mobilenetv2",
             "rice_fedavg_noniid_mobilenetv2",
+            "rice_fedavg_noniid_alpha0p1_mobilenetv2",
         ],
     )
 
@@ -296,12 +297,14 @@ def save_state(
     args: argparse.Namespace,
     best_round: int,
     best_macro_f1: float,
+    communication: dict,
 ) -> None:
     torch.save(
         {
             "completed_round": completed_round,
             "model_state_dict": model.state_dict(),
             "history": history,
+            "communication": communication,
             "arguments": vars(args),
         },
         output_dir / "training_state.pt",
@@ -321,6 +324,7 @@ def save_state(
                 "best_validation_macro_f1": best_macro_f1,
                 "class_names": CLASS_NAMES,
                 "history": history,
+                "communication": communication,
                 "arguments": {
                     key: str(value)
                     if isinstance(value, Path)
@@ -412,6 +416,31 @@ def main() -> None:
         num_classes=len(CLASS_NAMES),
         pretrained=False,
     ).to(device)
+
+    total_parameters = sum(
+        parameter.numel()
+        for parameter in global_model.parameters()
+    )
+    full_model_transfers = (
+        2 * len(client_manifests) * args.rounds
+    )
+    communication = {
+        "total_parameters": total_parameters,
+        "shared_parameters": total_parameters,
+        "private_parameters_per_client": 0,
+        "full_model_transfers": full_model_transfers,
+        "estimated_full_fp32_mib_per_transfer": round(
+            total_parameters * 4 / (1024 ** 2),
+            4,
+        ),
+        "estimated_cumulative_full_fp32_mib": round(
+            total_parameters
+            * 4
+            * full_model_transfers
+            / (1024 ** 2),
+            4,
+        ),
+    }
 
     history: list[dict] = []
     start_round = 1
@@ -554,6 +583,8 @@ def main() -> None:
                     "class_names": CLASS_NAMES,
                     "validation_metrics": validation_metrics,
                     "experiment": args.experiment_name,
+                    "algorithm": "FedAvg",
+                    "communication": communication,
                     "arguments": vars(args),
                 },
                 output_dir / "best_global_model.pt",
@@ -574,6 +605,7 @@ def main() -> None:
             args=args,
             best_round=best_round,
             best_macro_f1=best_macro_f1,
+            communication=communication,
         )
 
         print(
