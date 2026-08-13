@@ -1,0 +1,514 @@
+relative_path,top_level,filename,extension,category,size_bytes,size_mb,modified_utc
+apptainer/build_roihu_image.sh,apptainer,build_roihu_image.sh,.sh,code/script,397,0.0004,2026-07-30T14:42:19.271719+00:00
+apptainer/federated_fl.def,apptainer,federated_fl.def,.def,other,398,0.0004,2026-07-30T14:42:19.278426+00:00
+collect_paper_experiment_audit.sh,(repository root),collect_paper_experiment_audit.sh,.sh,code/script,19664,0.0188,2026-07-30T14:42:19.358925+00:00
+configs/classes.json,configs,classes.json,.json,structured data,130,0.0001,2026-07-30T14:42:19.367319+00:00
+configs/federated.example.yaml,configs,federated.example.yaml,.yaml,structured data,896,0.0009,2026-07-30T14:42:19.374740+00:00
+configs/mobilenetv2_smoke_local.yaml,configs,mobilenetv2_smoke_local.yaml,.yaml,structured data,625,0.0006,2026-07-30T14:42:19.424840+00:00
+containerized_fl/__init__.py,containerized_fl,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:19.438615+00:00
+containerized_fl/client/__init__.py,containerized_fl,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:19.453515+00:00
+containerized_fl/client/client.py,containerized_fl,client.py,.py,code/script,5117,0.0049,2026-07-30T14:42:19.463902+00:00
+containerized_fl/README.md,containerized_fl,README.md,.md,text/documentation,855,0.0008,2026-07-30T14:42:19.433970+00:00
+containerized_fl/requirements.txt,containerized_fl,requirements.txt,.txt,text/documentation,89,0.0001,2026-07-30T14:42:19.468812+00:00
+containerized_fl/server/__init__.py,containerized_fl,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:19.561446+00:00
+containerized_fl/server/server.py,containerized_fl,server.py,.py,code/script,3458,0.0033,2026-07-30T14:42:19.570071+00:00
+containerized_fl/shared/__init__.py,containerized_fl,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:19.578669+00:00
+docker/docker-compose.yml,docker,docker-compose.yml,.yml,structured data,2170,0.0021,2026-07-30T14:42:19.613569+00:00
+docker/Dockerfile.fl,docker,Dockerfile.fl,.fl,other,449,0.0004,2026-07-30T14:42:19.607241+00:00
+docker/run-local.sh,docker,run-local.sh,.sh,code/script,419,0.0004,2026-07-30T14:42:19.690550+00:00
+docs/DATA_CONTRACT.md,docs,DATA_CONTRACT.md,.md,text/documentation,487,0.0005,2026-07-30T14:42:19.697562+00:00
+experiments/results/provenance/checkpoint_inventory.csv,experiments,checkpoint_inventory.csv,.csv,tabular data,9763,0.0093,2026-07-30T14:42:19.732621+00:00
+experiments/results/provenance/rice_grouped_split/split_summary.json,experiments,split_summary.json,.json,structured data,980,0.0009,2026-07-30T14:42:19.753960+00:00
+experiments/results/provenance/wheat_grouped_split_v2/class_allocation.csv,experiments,class_allocation.csv,.csv,tabular data,458,0.0004,2026-07-30T14:42:19.811682+00:00
+experiments/results/provenance/wheat_grouped_split_v2/metadata.json,experiments,metadata.json,.json,structured data,641,0.0006,2026-07-30T14:42:19.824986+00:00
+experiments/results/README.md,experiments,README.md,.md,text/documentation,1284,0.0012,2026-07-30T14:42:19.718348+00:00
+experiments/results/rice/rice_dataset_validation/cross_split_exact_duplicates.json,experiments,cross_split_exact_duplicates.json,.json,structured data,2,0.0,2026-07-30T14:42:19.855773+00:00
+experiments/results/rice/rice_dataset_validation/exact_duplicate_summary.json,experiments,exact_duplicate_summary.json,.json,structured data,193,0.0002,2026-07-30T14:42:19.869624+00:00
+experiments/results/rice/rice_dataset_validation/perceptual_duplicate_candidates.json,experiments,perceptual_duplicate_candidates.json,.json,structured data,2,0.0,2026-07-30T14:42:19.923919+00:00
+experiments/results/rice/rice_dataset_validation/perceptual_duplicate_summary.json,experiments,perceptual_duplicate_summary.json,.json,structured data,153,0.0001,2026-07-30T14:42:19.936186+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_metrics.json,experiments,evaluation_metrics.json,.json,structured data,5040,0.0048,2026-07-30T14:42:19.968163+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/evaluation_summary.csv,experiments,evaluation_summary.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:19.985942+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:19.998493+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,107553,0.1026,2026-07-30T14:42:20.018409+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,560,0.0005,2026-07-30T14:42:20.028338+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,1680524,1.6027,2026-07-30T14:42:20.117673+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:20.128590+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,108056,0.1031,2026-07-30T14:42:20.152294+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,548,0.0005,2026-07-30T14:42:20.165224+00:00
+experiments/results/rice/rice_ddp_resnet18/evaluation/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,1732192,1.6519,2026-07-30T14:42:20.280366+00:00
+experiments/results/rice/rice_ddp_resnet18/metrics.json,experiments,metrics.json,.json,structured data,3341,0.0032,2026-07-30T14:42:20.290169+00:00
+experiments/results/rice/rice_ddp_resnet18/training_summary.json,experiments,training_summary.json,.json,structured data,259,0.0002,2026-07-30T14:42:20.306178+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/confusion_matrix.png,experiments,confusion_matrix.png,.png,image,92560,0.0883,2026-07-30T14:42:20.332986+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/history.json,experiments,history.json,.json,structured data,2541,0.0024,2026-07-30T14:42:20.347357+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/metrics.json,experiments,metrics.json,.json,structured data,2256,0.0022,2026-07-30T14:42:20.356940+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:20.367589+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,92263,0.088,2026-07-30T14:42:20.382453+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_evaluation.json,experiments,test_evaluation.json,.json,structured data,1791,0.0017,2026-07-30T14:42:20.392454+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,531,0.0005,2026-07-30T14:42:20.403308+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,876105,0.8355,2026-07-30T14:42:20.468060+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:20.478678+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,92967,0.0887,2026-07-30T14:42:20.495906+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_evaluation.json,experiments,validation_evaluation.json,.json,structured data,1796,0.0017,2026-07-30T14:42:20.506501+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,530,0.0005,2026-07-30T14:42:20.516962+00:00
+experiments/results/rice/rice_efficientnetb0_grouped_v1/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,916698,0.8742,2026-07-30T14:42:20.585681+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_metrics.json,experiments,evaluation_metrics.json,.json,structured data,458,0.0004,2026-07-30T14:42:20.618468+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/evaluation_summary.csv,experiments,evaluation_summary.csv,.csv,tabular data,191,0.0002,2026-07-30T14:42:20.631704+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:20.645251+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,92990,0.0887,2026-07-30T14:42:20.669609+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_evaluation.json,experiments,test_evaluation.json,.json,structured data,1790,0.0017,2026-07-30T14:42:20.682068+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,516,0.0005,2026-07-30T14:42:20.695935+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,876114,0.8355,2026-07-30T14:42:20.755337+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:20.762326+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,94683,0.0903,2026-07-30T14:42:20.778192+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_evaluation.json,experiments,validation_evaluation.json,.json,structured data,1798,0.0017,2026-07-30T14:42:20.790024+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,517,0.0005,2026-07-30T14:42:20.800002+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/evaluation/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,916705,0.8742,2026-07-30T14:42:20.854537+00:00
+experiments/results/rice/rice_fedavg_iid_mobilenetv2/metrics.json,experiments,metrics.json,.json,structured data,4072,0.0039,2026-07-30T14:42:20.864504+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_metrics.json,experiments,evaluation_metrics.json,.json,structured data,5122,0.0049,2026-07-30T14:42:20.895215+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/evaluation_summary.csv,experiments,evaluation_summary.csv,.csv,tabular data,242,0.0002,2026-07-30T14:42:20.908412+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:20.918703+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,106917,0.102,2026-07-30T14:42:20.936882+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,560,0.0005,2026-07-30T14:42:20.946390+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,1683691,1.6057,2026-07-30T14:42:21.053969+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:21.065128+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,107804,0.1028,2026-07-30T14:42:21.087164+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,545,0.0005,2026-07-30T14:42:21.097535+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/evaluation/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,1734601,1.6542,2026-07-30T14:42:21.228518+00:00
+experiments/results/rice/rice_fedavg_iid_resnet18/metrics.json,experiments,metrics.json,.json,structured data,4054,0.0039,2026-07-30T14:42:21.238060+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_metrics.json,experiments,evaluation_metrics.json,.json,structured data,464,0.0004,2026-07-30T14:42:21.265829+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/evaluation_summary.csv,experiments,evaluation_summary.csv,.csv,tabular data,198,0.0002,2026-07-30T14:42:21.279618+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:21.310023+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,93541,0.0892,2026-07-30T14:42:21.363345+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_evaluation.json,experiments,test_evaluation.json,.json,structured data,1793,0.0017,2026-07-30T14:42:21.374267+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,515,0.0005,2026-07-30T14:42:21.383785+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,876112,0.8355,2026-07-30T14:42:21.439741+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:21.451737+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,95328,0.0909,2026-07-30T14:42:21.467233+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_evaluation.json,experiments,validation_evaluation.json,.json,structured data,1801,0.0017,2026-07-30T14:42:21.478518+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,518,0.0005,2026-07-30T14:42:21.488821+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/evaluation/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,916707,0.8742,2026-07-30T14:42:21.557560+00:00
+experiments/results/rice/rice_fedavg_noniid_mobilenetv2/metrics.json,experiments,metrics.json,.json,structured data,4097,0.0039,2026-07-30T14:42:21.568676+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_metrics.json,experiments,evaluation_metrics.json,.json,structured data,5152,0.0049,2026-07-30T14:42:21.599086+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/evaluation_summary.csv,experiments,evaluation_summary.csv,.csv,tabular data,249,0.0002,2026-07-30T14:42:21.612404+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:21.627142+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,107166,0.1022,2026-07-30T14:42:21.646551+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,561,0.0005,2026-07-30T14:42:21.656037+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,1683654,1.6057,2026-07-30T14:42:21.763146+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:21.766045+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,107371,0.1024,2026-07-30T14:42:21.777988+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,546,0.0005,2026-07-30T14:42:21.784936+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/evaluation/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,1734883,1.6545,2026-07-30T14:42:21.898205+00:00
+experiments/results/rice/rice_fedavg_noniid_resnet18/metrics.json,experiments,metrics.json,.json,structured data,4082,0.0039,2026-07-30T14:42:21.909256+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/confusion_matrix.png,experiments,confusion_matrix.png,.png,image,91969,0.0877,2026-07-30T14:42:21.938000+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/history.json,experiments,history.json,.json,structured data,2538,0.0024,2026-07-30T14:42:21.950659+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/metrics.json,experiments,metrics.json,.json,structured data,2236,0.0021,2026-07-30T14:42:21.961738+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:21.973983+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,91614,0.0874,2026-07-30T14:42:21.988457+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_evaluation.json,experiments,test_evaluation.json,.json,structured data,1772,0.0017,2026-07-30T14:42:21.998214+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,513,0.0005,2026-07-30T14:42:22.008164+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,876113,0.8355,2026-07-30T14:42:22.070747+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:22.078671+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,92934,0.0886,2026-07-30T14:42:22.104401+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_evaluation.json,experiments,validation_evaluation.json,.json,structured data,1789,0.0017,2026-07-30T14:42:22.113724+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,528,0.0005,2026-07-30T14:42:22.126762+00:00
+experiments/results/rice/rice_mobilenetv2_grouped_v1/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,916714,0.8742,2026-07-30T14:42:22.189716+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/confusion_matrix.png,experiments,confusion_matrix.png,.png,image,91532,0.0873,2026-07-30T14:42:22.224380+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/history.json,experiments,history.json,.json,structured data,2537,0.0024,2026-07-30T14:42:22.240426+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/history_final.json,experiments,history_final.json,.json,structured data,2537,0.0024,2026-07-30T14:42:22.251184+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/metrics.json,experiments,metrics.json,.json,structured data,2251,0.0021,2026-07-30T14:42:22.264184+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/metrics_final.json,experiments,metrics_final.json,.json,structured data,2251,0.0021,2026-07-30T14:42:22.277028+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/split_summary.json,experiments,split_summary.json,.json,structured data,980,0.0009,2026-07-30T14:42:22.289882+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:22.300793+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,91705,0.0875,2026-07-30T14:42:22.320107+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/test_evaluation.json,experiments,test_evaluation.json,.json,structured data,1787,0.0017,2026-07-30T14:42:22.330933+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,531,0.0005,2026-07-30T14:42:22.345470+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,876118,0.8355,2026-07-30T14:42:22.398290+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:22.407960+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,93496,0.0892,2026-07-30T14:42:22.429823+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/validation_evaluation.json,experiments,validation_evaluation.json,.json,structured data,1822,0.0017,2026-07-30T14:42:22.438704+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,560,0.0005,2026-07-30T14:42:22.450088+00:00
+experiments/results/rice/rice_resnet18_grouped_v1/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,916709,0.8742,2026-07-30T14:42:22.515070+00:00
+experiments/results/tables/rice_architecture_evaluation.csv,experiments,rice_architecture_evaluation.csv,.csv,tabular data,408,0.0004,2026-07-30T14:42:22.533975+00:00
+experiments/results/tables/rice_fedavg_mobilenetv2_comparison.csv,experiments,rice_fedavg_mobilenetv2_comparison.csv,.csv,tabular data,355,0.0003,2026-07-30T14:42:22.542884+00:00
+experiments/results/tables/rice_model_efficiency.csv,experiments,rice_model_efficiency.csv,.csv,tabular data,234,0.0002,2026-07-30T14:42:22.552446+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/evaluation_summary.csv,experiments,evaluation_summary.csv,.csv,tabular data,291,0.0003,2026-07-30T14:42:22.584606+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/history.json,experiments,history.json,.json,structured data,2995,0.0029,2026-07-30T14:42:22.601396+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/metrics.json,experiments,metrics.json,.json,structured data,7103,0.0068,2026-07-30T14:42:22.617187+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_07_confusion_matrix.csv,experiments,test_07_confusion_matrix.csv,.csv,tabular data,327,0.0003,2026-07-30T14:42:22.631034+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_07_confusion_matrix.png,experiments,test_07_confusion_matrix.png,.png,image,136366,0.13,2026-07-30T14:42:22.652921+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_07_per_class_metrics.csv,experiments,test_07_per_class_metrics.csv,.csv,tabular data,603,0.0006,2026-07-30T14:42:22.662019+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_07_predictions.csv,experiments,test_07_predictions.csv,.csv,tabular data,6905671,6.5858,2026-07-30T14:42:23.077418+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,326,0.0003,2026-07-30T14:42:23.084935+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,140646,0.1341,2026-07-30T14:42:23.106684+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,602,0.0006,2026-07-30T14:42:23.116184+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,9191029,8.7652,2026-07-30T14:42:23.506979+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,317,0.0003,2026-07-30T14:42:23.515694+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,136330,0.13,2026-07-30T14:42:23.532733+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,601,0.0006,2026-07-30T14:42:23.536714+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v2/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,6613011,6.3067,2026-07-30T14:42:23.765520+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/evaluation_summary.csv,experiments,evaluation_summary.csv,.csv,tabular data,327,0.0003,2026-07-30T14:42:23.772441+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/history.json,experiments,history.json,.json,structured data,2994,0.0029,2026-07-30T14:42:23.779543+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/metrics.json,experiments,metrics.json,.json,structured data,7055,0.0067,2026-07-30T14:42:23.784626+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_07_confusion_matrix.csv,experiments,test_07_confusion_matrix.csv,.csv,tabular data,325,0.0003,2026-07-30T14:42:23.790320+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_07_confusion_matrix.png,experiments,test_07_confusion_matrix.png,.png,image,138013,0.1316,2026-07-30T14:42:23.800739+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_07_per_class_metrics.csv,experiments,test_07_per_class_metrics.csv,.csv,tabular data,564,0.0005,2026-07-30T14:42:23.805535+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_07_predictions.csv,experiments,test_07_predictions.csv,.csv,tabular data,6903098,6.5833,2026-07-30T14:42:23.987788+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_confusion_matrix.csv,experiments,test_confusion_matrix.csv,.csv,tabular data,326,0.0003,2026-07-30T14:42:23.993219+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_confusion_matrix.png,experiments,test_confusion_matrix.png,.png,image,142552,0.1359,2026-07-30T14:42:24.006721+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_per_class_metrics.csv,experiments,test_per_class_metrics.csv,.csv,tabular data,601,0.0006,2026-07-30T14:42:24.013862+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/test_predictions.csv,experiments,test_predictions.csv,.csv,tabular data,9189570,8.7639,2026-07-30T14:42:24.265460+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/validation_confusion_matrix.csv,experiments,validation_confusion_matrix.csv,.csv,tabular data,311,0.0003,2026-07-30T14:42:24.269781+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/validation_confusion_matrix.png,experiments,validation_confusion_matrix.png,.png,image,133098,0.1269,2026-07-30T14:42:24.277596+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/validation_per_class_metrics.csv,experiments,validation_per_class_metrics.csv,.csv,tabular data,586,0.0006,2026-07-30T14:42:24.279264+00:00
+experiments/results/wheat/wheat_resnet18_grouped_v3_sqrt_weights/validation_predictions.csv,experiments,validation_predictions.csv,.csv,tabular data,6610141,6.3039,2026-07-30T14:42:24.437317+00:00
+inspect_project_for_dashboard.py,(repository root),inspect_project_for_dashboard.py,.py,code/script,55909,0.0533,2026-08-05T11:58:44.999621+00:00
+paper/audit/01_result_files.txt,paper,01_result_files.txt,.txt,result/report text,3551,0.0034,2026-07-30T14:42:24.450332+00:00
+paper/audit/02_all_metrics.txt,paper,02_all_metrics.txt,.txt,result/report text,56428,0.0538,2026-07-30T14:42:24.460646+00:00
+paper/audit/03_hyperparameters.txt,paper,03_hyperparameters.txt,.txt,text/documentation,181162,0.1728,2026-07-30T14:42:24.470636+00:00
+paper/audit/03a_federated_config.txt,paper,03a_federated_config.txt,.txt,text/documentation,112691,0.1075,2026-07-30T14:42:24.480305+00:00
+paper/audit/03b_ddp_config.txt,paper,03b_ddp_config.txt,.txt,text/documentation,95487,0.0911,2026-07-30T14:42:24.486747+00:00
+paper/audit/03c_centralized_config.txt,paper,03c_centralized_config.txt,.txt,text/documentation,141615,0.1351,2026-07-30T14:42:24.494851+00:00
+paper/audit/04_version_progression.txt,paper,04_version_progression.txt,.txt,text/documentation,13750251,13.1133,2026-07-30T14:42:24.806982+00:00
+paper/audit_20260714_200536/00_repository_identity.txt,paper,00_repository_identity.txt,.txt,text/documentation,684,0.0007,2026-07-30T14:42:24.812577+00:00
+paper/audit_20260714_200536/00_run_log.txt,paper,00_run_log.txt,.txt,text/documentation,3680,0.0035,2026-07-30T14:42:24.819094+00:00
+paper/audit_20260714_200536/01_result_files.txt,paper,01_result_files.txt,.txt,result/report text,9244,0.0088,2026-07-30T14:42:24.825242+00:00
+paper/audit_20260714_200536/02_all_metrics.txt,paper,02_all_metrics.txt,.txt,result/report text,115492,0.1101,2026-07-30T14:42:24.833142+00:00
+paper/audit_20260714_200536/03_hyperparameters.txt,paper,03_hyperparameters.txt,.txt,text/documentation,234194,0.2233,2026-07-30T14:42:24.844095+00:00
+paper/audit_20260714_200536/03a_federated_config.txt,paper,03a_federated_config.txt,.txt,text/documentation,135316,0.129,2026-07-30T14:42:24.851874+00:00
+paper/audit_20260714_200536/03b_ddp_config.txt,paper,03b_ddp_config.txt,.txt,text/documentation,110362,0.1052,2026-07-30T14:42:24.855374+00:00
+paper/audit_20260714_200536/03c_centralized_config.txt,paper,03c_centralized_config.txt,.txt,text/documentation,192183,0.1833,2026-07-30T14:42:24.866857+00:00
+paper/audit_20260714_200536/04_version_progression.txt,paper,04_version_progression.txt,.txt,text/documentation,15195607,14.4917,2026-07-30T14:42:25.285626+00:00
+paper/audit_20260714_200536/04a_experiment_directories.txt,paper,04a_experiment_directories.txt,.txt,text/documentation,1045,0.001,2026-07-30T14:42:25.291318+00:00
+paper/audit_20260714_200536/05_git_chronology.txt,paper,05_git_chronology.txt,.txt,text/documentation,278,0.0003,2026-07-30T14:42:25.299903+00:00
+paper/audit_20260714_200536/05a_git_files_chronology.txt,paper,05a_git_files_chronology.txt,.txt,text/documentation,17257,0.0165,2026-07-30T14:42:25.303444+00:00
+paper/audit_20260714_200536/06_failed_and_incomplete.txt,paper,06_failed_and_incomplete.txt,.txt,text/documentation,2507828,2.3917,2026-07-30T14:42:25.376724+00:00
+paper/audit_20260714_200536/06a_cross_dataset_transfer.txt,paper,06a_cross_dataset_transfer.txt,.txt,text/documentation,467192,0.4455,2026-07-30T14:42:25.394469+00:00
+paper/audit_20260714_200536/07_dataset_details.txt,paper,07_dataset_details.txt,.txt,text/documentation,41292332,39.3794,2026-07-30T14:42:26.625963+00:00
+paper/audit_20260714_200536/07a_class_mappings.txt,paper,07a_class_mappings.txt,.txt,text/documentation,87555663,83.4996,2026-07-30T14:42:30.422466+00:00
+paper/audit_20260714_200536/08_rice_seed_files.txt,paper,08_rice_seed_files.txt,.txt,text/documentation,4367,0.0042,2026-07-30T14:42:30.667463+00:00
+paper/audit_20260714_200536/08a_rice_seed_contents.txt,paper,08a_rice_seed_contents.txt,.txt,text/documentation,713968,0.6809,2026-07-30T14:42:31.118626+00:00
+paper/audit_20260714_200536/09_documentation_inventory.txt,paper,09_documentation_inventory.txt,.txt,text/documentation,1470,0.0014,2026-07-30T14:42:31.129654+00:00
+paper/audit_20260714_200536/10_repository_tree.txt,paper,10_repository_tree.txt,.txt,text/documentation,17180,0.0164,2026-07-30T14:42:31.175498+00:00
+paper/figures/rice_test_macro_f1_comparison.pdf,paper,rice_test_macro_f1_comparison.pdf,.pdf,document,19436,0.0185,2026-07-14T16:03:30.712099+00:00
+paper/figures/rice_test_macro_f1_comparison.png,paper,rice_test_macro_f1_comparison.png,.png,image,182950,0.1745,2026-07-14T16:03:27.924348+00:00
+paper/figures/wheat_v3_test07_confusion_matrix_normalized.pdf,paper,wheat_v3_test07_confusion_matrix_normalized.pdf,.pdf,document,22766,0.0217,2026-07-14T16:03:41.278351+00:00
+paper/figures/wheat_v3_test07_confusion_matrix_normalized.png,paper,wheat_v3_test07_confusion_matrix_normalized.png,.png,image,214722,0.2048,2026-07-14T16:03:38.715872+00:00
+paper/figures/wheat_v3_validation_macro_f1_history.pdf,paper,wheat_v3_validation_macro_f1_history.pdf,.pdf,document,17768,0.0169,2026-07-14T16:03:44.490836+00:00
+paper/figures/wheat_v3_validation_macro_f1_history.png,paper,wheat_v3_validation_macro_f1_history.png,.png,image,137967,0.1316,2026-07-14T16:03:43.222108+00:00
+paper/figures/wheat_weighting_macro_f1_comparison.pdf,paper,wheat_weighting_macro_f1_comparison.pdf,.pdf,document,17411,0.0166,2026-07-14T16:03:34.010129+00:00
+paper/figures/wheat_weighting_macro_f1_comparison.png,paper,wheat_weighting_macro_f1_comparison.png,.png,image,93967,0.0896,2026-07-14T16:03:32.570064+00:00
+README.md,(repository root),README.md,.md,text/documentation,7472,0.0071,2026-07-30T15:04:19.838918+00:00
+requirements/federated.txt,requirements,federated.txt,.txt,text/documentation,63,0.0001,2026-07-30T14:42:31.192040+00:00
+ResearchPaper.tex,(repository root),ResearchPaper.tex,.tex,text/documentation,20671,0.0197,2026-07-30T14:42:19.258901+00:00
+results/CHECKPOINTS_ON_ROIHU.tsv,results,CHECKPOINTS_ON_ROIHU.tsv,.tsv,tabular data,9895,0.0094,2026-07-30T14:42:31.196908+00:00
+results/ProjectMetadata/DuplicateAudit/duplicate_groups.json,results,duplicate_groups.json,.json,structured data,235080,0.2242,2026-07-30T14:42:32.481216+00:00
+results/ProjectMetadata/DuplicateAudit/duplicate_groups.txt,results,duplicate_groups.txt,.txt,text/documentation,197309,0.1882,2026-07-30T14:42:32.490279+00:00
+results/ProjectMetadata/file_inventory.tsv,results,file_inventory.tsv,.tsv,tabular data,22623,0.0216,2026-07-30T14:42:32.585213+00:00
+results/ProjectMetadata/old_to_new_paths.tsv,results,old_to_new_paths.tsv,.tsv,tabular data,3698,0.0035,2026-07-30T14:42:32.589356+00:00
+results/ProjectMetadata/PreviousRunMetadata/personalized_fl_job_accounting.txt,results,personalized_fl_job_accounting.txt,.txt,text/documentation,990,0.0009,2026-07-30T14:42:32.496530+00:00
+results/ProjectMetadata/PreviousRunMetadata/repository_state.txt,results,repository_state.txt,.txt,text/documentation,698,0.0007,2026-07-30T14:42:32.500352+00:00
+results/ProjectMetadata/PreviousRunMetadata/software_environment.txt,results,software_environment.txt,.txt,text/documentation,179,0.0002,2026-07-30T14:42:32.549881+00:00
+results/README.md,results,README.md,.md,text/documentation,888,0.0008,2026-07-30T14:42:32.591757+00:00
+results/README_RESULTS.txt,results,README_RESULTS.txt,.txt,result/report text,746,0.0007,2026-07-30T14:42:32.594762+00:00
+results/Reports/FinalReportArchive/result_inventory.txt,results,result_inventory.txt,.txt,result/report text,22548,0.0215,2026-07-30T14:42:32.604440+00:00
+results/Reports/FinalReportArchive/rice/train_rice_efficientnetb0_grouped.py,results,train_rice_efficientnetb0_grouped.py,.py,code/script,17053,0.0163,2026-07-30T14:42:32.617806+00:00
+results/Reports/FinalReportArchive/rice/train_rice_efficientnetb0_grouped.sh,results,train_rice_efficientnetb0_grouped.sh,.sh,code/script,790,0.0008,2026-07-30T14:42:32.624531+00:00
+results/Reports/FinalReportArchive/rice/train_rice_mobilenetv2_grouped.py,results,train_rice_mobilenetv2_grouped.py,.py,code/script,17032,0.0162,2026-07-30T14:42:32.666992+00:00
+results/Reports/FinalReportArchive/rice/train_rice_mobilenetv2_grouped.sh,results,train_rice_mobilenetv2_grouped.sh,.sh,code/script,784,0.0007,2026-07-30T14:42:32.680046+00:00
+results/Reports/FinalReportArchive/rice/train_rice_resnet18_grouped.py,results,train_rice_resnet18_grouped.py,.py,code/script,16979,0.0162,2026-07-30T14:42:32.683988+00:00
+results/Reports/FinalReportArchive/tables/rice_architecture_evaluation.csv,results,rice_architecture_evaluation.csv,.csv,tabular data,408,0.0004,2026-07-30T14:42:32.690937+00:00
+results/Reports/FinalReportArchive/tables/rice_fedavg_mobilenetv2_comparison.csv,results,rice_fedavg_mobilenetv2_comparison.csv,.csv,tabular data,355,0.0003,2026-07-30T14:42:32.694805+00:00
+results/Reports/FinalReportArchive/tables/rice_model_efficiency.csv,results,rice_model_efficiency.csv,.csv,tabular data,234,0.0002,2026-07-30T14:42:32.740733+00:00
+results/Reports/FinalReportArchive/wheat/train_wheat_resnet18_grouped_v3_sqrt_weights.py,results,train_wheat_resnet18_grouped_v3_sqrt_weights.py,.py,code/script,25936,0.0247,2026-07-30T14:42:32.757055+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/confusion_matrix.png,results,confusion_matrix.png,.png,image,92560,0.0883,2026-07-30T14:42:32.803018+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/history.json,results,history.json,.json,structured data,2541,0.0024,2026-07-30T14:42:32.810949+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/metrics.json,results,metrics.json,.json,structured data,2256,0.0022,2026-07-30T14:42:32.820980+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:32.827539+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,92263,0.088,2026-07-30T14:42:32.834904+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/test_evaluation.json,results,test_evaluation.json,.json,structured data,1791,0.0017,2026-07-30T14:42:32.841682+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,531,0.0005,2026-07-30T14:42:32.847475+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:32.885322+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,92967,0.0887,2026-07-30T14:42:32.899256+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/validation_evaluation.json,results,validation_evaluation.json,.json,structured data,1796,0.0017,2026-07-30T14:42:32.903476+00:00
+results/Rice/Centralized/EfficientNetB0/seed42/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,530,0.0005,2026-07-30T14:42:32.911305+00:00
+results/Rice/Centralized/MobileNetV2/seed42/confusion_matrix.png,results,confusion_matrix.png,.png,image,91969,0.0877,2026-07-30T14:42:32.965420+00:00
+results/Rice/Centralized/MobileNetV2/seed42/history.json,results,history.json,.json,structured data,2538,0.0024,2026-07-30T14:42:32.979226+00:00
+results/Rice/Centralized/MobileNetV2/seed42/metrics.json,results,metrics.json,.json,structured data,2236,0.0021,2026-07-30T14:42:32.987995+00:00
+results/Rice/Centralized/MobileNetV2/seed42/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:32.994228+00:00
+results/Rice/Centralized/MobileNetV2/seed42/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,91614,0.0874,2026-07-30T14:42:33.009116+00:00
+results/Rice/Centralized/MobileNetV2/seed42/test_evaluation.json,results,test_evaluation.json,.json,structured data,1772,0.0017,2026-07-30T14:42:33.014338+00:00
+results/Rice/Centralized/MobileNetV2/seed42/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,513,0.0005,2026-07-30T14:42:33.018416+00:00
+results/Rice/Centralized/MobileNetV2/seed42/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:33.046325+00:00
+results/Rice/Centralized/MobileNetV2/seed42/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,92934,0.0886,2026-07-30T14:42:33.059956+00:00
+results/Rice/Centralized/MobileNetV2/seed42/validation_evaluation.json,results,validation_evaluation.json,.json,structured data,1789,0.0017,2026-07-30T14:42:33.069910+00:00
+results/Rice/Centralized/MobileNetV2/seed42/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,528,0.0005,2026-07-30T14:42:33.077108+00:00
+results/Rice/Centralized/ResNet18/seed123/confusion_matrix.png,results,confusion_matrix.png,.png,image,92320,0.088,2026-07-30T14:42:33.144470+00:00
+results/Rice/Centralized/ResNet18/seed123/history.json,results,history.json,.json,structured data,2537,0.0024,2026-07-30T14:42:33.164343+00:00
+results/Rice/Centralized/ResNet18/seed123/metrics.json,results,metrics.json,.json,structured data,2239,0.0021,2026-07-30T14:42:33.180543+00:00
+results/Rice/Centralized/ResNet18/seed2026/confusion_matrix.png,results,confusion_matrix.png,.png,image,92756,0.0885,2026-07-30T14:42:33.215579+00:00
+results/Rice/Centralized/ResNet18/seed2026/history.json,results,history.json,.json,structured data,2536,0.0024,2026-07-30T14:42:33.221123+00:00
+results/Rice/Centralized/ResNet18/seed2026/metrics.json,results,metrics.json,.json,structured data,2275,0.0022,2026-07-30T14:42:33.227016+00:00
+results/Rice/Centralized/ResNet18/seed42/confusion_matrix.png,results,confusion_matrix.png,.png,image,91532,0.0873,2026-07-30T14:42:33.243139+00:00
+results/Rice/Centralized/ResNet18/seed42/history.json,results,history.json,.json,structured data,2537,0.0024,2026-07-30T14:42:33.250776+00:00
+results/Rice/Centralized/ResNet18/seed42/metrics.json,results,metrics.json,.json,structured data,2251,0.0021,2026-07-30T14:42:33.262839+00:00
+results/Rice/Centralized/ResNet18/seed42/split_summary.json,results,split_summary.json,.json,structured data,980,0.0009,2026-07-30T14:42:33.275214+00:00
+results/Rice/Centralized/ResNet18/seed42/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:33.279213+00:00
+results/Rice/Centralized/ResNet18/seed42/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,91705,0.0875,2026-07-30T14:42:33.286897+00:00
+results/Rice/Centralized/ResNet18/seed42/test_evaluation.json,results,test_evaluation.json,.json,structured data,1787,0.0017,2026-07-30T14:42:33.305652+00:00
+results/Rice/Centralized/ResNet18/seed42/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,531,0.0005,2026-07-30T14:42:33.312641+00:00
+results/Rice/Centralized/ResNet18/seed42/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:33.350854+00:00
+results/Rice/Centralized/ResNet18/seed42/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,93496,0.0892,2026-07-30T14:42:33.354314+00:00
+results/Rice/Centralized/ResNet18/seed42/validation_evaluation.json,results,validation_evaluation.json,.json,structured data,1822,0.0017,2026-07-30T14:42:33.361256+00:00
+results/Rice/Centralized/ResNet18/seed42/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,560,0.0005,2026-07-30T14:42:33.365750+00:00
+results/Rice/DataValidation/DuplicateAudit/cross_split_exact_duplicates.json,results,cross_split_exact_duplicates.json,.json,structured data,2,0.0,2026-07-30T14:42:33.573852+00:00
+results/Rice/DataValidation/DuplicateAudit/exact_duplicate_summary.json,results,exact_duplicate_summary.json,.json,structured data,193,0.0002,2026-07-30T14:42:33.576685+00:00
+results/Rice/DataValidation/DuplicateAudit/perceptual_duplicate_candidates.json,results,perceptual_duplicate_candidates.json,.json,structured data,2,0.0,2026-07-30T14:42:33.609962+00:00
+results/Rice/DataValidation/DuplicateAudit/perceptual_duplicate_summary.json,results,perceptual_duplicate_summary.json,.json,structured data,153,0.0001,2026-07-30T14:42:33.620348+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/evaluation_metrics.json,results,evaluation_metrics.json,.json,structured data,5040,0.0048,2026-07-30T14:42:33.415426+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:33.421274+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:33.437893+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,107553,0.1026,2026-07-30T14:42:33.445269+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,560,0.0005,2026-07-30T14:42:33.449945+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:33.493314+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,108056,0.1031,2026-07-30T14:42:33.500523+00:00
+results/Rice/DDP/ResNet18/Final/evaluation/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,548,0.0005,2026-07-30T14:42:33.507205+00:00
+results/Rice/DDP/ResNet18/Final/metrics.json,results,metrics.json,.json,structured data,3341,0.0032,2026-07-30T14:42:33.558904+00:00
+results/Rice/DDP/ResNet18/Final/training_summary.json,results,training_summary.json,.json,structured data,259,0.0002,2026-07-30T14:42:33.561838+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/evaluation_metrics.json,results,evaluation_metrics.json,.json,structured data,458,0.0004,2026-07-30T14:42:33.687580+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,191,0.0002,2026-07-30T14:42:33.700691+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:33.715330+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,92990,0.0887,2026-07-30T14:42:33.726483+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/test_evaluation.json,results,test_evaluation.json,.json,structured data,1790,0.0017,2026-07-30T14:42:33.732407+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,516,0.0005,2026-07-30T14:42:33.742585+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:33.819674+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,94683,0.0903,2026-07-30T14:42:33.831362+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/validation_evaluation.json,results,validation_evaluation.json,.json,structured data,1798,0.0017,2026-07-30T14:42:33.836593+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/evaluation/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,517,0.0005,2026-07-30T14:42:33.843021+00:00
+results/Rice/Federated/FedAvg/IID/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,4072,0.0039,2026-07-30T14:42:33.874167+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/evaluation_metrics.json,results,evaluation_metrics.json,.json,structured data,5122,0.0049,2026-07-30T14:42:33.895322+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,242,0.0002,2026-07-30T14:42:33.907276+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:33.958708+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,106917,0.102,2026-07-30T14:42:33.979231+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,560,0.0005,2026-07-30T14:42:33.986089+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:34.076313+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,107804,0.1028,2026-07-30T14:42:34.084878+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/evaluation/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,545,0.0005,2026-07-30T14:42:34.095601+00:00
+results/Rice/Federated/FedAvg/IID/ResNet18/metrics.json,results,metrics.json,.json,structured data,4054,0.0039,2026-07-30T14:42:34.160744+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/evaluation_metrics.json,results,evaluation_metrics.json,.json,structured data,1424,0.0014,2026-07-30T16:06:01.458036+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,244,0.0002,2026-07-30T16:06:01.462869+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/run_metadata.json,results,run_metadata.json,.json,structured data,134,0.0001,2026-07-30T16:06:01.471403+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T16:06:01.478134+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,96358,0.0919,2026-07-30T16:06:01.485541+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/test_evaluation.json,results,test_evaluation.json,.json,structured data,1806,0.0017,2026-07-30T16:06:01.493195+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,516,0.0005,2026-07-30T16:06:01.498521+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T16:06:01.529735+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,96067,0.0916,2026-07-30T16:06:01.532381+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/validation_evaluation.json,results,validation_evaluation.json,.json,structured data,1815,0.0017,2026-07-30T16:06:01.545069+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/evaluation/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,518,0.0005,2026-07-30T16:06:01.550436+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p1/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,4411,0.0042,2026-07-30T16:06:01.588401+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/evaluation_metrics.json,results,evaluation_metrics.json,.json,structured data,464,0.0004,2026-07-30T14:42:34.201274+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,198,0.0002,2026-07-30T14:42:34.214980+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:34.222787+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,93541,0.0892,2026-07-30T14:42:34.234770+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/test_evaluation.json,results,test_evaluation.json,.json,structured data,1793,0.0017,2026-07-30T14:42:34.243677+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,515,0.0005,2026-07-30T14:42:34.249104+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,231,0.0002,2026-07-30T14:42:34.291788+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,95328,0.0909,2026-07-30T14:42:34.305274+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/validation_evaluation.json,results,validation_evaluation.json,.json,structured data,1801,0.0017,2026-07-30T14:42:34.312337+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/evaluation/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,518,0.0005,2026-07-30T14:42:34.319309+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,4097,0.0039,2026-07-30T14:42:34.361167+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/evaluation_metrics.json,results,evaluation_metrics.json,.json,structured data,5152,0.0049,2026-07-30T14:42:34.379571+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,249,0.0002,2026-07-30T14:42:34.387434+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:34.393094+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,107166,0.1022,2026-07-30T14:42:34.401006+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,561,0.0005,2026-07-30T14:42:34.405963+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,230,0.0002,2026-07-30T14:42:34.476482+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,107371,0.1024,2026-07-30T14:42:34.485485+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/evaluation/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,546,0.0005,2026-07-30T14:42:34.490962+00:00
+results/Rice/Federated/FedAvg/NonIID_alpha0p5/ResNet18/metrics.json,results,metrics.json,.json,structured data,4082,0.0039,2026-07-30T14:42:34.611640+00:00
+results/Rice/Federated/FedPer/IID/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,7499,0.0072,2026-07-30T14:42:34.631754+00:00
+results/Rice/Federated/FedPer/IID/MobileNetV2/test_metrics.json,results,test_metrics.json,.json,structured data,1028,0.001,2026-07-30T14:42:34.645805+00:00
+results/Rice/Federated/FedPer/NonIID_alpha0p1/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,7806,0.0074,2026-07-30T16:06:01.604692+00:00
+results/Rice/Federated/FedPer/NonIID_alpha0p1/MobileNetV2/test_metrics.json,results,test_metrics.json,.json,structured data,1256,0.0012,2026-07-30T16:06:01.614919+00:00
+results/Rice/Federated/FedPer/NonIID_alpha0p5/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,7533,0.0072,2026-07-30T14:42:34.668861+00:00
+results/Rice/Federated/FedPer/NonIID_alpha0p5/MobileNetV2/test_metrics.json,results,test_metrics.json,.json,structured data,1025,0.001,2026-07-30T14:42:34.676706+00:00
+results/Rice/Federated/FedRep/IID/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,8416,0.008,2026-07-30T14:42:34.699091+00:00
+results/Rice/Federated/FedRep/IID/MobileNetV2/test_metrics.json,results,test_metrics.json,.json,structured data,1393,0.0013,2026-07-30T14:42:34.705957+00:00
+results/Rice/Federated/FedRep/NonIID_alpha0p1/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,8487,0.0081,2026-07-30T16:06:01.641239+00:00
+results/Rice/Federated/FedRep/NonIID_alpha0p1/MobileNetV2/test_metrics.json,results,test_metrics.json,.json,structured data,1406,0.0013,2026-07-30T16:06:01.650416+00:00
+results/Rice/Federated/FedRep/NonIID_alpha0p5/MobileNetV2/metrics.json,results,metrics.json,.json,structured data,8440,0.008,2026-07-30T14:42:34.719415+00:00
+results/Rice/Federated/FedRep/NonIID_alpha0p5/MobileNetV2/test_metrics.json,results,test_metrics.json,.json,structured data,1395,0.0013,2026-07-30T14:42:34.729353+00:00
+results/Rice/Federated/Summaries/NonIID_alpha_comparison_MobileNetV2/all_results.csv,results,all_results.csv,.csv,tabular data,649,0.0006,2026-07-30T16:06:01.685492+00:00
+results/Rice/Federated/Summaries/NonIID_alpha_comparison_MobileNetV2/alpha_deltas.csv,results,alpha_deltas.csv,.csv,tabular data,237,0.0002,2026-07-30T16:06:01.691939+00:00
+results/Rice/Federated/Summaries/NonIID_alpha_comparison_MobileNetV2/comparison_summary.json,results,comparison_summary.json,.json,structured data,2124,0.002,2026-07-30T16:06:01.697702+00:00
+results/Rice/Federated/Summaries/NonIID_alpha_comparison_MobileNetV2/README.md,results,README.md,.md,text/documentation,1093,0.001,2026-07-30T16:06:01.673588+00:00
+results/Rice/Federated/Summaries/Presentation_tables/PRESENTATION_EXPLANATION.md,results,PRESENTATION_EXPLANATION.md,.md,text/documentation,1077,0.001,2026-07-30T16:36:45.867509+00:00
+results/Rice/Federated/Summaries/Presentation_tables/README.md,results,README.md,.md,text/documentation,561,0.0005,2026-07-30T16:36:45.873306+00:00
+results/Rice/Federated/Summaries/Presentation_tables/table_1_alpha0p5_comprehensive.csv,results,table_1_alpha0p5_comprehensive.csv,.csv,tabular data,820,0.0008,2026-07-30T16:36:45.880131+00:00
+results/Rice/Federated/Summaries/Presentation_tables/table_1_alpha0p5_comprehensive.md,results,table_1_alpha0p5_comprehensive.md,.md,text/documentation,1504,0.0014,2026-07-30T16:36:45.880131+00:00
+results/Rice/Federated/Summaries/Presentation_tables/table_1_alpha0p5_comprehensive.png,results,table_1_alpha0p5_comprehensive.png,.png,image,335326,0.3198,2026-07-30T16:36:45.901086+00:00
+results/Rice/Federated/Summaries/Presentation_tables/table_2_alpha0p1_comparison.csv,results,table_2_alpha0p1_comparison.csv,.csv,tabular data,283,0.0003,2026-07-30T16:36:45.904890+00:00
+results/Rice/Federated/Summaries/Presentation_tables/table_2_alpha0p1_comparison.md,results,table_2_alpha0p1_comparison.md,.md,text/documentation,962,0.0009,2026-07-30T16:36:45.910143+00:00
+results/Rice/Federated/Summaries/Presentation_tables/table_2_alpha0p1_comparison.png,results,table_2_alpha0p1_comparison.png,.png,image,131086,0.125,2026-07-30T16:36:45.920526+00:00
+results/Rice/Summaries/resnet18_multiseed_summary.json,results,resnet18_multiseed_summary.json,.json,structured data,1056,0.001,2026-07-30T14:42:34.743421+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/confusion_matrix.png,results,confusion_matrix.png,.png,image,91532,0.0873,2026-07-30T14:42:34.846414+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/exact_duplicate_summary.json,results,exact_duplicate_summary.json,.json,structured data,193,0.0002,2026-07-30T14:42:34.938773+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/history.json,results,history.json,.json,structured data,2537,0.0024,2026-07-30T14:42:34.944705+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/metrics.json,results,metrics.json,.json,structured data,2251,0.0021,2026-07-30T14:42:34.949767+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/metrics_seed123.json,results,metrics_seed123.json,.json,structured data,2239,0.0021,2026-07-30T14:42:34.954463+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/metrics_seed2026.json,results,metrics_seed2026.json,.json,structured data,2275,0.0022,2026-07-30T14:42:34.967367+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/perceptual_duplicate_summary.json,results,perceptual_duplicate_summary.json,.json,structured data,153,0.0001,2026-07-30T14:42:34.978532+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/RESULT_SUMMARY.txt,results,RESULT_SUMMARY.txt,.txt,result/report text,750,0.0007,2026-07-30T14:42:34.818686+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/rice_resnet18_multiseed_summary.json,results,rice_resnet18_multiseed_summary.json,.json,structured data,1056,0.001,2026-07-30T14:42:34.983801+00:00
+results/Rice/SupportingEvidence/ResNet18Proof/split_summary.json,results,split_summary.json,.json,structured data,980,0.0009,2026-07-30T14:42:34.989150+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,291,0.0003,2026-07-30T14:42:35.014009+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/history.json,results,history.json,.json,structured data,2995,0.0029,2026-07-30T14:42:35.021691+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/metrics.json,results,metrics.json,.json,structured data,7103,0.0068,2026-07-30T14:42:35.073928+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/test_07_confusion_matrix.csv,results,test_07_confusion_matrix.csv,.csv,tabular data,327,0.0003,2026-07-30T14:42:35.080449+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/test_07_confusion_matrix.png,results,test_07_confusion_matrix.png,.png,image,136366,0.13,2026-07-30T14:42:35.093417+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/test_07_per_class_metrics.csv,results,test_07_per_class_metrics.csv,.csv,tabular data,603,0.0006,2026-07-30T14:42:35.101324+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,326,0.0003,2026-07-30T14:42:35.277569+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,140646,0.1341,2026-07-30T14:42:35.288756+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,602,0.0006,2026-07-30T14:42:35.291336+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,317,0.0003,2026-07-30T14:42:35.548687+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,136330,0.13,2026-07-30T14:42:35.555322+00:00
+results/Wheat/Centralized/ResNet18/GroupedV2_FullInverseWeights/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,601,0.0006,2026-07-30T14:42:35.561552+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/evaluation_summary.csv,results,evaluation_summary.csv,.csv,tabular data,327,0.0003,2026-07-30T14:42:36.118085+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/history.json,results,history.json,.json,structured data,2994,0.0029,2026-07-30T14:42:43.613229+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/metrics.json,results,metrics.json,.json,structured data,7055,0.0067,2026-07-30T14:42:43.645119+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/test_07_confusion_matrix.csv,results,test_07_confusion_matrix.csv,.csv,tabular data,325,0.0003,2026-07-30T14:42:43.658921+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/test_07_confusion_matrix.png,results,test_07_confusion_matrix.png,.png,image,138013,0.1316,2026-07-30T14:42:43.679238+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/test_07_per_class_metrics.csv,results,test_07_per_class_metrics.csv,.csv,tabular data,564,0.0005,2026-07-30T14:42:43.693008+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/test_confusion_matrix.csv,results,test_confusion_matrix.csv,.csv,tabular data,326,0.0003,2026-07-30T14:42:43.941389+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/test_confusion_matrix.png,results,test_confusion_matrix.png,.png,image,142552,0.1359,2026-07-30T14:42:43.952078+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/test_per_class_metrics.csv,results,test_per_class_metrics.csv,.csv,tabular data,601,0.0006,2026-07-30T14:42:43.957887+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/validation_confusion_matrix.csv,results,validation_confusion_matrix.csv,.csv,tabular data,311,0.0003,2026-07-30T14:42:44.272467+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/validation_confusion_matrix.png,results,validation_confusion_matrix.png,.png,image,133098,0.1269,2026-07-30T14:42:44.280422+00:00
+results/Wheat/Centralized/ResNet18/GroupedV3_SqrtWeights/validation_per_class_metrics.csv,results,validation_per_class_metrics.csv,.csv,tabular data,586,0.0006,2026-07-30T14:42:44.286513+00:00
+scripts/audit_wheat_capture_groups.py,scripts,audit_wheat_capture_groups.py,.py,code/script,4948,0.0047,2026-07-30T14:42:44.520193+00:00
+scripts/check_rice_exact_duplicates.py,scripts,check_rice_exact_duplicates.py,.py,code/script,3461,0.0033,2026-07-30T14:42:44.523601+00:00
+scripts/check_rice_perceptual_duplicates.py,scripts,check_rice_perceptual_duplicates.py,.py,code/script,4384,0.0042,2026-07-30T14:42:44.525671+00:00
+scripts/create_final_comparison_artifacts.py,scripts,create_final_comparison_artifacts.py,.py,code/script,1878,0.0018,2026-07-30T14:42:44.527613+00:00
+scripts/create_rice_federated_partitions.py,scripts,create_rice_federated_partitions.py,.py,code/script,16834,0.0161,2026-07-30T14:42:44.530581+00:00
+scripts/create_rice_federated_partitions_v2.py,scripts,create_rice_federated_partitions_v2.py,.py,code/script,13899,0.0133,2026-07-30T16:06:01.699017+00:00
+scripts/create_wheat_grouped_split.py,scripts,create_wheat_grouped_split.py,.py,code/script,11079,0.0106,2026-07-30T14:42:44.535597+00:00
+scripts/create_wheat_grouped_split_v2.py,scripts,create_wheat_grouped_split_v2.py,.py,code/script,11075,0.0106,2026-07-30T14:42:44.540336+00:00
+scripts/csc_continue_finetune_v2.py,scripts,csc_continue_finetune_v2.py,.py,code/script,11531,0.011,2026-07-30T14:42:44.540336+00:00
+scripts/csc_finetune_efficientnetb0.py,scripts,csc_finetune_efficientnetb0.py,.py,code/script,9915,0.0095,2026-07-30T14:42:44.545419+00:00
+scripts/csc_finetune_mobilenet.py,scripts,csc_finetune_mobilenet.py,.py,code/script,10037,0.0096,2026-07-30T14:42:44.547961+00:00
+scripts/csc_finetune_resnet18.py,scripts,csc_finetune_resnet18.py,.py,code/script,9894,0.0094,2026-07-30T14:42:44.551296+00:00
+scripts/csc_finetune_v3_resnet18.py,scripts,csc_finetune_v3_resnet18.py,.py,code/script,11140,0.0106,2026-07-30T14:42:44.554276+00:00
+scripts/csc_gpu_data_test.py,scripts,csc_gpu_data_test.py,.py,code/script,1113,0.0011,2026-07-30T14:42:44.557204+00:00
+scripts/evaluate_all_final_models.py,scripts,evaluate_all_final_models.py,.py,code/script,6579,0.0063,2026-07-30T14:42:44.560354+00:00
+scripts/evaluate_resnet18_v2_full.py,scripts,evaluate_resnet18_v2_full.py,.py,code/script,2757,0.0026,2026-07-30T14:42:44.561848+00:00
+scripts/evaluate_resnet18_v2_v3_fixed.py,scripts,evaluate_resnet18_v2_v3_fixed.py,.py,code/script,5301,0.0051,2026-07-30T14:42:44.566456+00:00
+scripts/evaluate_rice_architectures.py,scripts,evaluate_rice_architectures.py,.py,code/script,11286,0.0108,2026-07-30T14:42:44.569395+00:00
+scripts/evaluate_rice_fedavg_mobilenetv2.py,scripts,evaluate_rice_fedavg_mobilenetv2.py,.py,code/script,12433,0.0119,2026-07-30T14:42:44.571403+00:00
+scripts/evaluate_rice_fedavg_single.py,scripts,evaluate_rice_fedavg_single.py,.py,code/script,7282,0.0069,2026-07-30T16:06:01.708175+00:00
+scripts/evaluate_rice_model.py,scripts,evaluate_rice_model.py,.py,code/script,10366,0.0099,2026-07-30T14:42:44.575361+00:00
+scripts/evaluate_v3_on_v2_protocol.py,scripts,evaluate_v3_on_v2_protocol.py,.py,code/script,5148,0.0049,2026-07-30T14:42:44.579577+00:00
+scripts/paper/generate_paper_figures.py,scripts,generate_paper_figures.py,.py,code/script,13619,0.013,2026-07-30T14:42:44.587245+00:00
+scripts/show_best_experimental_results.py,scripts,show_best_experimental_results.py,.py,code/script,7179,0.0068,2026-07-30T14:42:44.589178+00:00
+scripts/test_dataset.py,scripts,test_dataset.py,.py,code/script,718,0.0007,2026-07-30T14:42:44.591957+00:00
+scripts/test_metrics.py,scripts,test_metrics.py,.py,code/script,571,0.0005,2026-07-30T14:42:44.595105+00:00
+scripts/test_model.py,scripts,test_model.py,.py,code/script,626,0.0006,2026-07-30T14:42:44.597005+00:00
+scripts/train_rice_efficientnetb0_grouped.py,scripts,train_rice_efficientnetb0_grouped.py,.py,code/script,17053,0.0163,2026-07-30T14:42:44.600072+00:00
+scripts/train_rice_mobilenetv2_grouped.py,scripts,train_rice_mobilenetv2_grouped.py,.py,code/script,17032,0.0162,2026-07-30T14:42:44.603075+00:00
+scripts/train_rice_resnet18_grouped.py,scripts,train_rice_resnet18_grouped.py,.py,code/script,16979,0.0162,2026-07-30T14:42:44.607068+00:00
+scripts/train_rice_resnet18_seed123.py,scripts,train_rice_resnet18_seed123.py,.py,code/script,16990,0.0162,2026-07-30T14:42:44.609981+00:00
+scripts/train_rice_resnet18_seed2026.py,scripts,train_rice_resnet18_seed2026.py,.py,code/script,16993,0.0162,2026-07-30T14:42:44.614897+00:00
+scripts/train_wheat_resnet18_grouped_v2.py,scripts,train_wheat_resnet18_grouped_v2.py,.py,code/script,25813,0.0246,2026-07-30T14:42:44.616902+00:00
+scripts/train_wheat_resnet18_grouped_v2_smoke.py,scripts,train_wheat_resnet18_grouped_v2_smoke.py,.py,code/script,25831,0.0246,2026-07-30T14:42:44.621882+00:00
+scripts/train_wheat_resnet18_grouped_v3_sqrt_weights.py,scripts,train_wheat_resnet18_grouped_v3_sqrt_weights.py,.py,code/script,25936,0.0247,2026-07-30T14:42:44.628228+00:00
+slurm/csc_gpu_data_test.sh,slurm,csc_gpu_data_test.sh,.sh,code/script,493,0.0005,2026-07-30T14:42:44.634199+00:00
+slurm/csc_v2_efficientnetb0.sh,slurm,csc_v2_efficientnetb0.sh,.sh,code/script,568,0.0005,2026-07-30T14:42:44.638203+00:00
+slurm/csc_v2_mobilenetv2.sh,slurm,csc_v2_mobilenetv2.sh,.sh,code/script,556,0.0005,2026-07-30T14:42:44.641804+00:00
+slurm/csc_v2_resnet18.sh,slurm,csc_v2_resnet18.sh,.sh,code/script,550,0.0005,2026-07-30T14:42:44.644792+00:00
+slurm/csc_v3_resnet18.sh,slurm,csc_v3_resnet18.sh,.sh,code/script,502,0.0005,2026-07-30T14:42:44.647783+00:00
+slurm/ddp_resnet18_v3.sh,slurm,ddp_resnet18_v3.sh,.sh,code/script,878,0.0008,2026-07-30T14:42:44.649783+00:00
+slurm/ddp_resnet18_v3_smoke.sh,slurm,ddp_resnet18_v3_smoke.sh,.sh,code/script,901,0.0009,2026-07-30T14:42:44.652800+00:00
+slurm/evaluate_all_final_models.sh,slurm,evaluate_all_final_models.sh,.sh,code/script,1080,0.001,2026-07-30T14:42:44.655912+00:00
+slurm/evaluate_fl_full_iid_v3.sh,slurm,evaluate_fl_full_iid_v3.sh,.sh,code/script,869,0.0008,2026-07-30T14:42:44.658905+00:00
+slurm/evaluate_fl_full_noniid_v3.sh,slurm,evaluate_fl_full_noniid_v3.sh,.sh,code/script,875,0.0008,2026-07-30T14:42:44.663452+00:00
+slurm/evaluate_resnet18_v2_v3_fixed.sh,slurm,evaluate_resnet18_v2_v3_fixed.sh,.sh,code/script,503,0.0005,2026-07-30T14:42:44.665662+00:00
+slurm/evaluate_rice_architectures.sh,slurm,evaluate_rice_architectures.sh,.sh,code/script,612,0.0006,2026-07-30T14:42:44.668379+00:00
+slurm/evaluate_rice_ddp.sh,slurm,evaluate_rice_ddp.sh,.sh,code/script,1195,0.0011,2026-07-30T14:42:44.671623+00:00
+slurm/evaluate_rice_fedavg_mobilenetv2.sh,slurm,evaluate_rice_fedavg_mobilenetv2.sh,.sh,code/script,649,0.0006,2026-07-30T14:42:44.672637+00:00
+slurm/evaluate_rice_fedavg_mobilenetv2_noniid_alpha0p1.sh,slurm,evaluate_rice_fedavg_mobilenetv2_noniid_alpha0p1.sh,.sh,code/script,1747,0.0017,2026-07-30T16:06:01.711634+00:00
+slurm/evaluate_rice_federated_models.sh,slurm,evaluate_rice_federated_models.sh,.sh,code/script,1620,0.0015,2026-07-30T14:42:44.676535+00:00
+slurm/evaluate_v3_on_v2_protocol.sh,slurm,evaluate_v3_on_v2_protocol.sh,.sh,code/script,498,0.0005,2026-07-30T14:42:44.680087+00:00
+slurm/fedavg_rice_mobilenetv2_iid.sh,slurm,fedavg_rice_mobilenetv2_iid.sh,.sh,code/script,1497,0.0014,2026-07-30T14:42:44.683409+00:00
+slurm/fedavg_rice_mobilenetv2_noniid.sh,slurm,fedavg_rice_mobilenetv2_noniid.sh,.sh,code/script,1524,0.0015,2026-07-30T14:42:44.686412+00:00
+slurm/fedavg_rice_mobilenetv2_noniid_alpha0p1.sh,slurm,fedavg_rice_mobilenetv2_noniid_alpha0p1.sh,.sh,code/script,1978,0.0019,2026-07-30T16:06:01.714231+00:00
+slurm/fedper_rice_mobilenetv2_iid.sh,slurm,fedper_rice_mobilenetv2_iid.sh,.sh,code/script,1570,0.0015,2026-07-30T14:42:44.688420+00:00
+slurm/fedper_rice_mobilenetv2_noniid.sh,slurm,fedper_rice_mobilenetv2_noniid.sh,.sh,code/script,1590,0.0015,2026-07-30T14:42:44.691415+00:00
+slurm/fedper_rice_mobilenetv2_noniid_alpha0p1.sh,slurm,fedper_rice_mobilenetv2_noniid_alpha0p1.sh,.sh,code/script,2076,0.002,2026-07-30T16:06:01.719765+00:00
+slurm/fedrep_rice_mobilenetv2_iid.sh,slurm,fedrep_rice_mobilenetv2_iid.sh,.sh,code/script,1694,0.0016,2026-07-30T14:42:44.695109+00:00
+slurm/fedrep_rice_mobilenetv2_noniid.sh,slurm,fedrep_rice_mobilenetv2_noniid.sh,.sh,code/script,1721,0.0016,2026-07-30T14:42:44.698236+00:00
+slurm/fedrep_rice_mobilenetv2_noniid_alpha0p1.sh,slurm,fedrep_rice_mobilenetv2_noniid_alpha0p1.sh,.sh,code/script,2150,0.0021,2026-07-30T16:06:01.721512+00:00
+slurm/fl_fedavg_smoke.sh,slurm,fl_fedavg_smoke.sh,.sh,code/script,927,0.0009,2026-07-30T14:42:44.700233+00:00
+slurm/fl_full_iid_v3.sh,slurm,fl_full_iid_v3.sh,.sh,code/script,1041,0.001,2026-07-30T14:42:44.703236+00:00
+slurm/fl_full_noniid_v3.sh,slurm,fl_full_noniid_v3.sh,.sh,code/script,1070,0.001,2026-07-30T14:42:44.706234+00:00
+slurm/rice_ddp_resnet18_full.sh,slurm,rice_ddp_resnet18_full.sh,.sh,code/script,1486,0.0014,2026-07-30T14:42:44.709328+00:00
+slurm/rice_ddp_resnet18_smoke.sh,slurm,rice_ddp_resnet18_smoke.sh,.sh,code/script,1501,0.0014,2026-07-30T14:42:44.712516+00:00
+slurm/rice_fedavg_iid_full.sh,slurm,rice_fedavg_iid_full.sh,.sh,code/script,1466,0.0014,2026-07-30T14:42:44.715523+00:00
+slurm/rice_fedavg_iid_smoke.sh,slurm,rice_fedavg_iid_smoke.sh,.sh,code/script,1481,0.0014,2026-07-30T14:42:44.718188+00:00
+slurm/rice_fedavg_noniid_full.sh,slurm,rice_fedavg_noniid_full.sh,.sh,code/script,1496,0.0014,2026-07-30T14:42:44.721188+00:00
+slurm/roihu_fl_env_test.sh,slurm,roihu_fl_env_test.sh,.sh,code/script,833,0.0008,2026-07-30T14:42:44.724187+00:00
+slurm/roihu_fl_network_smoke.sh,slurm,roihu_fl_network_smoke.sh,.sh,code/script,1311,0.0013,2026-07-30T14:42:44.728239+00:00
+slurm/roihu_gpu_test.sh,slurm,roihu_gpu_test.sh,.sh,code/script,1050,0.001,2026-07-30T14:42:44.730892+00:00
+slurm/roihu_module_check.sh,slurm,roihu_module_check.sh,.sh,code/script,553,0.0005,2026-07-30T14:42:44.733014+00:00
+slurm/train_rice_efficientnetb0_grouped.sh,slurm,train_rice_efficientnetb0_grouped.sh,.sh,code/script,790,0.0008,2026-07-30T14:42:44.736009+00:00
+slurm/train_rice_mobilenetv2_grouped.sh,slurm,train_rice_mobilenetv2_grouped.sh,.sh,code/script,784,0.0007,2026-07-30T14:42:44.739929+00:00
+slurm/train_rice_resnet18_grouped.sh,slurm,train_rice_resnet18_grouped.sh,.sh,code/script,931,0.0009,2026-07-30T14:42:44.741923+00:00
+slurm/train_rice_resnet18_seed123.sh,slurm,train_rice_resnet18_seed123.sh,.sh,code/script,937,0.0009,2026-07-30T14:42:44.747435+00:00
+slurm/train_rice_resnet18_seed2026.sh,slurm,train_rice_resnet18_seed2026.sh,.sh,code/script,941,0.0009,2026-07-30T14:42:44.752660+00:00
+slurm/train_wheat_resnet18_grouped_v2_full.sh,slurm,train_wheat_resnet18_grouped_v2_full.sh,.sh,code/script,780,0.0007,2026-07-30T14:42:44.761934+00:00
+slurm/train_wheat_resnet18_grouped_v2_smoke.sh,slurm,train_wheat_resnet18_grouped_v2_smoke.sh,.sh,code/script,728,0.0007,2026-07-30T14:42:44.765685+00:00
+slurm/train_wheat_resnet18_grouped_v3_sqrt_weights.sh,slurm,train_wheat_resnet18_grouped_v3_sqrt_weights.sh,.sh,code/script,810,0.0008,2026-07-30T14:42:44.768852+00:00
+src/dataset.py,src,dataset.py,.py,code/script,1942,0.0019,2026-07-30T14:42:44.772842+00:00
+src/federated_pipeline/__init__.py,src,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:44.779515+00:00
+src/federated_pipeline/common/__init__.py,src,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:44.787714+00:00
+src/federated_pipeline/common/model.py,src,model.py,.py,code/script,440,0.0004,2026-07-30T14:42:44.793387+00:00
+src/federated_pipeline/distributed/__init__.py,src,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:44.799551+00:00
+src/federated_pipeline/distributed/ddp_resnet18_v3.py,src,ddp_resnet18_v3.py,.py,code/script,15355,0.0146,2026-07-30T14:42:44.804492+00:00
+src/federated_pipeline/distributed/ddp_rice_resnet18.py,src,ddp_rice_resnet18.py,.py,code/script,15824,0.0151,2026-07-30T14:42:44.812869+00:00
+src/federated_pipeline/federated/__init__.py,src,__init__.py,.py,code/script,0,0.0,2026-07-30T14:42:44.819879+00:00
+src/federated_pipeline/federated/evaluate_federated_checkpoint.py,src,evaluate_federated_checkpoint.py,.py,code/script,5926,0.0057,2026-07-30T14:42:44.827357+00:00
+src/federated_pipeline/federated/fedavg_full_v3.py,src,fedavg_full_v3.py,.py,code/script,12914,0.0123,2026-07-30T14:42:44.832514+00:00
+src/federated_pipeline/federated/fedavg_rice_mobilenetv2.py,src,fedavg_rice_mobilenetv2.py,.py,code/script,18066,0.0172,2026-07-30T16:06:01.734590+00:00
+src/federated_pipeline/federated/fedavg_rice_resnet18.py,src,fedavg_rice_resnet18.py,.py,code/script,16675,0.0159,2026-07-30T14:42:44.838990+00:00
+src/federated_pipeline/federated/fedavg_simulation.py,src,fedavg_simulation.py,.py,code/script,9779,0.0093,2026-07-30T14:42:44.844123+00:00
+src/federated_pipeline/federated/fedper_rice_mobilenetv2.py,src,fedper_rice_mobilenetv2.py,.py,code/script,13347,0.0127,2026-07-30T16:06:01.741999+00:00
+src/federated_pipeline/federated/fedper_rice_mobilenetv2_iid.py,src,fedper_rice_mobilenetv2_iid.py,.py,code/script,11835,0.0113,2026-07-30T14:42:44.851908+00:00
+src/federated_pipeline/federated/fedrep_rice_mobilenetv2.py,src,fedrep_rice_mobilenetv2.py,.py,code/script,20641,0.0197,2026-07-30T16:06:01.748412+00:00
+src/metrics.py,src,metrics.py,.py,code/script,1303,0.0012,2026-07-30T14:42:44.859007+00:00
+src/models.py,src,models.py,.py,code/script,770,0.0007,2026-07-30T14:42:44.860004+00:00
+src/train.py,src,train.py,.py,code/script,11379,0.0109,2026-07-30T14:42:44.865076+00:00
+streamlit-ui/streamlit-ui/app.py,streamlit-ui,app.py,.py,code/script,23634,0.0225,2026-08-05T11:15:30.478793+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/clients_rice_alpha_0_1_entropy.pdf,streamlit-ui,clients_rice_alpha_0_1_entropy.pdf,.pdf,document,19460,0.0186,2026-08-05T11:15:30.616991+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/clients_rice_alpha_0_1_entropy.png,streamlit-ui,clients_rice_alpha_0_1_entropy.png,.png,image,80215,0.0765,2026-08-05T11:15:30.611269+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/clients_rice_alpha_0_1_images.pdf,streamlit-ui,clients_rice_alpha_0_1_images.pdf,.pdf,document,19011,0.0181,2026-08-05T11:15:30.565453+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/clients_rice_alpha_0_1_images.png,streamlit-ui,clients_rice_alpha_0_1_images.png,.png,image,71119,0.0678,2026-08-05T11:15:30.591468+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/dataset_split_rice.pdf,streamlit-ui,dataset_split_rice.pdf,.pdf,document,17980,0.0171,2026-08-05T11:15:30.581230+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/dataset_split_rice.png,streamlit-ui,dataset_split_rice.png,.png,image,71486,0.0682,2026-08-05T11:15:30.606004+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_centralized_centralized_macro_f1.pdf,streamlit-ui,experiment_rice_centralized_centralized_macro_f1.pdf,.pdf,document,16682,0.0159,2026-08-05T11:15:30.557929+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_centralized_centralized_macro_f1.png,streamlit-ui,experiment_rice_centralized_centralized_macro_f1.png,.png,image,60718,0.0579,2026-08-05T11:15:30.569672+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedavg_iid_macro_f1.pdf,streamlit-ui,experiment_rice_fedavg_iid_macro_f1.pdf,.pdf,document,17034,0.0162,2026-08-05T11:15:30.601352+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedavg_iid_macro_f1.png,streamlit-ui,experiment_rice_fedavg_iid_macro_f1.png,.png,image,57895,0.0552,2026-08-05T11:15:30.551354+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedavg_non_iid_macro_f1.pdf,streamlit-ui,experiment_rice_fedavg_non_iid_macro_f1.pdf,.pdf,document,17568,0.0168,2026-08-05T11:15:30.577218+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedavg_non_iid_macro_f1.png,streamlit-ui,experiment_rice_fedavg_non_iid_macro_f1.png,.png,image,61244,0.0584,2026-08-05T11:15:30.591468+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedper_non_iid_accuracy.pdf,streamlit-ui,experiment_rice_fedper_non_iid_accuracy.pdf,.pdf,document,17385,0.0166,2026-08-05T11:15:30.561941+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedper_non_iid_accuracy.png,streamlit-ui,experiment_rice_fedper_non_iid_accuracy.png,.png,image,79913,0.0762,2026-08-05T11:15:30.624434+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedper_non_iid_macro_f1.pdf,streamlit-ui,experiment_rice_fedper_non_iid_macro_f1.pdf,.pdf,document,16906,0.0161,2026-08-05T11:15:30.569672+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/experiment_rice_fedper_non_iid_macro_f1.png,streamlit-ui,experiment_rice_fedper_non_iid_macro_f1.png,.png,image,72281,0.0689,2026-08-05T11:15:30.585515+00:00
+streamlit-ui/streamlit-ui/assets/generated_charts/RUN_GENERATOR.txt,streamlit-ui,RUN_GENERATOR.txt,.txt,text/documentation,33,0.0,2026-08-05T11:15:30.630933+00:00
+streamlit-ui/streamlit-ui/data/client_statistics.csv,streamlit-ui,client_statistics.csv,.csv,tabular data,226,0.0002,2026-08-05T11:15:30.511915+00:00
+streamlit-ui/streamlit-ui/data/dataset_categories.csv,streamlit-ui,dataset_categories.csv,.csv,tabular data,128,0.0001,2026-08-05T11:15:30.539692+00:00
+streamlit-ui/streamlit-ui/data/dataset_splits.csv,streamlit-ui,dataset_splits.csv,.csv,tabular data,129,0.0001,2026-08-05T11:15:30.527743+00:00
+streamlit-ui/streamlit-ui/data/experiment_results.csv,streamlit-ui,experiment_results.csv,.csv,tabular data,1446,0.0014,2026-08-05T11:15:30.521627+00:00
+streamlit-ui/streamlit-ui/data/project_metadata.json,streamlit-ui,project_metadata.json,.json,structured data,343,0.0003,2026-08-05T11:15:30.501781+00:00
+streamlit-ui/streamlit-ui/data/round_metrics.csv,streamlit-ui,round_metrics.csv,.csv,tabular data,90,0.0001,2026-08-05T11:15:30.533319+00:00
+streamlit-ui/streamlit-ui/generate_static_charts.py,streamlit-ui,generate_static_charts.py,.py,code/script,7949,0.0076,2026-08-05T11:15:30.491559+00:00
+streamlit-ui/streamlit-ui/README_UI.md,streamlit-ui,README_UI.md,.md,text/documentation,1753,0.0017,2026-08-05T11:15:30.495578+00:00
+streamlit-ui/streamlit-ui/requirements.txt,streamlit-ui,requirements.txt,.txt,text/documentation,68,0.0001,2026-08-05T11:15:30.478793+00:00

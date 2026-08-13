@@ -1,0 +1,15 @@
+top_level,file_count,total_size_mb
+results,185,4.19
+experiments,144,64.31
+slurm,46,0.05
+paper,35,156.04
+scripts,35,0.35
+streamlit-ui,27,0.7
+src,19,0.15
+containerized_fl,8,0.01
+(repository root),4,0.1
+configs,3,0.0
+docker,3,0.0
+apptainer,2,0.0
+docs,1,0.0
+requirements,1,0.0

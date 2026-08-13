@@ -1,0 +1,27 @@
+{
+  "repository_root": "/mnt/c/Users/fajrn/Desktop/GrainClassification/Grain-Federated-Learning-Classification-",
+  "output_directory": "/mnt/c/Users/fajrn/Desktop/GrainClassification/Grain-Federated-Learning-Classification-/project_audit",
+  "generated_at_utc": "2026-08-05T12:00:17.313255+00:00",
+  "file_count": 513,
+  "total_size_mb": 225.91,
+  "tabular_file_count": 259,
+  "image_file_count": 69,
+  "text_metric_file_count": 37,
+  "graph_recommendation_count": 302,
+  "priority_one_graph_count": 204,
+  "excluded_directory_names": [
+    ".cache",
+    ".git",
+    ".idea",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".venv-paper",
+    "__pycache__",
+    "build",
+    "dist",
+    "node_modules",
+    "project_audit"
+  ]
+}
